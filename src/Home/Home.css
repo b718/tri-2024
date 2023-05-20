@@ -1,0 +1,13 @@
+.home-grid-information {
+  max-width: 55rem;
+  margin-top: 3rem;
+}
+
+.home-grid-paragraph-title {
+  text-align: left;
+}
+
+.home-grid-paragraph {
+  text-align: left;
+  margin-top: 1rem;
+}

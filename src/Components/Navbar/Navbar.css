@@ -3,6 +3,31 @@
   margin-left: 1rem;
 }
 
-.nav-bar-grid {
-  margin-top: 1rem;
+.nav-bar-different-sections {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-bar-different-sections:hover {
+  text-decoration: underline;
+}
+
+.nav-bar-tri-text {
+  text-align: left;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.nav-bar-container {
+  max-width: fit-content;
+  margin-top: 2rem;
+  background-color: #126fdb;
+}
+
+nav {
+  background-color: #126fdb;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }

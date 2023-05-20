@@ -1,35 +1,58 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
-import { Flex, Button, Grid } from "@mantine/core";
+import { Flex, Text, Center } from "@mantine/core";
+import { NavBarContext } from "../../App";
 
 const Navbar = () => {
+  const scrollToSection = (elementRef: any): void => {
+    window.scrollTo({
+      top: elementRef!.current!.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  const navBarScrollRefs = useContext(NavBarContext);
+
   return (
-    <div>
-      <Grid className="nav-bar-grid">
-        <Grid.Col>TRI 2024</Grid.Col>
-        <Grid.Col>
-          {" "}
-          <Flex
-            mih={50}
-            gap="md"
-            justify="flex-start"
-            align="flex-start"
-            direction="row"
-            wrap="wrap"
-            className="nav-bar-whole"
-          >
-            <Button>Home</Button>
-            <Button>Committee</Button>
-            <Button>Conference Program</Button>
-            <Button>Registration</Button>
-            <Button>Presenters</Button>
-            <Button>Sponsorship</Button>
-            <Button>Venue</Button>
-            <Button>Contact Us</Button>
-          </Flex>
-        </Grid.Col>
-      </Grid>
-    </div>
+    <>
+      <nav className="nav-bar-for-access">
+        <Center>
+          <div className="nav-bar-container">
+            <Text className="nav-bar-tri-text">TRI 2024</Text>
+            <Flex
+              mih={50}
+              gap="1.2rem"
+              justify="flex-start"
+              align="flex-start"
+              direction="row"
+              wrap="wrap"
+              className="nav-bar-whole"
+            >
+              <Text
+                className="nav-bar-different-sections"
+                onClick={() => scrollToSection(navBarScrollRefs.homeRef)}
+              >
+                Home
+              </Text>
+              <Text
+                className="nav-bar-different-sections"
+                onClick={() => scrollToSection(navBarScrollRefs.committeeRef)}
+              >
+                Committee
+              </Text>
+              <Text className="nav-bar-different-sections">
+                Conference Program
+              </Text>
+              <Text className="nav-bar-different-sections">Registration</Text>
+              <Text className="nav-bar-different-sections">Presenters</Text>
+              <Text className="nav-bar-different-sections">Sponsorship</Text>
+              <Text className="nav-bar-different-sections">Venue</Text>
+              <Text className="nav-bar-different-sections">Contact Us</Text>
+            </Flex>
+          </div>
+        </Center>
+      </nav>
+    </>
   );
 };
 
