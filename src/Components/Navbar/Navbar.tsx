@@ -5,7 +5,7 @@ import { Flex, Button, Grid } from "@mantine/core";
 const Navbar = () => {
   return (
     <div>
-      <Grid>
+      <Grid className="nav-bar-grid">
         <Grid.Col>TRI 2024</Grid.Col>
         <Grid.Col>
           {" "}
