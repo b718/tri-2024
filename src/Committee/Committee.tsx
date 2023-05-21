@@ -7,7 +7,7 @@ const Committee = () => {
   const committeeRef = useContext(NavBarContext);
 
   return (
-    <>
+    <div className="committee-div-min-vh">
       <Box className="committee-container" ref={committeeRef.committeeRef}>
         <Text className="committee-scientific-title">SCIENTIFIC COMMITTEE</Text>
         <Center>
@@ -86,7 +86,7 @@ const Committee = () => {
           </Text>
         </Box>
       </Box>
-    </>
+    </div>
   );
 };
 

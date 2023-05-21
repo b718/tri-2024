@@ -11,3 +11,7 @@
   text-align: left;
   margin-top: 1rem;
 }
+
+.home-div-vh-min {
+  min-height: 100vh;
+}

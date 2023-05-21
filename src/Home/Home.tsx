@@ -8,7 +8,7 @@ const Home = () => {
   const homeRef = useContext(NavBarContext);
 
   return (
-    <>
+    <div className="home-div-vh-min">
       <Center>
         <Grid
           columns={12}
@@ -55,7 +55,7 @@ const Home = () => {
           </Grid.Col>
         </Grid>
       </Center>
-    </>
+    </div>
   );
 };
 

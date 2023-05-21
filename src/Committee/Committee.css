@@ -13,7 +13,6 @@
 
 .committee-container {
   margin: 0 auto;
-  margin-top: 7.8rem;
   max-width: fit-content;
   margin-bottom: 1rem;
 }
@@ -31,4 +30,8 @@
 
 .committee-italic-title {
   font-style: italic;
+}
+
+.committee-div-min-vh {
+  min-height: 100vh;
 }
