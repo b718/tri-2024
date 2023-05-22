@@ -1,0 +1,13 @@
+.registration-grid {
+  max-width: 60rem;
+  margin-top: 1rem;
+}
+
+.registration-flex {
+  max-width: fit-content;
+}
+
+.registration-opening-text {
+  text-align: justify;
+  text-transform: none;
+}

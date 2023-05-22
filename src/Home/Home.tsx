@@ -8,11 +8,11 @@ const Home = () => {
   const homeRef = useContext(NavBarContext);
 
   return (
-    <div className="home-div-vh-min">
+    <div>
       <Text
         fz="xl"
         fw="600"
-        style={{ marginLeft: "2rem", marginBottom: "1rem", marginTop: "2rem" }}
+        style={{ marginLeft: "10%", marginBottom: "1rem", marginTop: "2rem" }}
         ref={homeRef.homeRef}
       >
         Home

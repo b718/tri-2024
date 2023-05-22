@@ -32,8 +32,9 @@
   font-style: italic;
 }
 
-.committee-div-min-vh {
+.committee-outer-container {
   /* min-height: 100vh; */
-  max-width: 60rem;
-  margin: 0 auto;
+  background-color: #238be6;
+  color: white;
+  padding-bottom: 1rem;
 }
