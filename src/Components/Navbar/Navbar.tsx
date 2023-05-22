@@ -5,12 +5,12 @@ import { NavBarContext } from "../../App";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
+    let offSetTopInc = elementRef!.current!.offsetTop - 130;
     window.scrollTo({
-      top: elementRef!.current!.offsetTop,
+      top: offSetTopInc,
       behavior: "smooth",
     });
   };
-
   const navBarScrollRefs = useContext(NavBarContext);
 
   return (
@@ -40,7 +40,12 @@ const Navbar = () => {
               >
                 Committee
               </Text>
-              <Text className="nav-bar-different-sections">
+              <Text
+                className="nav-bar-different-sections"
+                onClick={() =>
+                  scrollToSection(navBarScrollRefs.conferenceProgramRef)
+                }
+              >
                 Conference Program
               </Text>
               <Text className="nav-bar-different-sections">Registration</Text>

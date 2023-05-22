@@ -1,0 +1,36 @@
+.speaker-base-drop-down {
+  color: black;
+  max-width: 40rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.speaker-base-drop-down-content {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 1s;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.speaker-base-container {
+  background-color: white;
+}
+
+.speaker-base-flex-click {
+  cursor: pointer;
+}
+
+.speaker-base-title-about {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: none;
+}
+
+.speaker-base-about-text {
+  text-align: justify;
+  text-transform: none;
+}

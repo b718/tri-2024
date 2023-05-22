@@ -1,6 +1,6 @@
 .home-grid-information {
   max-width: 55rem;
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 
 .home-grid-paragraph-title {
@@ -13,5 +13,7 @@
 }
 
 .home-div-vh-min {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  max-width: 60rem;
+  margin: 0 auto;
 }

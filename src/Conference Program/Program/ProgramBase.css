@@ -1,0 +1,27 @@
+.program-base-drop-down {
+  color: black;
+  max-width: 40rem;
+  margin-top: 1rem;
+  text-align: left;
+  margin-left: 7rem;
+}
+
+.program-base-drop-down-content {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.6s;
+}
+
+.program-base-about-text {
+  text-align: justify;
+  text-transform: none;
+  margin-left: 1rem;
+}
+
+.program-base-text-title {
+  cursor: pointer;
+  background-color: lightgray;
+  padding: 0.4rem 1.1rem 0.4rem 1.1rem;
+  border: 1px black solid;
+  border-radius: 11px;
+}
