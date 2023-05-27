@@ -14,11 +14,11 @@ const SpeakerSection = () => {
   const conferenceProgramRef = useContext(NavBarContext);
 
   return (
-    <div>
+    <div className="speaker-section-div">
       <Text
         fz="xl"
         fw="600"
-        style={{ marginLeft: "10%", marginBottom: "1rem", marginTop: "2rem" }}
+        style={{ marginLeft: "10%", marginBottom: "1rem" }}
         ref={conferenceProgramRef.conferenceProgramRef}
       >
         Speakers

@@ -5,11 +5,11 @@ import { Text, Center } from "@mantine/core";
 
 const Program = () => {
   return (
-    <div>
+    <div className="program-section-div">
       <Text
         fz="xl"
         fw="600"
-        style={{ marginLeft: "10%", marginBottom: "1rem", marginTop: "2rem" }}
+        style={{ marginLeft: "10%", marginBottom: "1rem" }}
       >
         Programs
       </Text>

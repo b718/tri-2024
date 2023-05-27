@@ -7,6 +7,7 @@ import Committee from "./Committee/Committee";
 import SpeakerSection from "./Conference Program/SpeakersComponent/SpeakerSection";
 import ConferenceProgram from "./Conference Program/ConferenceProgram";
 import Registration from "./Registration/Registration";
+import Sponsorships from "./Sponsorship/Sponsorships";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -14,7 +15,7 @@ interface ContextTypeNavBarRef {
   conferenceProgramRef: React.RefObject<HTMLDivElement>;
   registrationRef: React.RefObject<HTMLDivElement>;
   // presentersRef?: React.RefObject<HTMLDivElement>;
-  // sponsorshipRef?: React.RefObject<HTMLDivElement>;
+  sponsorshipRef: React.RefObject<HTMLDivElement>;
   // venueRef?: React.RefObject<HTMLDivElement>;
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
@@ -23,6 +24,7 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   homeRef: createRef(),
   conferenceProgramRef: createRef(),
   registrationRef: createRef(),
+  sponsorshipRef: createRef(),
 });
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
   const homeRef = useRef<HTMLDivElement>(null);
   const conferenceProgramRef = useRef<HTMLDivElement>(null);
   const registrationRef = useRef<HTMLDivElement>(null);
+  const sponsorshipRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -39,6 +42,7 @@ function App() {
           homeRef: homeRef,
           conferenceProgramRef: conferenceProgramRef,
           registrationRef: registrationRef,
+          sponsorshipRef: sponsorshipRef,
         }}
       >
         <Navbar />
@@ -46,6 +50,7 @@ function App() {
         <Committee />
         <ConferenceProgram />
         <Registration />
+        <Sponsorships />
       </NavBarContext.Provider>
     </>
   );

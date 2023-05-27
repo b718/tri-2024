@@ -33,8 +33,10 @@
 }
 
 .committee-outer-container {
-  /* min-height: 100vh; */
   background-color: #238be6;
   color: white;
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

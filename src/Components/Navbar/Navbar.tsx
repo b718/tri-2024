@@ -57,7 +57,12 @@ const Navbar = () => {
                 Registration
               </Text>
               <Text className="nav-bar-different-sections">Presenters</Text>
-              <Text className="nav-bar-different-sections">Sponsorship</Text>
+              <Text
+                className="nav-bar-different-sections"
+                onClick={() => scrollToSection(navBarScrollRefs.sponsorshipRef)}
+              >
+                Sponsorship
+              </Text>
               <Text className="nav-bar-different-sections">Venue</Text>
               <Text className="nav-bar-different-sections">Contact Us</Text>
             </Flex>

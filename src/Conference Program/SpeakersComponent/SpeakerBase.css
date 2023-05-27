@@ -33,4 +33,6 @@ p {
 .speaker-base-about-text {
   text-align: justify;
   text-transform: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
