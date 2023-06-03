@@ -1,0 +1,38 @@
+:root {
+  --gradient: linear-gradient(90deg, green, darkblue, lightblue);
+}
+
+.page-holder-text-section {
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.page-holder-div-image {
+  margin-top: 2%;
+}
+
+.page-holder-text-section h1 {
+  margin: 0;
+}
+
+.page-holder-div {
+  min-height: 100vh;
+  color: white;
+  background: #ddd;
+  background-size: 300%;
+  background-image: var(--gradient);
+  animation: bg-animation 25s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}

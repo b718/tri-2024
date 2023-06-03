@@ -8,6 +8,7 @@ import SpeakerSection from "./Conference Program/SpeakersComponent/SpeakerSectio
 import ConferenceProgram from "./Conference Program/ConferenceProgram";
 import Registration from "./Registration/Registration";
 import Sponsorships from "./Sponsorship/Sponsorships";
+import PageHolder from "./PageHolder/PageHolder";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -51,8 +52,7 @@ function App() {
         <ConferenceProgram />
         <Registration />
         <Sponsorships /> */}
-
-        <h1>Coming soon - watch this space!</h1>
+        <PageHolder />
       </NavBarContext.Provider>
     </>
   );

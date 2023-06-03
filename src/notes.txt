@@ -15,3 +15,5 @@ Venue (look at 2019.tri-conf.org - I like their venue tab)
 Contact Us
 
 #238be6
+
+-Can the hero area have a dynamic multi-point gradient? I'm imagining it moving pretty slowly with about 3 colours (green blue and dark blue) 
