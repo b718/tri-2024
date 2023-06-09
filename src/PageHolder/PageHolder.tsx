@@ -13,15 +13,16 @@ const PageHolder = () => {
 
       <AspectRatio ratio={16 / 9} className="page-holder-aspect-ratio-frame">
         <iframe
-          src="https://www.youtube.com/embed/Dorf8i6lCuk"
+          src="https://www.youtube.com/embed/epvpr3dxfj4"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </AspectRatio>
+
       <div className="page-holder-text-section">
-        <h1 style={{ textAlign: "center", fontSize: "5rem" }}>
+        <h1 style={{ textAlign: "center", fontSize: "4.6rem" }}>
           TRI2024 is coming!
         </h1>
         <Center>

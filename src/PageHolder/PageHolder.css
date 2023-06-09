@@ -1,28 +1,14 @@
 :root {
-  --gradient: linear-gradient(45deg, #73a441, #86ccf2, #86ccf2, #0482c8);
+  --gradient: linear-gradient(45deg, #73a441, #0482c8, #194177);
 }
 
-.page-holder-text-section {
-  max-width: fit-content;
-  margin: 0 auto;
-  margin-top: 2%;
-}
-
-.page-holder-div-image {
-  margin-top: 2%;
-}
-
-.page-holder-text-section h1 {
-  margin: 0;
-}
-
-.page-holder-aspect-ratio-frame {
-  max-width: 50rem;
-  margin: 0 auto;
-  margin-top: 6%;
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
 }
 
 .page-holder-div {
+  font-family: Gravity;
   min-height: 100vh;
   color: white;
   background: #ddd;
@@ -41,4 +27,25 @@
   100% {
     background-position: left;
   }
+}
+
+.page-holder-text-section {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.page-holder-div-image {
+  margin-top: 2%;
+}
+
+.page-holder-text-section h1 {
+  margin: 0;
+}
+
+.page-holder-aspect-ratio-frame {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 6%;
 }
