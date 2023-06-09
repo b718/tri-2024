@@ -2,8 +2,7 @@ import React from "react";
 import "./PageHolder.css";
 import { Center, Image, Text } from "@mantine/core";
 import { AspectRatio } from "@mantine/core";
-
-import headImage from "../Images/head-image-transformed.png";
+import headImage from "../Images/TRI2024Logo_Nav.png";
 
 const PageHolder = () => {
   return (
