@@ -27,7 +27,7 @@ const PageHolder = () => {
         </h1>
         <Center>
           <Text fz="sm" style={{ marginTop: "1rem" }}>
-            Check back soon for an update!
+            Check back soon for an update.
           </Text>
         </Center>
       </div>
