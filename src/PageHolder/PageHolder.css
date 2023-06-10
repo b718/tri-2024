@@ -14,7 +14,8 @@
 
 .page-holder-div {
   font-family: Gravity;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   color: white;
   background: #ddd;
   background-size: 300%;
@@ -38,11 +39,10 @@
   max-width: fit-content;
   margin: 0 auto;
   margin-top: 4rem;
-  margin-bottom: 2rem;
 }
 
 .page-holder-div-image {
-  margin-top: 2%;
+  margin-top: 2rem;
 }
 
 .page-holder-text-section h1 {
@@ -52,5 +52,5 @@
 .page-holder-aspect-ratio-frame {
   max-width: 50rem;
   margin: 0 auto;
-  margin-top: 6%;
+  margin-top: 2rem;
 }
