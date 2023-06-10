@@ -26,7 +26,7 @@ const PageHolder = () => {
           TRI2024 is coming!
         </h1>
         <Center>
-          <Text fz="sm" style={{ marginTop: "1rem" }}>
+          <Text fz="sm" style={{ marginTop: "0.5rem" }}>
             Check back soon for an update.
           </Text>
         </Center>

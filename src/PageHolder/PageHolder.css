@@ -54,3 +54,50 @@
   margin: 0 auto;
   margin-top: 2rem;
 }
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (width < 500px) {
+    .page-holder-aspect-ratio-frame {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .page-holder-text-section {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .page-holder-aspect-ratio-frame {
+      max-width: 50rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    .page-holder-text-section {
+      max-width: fit-content;
+      margin: 0 auto;
+      margin-top: 4rem;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+}
