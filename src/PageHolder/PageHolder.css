@@ -1,5 +1,10 @@
 :root {
-  --gradient: linear-gradient(45deg, #73a441, #0482c8, #194177);
+  --gradient: linear-gradient(
+    45deg,
+    hsla(89, 42%, 45%, 1),
+    hsla(201, 96%, 40%, 1),
+    hsla(214, 47%, 42%, 1)
+  );
 }
 
 @font-face {
