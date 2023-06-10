@@ -22,7 +22,7 @@ const PageHolder = () => {
       </AspectRatio>
 
       <div className="page-holder-text-section">
-        <h1 style={{ textAlign: "center", fontSize: "4.6rem" }}>
+        <h1 style={{ textAlign: "center", fontSize: "4rem" }}>
           TRI2024 is coming!
         </h1>
         <Center>

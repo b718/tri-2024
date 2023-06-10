@@ -51,7 +51,6 @@
 .page-holder-aspect-ratio-frame {
   max-width: 50rem;
   margin: 0 auto;
-  margin-top: 2rem;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
@@ -81,7 +80,7 @@
     .page-holder-aspect-ratio-frame {
       max-width: 50rem;
       margin: 0 auto;
-      margin-top: 2rem;
+      margin-top: 6rem;
     }
 
     .page-holder-text-section {
