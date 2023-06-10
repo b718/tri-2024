@@ -19,7 +19,7 @@
   background: #ddd;
   background-size: 300%;
   background-image: var(--gradient);
-  animation: bg-animation 25s infinite;
+  animation: bg-animation 10s infinite;
 }
 
 @keyframes bg-animation {
