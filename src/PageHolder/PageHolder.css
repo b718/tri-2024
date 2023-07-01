@@ -68,11 +68,13 @@
     .page-holder-aspect-ratio-frame {
       margin-left: 1rem;
       margin-right: 1rem;
+      margin-top: 6rem;
     }
 
     .page-holder-text-section {
       margin-left: 1rem;
       margin-right: 1rem;
+      margin-top: 4rem;
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
