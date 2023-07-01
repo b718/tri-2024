@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
-import { Flex, Text, Center } from "@mantine/core";
+import { Flex, Text, Center, Image, Grid } from "@mantine/core";
 import { NavBarContext } from "../../App";
+import NavBarImage from "../../Images/head-image-transformed.png";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -12,59 +13,87 @@ const Navbar = () => {
     });
   };
   const navBarScrollRefs = useContext(NavBarContext);
-
+  {
+    /*
+    About
+    Trinity
+    Committee
+    Registration
+    Speakers
+    Program
+    Guidelines
+    Awards
+    Socials
+    PPI
+    Sponsors
+    FAQ
+    Location
+*/
+  }
   return (
     <>
       <nav className="nav-bar-for-access">
         <Center>
           <div className="nav-bar-container">
-            <Text className="nav-bar-tri-text">TRI 2024</Text>
-            <Flex
-              mih={50}
-              gap="1.2rem"
-              justify="flex-start"
-              align="flex-start"
-              direction="row"
-              wrap="wrap"
-              className="nav-bar-whole"
-            >
-              <Text
-                className="nav-bar-different-sections"
-                onClick={() => scrollToSection(navBarScrollRefs.homeRef)}
+            {" "}
+            <Flex direction="row">
+              <Image width={60} src={NavBarImage} className="nav-bar-picture" />
+              <Flex
+                mih={50}
+                gap="1.3rem"
+                justify="flex-start"
+                align="flex-start"
+                direction="row"
+                wrap="wrap"
+                className="nav-bar-whole"
               >
-                Home
-              </Text>
-              <Text
-                className="nav-bar-different-sections"
-                onClick={() => scrollToSection(navBarScrollRefs.committeeRef)}
-              >
-                Committee
-              </Text>
-              <Text
-                className="nav-bar-different-sections"
-                onClick={() =>
-                  scrollToSection(navBarScrollRefs.conferenceProgramRef)
-                }
-              >
-                Conference Program
-              </Text>
-              <Text
-                className="nav-bar-different-sections"
-                onClick={() =>
-                  scrollToSection(navBarScrollRefs.registrationRef)
-                }
-              >
-                Registration
-              </Text>
-              <Text className="nav-bar-different-sections">Presenters</Text>
-              <Text
-                className="nav-bar-different-sections"
-                onClick={() => scrollToSection(navBarScrollRefs.sponsorshipRef)}
-              >
-                Sponsorship
-              </Text>
-              <Text className="nav-bar-different-sections">Venue</Text>
-              <Text className="nav-bar-different-sections">Contact Us</Text>
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() => scrollToSection(navBarScrollRefs.homeRef)}
+                >
+                  About
+                </Text>
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() =>
+                    scrollToSection(navBarScrollRefs.conferenceProgramRef)
+                  }
+                >
+                  Trinity
+                </Text>
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() => scrollToSection(navBarScrollRefs.committeeRef)}
+                >
+                  Committee
+                </Text>
+
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() =>
+                    scrollToSection(navBarScrollRefs.registrationRef)
+                  }
+                >
+                  Registration
+                </Text>
+                <Text className="nav-bar-different-sections">Speakers</Text>
+                <Text className="nav-bar-different-sections">Program</Text>
+                <Text className="nav-bar-different-sections">Guidelines</Text>
+                <Text className="nav-bar-different-sections">Awards</Text>
+                <Text className="nav-bar-different-sections">Socials</Text>
+                <Text className="nav-bar-different-sections">PPI</Text>
+
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() =>
+                    scrollToSection(navBarScrollRefs.sponsorshipRef)
+                  }
+                >
+                  Sponsorship
+                </Text>
+                <Text className="nav-bar-different-sections">FAQ</Text>
+                <Text className="nav-bar-different-sections">Location</Text>
+              </Flex>
             </Flex>
           </div>
         </Center>

@@ -1,10 +1,18 @@
 import React, { useContext } from "react";
 import "./Home.css";
-import { Center, Grid, Image, Text } from "@mantine/core";
+import { Center, Grid, Image, Text, Button } from "@mantine/core";
 import triHomePicture from "../Images/TRI.png";
 import { NavBarContext } from "../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
+  const scrollToSection = (elementRef: any): void => {
+    let offSetTopInc = elementRef!.current!.offsetTop - 130;
+    window.scrollTo({
+      top: offSetTopInc,
+      behavior: "smooth",
+    });
+  };
   const homeRef = useContext(NavBarContext);
 
   return (
@@ -12,12 +20,17 @@ const Home = () => {
       <Text
         fz="xl"
         fw="600"
-        style={{ marginLeft: "10%", marginBottom: "1rem", marginTop: "2rem" }}
+        style={{
+          marginLeft: "10%",
+          marginBottom: "1rem",
+          marginTop: "1rem",
+          color: "white",
+        }}
         ref={homeRef.homeRef}
       >
         Home
       </Text>
-      <div>
+      {/* <div>
         <Center>
           <Grid columns={12} className="home-grid-information">
             <Grid.Col span={6}>
@@ -60,7 +73,46 @@ const Home = () => {
             </Grid.Col>
           </Grid>
         </Center>
-      </div>
+      </div> */}
+      <Center>
+        <div className="home-main-div">
+          <h1 className="home-h1-div-intro">
+            Engineering the Future of Tinnitus
+          </h1>
+          <Text className="home-text-under-h1">
+            Tinnitus Research Initiative Conference
+          </Text>
+          <Text className="home-text-under-h1-text" fz="sm">
+            June 10-12 2024 • Vancouver, Canada
+          </Text>
+
+          <Center>
+            <Button
+              radius="lg"
+              className="home-text-under-ht-text-text-button"
+              onClick={() => scrollToSection(homeRef.registrationRef)}
+            >
+              <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
+                Register Now
+              </p>
+            </Button>
+          </Center>
+
+          <div className="home-arrow-scroll">
+            <Text>Scroll</Text>
+            <div className="home-arrow-svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+              >
+                <path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </Center>
     </div>
   );
 };

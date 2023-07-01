@@ -1,11 +1,23 @@
-.nav-bar-whole {
-  margin-top: 1rem;
+@font-face {
+  font-family: Gravity-Bold;
+  src: url("../../../public/Fonts/gravity/Gravity-Bold.otf");
+}
+
+.nav-bar-picture {
   margin-left: 1rem;
+}
+.nav-bar-whole {
+  margin-right: 1rem;
+  margin-left: 15rem;
+  margin-top: 0.5rem;
 }
 
 .nav-bar-different-sections {
-  color: white;
+  color: rgb(26 65 119);
   cursor: pointer;
+  font-family: Gravity-Bold;
+  text-transform: uppercase;
+  font-size: 8px;
 }
 
 .nav-bar-different-sections:hover {
@@ -21,12 +33,12 @@
 
 .nav-bar-container {
   max-width: fit-content;
-  margin-top: 1rem;
-  background-color: #126fdb;
+  margin-top: 2.3rem;
+  background-color: white;
 }
 
 nav {
-  background-color: #126fdb;
+  background-color: white;
   position: sticky;
   top: 0px;
   z-index: 10;

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Gravity-Light;
+  src: url("../../public/Fonts/gravity/Gravity-UltraLight.otf");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
 .home-grid-information {
   max-width: 55rem;
   margin-top: 0rem;
@@ -16,4 +25,63 @@
   /* min-height: 100vh; */
   max-width: 60rem;
   margin: 0 auto;
+}
+
+.home-h1-div-intro {
+  font-family: Gravity-Light;
+  color: rgb(26 65 119);
+  font-size: 100px;
+  max-width: 50rem;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.home-text-under-h1 {
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: rgb(0 130 200);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.home-text-under-h1-text {
+  color: rgb(26 65 119);
+  text-transform: uppercase;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  font-family: Gravity;
+  font-weight: bold;
+}
+
+.home-text-under-ht-text-text-button {
+  font-family: Gravity;
+  font-size: 0.7rem;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  max-width: fit-content;
+  background-color: #0582c9;
+}
+
+.home-arrow-scroll {
+  font-family: Gravity;
+  color: rgb(26 65 119);
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.home-arrow-svg {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+svg {
+  color: rgb(26 65 119);
 }

@@ -46,13 +46,13 @@ function App() {
           sponsorshipRef: sponsorshipRef,
         }}
       >
-        {/* <Navbar />
+        <Navbar />
         <Home />
         <Committee />
         <ConferenceProgram />
         <Registration />
-        <Sponsorships /> */}
-        <PageHolder />
+        <Sponsorships />
+        {/* <PageHolder /> */}
       </NavBarContext.Provider>
     </>
   );
