@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Home.css";
-import { Center, Grid, Image, Text, Button } from "@mantine/core";
+import { Center, Grid, Image, Text, Button, AspectRatio } from "@mantine/core";
 import triHomePicture from "../Images/TRI.png";
 import { NavBarContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,8 +16,8 @@ const Home = () => {
   const homeRef = useContext(NavBarContext);
 
   return (
-    <div>
-      <Text
+    <div ref={homeRef.homeRef}>
+      {/* <Text
         fz="xl"
         fw="600"
         style={{
@@ -29,7 +29,7 @@ const Home = () => {
         ref={homeRef.homeRef}
       >
         Home
-      </Text>
+      </Text> */}
       {/* <div>
         <Center>
           <Grid columns={12} className="home-grid-information">
@@ -83,7 +83,7 @@ const Home = () => {
             Tinnitus Research Initiative Conference
           </Text>
           <Text className="home-text-under-h1-text" fz="sm">
-            June 10-12 2024 • Vancouver, Canada
+            June 10 - 12 2024 • Vancouver, Canada
           </Text>
 
           <Center>
@@ -113,6 +113,16 @@ const Home = () => {
           </div>
         </div>
       </Center>
+
+      <AspectRatio ratio={16 / 9} className="page-holder-aspect-ratio-frame">
+        <iframe
+          src="https://www.youtube.com/embed/epvpr3dxfj4"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </AspectRatio>
     </div>
   );
 };

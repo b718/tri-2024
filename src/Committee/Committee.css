@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Auger-Mono-Light;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-light.woff2");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
 .committee-scientific-title {
   font-weight: 600;
   font-size: 1.4rem;
@@ -33,10 +43,48 @@
 }
 
 .committee-outer-container {
-  background-color: #238be6;
   color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
   margin-bottom: 2rem;
+}
+
+.committee-text-left {
+  color: rgb(26 65 119);
+}
+
+.committee-text-left-header {
+  font-family: Gravity;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.committee-text-left-paragraph {
+  font-family: Gravity;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  text-transform: none;
+  text-decoration: none;
+  max-width: 30rem;
+}
+
+.committee-text-left-footer {
+  font-family: Gravity;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.comittee-grid {
+  margin: 0 auto;
+}
+
+.committee-grid-right-image {
+  margin-top: 5rem;
+  margin-left: 1rem;
 }

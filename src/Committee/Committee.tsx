@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import "./Committee.css";
-import { Box, Center, Text } from "@mantine/core";
+import { Box, Center, Grid, Image, Text } from "@mantine/core";
 import { NavBarContext } from "../App";
+import TriCommitteePicture from "../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_Medium.png";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
 
   return (
-    <div className="committee-outer-container">
-      <Text
+    <div className="committee-outer-container" ref={committeeRef.committeeRef}>
+      {/* <Text
         fz="xl"
         fw="600"
         style={{
@@ -103,7 +104,57 @@ const Committee = () => {
             </Text>
           </Box>
         </Box>
-      </div>
+      </div> */}
+
+      <Center>
+        <Grid columns={8} className="committee-grid" grow={true}>
+          <Grid.Col span={4} style={{ marginLeft: "1rem", maxWidth: "40rem" }}>
+            <div className="committee-text-left">
+              <Text className="committee-text-left-header">
+                Bridging academia, industry, medicine & society
+              </Text>
+              <Text className="committee-text-left-paragraph">
+                While tinnitus is a common symptom, current-day treatments
+                reduce the impact than specifically address the percept itself.
+                Globally, tinnitus sufferers demand a permanent solution to this
+                problem. Although market research demonstrates a strong
+                commercial opportunity, the amount of scientific research and
+                financial investment is small compared to other chronic health
+                conditions. TRI 2023 aims to bring together world-class
+                scientists, industrialists, clinicians and policymakers,
+                patients and caregivers to address these impending issues
+                thereby seeking to bridge the gap between academia, industry,
+                medicine & society (AIMS). We aspire to join hands with experts
+                from emerging scientific fields such as big data science,
+                personalized medicine, neuroinflammation, genetics etc. who can
+                give us insights about their successful translations from bench
+                to bedside. Through this meeting we intend to open new avenues
+                of research, clinical practices, and patient engagement
+                strategies in tinnitus, setting us on a path of disruptive
+                innovation. This led us to title the conference{" "}
+                <b>
+                  Engineering the future of tinnitus: Bridging Academia,
+                  Industry, Medicine & Society.
+                </b>
+              </Text>
+
+              <Text className="committee-text-left-footer">
+                Sven Vanneste & Anusha Mohan
+              </Text>
+            </div>
+          </Grid.Col>
+          <Grid.Col
+            span={4}
+            style={{ marginRight: "1rem", maxWidth: "fit-content" }}
+          >
+            <Image
+              width={300}
+              src={TriCommitteePicture}
+              className="committee-grid-right-image"
+            />
+          </Grid.Col>
+        </Grid>
+      </Center>
     </div>
   );
 };
