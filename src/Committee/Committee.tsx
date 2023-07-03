@@ -3,6 +3,8 @@ import "./Committee.css";
 import { Box, Center, Grid, Image, Text } from "@mantine/core";
 import { NavBarContext } from "../App";
 import TriCommitteePicture from "../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_Medium.png";
+import ComitteePictureStairs from "../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg";
+import ComitteePictureBridge from "../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
@@ -148,13 +150,41 @@ const Committee = () => {
             style={{ marginRight: "1rem", maxWidth: "fit-content" }}
           >
             <Image
-              width={300}
+              width={400}
               src={TriCommitteePicture}
               className="committee-grid-right-image"
             />
           </Grid.Col>
         </Grid>
       </Center>
+
+      <div className="committee-image-stairs">
+        <Image width={550} fit="contain" src={ComitteePictureStairs} />
+        <Text>Rollover: © Alexander Serzhantov</Text>
+      </div>
+
+      <div className="committee-west-coast-text">
+        <Text className="committee-west-coast-text-header">
+          The West Coast is waiting for you
+        </Text>
+        <Text className="committee-west-coast-text-paragraph">
+          TRI 2023 will be held at the Trinity Business School in Trinity
+          College Dublin, the oldest academic institution in Ireland.
+          Established in 1592 as the College of the Holy and Undivided Trinity
+          of Queen Elizabeth in the heart of Dublin city, Trinity College draws
+          more than 400 years of history and houses some of the oldest relics in
+          the world. Complementing its glory is Dublin city itself, weaving
+          centuries of culture and tradition between the modern folds of the
+          third millennium. This year at TRI 2023, along with our vision to
+          #BridgingAIMS, we are honoured to give our delegates a taste of the
+          infamous Irish culture and tradition through our social events.
+        </Text>
+      </div>
+
+      <div className="committee-image-bridge">
+        <Image width={650} fit="contain" src={ComitteePictureBridge} />
+        <Text>Rollover: © Divit Sharma</Text>
+      </div>
     </div>
   );
 };
