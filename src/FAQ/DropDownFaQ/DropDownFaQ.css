@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Auger-Mono;
+  src: url("../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-light.woff2");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+.drop-down-faq-div-active-content {
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.drop-down-faq-title {
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.5s;
+}
+
+.drop-down-faq-title-active {
+  margin-top: 1rem;
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.5s;
+}
+
+.drop-down-faq-paragraph {
+  font-family: Gravity;
+  font-size: 0.8rem;
+  max-width: 90%;
+  transition: 0.5s;
+}
+
+.drop-down-faq-paragraph-active {
+  font-family: Gravity;
+  font-size: 0.8rem;
+  max-width: 90%;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.drop-down-faq-links {
+  color: #81c0e3;
+  font-family: Gravity;
+  font-size: 0.7rem;
+  transition: 0.5s;
+}
+
+.drop-down-faq-links-active {
+  color: #81c0e3;
+  font-family: Gravity;
+  font-size: 0.7rem;
+  margin-top: 2rem;
+  transition: 0.5s;
+}

@@ -9,6 +9,7 @@ import ConferenceProgram from "./Conference Program/ConferenceProgram";
 import Registration from "./Registration/Registration";
 import Sponsorships from "./Sponsorship/Sponsorships";
 import PageHolder from "./PageHolder/PageHolder";
+import FaQ from "./FAQ/FaQ";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -49,6 +50,7 @@ function App() {
         <Navbar />
         <Home />
         <Committee />
+        <FaQ />
         <ConferenceProgram />
         <Registration />
         <Sponsorships />

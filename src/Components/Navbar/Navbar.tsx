@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 import { Flex, Text, Center, Image, Grid } from "@mantine/core";
 import { NavBarContext } from "../../App";
-import NavBarImage from "../../Images/head-image-transformed.png";
+import NavBarImage from "../../Images/Logos/TRI2024 NAV/TRI2024_Logo_Nav2.png";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -37,7 +37,11 @@ const Navbar = () => {
           <div className="nav-bar-container">
             {" "}
             <Flex direction="row">
-              <Image width={60} src={NavBarImage} className="nav-bar-picture" />
+              <Image
+                width={200}
+                src={NavBarImage}
+                className="nav-bar-picture"
+              />
               <Flex
                 mih={50}
                 gap="1.3rem"

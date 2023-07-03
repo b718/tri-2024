@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+.faq-main-div {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  color: rgb(26 65 119);
+  margin-top: 10rem;
+}
+
+.faq-main-header {
+  font-size: 3rem;
+}
