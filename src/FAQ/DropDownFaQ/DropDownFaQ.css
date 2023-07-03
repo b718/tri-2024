@@ -39,6 +39,7 @@
   font-family: Gravity;
   font-size: 0.8rem;
   max-width: 90%;
+  margin-top: 1rem;
   transition: 0.5s;
 }
 
@@ -47,6 +48,8 @@
   font-size: 0.8rem;
   max-width: 90%;
   margin-top: 1rem;
+
+  /* margin-top: 1rem; */
   transition: 0.5s;
 }
 
@@ -55,12 +58,49 @@
   font-family: Gravity;
   font-size: 0.7rem;
   transition: 0.5s;
+  margin-top: 1.5rem;
 }
 
 .drop-down-faq-links-active {
-  color: #81c0e3;
+  color: #0082c8;
   font-family: Gravity;
   font-size: 0.7rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  /* margin-top: 2rem; */
   transition: 0.5s;
+}
+
+.drop-down-faq-links a {
+  color: #0082c8;
+  text-decoration: none;
+  max-width: fit-content;
+}
+
+.drop-down-faq-links-active a {
+  color: #0082c8;
+  text-decoration: none;
+  max-width: fit-content;
+}
+
+.drop-down-faq-links-active:hover {
+  text-decoration: underline;
+  text-decoration-color: #0191de;
+}
+
+.drop-down-faq-line-rotate {
+  color: #74a441;
+  /* rotate: 90deg; */
+  /* transform: rotate(90deg); */
+  transition: 0.5s;
+}
+
+.drop-down-faq-line-rotate:hover {
+  color: #74a441;
+  /* rotate: 90deg; */
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.drop-down-faq-line-middle {
+  color: #74a441;
 }

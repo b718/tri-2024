@@ -5,13 +5,19 @@ interface FaQData {
   title: string;
   text: string;
   links: string;
+  url: string;
 }
-const DropDownFaQ: FunctionComponent<FaQData> = ({ title, text, links }) => {
+const DropDownFaQ: FunctionComponent<FaQData> = ({
+  title,
+  text,
+  links,
+  url,
+}) => {
   const [click, setClick] = useState<Boolean>(false);
   const parentRef = useRef<HTMLInputElement>(null);
   return (
-    <div className="drop-down-faq-div" onClick={() => setClick(!click)}>
-      <Grid columns={8}>
+    <div className="drop-down-faq-div">
+      <Grid columns={8} onClick={() => setClick(!click)}>
         <Grid.Col span={4}>
           {" "}
           <Text className={`drop-down-faq-title${click ? "-active" : ""}`}>
@@ -43,9 +49,49 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({ title, text, links }) => {
         <Text className={`drop-down-faq-paragraph${click ? "-active" : ""}`}>
           {text}
         </Text>
-        <Text className={`drop-down-faq-links${click ? "-active" : ""}`}>
-          + {links}
-        </Text>
+
+        <div style={{ display: "flex" }}>
+          <Text
+            className="drop-down-faq-links"
+            style={{ marginRight: "0.2rem" }}
+          >
+            +
+          </Text>
+          <Text className={`drop-down-faq-links${click ? "-active" : ""}`}>
+            <a href={url} target="blank">
+              {" "}
+              {links}
+            </a>
+          </Text>
+        </div>
+        <div style={{ display: "flex" }}>
+          <Text
+            className="drop-down-faq-links"
+            style={{ marginRight: "0.2rem" }}
+          >
+            +
+          </Text>
+          <Text className={`drop-down-faq-links${click ? "-active" : ""}`}>
+            <a href={url} target="blank">
+              {" "}
+              {links}
+            </a>
+          </Text>
+        </div>
+        <div style={{ display: "flex" }}>
+          <Text
+            className="drop-down-faq-links"
+            style={{ marginRight: "0.2rem" }}
+          >
+            +
+          </Text>
+          <Text className={`drop-down-faq-links${click ? "-active" : ""}`}>
+            <a href={url} target="blank">
+              {" "}
+              {links}
+            </a>
+          </Text>
+        </div>
       </div>
       <hr />
     </div>

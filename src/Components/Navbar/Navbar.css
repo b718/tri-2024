@@ -21,6 +21,7 @@
 }
 
 .nav-bar-different-sections:hover {
+  text-decoration-color: rgb(26 65 119);
   text-decoration: underline;
 }
 
