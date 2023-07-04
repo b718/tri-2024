@@ -59,9 +59,7 @@ const Navbar = () => {
                 </Text>
                 <Text
                   className="nav-bar-different-sections"
-                  onClick={() =>
-                    scrollToSection(navBarScrollRefs.conferenceProgramRef)
-                  }
+                  onClick={() => scrollToSection(navBarScrollRefs.committeeRef)}
                 >
                   Trinity
                 </Text>
@@ -74,9 +72,9 @@ const Navbar = () => {
 
                 <Text
                   className="nav-bar-different-sections"
-                  onClick={() =>
-                    scrollToSection(navBarScrollRefs.registrationRef)
-                  }
+                  // onClick={() =>
+                  //   scrollToSection(navBarScrollRefs.registrationRef)
+                  // }
                 >
                   Registration
                 </Text>
@@ -89,14 +87,24 @@ const Navbar = () => {
 
                 <Text
                   className="nav-bar-different-sections"
-                  onClick={() =>
-                    scrollToSection(navBarScrollRefs.sponsorshipRef)
-                  }
+                  // onClick={() =>
+                  //   scrollToSection(navBarScrollRefs.sponsorshipRef)
+                  // }
                 >
                   Sponsorship
                 </Text>
-                <Text className="nav-bar-different-sections">FAQ</Text>
-                <Text className="nav-bar-different-sections">Location</Text>
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
+                >
+                  FAQ
+                </Text>
+                <Text
+                  className="nav-bar-different-sections"
+                  onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+                >
+                  Location
+                </Text>
               </Flex>
             </Flex>
           </div>

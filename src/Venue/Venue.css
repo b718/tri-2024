@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+.venue-i-frame-div {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  color: rgb(26 65 119);
+  font-family: Gravity;
+}
+
+.venue-title-event-location {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.venue-text-div-right {
+  margin-top: 40%;
+}
+
+.venue-text-location {
+  font-size: 0.7rem;
+}
+
+.venue-text-website {
+  color: #0082c8;
+  font-size: 0.7rem;
+}
+
+.venue-text-title {
+  font-size: 1.3rem;
+}
+
+.venue-text-website a {
+  color: #0082c8;
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.5s;
+}
+
+.venue-text-website a:hover {
+  text-decoration-color: #0191de;
+}

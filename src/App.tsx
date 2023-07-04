@@ -10,6 +10,8 @@ import Registration from "./Registration/Registration";
 import Sponsorships from "./Sponsorship/Sponsorships";
 import PageHolder from "./PageHolder/PageHolder";
 import FaQ from "./FAQ/FaQ";
+import Venue from "./Venue/Venue";
+import Footer from "./Footer/Footer";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -18,7 +20,10 @@ interface ContextTypeNavBarRef {
   registrationRef: React.RefObject<HTMLDivElement>;
   // presentersRef?: React.RefObject<HTMLDivElement>;
   sponsorshipRef: React.RefObject<HTMLDivElement>;
-  // venueRef?: React.RefObject<HTMLDivElement>;
+  venueRef: React.RefObject<HTMLDivElement>;
+  faqRef: React.RefObject<HTMLDivElement>;
+  trinityRef: React.RefObject<HTMLDivElement>;
+
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
 export const NavBarContext = createContext<ContextTypeNavBarRef>({
@@ -27,6 +32,9 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   conferenceProgramRef: createRef(),
   registrationRef: createRef(),
   sponsorshipRef: createRef(),
+  venueRef: createRef(),
+  faqRef: createRef(),
+  trinityRef: createRef(),
 });
 
 function App() {
@@ -35,7 +43,9 @@ function App() {
   const conferenceProgramRef = useRef<HTMLDivElement>(null);
   const registrationRef = useRef<HTMLDivElement>(null);
   const sponsorshipRef = useRef<HTMLDivElement>(null);
-
+  const venueRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const trinityRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <NavBarContext.Provider
@@ -45,15 +55,20 @@ function App() {
           conferenceProgramRef: conferenceProgramRef,
           registrationRef: registrationRef,
           sponsorshipRef: sponsorshipRef,
+          venueRef: venueRef,
+          faqRef: faqRef,
+          trinityRef: trinityRef,
         }}
       >
         <Navbar />
         <Home />
         <Committee />
         <FaQ />
-        <ConferenceProgram />
+        <Venue />
+        <Footer />
+        {/* <ConferenceProgram />
         <Registration />
-        <Sponsorships />
+        <Sponsorships /> */}
         {/* <PageHolder /> */}
       </NavBarContext.Provider>
     </>

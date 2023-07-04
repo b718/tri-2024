@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./FaQ.css";
-import { Text } from "@mantine/core";
+import { Image, Text } from "@mantine/core";
 import DropDownFaQ from "./DropDownFaQ/DropDownFaQ";
+import RogersArenaPicture from "../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.jpg";
+import { NavBarContext } from "../App";
 
 const FaQ = () => {
+  const faqRef = useContext(NavBarContext);
   return (
     <>
-      <div className="faq-main-div">
+      <div className="faq-main-div" ref={faqRef.faqRef}>
         <Text className="faq-main-header">Event FAQs</Text>
         <hr />
         <DropDownFaQ
@@ -50,6 +53,10 @@ const FaQ = () => {
           url="https://www.google.ca/"
         />
       </div>
+      <div className="faq-rogers-arena-picture">
+        <Image width={500} fit="contain" src={RogersArenaPicture} />
+        <Text>Rollover: © Nicolas Savignat</Text>
+      </div>{" "}
     </>
   );
 };

@@ -18,6 +18,9 @@
   font-family: Gravity-Bold;
   text-transform: uppercase;
   font-size: 8px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.5s;
 }
 
 .nav-bar-different-sections:hover {
