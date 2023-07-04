@@ -26,9 +26,36 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
         </Grid.Col>
         <Grid.Col span={4}>
           {" "}
-          <Flex justify="flex-end">
+          {/* <Flex justify="flex-end">
             {" "}
             <Text style={{ marginRight: "1rem" }}>""</Text>
+          </Flex> */}
+          <Flex justify="flex-end">
+            <svg
+              viewBox="0 0 100 100"
+              stroke="#74a441"
+              style={{ maxWidth: "1rem", marginRight: "1rem" }}
+              className={`drop-down-svg-div${click ? "-active" : ""}`}
+            >
+              <line
+                className="drop-down-faq-line-middle"
+                x1="10"
+                y1="50"
+                x2="90"
+                y2="50"
+                stroke="#74a441"
+                stroke-width="10"
+              />
+              <line
+                className={`drop-down-faq-line-rotate${click ? "-active" : ""}`}
+                x1="50"
+                y1="10"
+                x2="50"
+                y2="90"
+                stroke="#74a441"
+                stroke-width="10"
+              />
+            </svg>
           </Flex>
         </Grid.Col>
       </Grid>

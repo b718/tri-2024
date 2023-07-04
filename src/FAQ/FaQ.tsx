@@ -50,28 +50,6 @@ const FaQ = () => {
           url="https://www.google.ca/"
         />
       </div>
-      <div style={{ maxWidth: "2rem", marginRight: "1rem" }}>
-        <svg viewBox="0 0 100 100" stroke="#74a441">
-          <line
-            className="drop-down-faq-line-miaddle"
-            x1="10"
-            y1="10"
-            x2="100"
-            y2="100"
-            stroke="red"
-            stroke-width="10"
-          />
-          <line
-            className="drop-down-faq-line-rotate"
-            x1="100"
-            y1="10"
-            x2="10"
-            y2="100"
-            stroke="red"
-            stroke-width="10"
-          />
-        </svg>
-      </div>
     </>
   );
 };

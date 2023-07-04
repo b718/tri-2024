@@ -94,13 +94,22 @@
   transition: 0.5s;
 }
 
-.drop-down-faq-line-rotate:hover {
+.drop-down-faq-line-middle {
+  color: #74a441;
+}
+
+.drop-down-faq-line-rotate-active {
   color: #74a441;
   /* rotate: 90deg; */
+  transform-origin: center;
   transform: rotate(-90deg);
   transition: 0.5s;
 }
 
-.drop-down-faq-line-middle {
-  color: #74a441;
+.drop-down-svg-div {
+  transition: 0.5s;
+}
+.drop-down-svg-div-active {
+  margin-top: 1rem;
+  transition: 0.5s;
 }
