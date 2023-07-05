@@ -22,7 +22,7 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: 0.5s;
 }
 
@@ -31,13 +31,13 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: 0.5s;
 }
 
 .drop-down-faq-paragraph {
   font-family: Gravity;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 90%;
   margin-top: 1rem;
   transition: 0.5s;
@@ -45,7 +45,7 @@
 
 .drop-down-faq-paragraph-active {
   font-family: Gravity;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 90%;
   margin-top: 1rem;
 
@@ -56,7 +56,7 @@
 .drop-down-faq-links {
   color: #81c0e3;
   font-family: Gravity;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   transition: 0.5s;
   margin-top: 1.5rem;
 }
@@ -64,7 +64,7 @@
 .drop-down-faq-links-active {
   color: #0082c8;
   font-family: Gravity;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-top: 1.5rem;
   /* margin-top: 2rem; */
   transition: 0.5s;

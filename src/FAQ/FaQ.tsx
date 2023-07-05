@@ -52,11 +52,13 @@ const FaQ = () => {
           links={"INFORMATION LINK"}
           url="https://www.google.ca/"
         />
+        <div className="faq-rogers-arena-picture">
+          <Image width={500} fit="contain" src={RogersArenaPicture} />
+          <Text className="faq-roger-roll-over">
+            Rollover: © Nicolas Savignat
+          </Text>
+        </div>{" "}
       </div>
-      <div className="faq-rogers-arena-picture">
-        <Image width={500} fit="contain" src={RogersArenaPicture} />
-        <Text>Rollover: © Nicolas Savignat</Text>
-      </div>{" "}
     </>
   );
 };

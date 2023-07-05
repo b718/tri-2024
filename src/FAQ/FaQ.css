@@ -17,6 +17,11 @@
 
 .faq-rogers-arena-picture {
   color: rgb(26 65 119);
-  margin-left: 22rem;
   margin-top: 10rem;
+}
+
+.faq-roger-roll-over {
+  color: white;
+  position: absolute;
+  transform: translate(5px, -25px);
 }
