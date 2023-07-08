@@ -21,7 +21,13 @@
 }
 
 .faq-roger-roll-over {
-  color: white;
+  color: transparent;
   position: absolute;
   transform: translate(5px, -25px);
+  transition: 0.5s;
+}
+
+.faq-roger-roll-over:hover {
+  color: white;
+  transition: 0.5s;
 }

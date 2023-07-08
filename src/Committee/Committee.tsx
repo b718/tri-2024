@@ -5,9 +5,12 @@ import { NavBarContext } from "../App";
 import TriCommitteePicture from "../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_Medium.png";
 import ComitteePictureStairs from "../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg";
 import ComitteePictureBridge from "../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg";
+import { Parallax, useParallax } from "react-scroll-parallax";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
+  const stairs = useParallax<HTMLDivElement>({ speed: -10 });
+  const bridge = useParallax<HTMLDivElement>({ speed: -10 });
 
   return (
     <div className="committee-outer-container" ref={committeeRef.committeeRef}>
@@ -161,10 +164,11 @@ const Committee = () => {
             </Grid.Col>
           </Grid>
         </Center>
-        <div className="committee-image-stairs">
+
+        <div className="committee-image-stairs" ref={stairs.ref}>
           <Image width={550} fit="contain" src={ComitteePictureStairs} />
           <Text className="committee-text-roll-over">
-            Rollover: © Alexander Serzhantov
+            © Alexander Serzhantov
           </Text>
         </div>
       </div>
@@ -193,11 +197,9 @@ const Committee = () => {
               </Text>
             </div>
           </Flex>
-          <div className="committee-image-bridge">
+          <div className="committee-image-bridge" ref={bridge.ref}>
             <Image width={650} fit="contain" src={ComitteePictureBridge} />
-            <Text className="committee-bridge-roll-over">
-              Rollover: © Divit Sharma
-            </Text>
+            <Text className="committee-bridge-roll-over">© Divit Sharma</Text>
           </div>
         </Grid.Col>
       </Grid>
