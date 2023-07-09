@@ -4,6 +4,7 @@ import { Center, Grid, Image, Text, Button, AspectRatio } from "@mantine/core";
 import triHomePicture from "../Images/TRI.png";
 import { NavBarContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Orb from "./Orb/Orb";
 
 const Home = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -17,7 +18,63 @@ const Home = () => {
 
   return (
     <div ref={homeRef.homeRef}>
-      {/* <Text
+      <Center>
+        <div className="home-main-div">
+          <Orb />
+          <h1 className="home-h1-div-intro">
+            Engineering the Future of Tinnitus
+          </h1>
+          <Text className="home-text-under-h1">
+            Tinnitus Research Initiative Conference
+          </Text>
+          <Text className="home-text-under-h1-text" fz="sm">
+            June 10 - 12 2024 • Vancouver, Canada
+          </Text>
+
+          <Center>
+            <Button
+              radius="lg"
+              className="home-text-under-ht-text-text-button"
+              onClick={() => scrollToSection(homeRef.registrationRef)}
+            >
+              <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
+                Register Now
+              </p>
+            </Button>
+          </Center>
+        </div>
+      </Center>
+
+      <AspectRatio ratio={16 / 9} className="page-holder-aspect-ratio-frame">
+        <iframe
+          src="https://www.youtube.com/embed/epvpr3dxfj4"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </AspectRatio>
+    </div>
+  );
+};
+
+{
+  /* <div className="home-arrow-scroll">
+            <Text>Scroll</Text>
+            <div className="home-arrow-svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+              >
+                <path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" />
+              </svg>
+            </div>
+          </div> */
+}
+{
+  /* <Text
         fz="xl"
         fw="600"
         style={{
@@ -29,8 +86,10 @@ const Home = () => {
         ref={homeRef.homeRef}
       >
         Home
-      </Text> */}
-      {/* <div>
+      </Text> */
+}
+{
+  /* <div>
         <Center>
           <Grid columns={12} className="home-grid-information">
             <Grid.Col span={6}>
@@ -73,58 +132,7 @@ const Home = () => {
             </Grid.Col>
           </Grid>
         </Center>
-      </div> */}
-      <Center>
-        <div className="home-main-div">
-          <h1 className="home-h1-div-intro">
-            Engineering the Future of Tinnitus
-          </h1>
-          <Text className="home-text-under-h1">
-            Tinnitus Research Initiative Conference
-          </Text>
-          <Text className="home-text-under-h1-text" fz="sm">
-            June 10 - 12 2024 • Vancouver, Canada
-          </Text>
-
-          <Center>
-            <Button
-              radius="lg"
-              className="home-text-under-ht-text-text-button"
-              onClick={() => scrollToSection(homeRef.registrationRef)}
-            >
-              <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
-                Register Now
-              </p>
-            </Button>
-          </Center>
-
-          {/* <div className="home-arrow-scroll">
-            <Text>Scroll</Text>
-            <div className="home-arrow-svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 448 512"
-                fill="currentColor"
-              >
-                <path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z" />
-              </svg>
-            </div>
-          </div> */}
-        </div>
-      </Center>
-
-      <AspectRatio ratio={16 / 9} className="page-holder-aspect-ratio-frame">
-        <iframe
-          src="https://www.youtube.com/embed/epvpr3dxfj4"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </AspectRatio>
-    </div>
-  );
-};
+      </div> */
+}
 
 export default Home;
