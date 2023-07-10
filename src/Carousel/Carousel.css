@@ -1,9 +1,11 @@
 .carousel-main-div {
-  background-color: #1a4177;
+  /* background-color: #1a4177; */
+  background-image: url("../Images/Carousel/TRI2024_CarouselBkg.png");
   margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: 65%;
 }
 
 .carousel-circle-small {
