@@ -9,6 +9,6 @@
   border: 1px solid red;
 }
 
-svg {
+.content svg {
   filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.4));
 }

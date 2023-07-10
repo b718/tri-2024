@@ -1,0 +1,64 @@
+.carousel-main-div {
+  background-color: #1a4177;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-circle-small {
+  width: 100px;
+  height: 100px;
+  background-color: #1a4177;
+  border: 0.5px solid white;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 50%;
+  transform: translate(-30%, 50%);
+}
+
+.carousel-circle-small-two {
+  width: 150px;
+  height: 150px;
+  background-color: #1a4177;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(150px, -100px);
+}
+
+.carousel-circle-small-three {
+  width: 300px;
+  height: 900px;
+  background-color: #1a4177;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.carousel-button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.carousel-arrow-right {
+  right: 2rem;
+}
+
+.carousel-arrow-left {
+  left: 2rem;
+}
+
+.carousel-no-display-slide {
+  display: none;
+}
+
+.carousel-display-slide {
+  transition: 1s;
+}

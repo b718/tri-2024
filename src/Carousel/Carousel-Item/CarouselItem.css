@@ -1,0 +1,29 @@
+.carousel-item-title {
+  text-align: left;
+  color: white;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.carousel-item-para {
+  max-width: 40rem;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.carousel-item-link {
+  color: #0479c3;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.carousel-item-image {
+  margin-top: 2.3rem;
+}
+
+.carousel-item-display {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}

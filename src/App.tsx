@@ -12,6 +12,7 @@ import PageHolder from "./PageHolder/PageHolder";
 import FaQ from "./FAQ/FaQ";
 import Venue from "./Venue/Venue";
 import Footer from "./Footer/Footer";
+import Carousel from "./Carousel/Carousel";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -70,6 +71,7 @@ function App() {
         <Registration />
         <Sponsorships /> */}
         {/* <PageHolder /> */}
+        <Carousel />
       </NavBarContext.Provider>
     </>
   );
