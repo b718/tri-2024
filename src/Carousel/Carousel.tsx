@@ -57,13 +57,20 @@ const Carousel = () => {
             >
               {index === 0 ? (
                 <div
-                  className="carousel-post-presentations"
-                  style={{ display: `${slide === 0 ? "" : "none"}` }}
+                  className={`carousel-post-presentations${
+                    slide === 0 ? "-active" : ""
+                  }`}
+                  //   style={{ height: `${slide === 0 ? "auto" : "0"}` }}
                 >
                   <Text>Poster & Presentations Guidelines</Text>
                 </div>
               ) : (
-                <div style={{ display: `${slide === index ? "" : "none"}` }}>
+                <div
+                  className={`carousel-slide${
+                    slide === index ? "-active" : ""
+                  }`}
+                  //   style={{ height: `${slide === index ? "auto" : "0"}` }}
+                >
                   <CarouselItem
                     title={item.title}
                     paragraph={item.paragraph}

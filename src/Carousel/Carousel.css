@@ -63,16 +63,56 @@
 
 .carousel-no-display-slide {
   display: none;
+  animation: fading 10s infinite;
 }
 
 .carousel-display-slide {
-  transition: 1s;
+  /* animation: fading 10s infinite; */
 }
 
 .carousel-post-presentations {
   color: white;
   font-size: 3rem;
   max-width: 30rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  display: none;
+}
+
+.carousel-post-presentations-active {
+  color: white;
+  font-size: 3rem;
+  max-width: 30rem;
   padding-top: 8.5rem;
   padding-bottom: 8.5rem;
+  display: block;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide-active {
+  display: block;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
