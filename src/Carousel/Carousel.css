@@ -1,11 +1,15 @@
 .carousel-main-div {
   /* background-color: #1a4177; */
   background-image: url("../Images/Carousel/TRI2024_CarouselBkg.png");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
   margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: 65%;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 .carousel-circle-small {
@@ -63,4 +67,12 @@
 
 .carousel-display-slide {
   transition: 1s;
+}
+
+.carousel-post-presentations {
+  color: white;
+  font-size: 3rem;
+  max-width: 30rem;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
 }

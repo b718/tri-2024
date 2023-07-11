@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import "./CarouselItem.css";
 import { Flex, Grid, Image, Text } from "@mantine/core";
-import TestImage from "../../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_Medium.png";
+import TestImage from "../../Images/Carousel/TRI2024_Poster.png";
 interface CI {
   title: string;
   paragraph: string;
@@ -10,7 +10,7 @@ interface CI {
 const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
   return (
     <>
-      <Flex className="carousel-item-display">
+      <Flex className="carousel-item-display" style={{ width: "100%" }}>
         <Image src={TestImage} width={200} className="carousel-item-image" />
 
         <Flex
@@ -18,7 +18,7 @@ const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
           align="flex-start"
           direction="column"
           wrap="wrap"
-          style={{ marginLeft: "1rem" }}
+          style={{ marginLeft: "4rem" }}
         >
           <Text className="carousel-item-title">{title}</Text>
           <Text className="carousel-item-para">{paragraph}</Text>
