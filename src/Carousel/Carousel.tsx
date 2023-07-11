@@ -30,10 +30,6 @@ const Carousel = () => {
   return (
     <>
       <div className="carousel-main-div">
-        {/* <div className="carousel-circle-small"></div>
-        <div className="carousel-circle-small-two"></div>
-        <div className="carousel-circle-small-three"></div> */}
-
         <button
           className="carousel-button-arrow carousel-arrow-left"
           onClick={() => {
@@ -49,18 +45,12 @@ const Carousel = () => {
         </button>
         {carouselItemData.map((item, index) => {
           return (
-            <div
-              className="carousel-display-slide"
-              //   style={{
-              //     transform: `translateX(-${slide * 100}%)`,
-              //   }}
-            >
+            <div className="carousel-display-slide">
               {index === 0 ? (
                 <div
                   className={`carousel-post-presentations${
                     slide === 0 ? "-active" : ""
                   }`}
-                  //   style={{ height: `${slide === 0 ? "auto" : "0"}` }}
                 >
                   <Text>Poster & Presentations Guidelines</Text>
                 </div>
@@ -69,7 +59,6 @@ const Carousel = () => {
                   className={`carousel-slide${
                     slide === index ? "-active" : ""
                   }`}
-                  //   style={{ height: `${slide === index ? "auto" : "0"}` }}
                 >
                   <CarouselItem
                     title={item.title}
