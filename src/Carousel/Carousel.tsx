@@ -31,7 +31,9 @@ const Carousel = () => {
     <>
       <div className="carousel-main-div">
         <button
-          className="carousel-button-arrow carousel-arrow-left"
+          className={`carousel-button-arrow carousel-arrow-left ${
+            slide === 0 ? "carousel-arrow-left-zero" : ""
+          }`}
           onClick={() => {
             if (slide - 1 <= 0) {
               setSlide(0);
@@ -72,7 +74,9 @@ const Carousel = () => {
         })}
 
         <button
-          className="carousel-button-arrow carousel-arrow-right"
+          className={`carousel-button-arrow carousel-arrow-right ${
+            slide === 0 ? "carousel-arrow-right-zero" : ""
+          }`}
           onClick={() => {
             if (slide + 1 >= carouselItemData.length) {
               setSlide(0);
@@ -81,7 +85,9 @@ const Carousel = () => {
             }
           }}
         >
-          <span className="material-symbols-outlined">arrow_circle_right</span>
+          <span className={`material-symbols-outlined`}>
+            arrow_circle_right
+          </span>
         </button>
       </div>
     </>
