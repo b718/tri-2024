@@ -1,12 +1,18 @@
 .content {
-  width: 70vw;
+  /* width: 70vw;
   height: 20vw;
   position: absolute;
   z-index: -1;
   transform: translate(350px, -20px);
   filter: blur(10px);
   max-width: 50rem;
-  border: 1px solid red;
+  border: 1px solid red; */
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  filter: blur(20px);
+  z-index: -1;
+  transform: translate(450px, 30px);
 }
 
 .content svg {
