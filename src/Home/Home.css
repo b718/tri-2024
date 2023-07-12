@@ -66,10 +66,13 @@
 .home-text-under-ht-text-text-button {
   font-family: Gravity;
   font-size: 0.7rem;
+  color: white;
   margin-top: 2.5rem;
   text-transform: uppercase;
   max-width: fit-content;
-  background-color: #0582c9;
+  background-color: #0482c8;
+  border-radius: 20px;
+  border: none;
 }
 
 .home-arrow-scroll {

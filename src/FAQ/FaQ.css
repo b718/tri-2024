@@ -31,3 +31,12 @@
   color: white;
   transition: 0.5s;
 }
+
+.faq-parallax-rogers {
+  height: 600px;
+  width: 50%;
+  background-image: url("../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.jpg");
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

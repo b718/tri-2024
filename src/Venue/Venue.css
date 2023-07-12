@@ -14,6 +14,7 @@
 .venue-title-event-location {
   font-size: 3rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .venue-text-div-right {
@@ -43,4 +44,8 @@
 
 .venue-text-website a:hover {
   text-decoration-color: #0191de;
+}
+
+.venue-iframe-div {
+  margin-left: 1rem;
 }

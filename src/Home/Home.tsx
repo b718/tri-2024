@@ -32,15 +32,14 @@ const Home = () => {
           </Text>
 
           <Center>
-            <Button
-              radius="lg"
+            <button
               className="home-text-under-ht-text-text-button"
-              onClick={() => scrollToSection(homeRef.registrationRef)}
+              // onClick={() => scrollToSection(homeRef.registrationRef)}
             >
               <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
                 Register Now
               </p>
-            </Button>
+            </button>
           </Center>
         </div>
       </Center>

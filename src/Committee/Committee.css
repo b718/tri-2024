@@ -91,6 +91,7 @@
 
 .committee-image-stairs {
   margin-top: 7rem;
+  margin-left: 1rem;
   color: rgb(26 65 119);
 }
 
@@ -145,4 +146,22 @@
 .committee-bridge-roll-over:hover {
   color: white;
   transition: 0.5s;
+}
+
+.committee-parallax-stairs {
+  height: 40rem;
+  width: 50%;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg");
+}
+
+.committee-parallax-bridge {
+  height: 20rem;
+  width: 50%;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg");
 }

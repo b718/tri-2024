@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useContext } from "react";
 import "./Venue.css";
 import { Text, Grid } from "@mantine/core";
