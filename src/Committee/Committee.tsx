@@ -42,8 +42,8 @@ const Committee = () => {
     } else if (y < 0) {
       y = 0;
     }
-    y = 100 - y - 60;
-    var out = String(y) + "px";
+    y = 100 - y;
+    var out = String(y) + "%";
     $(".committee-parallax-bridge").css("background-position-y", out);
   });
 

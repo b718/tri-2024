@@ -23,7 +23,7 @@ const FaQ = () => {
     } else if (y < 0) {
       y = 0;
     }
-    y = 100 - y;
+    y = 80 - y;
     var out = String(y) + "px";
     $(".faq-parallax-rogers").css("background-position-y", out);
   });
