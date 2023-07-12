@@ -40,7 +40,7 @@ const Orb = () => {
 
     <div className="content">
       <svg
-        viewBox="0 0 500 500"
+        viewBox="0 0 600 500"
         xmlns="http://www.w3.org/2000/svg"
         // xmlns:xlink="http://www.w3.org/1999/xlink"
         width="100%"
