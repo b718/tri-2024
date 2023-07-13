@@ -43,6 +43,7 @@ const Committee = () => {
       y = 0;
     }
     y = 100 - y;
+    y = y * 1.5;
     var out = String(y) + "%";
     $(".committee-parallax-bridge").css("background-position-y", out);
   });

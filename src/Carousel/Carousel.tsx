@@ -85,7 +85,10 @@ const Carousel = () => {
             }
           }}
         >
-          <span className={`material-symbols-outlined`}>
+          <span
+            className={`material-symbols-outlined`}
+            style={{ fontSize: `${slide === 0 ? "40px" : ""}` }}
+          >
             arrow_circle_right
           </span>
         </button>

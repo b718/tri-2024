@@ -79,8 +79,8 @@
   color: white;
   font-size: 3rem;
   max-width: 30rem;
-  padding-top: 8.4rem;
-  padding-bottom: 8.4rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   display: block;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
@@ -97,13 +97,11 @@
 }
 
 .carousel-arrow-right-zero {
-  right: 4rem;
+  right: 10rem;
   background: none;
   border: none;
   cursor: pointer;
   color: white;
-  width: 10rem;
-  height: 10rem;
   position: absolute;
 }
 
