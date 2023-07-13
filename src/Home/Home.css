@@ -73,6 +73,12 @@
   background-color: #0482c8;
   border-radius: 20px;
   border: none;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.home-text-under-ht-text-text-button:hover {
+  background-color: #04689e;
 }
 
 .home-arrow-scroll {
