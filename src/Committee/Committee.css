@@ -90,7 +90,7 @@
 }
 
 .committee-image-stairs {
-  margin-top: 7rem;
+  margin-top: 5rem;
   margin-left: 1rem;
   color: rgb(26 65 119);
 }
@@ -150,11 +150,12 @@
 
 .committee-parallax-stairs {
   height: 40rem;
-  width: 50%;
-  background-position-y: 0%;
+  width: 40%;
+  /* background-position-y: -100%; */
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg");
+  background-attachment: scroll;
 }
 
 .committee-parallax-bridge {
@@ -164,4 +165,65 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg");
+}
+
+.committee-stairs-parrallax {
+  max-width: 25rem;
+  height: 40rem;
+  margin-top: 2rem;
+  background-size: contain;
+}
+
+.committee-parallax-container-stairs {
+  position: relative;
+  max-width: 30rem;
+  height: 600px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.committee-parallax-image-stairs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  height: 2000px;
+  overflow: hidden;
+}
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax-img:nth-child(1) {
+  background-image: url("https://via.placeholder.com/800x600");
+}
+
+.parallax-img:nth-child(2) {
+  background-image: url("https://via.placeholder.com/600x800");
+}
+
+.parallax-img:nth-child(3) {
+  background-image: url("https://via.placeholder.com/1000x500");
 }

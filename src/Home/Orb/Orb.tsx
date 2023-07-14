@@ -12,7 +12,7 @@ const Orb = () => {
         id="blobSvg"
       >
         <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient id="gradient" x1="10%" y1="0%" x2="100%" y2="100%">
             <stop
               style={{ stopColor: "hsla(89, 42%, 45%, 1)" }}
               offset="19%"
