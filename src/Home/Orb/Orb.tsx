@@ -7,22 +7,33 @@ const Orb = () => {
       <svg
         viewBox="0 0 600 500"
         xmlns="http://www.w3.org/2000/svg"
-        // xmlns:xlink="http://www.w3.org/1999/xlink"
         width="100%"
         id="blobSvg"
       >
         <defs>
-          <linearGradient id="gradient" x1="10%" y1="0%" x2="100%" y2="100%">
+          {/* <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop
               style={{ stopColor: "hsla(89, 42%, 45%, 1)" }}
-              offset="19%"
+              offset="20%"
             ></stop>
-            <stop style={{ stopColor: "#86CCF2" }} offset="60%"></stop>
             <stop
               offset="100%"
               style={{ stopColor: "hsla(201, 96%, 40%, 1)" }}
             ></stop>
-          </linearGradient>
+          </linearGradient> */}
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            {" "}
+            <stop
+              offset="0%"
+              style={{ stopColor: "rgb(107, 152, 62)" }}
+              data-darkreader-inline-stopcolor=""
+            ></stop>{" "}
+            <stop
+              offset="100%"
+              style={{ stopColor: "rgb(8, 133, 201)" }}
+              data-darkreader-inline-stopcolor=""
+            ></stop>{" "}
+          </linearGradient>{" "}
         </defs>
         <path fill="url(#gradient)">
           <animate

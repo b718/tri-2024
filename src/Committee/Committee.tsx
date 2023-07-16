@@ -3,12 +3,26 @@ import "./Committee.css";
 import { Center, Grid, Image, Text, Flex } from "@mantine/core";
 import { NavBarContext } from "../App";
 import TriCommitteePicture from "../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_Medium.png";
-import { ScrollParallax } from "react-just-parallax";
+import CommitteBridgePicture from "../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg";
 import CommitteeStairsPicture from "../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg";
+import { Parallax, useParallax } from "react-scroll-parallax";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
+  const [hoverStairs, setHoverStairs] = useState(false);
+  const [hoverBridge, setHoverBridge] = useState(false);
 
+  const stairs = useParallax<HTMLDivElement>({
+    // rotateX: [0, 40],
+    rotateY: [-40, 0],
+    // rotateZ: [0, 40],
+  });
+
+  const bridge = useParallax<HTMLDivElement>({
+    // rotateX: [0, 40],
+    rotateY: [0, 40],
+    // rotateZ: [0, 40],
+  });
   return (
     <div className="committee-outer-container" ref={committeeRef.committeeRef}>
       <div className="committee-contain-div">
@@ -66,12 +80,24 @@ const Committee = () => {
           </Grid>
         </Center>
 
-        <div className="committee-image-stairs">
-          <div className="committee-parallax-stairs"></div>
-          <Text className="committee-text-roll-over">
-            © Alexander Serzhantov
-          </Text>
-          {/* <div className="committee-parallax-container-stairs">
+        <div className="committee-image-stairs" ref={stairs.ref}>
+          <Parallax>
+            {/* <div className="committee-parallax-stairs"></div> */}
+            <Image
+              width={500}
+              fit="contain"
+              src={CommitteeStairsPicture}
+              onMouseEnter={() => setHoverStairs(true)}
+              onMouseLeave={() => setHoverStairs(false)}
+            />
+            <Text
+              className={`committee-text-roll-over${
+                hoverStairs ? "-active" : ""
+              }`}
+            >
+              © Alexander Serzhantov
+            </Text>
+            {/* <div className="committee-parallax-container-stairs">
             <div
               className="committee-parallax-image-stairs"
               style={{
@@ -82,10 +108,17 @@ const Committee = () => {
           <Text className="committee-text-roll-over">
             © Alexander Serzhantov
           </Text> */}
+          </Parallax>
         </div>
       </div>
 
-      <Grid columns={8} justify="center">
+      {/* <div className="committee-west-coast-grid-div"> */}
+      <Grid
+        columns={8}
+        justify="center"
+        grow={true}
+        style={{ maxWidth: "99vw" }}
+      >
         <Grid.Col span={2}></Grid.Col>
         <Grid.Col span={6}>
           {" "}
@@ -109,13 +142,27 @@ const Committee = () => {
               </Text>
             </div>
           </Flex>
-          <div className="committee-image-bridge">
-            <div className="committee-parallax-bridge"></div>
-            <Text className="committee-bridge-roll-over">© Divit Sharma</Text>
+          <div className="committee-image-bridge" ref={bridge.ref}>
+            {/* <div className="committee-parallax-bridge"></div> */}
+            <Image
+              width={650}
+              fit="contain"
+              src={CommitteBridgePicture}
+              onMouseEnter={() => setHoverBridge(true)}
+              onMouseLeave={() => setHoverBridge(false)}
+            />
+            <Text
+              className={`committee-bridge-roll-over${
+                hoverBridge ? "-active" : ""
+              }`}
+            >
+              © Divit Sharma
+            </Text>
           </div>
         </Grid.Col>
       </Grid>
     </div>
+    // </div>
   );
 };
 

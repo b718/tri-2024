@@ -1,32 +1,39 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./FaQ.css";
 import { Image, Text } from "@mantine/core";
 import DropDownFaQ from "./DropDownFaQ/DropDownFaQ";
 import RogersArenaPicture from "../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.jpg";
 import { NavBarContext } from "../App";
+import { Parallax, useParallax } from "react-scroll-parallax";
 import $ from "jquery";
 
 const FaQ = () => {
   const faqRef = useContext(NavBarContext);
+  const [hoverFAQ, setHoverFAQ] = useState(false);
 
-  $(window).scroll(function () {
-    var y = 0;
-    var scroll = $(window).scrollTop();
-    var win = $(window).height();
-    var height = $(".faq-parallax-rogers").height();
-    var offset = $(".faq-parallax-rogers").offset()!.top;
-    y =
-      (100 * scroll!) / (height! + win!) +
-      (100 * (win! - offset)) / (height! + win!);
-    if (y > 100) {
-      y = 100;
-    } else if (y < 0) {
-      y = 0;
-    }
-    y = 80 - y;
-    var out = String(y) + "px";
-    $(".faq-parallax-rogers").css("background-position-y", out);
+  const rogersArena = useParallax<HTMLDivElement>({
+    // rotateX: [0, 40],
+    rotateY: [0, 40],
+    // rotateZ: [0, 40],
   });
+  // $(window).scroll(function () {
+  //   var y = 0;
+  //   var scroll = $(window).scrollTop();
+  //   var win = $(window).height();
+  //   var height = $(".faq-parallax-rogers").height();
+  //   var offset = $(".faq-parallax-rogers").offset()!.top;
+  //   y =
+  //     (100 * scroll!) / (height! + win!) +
+  //     (100 * (win! - offset)) / (height! + win!);
+  //   if (y > 100) {
+  //     y = 100;
+  //   } else if (y < 0) {
+  //     y = 0;
+  //   }
+  //   y = 80 - y;
+  //   var out = String(y) + "px";
+  //   $(".faq-parallax-rogers").css("background-position-y", out);
+  // });
   return (
     <>
       <div className="faq-main-div" ref={faqRef.faqRef}>
@@ -72,10 +79,18 @@ const FaQ = () => {
           links={"INFORMATION LINK"}
           url="https://www.google.ca/"
         />
-        <div className="faq-rogers-arena-picture">
-          {/* <Image width={500} fit="contain" src={RogersArenaPicture} /> */}
-          <div className="faq-parallax-rogers"></div>
-          <Text className="faq-roger-roll-over">© Nicolas Savignat</Text>
+        <div className="faq-rogers-arena-picture" ref={rogersArena.ref}>
+          <Image
+            width={500}
+            fit="contain"
+            src={RogersArenaPicture}
+            onMouseEnter={() => setHoverFAQ(true)}
+            onMouseLeave={() => setHoverFAQ(false)}
+          />
+          {/* <div className="faq-parallax-rogers"></div> */}
+          <Text className={`faq-roger-roll-over${hoverFAQ ? "-active" : ""}`}>
+            © Nicolas Savignat
+          </Text>
         </div>{" "}
       </div>
     </>

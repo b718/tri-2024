@@ -5,6 +5,7 @@ import triHomePicture from "../Images/TRI.png";
 import { NavBarContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Orb from "./Orb/Orb";
+import MeshGradientSvg from "../MeshGradientOrb/MeshGradient";
 
 const Home = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -21,6 +22,10 @@ const Home = () => {
       <Center>
         <div className="home-main-div">
           <Orb />
+          {/* <div style={{ border: "1px solid red" }}>
+            <MeshGradientSvg />
+          </div> */}
+
           <h1 className="home-h1-div-intro">
             Engineering the Future of Tinnitus
           </h1>

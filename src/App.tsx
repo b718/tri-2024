@@ -13,6 +13,8 @@ import FaQ from "./FAQ/FaQ";
 import Venue from "./Venue/Venue";
 import Footer from "./Footer/Footer";
 import Carousel from "./Carousel/Carousel";
+import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
+import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -47,6 +49,7 @@ function App() {
   const venueRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <NavBarContext.Provider
@@ -71,7 +74,7 @@ function App() {
         <Registration />
         <Sponsorships /> */}
         {/* <PageHolder /> */}
-        <Carousel />
+        {/* <Carousel /> */}
       </NavBarContext.Provider>
     </>
   );

@@ -124,6 +124,11 @@
   margin: 0 auto;
 }
 
+/* .committee-west-coast-grid-div {
+  max-width: fit-content;
+  margin: 0 auto;
+} */
+
 .committee-text-roll-over {
   color: transparent;
   position: absolute;
@@ -131,8 +136,10 @@
   transition: 0.5s;
 }
 
-.committee-text-roll-over:hover {
+.committee-text-roll-over-active {
   color: white;
+  position: absolute;
+  transform: translate(5px, -25px);
   transition: 0.5s;
 }
 
@@ -143,8 +150,10 @@
   transition: 0.5s;
 }
 
-.committee-bridge-roll-over:hover {
+.committee-bridge-roll-over-active {
   color: white;
+  position: absolute;
+  transform: translate(5px, -25px);
   transition: 0.5s;
 }
 
