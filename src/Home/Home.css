@@ -104,4 +104,49 @@ svg {
   max-width: 65rem;
   margin: 0 auto;
   margin-top: 12rem;
+  opacity: 0;
+}
+
+.page-holder-aspect-ratio-frame-active {
+  max-width: 65rem;
+  margin: 0 auto;
+  margin-top: 12rem;
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+
+.home-main-div {
+  opacity: 0;
+}
+
+.home-main-div-active {
+  opacity: 1;
+  transition: 3s ease-out;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
 }

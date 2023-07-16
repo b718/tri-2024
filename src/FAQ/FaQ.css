@@ -1,6 +1,6 @@
 @font-face {
   font-family: Gravity;
-  wrc: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
 }
 
 .faq-main-div {
@@ -9,6 +9,17 @@
   font-family: Gravity;
   color: rgb(26 65 119);
   margin-top: 10rem;
+  opacity: 0;
+}
+
+.faq-main-div-active {
+  max-width: 50rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  color: rgb(26 65 119);
+  margin-top: 10rem;
+  opacity: 1;
+  transition: 0.8s ease;
 }
 
 .faq-main-header {
@@ -41,4 +52,31 @@
   background-position-y: 0%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
 }

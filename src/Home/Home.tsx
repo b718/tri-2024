@@ -6,6 +6,7 @@ import { NavBarContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Orb from "./Orb/Orb";
 import MeshGradientSvg from "../MeshGradientOrb/MeshGradient";
+import { useInView } from "react-intersection-observer";
 
 const Home = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -16,11 +17,21 @@ const Home = () => {
     });
   };
   const homeRef = useContext(NavBarContext);
+  const { ref: mainDivRef, inView: mainDivVisible } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: videoDivRef, inView: videoDivVisible } = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <div ref={homeRef.homeRef}>
       <Center>
-        <div className="home-main-div">
+        <div
+          className={`home-main-div${mainDivVisible ? "-active" : ""}`}
+          ref={mainDivRef}
+        >
           <Orb />
           {/* <div style={{ border: "1px solid red" }}>
             <MeshGradientSvg />
@@ -49,7 +60,13 @@ const Home = () => {
         </div>
       </Center>
 
-      <AspectRatio ratio={16 / 9} className="page-holder-aspect-ratio-frame">
+      <AspectRatio
+        ratio={16 / 9}
+        className={`page-holder-aspect-ratio-frame${
+          videoDivVisible ? "-active" : ""
+        }`}
+        ref={videoDivRef}
+      >
         <iframe
           src="https://www.youtube.com/embed/epvpr3dxfj4"
           title="YouTube video player"

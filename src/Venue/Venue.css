@@ -19,6 +19,13 @@
 
 .venue-text-div-right {
   margin-top: 40%;
+  opacity: 0;
+}
+
+.venue-text-div-right-active {
+  margin-top: 40%;
+  opacity: 1;
+  transition: 3s ease;
 }
 
 .venue-text-location {
@@ -48,4 +55,13 @@
 
 .venue-iframe-div {
   margin-left: 1rem;
+}
+
+.venue-iframe-div {
+  opacity: 0;
+}
+
+.venue-iframe-div-active {
+  opacity: 1;
+  transition: 0.8s ease;
 }

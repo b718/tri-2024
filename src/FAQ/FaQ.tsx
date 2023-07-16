@@ -6,16 +6,21 @@ import RogersArenaPicture from "../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.
 import { NavBarContext } from "../App";
 import { Parallax, useParallax } from "react-scroll-parallax";
 import $ from "jquery";
+import { useInView } from "react-intersection-observer";
 
 const FaQ = () => {
   const faqRef = useContext(NavBarContext);
   const [hoverFAQ, setHoverFAQ] = useState(false);
-
   const rogersArena = useParallax<HTMLDivElement>({
     // rotateX: [0, 40],
     rotateY: [0, 40],
     // rotateZ: [0, 40],
   });
+
+  const { ref: mainFaqDiv, inView: mainFaqDivVisible } = useInView({
+    triggerOnce: true,
+  });
+
   // $(window).scroll(function () {
   //   var y = 0;
   //   var scroll = $(window).scrollTop();
@@ -24,7 +29,7 @@ const FaQ = () => {
   //   var offset = $(".faq-parallax-rogers").offset()!.top;
   //   y =
   //     (100 * scroll!) / (height! + win!) +
-  //     (100 * (win! - offset)) / (height! + win!);
+//     (100 * (win! - offset)) / (height! + win!);
   //   if (y > 100) {
   //     y = 100;
   //   } else if (y < 0) {
@@ -35,8 +40,11 @@ const FaQ = () => {
   //   $(".faq-parallax-rogers").css("background-position-y", out);
   // });
   return (
-    <>
-      <div className="faq-main-div" ref={faqRef.faqRef}>
+    <div ref={faqRef.faqRef}>
+      <div
+        className={`faq-main-div${mainFaqDivVisible ? "-active" : ""}`}
+        ref={mainFaqDiv}
+      >
         <Text className="faq-main-header">Event FAQs</Text>
         <hr />
         <DropDownFaQ
@@ -93,7 +101,7 @@ const FaQ = () => {
           </Text>
         </div>{" "}
       </div>
-    </>
+    </div>
   );
 };
 

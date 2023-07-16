@@ -29,7 +29,7 @@ const Orb = () => {
               data-darkreader-inline-stopcolor=""
             ></stop>{" "}
             <stop
-              offset="100%"
+              offset="90%"
               style={{ stopColor: "rgb(8, 133, 201)" }}
               data-darkreader-inline-stopcolor=""
             ></stop>{" "}

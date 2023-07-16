@@ -6,11 +6,20 @@ import TriCommitteePicture from "../Images/Logos/TRI2024 Full Logo/TRI2024_Logo_
 import CommitteBridgePicture from "../Images/divit-sharma-9mvjJFDLYzg-unsplash.jpg";
 import CommitteeStairsPicture from "../Images/alexander-serzhantov-xN0zxqQSdCk-unsplash.jpg";
 import { Parallax, useParallax } from "react-scroll-parallax";
+import { useInView } from "react-intersection-observer";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
   const [hoverStairs, setHoverStairs] = useState(false);
   const [hoverBridge, setHoverBridge] = useState(false);
+  const { ref: mainCommitteeDiv, inView: mainCommitteeDivVisible } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: westCoastCommitteeDiv, inView: westCoastCommitteeDivVisible } =
+    useInView({
+      triggerOnce: true,
+    });
 
   const stairs = useParallax<HTMLDivElement>({
     // rotateX: [0, 40],
@@ -25,14 +34,18 @@ const Committee = () => {
   });
   return (
     <div className="committee-outer-container" ref={committeeRef.committeeRef}>
-      <div className="committee-contain-div">
+      <div className="committee-contain-div" ref={mainCommitteeDiv}>
         <Center>
           <Grid columns={8} className="committee-grid" grow={true}>
             <Grid.Col
               span={4}
               style={{ marginLeft: "1rem", maxWidth: "40rem" }}
             >
-              <div className="committee-text-left">
+              <div
+                className={`committee-text-left${
+                  mainCommitteeDivVisible ? "-active" : ""
+                }`}
+              >
                 <Text className="committee-text-left-header">
                   Bridging academia, industry, medicine & society
                 </Text>
@@ -74,7 +87,9 @@ const Committee = () => {
               <Image
                 width={400}
                 src={TriCommitteePicture}
-                className="committee-grid-right-image"
+                className={`committee-grid-right-image${
+                  mainCommitteeDivVisible ? "-active" : ""
+                }`}
               />
             </Grid.Col>
           </Grid>
@@ -123,7 +138,12 @@ const Committee = () => {
         <Grid.Col span={6}>
           {" "}
           <Flex justify="center">
-            <div className="committee-west-coast-text">
+            <div
+              className={`committee-west-coast-text${
+                westCoastCommitteeDivVisible ? "-active" : ""
+              }`}
+              ref={westCoastCommitteeDiv}
+            >
               <Text className="committee-west-coast-text-header">
                 The West Coast is waiting for you
               </Text>
