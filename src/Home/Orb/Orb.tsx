@@ -1,13 +1,24 @@
 import React from "react";
 import "./Orb.css";
+import useWindowDimensions from "../../Components/useWindowsDimensions";
 
 const Orb = () => {
+  const { width, height } = useWindowDimensions();
+  const currentWidth = () => {
+    if (width < 600) {
+      return "60%";
+    } else if (width > 600 && width < 830) {
+      return "80%";
+    } else {
+      return "100%";
+    }
+  };
   return (
     <div className="content">
       <svg
         viewBox="0 0 600 500"
         xmlns="http://www.w3.org/2000/svg"
-        width="100%"
+        width={currentWidth()}
         id="blobSvg"
       >
         <defs>
@@ -21,7 +32,7 @@ const Orb = () => {
               style={{ stopColor: "hsla(201, 96%, 40%, 1)" }}
             ></stop>
           </linearGradient> */}
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient id="gradient" x1="40%" y1="0%" x2="150%" y2="100%">
             {" "}
             <stop
               offset="0%"

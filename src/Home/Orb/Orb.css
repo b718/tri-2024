@@ -35,19 +35,25 @@
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
     .content {
-      transform: translate(20px, 30px);
+      transform: translate(100px, 150px);
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .content {
-      transform: translate(150px, 30px);
+      transform: translate(120px, 150px);
     }
   }
   /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 779px) {
     .content {
-      transform: translate(350px, 30px);
+      transform: translate(300px, 110px);
+    }
+  }
+
+  @media only screen and (min-width: 820px) {
+    .content {
+      transform: translate(325px, 110px);
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
