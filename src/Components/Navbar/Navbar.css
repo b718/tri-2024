@@ -5,6 +5,7 @@
 
 .nav-bar-picture {
   margin-left: 1rem;
+  margin-top: 0.5rem;
 }
 .nav-bar-whole {
   margin-right: 1rem;
@@ -41,9 +42,57 @@
   background-color: white;
 }
 
+.drop-down-svg-burger-div {
+  color: #74a441;
+}
+
+.drop-burger-line {
+  color: #74a441;
+  transition: 0.5s;
+}
+
+.drop-down-burger-line-rotate-bottom-active {
+  y: 45;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+.drop-down-burger-line-rotate-top-active {
+  y: 45;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+.drop-down-burger-line-rotate-middle-active {
+  transform-origin: center;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
 nav {
   background-color: white;
   position: sticky;
   top: 0px;
   z-index: 10;
+}
+
+.nav-bar-hamburger-div {
+  margin-left: 50vw;
+}
+
+.nav-bardrop-down-burger-div-active-content {
+  overflow: hidden;
+  transition: 0.5s;
+  position: absolute;
+  background-color: white;
+  opacity: 0.5s;
+  border-radius: 12px;
+}
+
+.nav-bar-burger-version {
+  margin-top: 0.5rem;
+  padding-right: 40vw;
+  padding-left: 10vw;
 }

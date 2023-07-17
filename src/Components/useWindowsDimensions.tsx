@@ -20,7 +20,7 @@ function useWindowDimensions() {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [windowDimensions]);
 
   return windowDimensions;
 }

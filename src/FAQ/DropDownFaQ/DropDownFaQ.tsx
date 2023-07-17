@@ -105,7 +105,7 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
             </a>
           </Text>
         </div>
-        <div style={{ display: "flex", marginBottom: "1.5rem" }}>
+        <div style={{ display: "flex", marginBottom: "1rem" }}>
           <Text
             className="drop-down-faq-links"
             style={{ marginRight: "0.2rem" }}
