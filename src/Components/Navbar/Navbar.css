@@ -109,7 +109,7 @@ nav {
   padding-left: 10vw;
 }
 
-.overlay {
+.nav-bar-burger-overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -119,11 +119,3 @@ nav {
   transition: 0.5s;
   margin: 0rem 0rem 0rem 0rem;
 }
-
-/* .overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-} */

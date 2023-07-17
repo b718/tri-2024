@@ -181,7 +181,7 @@ const Navbar = () => {
           </div>
         </Center>
         <div
-          className="overlay"
+          className="nav-bar-burger-overlay"
           ref={parentRef}
           style={
             burger
