@@ -136,17 +136,37 @@ svg {
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
+    .home-h1-div-intro {
+      max-width: 25rem;
+      font-size: 65px;
+    }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
+    .home-h1-div-intro {
+      max-width: 30rem;
+      font-size: 100px;
+    }
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
+    .home-h1-div-intro {
+      max-width: 50rem;
+      font-size: 100px;
+    }
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    .home-h1-div-intro {
+      max-width: 50rem;
+      font-size: 100px;
+    }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
+    .home-h1-div-intro {
+      max-width: 50rem;
+      font-size: 100px;
+    }
   }
 }

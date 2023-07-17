@@ -18,3 +18,48 @@
 .content svg {
   filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.4));
 }
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+    .content {
+      transform: translate(20px, 30px);
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+    .content {
+      transform: translate(20px, 30px);
+    }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .content {
+      transform: translate(150px, 30px);
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .content {
+      transform: translate(350px, 30px);
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .content {
+      transform: translate(400px, 30px);
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .content {
+      transform: translate(450px, 30px);
+    }
+  }
+}
