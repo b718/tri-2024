@@ -119,7 +119,7 @@ const Navbar = () => {
                   </Text>
                 </Flex>
               ) : (
-                <div>
+                <div className="">
                   <div className="nav-bar-hamburger-div">
                     {" "}
                     <div
@@ -175,108 +175,99 @@ const Navbar = () => {
                       </svg>
                     </div>
                   </div>
-                  <div
-                    className="nav-bardrop-down-burger-div-active-content"
-                    ref={parentRef}
-                    style={
-                      burger
-                        ? {
-                            height: parentRef.current?.scrollHeight,
-                          }
-                        : {
-                            height: "0px",
-                          }
-                    }
-                  >
-                    <Flex
-                      mih={50}
-                      gap="1.3rem"
-                      justify="center"
-                      align="center"
-                      direction="column"
-                      wrap="wrap"
-                      className="nav-bar-burger-version"
-                    >
-                      <Text
-                        className="nav-bar-different-sections"
-                        onClick={() => {
-                          scrollToSection(navBarScrollRefs.homeRef);
-                          setBurger(false);
-                        }}
-                      >
-                        About
-                      </Text>
-                      <Text
-                        className="nav-bar-different-sections"
-                        onClick={() => {
-                          scrollToSection(navBarScrollRefs.committeeRef);
-                          setBurger(false);
-                        }}
-                      >
-                        Trinity
-                      </Text>
-                      <Text
-                        className="nav-bar-different-sections"
-                        onClick={() => {
-                          scrollToSection(navBarScrollRefs.committeeRef);
-                          setBurger(false);
-                        }}
-                      >
-                        Committee
-                      </Text>
-
-                      <Text
-                        className="nav-bar-different-sections"
-                        // onClick={() =>
-                        //   scrollToSection(navBarScrollRefs.registrationRef)
-                        // }
-                      >
-                        Registration
-                      </Text>
-                      <Text className="nav-bar-different-sections">
-                        Speakers
-                      </Text>
-                      <Text className="nav-bar-different-sections">
-                        Program
-                      </Text>
-                      <Text className="nav-bar-different-sections">
-                        Guidelines
-                      </Text>
-                      <Text className="nav-bar-different-sections">Awards</Text>
-                      <Text className="nav-bar-different-sections">
-                        Socials
-                      </Text>
-                      <Text className="nav-bar-different-sections">PPI</Text>
-
-                      <Text
-                        className="nav-bar-different-sections"
-                        // onClick={() =>
-                        //   scrollToSection(navBarScrollRefs.sponsorshipRef)
-                        // }
-                      >
-                        Sponsorship
-                      </Text>
-                      <Text
-                        className="nav-bar-different-sections"
-                        onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
-                      >
-                        FAQ
-                      </Text>
-                      <Text
-                        className="nav-bar-different-sections"
-                        onClick={() =>
-                          scrollToSection(navBarScrollRefs.venueRef)
-                        }
-                      >
-                        Location
-                      </Text>
-                    </Flex>
-                  </div>
                 </div>
               )}
             </Flex>
           </div>
         </Center>
+        <div
+          className="overlay"
+          ref={parentRef}
+          style={
+            burger
+              ? {
+                  width: "100%",
+                }
+              : {
+                  width: "0%",
+                }
+          }
+        >
+          <Flex
+            mih={50}
+            gap="1.3rem"
+            justify="center"
+            align="flex-start"
+            direction="column"
+            wrap="wrap"
+            className="nav-bar-burger-version"
+          >
+            <Text
+              className="nav-bar-different-sections-burger"
+              onClick={() => {
+                scrollToSection(navBarScrollRefs.homeRef);
+                setBurger(false);
+              }}
+            >
+              About
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger"
+              onClick={() => {
+                scrollToSection(navBarScrollRefs.committeeRef);
+                setBurger(false);
+              }}
+            >
+              Trinity
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger"
+              onClick={() => {
+                scrollToSection(navBarScrollRefs.committeeRef);
+                setBurger(false);
+              }}
+            >
+              Committee
+            </Text>
+
+            <Text
+              className="nav-bar-different-sections-burger"
+              // onClick={() =>
+              //   scrollToSection(navBarScrollRefs.registrationRef)
+              // }
+            >
+              Registration
+            </Text>
+            <Text className="nav-bar-different-sections-burger">Speakers</Text>
+            <Text className="nav-bar-different-sections-burger">Program</Text>
+            <Text className="nav-bar-different-sections-burger">
+              Guidelines
+            </Text>
+            <Text className="nav-bar-different-sections-burger">Awards</Text>
+            <Text className="nav-bar-different-sections-burger">Socials</Text>
+            <Text className="nav-bar-different-sections-burger">PPI</Text>
+            <Text
+              className="nav-bar-different-sections-burger"
+              // onClick={() =>
+              //   scrollToSection(navBarScrollRefs.sponsorshipRef)
+              // }
+            >
+              Sponsorship
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger"
+              onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
+            >
+              FAQ
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger"
+              onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+            >
+              Location
+            </Text>
+          </Flex>
+        </div>
       </nav>
     </>
   );
