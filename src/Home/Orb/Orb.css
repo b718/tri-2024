@@ -15,6 +15,7 @@
   z-index: -1;
   transform: translate(450px, 30px);
   max-width: fit-content;
+  max-height: fit-content;
 }
 
 .content svg {
