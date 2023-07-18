@@ -81,7 +81,7 @@
 
 nav {
   background-color: white;
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
   z-index: 10;
 }
