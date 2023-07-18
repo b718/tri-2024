@@ -116,6 +116,7 @@ nav {
   margin: 0rem 0rem 0rem 0rem;
   z-index: 10;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
