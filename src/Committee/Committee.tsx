@@ -275,10 +275,7 @@ const Committee = () => {
               through our social events.
             </Text>
           </div>
-          <div
-            className="committee-image-bridge"
-            // ref={bridge.ref}
-          >
+          <div className="committee-image-bridge" ref={bridge.ref}>
             <Image
               width={triCommitteeBridgeSize()}
               fit="contain"
