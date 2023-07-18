@@ -132,7 +132,7 @@
 
 .committee-west-coast-text-paragraph {
   margin-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-transform: none;
   text-decoration: none;
 }
@@ -283,7 +283,17 @@
 
     .committee-image-bridge {
       margin-left: 1rem;
+      margin-right: 1rem;
       margin-top: 5rem;
+    }
+    .committee-image-stairs {
+      margin-left: 1rem;
+    }
+
+    .committee-west-coast-text,
+    .committee-west-coast-text-active {
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
   /* Extra small devices (phones, 600px and down) */
@@ -302,7 +312,8 @@
     }
 
     .committee-image-bridge {
-      margin-left: 0rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
       margin-top: 5rem;
     }
   }

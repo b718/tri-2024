@@ -24,11 +24,11 @@ const Committee = () => {
       triggerOnce: true,
     });
 
-  // const stairs = useParallax<HTMLDivElement>({
-  //   // rotateX: [0, 40],
-  //   rotateY: [-40, 0],
-  //   // rotateZ: [0, 40],
-  // });
+  const stairs = useParallax<HTMLDivElement>({
+    // rotateX: [0, 40],
+    rotateY: [-40, 0],
+    // rotateZ: [0, 40],
+  });
 
   const bridge = useParallax<HTMLDivElement>({
     // rotateX: [0, 40],
@@ -55,7 +55,7 @@ const Committee = () => {
     if (width > 1040) {
       return 650;
     } else if (width < 400) {
-      return 200;
+      return 150;
     } else if (width < 620) {
       return 500;
     } else if (width < 961) {
@@ -173,8 +173,7 @@ const Committee = () => {
             </Flex>
           )}
         </Center>
-        {/* ref={stairs.ref} */}
-        <div className="committee-image-stairs">
+        <div className="committee-image-stairs" ref={stairs.ref}>
           <Parallax>
             {/* <div className="committee-parallax-stairs"></div> */}
             <Image
