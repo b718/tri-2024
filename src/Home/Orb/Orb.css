@@ -10,7 +10,7 @@
   position: absolute;
   width: 600px;
   height: 500px;
-  will-change: filter;
+  /* will-change: filter; */
   filter: blur(15px);
   z-index: -1;
   transform: translate(450px, 30px);

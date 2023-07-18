@@ -225,11 +225,6 @@
   background-position: center;
 }
 
-.content {
-  height: 2000px;
-  overflow: hidden;
-}
-
 .parallax-container {
   position: relative;
   width: 100%;
@@ -287,7 +282,7 @@
       margin-top: 5rem;
     }
     .committee-image-stairs {
-      margin-left: 1rem;
+      /* margin-left: 1rem; */
     }
 
     .committee-west-coast-text,
