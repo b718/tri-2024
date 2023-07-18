@@ -48,6 +48,7 @@
   padding-bottom: 1rem;
   margin-top: 10rem;
   margin-bottom: 2rem;
+  will-change: "";
 }
 
 .committee-text-left {
