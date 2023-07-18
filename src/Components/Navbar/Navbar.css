@@ -52,6 +52,7 @@
   max-width: fit-content;
   margin-top: 2.5rem;
   background-color: white;
+  z-index: 10;
 }
 
 .drop-burger-line {
@@ -113,6 +114,7 @@ nav {
   overflow-x: hidden;
   transition: 0.5s;
   margin: 0rem 0rem 0rem 0rem;
+  z-index: 10;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
