@@ -174,23 +174,21 @@ const Committee = () => {
           )}
         </Center>
         <div className="committee-image-stairs" ref={stairs.ref}>
-          <Parallax>
-            {/* <div className="committee-parallax-stairs"></div> */}
-            <Image
-              width={triCommitteePictureSize()}
-              fit="contain"
-              src={CommitteeStairsPicture}
-              onMouseEnter={() => setHoverStairs(true)}
-              onMouseLeave={() => setHoverStairs(false)}
-            />
-            <Text
-              className={`committee-text-roll-over${
-                hoverStairs ? "-active" : ""
-              }`}
-            >
-              © Alexander Serzhantov
-            </Text>
-          </Parallax>
+          {/* <div className="committee-parallax-stairs"></div> */}
+          <Image
+            width={triCommitteePictureSize()}
+            fit="contain"
+            src={CommitteeStairsPicture}
+            onMouseEnter={() => setHoverStairs(true)}
+            onMouseLeave={() => setHoverStairs(false)}
+          />
+          <Text
+            className={`committee-text-roll-over${
+              hoverStairs ? "-active" : ""
+            }`}
+          >
+            © Alexander Serzhantov
+          </Text>
         </div>
       </div>
 
