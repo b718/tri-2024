@@ -30,11 +30,11 @@ const Committee = () => {
     // rotateZ: [0, 40],
   });
 
-  const bridge = useParallax<HTMLDivElement>({
-    // rotateX: [0, 40],
-    rotateY: [0, 40],
-    // rotateZ: [0, 40],
-  });
+  // const bridge = useParallax<HTMLDivElement>({
+  //   // rotateX: [0, 40],
+  //   rotateY: [0, 40],
+  //   // rotateZ: [0, 40],
+  // });
 
   const triCommitteePictureSize = () => {
     if (width > 1040) {
@@ -55,7 +55,7 @@ const Committee = () => {
     if (width > 1040) {
       return 650;
     } else if (width < 501) {
-      return 400;
+      return 350;
     } else if (width < 620) {
       return 500;
     } else if (width < 961) {
@@ -231,7 +231,10 @@ const Committee = () => {
                 </Text>
               </div>
             </Flex>
-            <div className="committee-image-bridge" ref={bridge.ref}>
+            <div
+              className="committee-image-bridge"
+              //  ref={bridge.ref}
+            >
               <Image
                 width={650}
                 fit="contain"
@@ -275,7 +278,10 @@ const Committee = () => {
               through our social events.
             </Text>
           </div>
-          <div className="committee-image-bridge" ref={bridge.ref}>
+          <div
+            className="committee-image-bridge"
+            // ref={bridge.ref}
+          >
             <Image
               width={triCommitteeBridgeSize()}
               fit="contain"
