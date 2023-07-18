@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import "./Home.css";
-import { Center, Grid, Image, Text, Button, AspectRatio } from "@mantine/core";
-import triHomePicture from "../Images/TRI.png";
+import { Center, Text, AspectRatio } from "@mantine/core";
 import { NavBarContext } from "../App";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Orb from "./Orb/Orb";
-import MeshGradientSvg from "../MeshGradientOrb/MeshGradient";
 import { useInView } from "react-intersection-observer";
 
 const Home = () => {
@@ -33,10 +30,6 @@ const Home = () => {
           ref={mainDivRef}
         >
           <Orb />
-          {/* <div style={{ border: "1px solid red" }}>
-            <MeshGradientSvg />
-          </div> */}
-
           <h1 className="home-h1-div-intro">
             Engineering the Future of Tinnitus
           </h1>
@@ -156,4 +149,6 @@ const Home = () => {
       </div> */
 }
 
+// import triHomePicture from "../Images/TRI.png";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default Home;

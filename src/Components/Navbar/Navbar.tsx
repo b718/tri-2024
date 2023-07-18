@@ -129,7 +129,7 @@ const Navbar = () => {
                     >
                       <svg
                         viewBox="0 0 100 100"
-                        stroke="#74a441"
+                        stroke="#184176"
                         width="40"
                         height="40"
                         style={{

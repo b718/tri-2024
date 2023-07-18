@@ -66,10 +66,10 @@ function App() {
       >
         <Navbar />
         <Home />
-        <Committee />
-        <FaQ />
+        {/* <Committee /> */}
+        {/* <FaQ />
         <Venue />
-        <Footer />
+        <Footer /> */}
         {/* <ConferenceProgram />
         <Registration />
         <Sponsorships /> */}

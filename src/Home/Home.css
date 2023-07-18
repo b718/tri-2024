@@ -133,7 +133,23 @@ svg {
   lg, large: 1200px
   xl, extra-large: 1536px */
 
-  @media only screen and (min-width: 300px) {
+  @media only screen and (min-width: 200px) {
+    .home-h1-div-intro {
+      max-width: 20rem;
+      font-size: 50px;
+      font-family: Gravity-Light;
+    }
+
+    .home-text-under-h1 {
+      max-width: 20rem;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+
+    .page-holder-aspect-ratio-frame-active,
+    .page-holder-aspect-ratio-frame {
+    }
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {

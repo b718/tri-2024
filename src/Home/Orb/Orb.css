@@ -13,6 +13,7 @@
   filter: blur(15px);
   z-index: -1;
   transform: translate(450px, 30px);
+  max-width: fit-content;
 }
 
 .content svg {
@@ -29,7 +30,7 @@
 
   @media only screen and (min-width: 300px) {
     .content {
-      transform: translate(20px, 30px);
+      transform: translate(40px, 120px);
     }
   }
   /* Extra small devices (phones, 600px and down) */
@@ -39,33 +40,51 @@
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 601px) {
+    .content {
+      transform: translate(140px, 150px);
+    }
+  }
+
+  @media only screen and (min-width: 602px) {
+    .content {
+      transform: translate(140px, 150px);
+    }
+  }
+
+  @media only screen and (min-width: 620px) {
     .content {
       transform: translate(120px, 150px);
     }
   }
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 779px) {
+
+  @media only screen and (min-width: 680px) {
     .content {
-      transform: translate(300px, 110px);
+      transform: translate(130px, 150px);
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 769px) {
+    .content {
+      transform: translate(300px, 150px);
     }
   }
 
   @media only screen and (min-width: 820px) {
     .content {
-      transform: translate(325px, 110px);
+      transform: translate(380px, 110px);
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .content {
-      transform: translate(400px, 30px);
+      transform: translate(400px, 110px);
     }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .content {
-      transform: translate(450px, 30px);
+      transform: translate(450px, 110px);
     }
   }
 }

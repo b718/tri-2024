@@ -6,12 +6,28 @@ const Orb = () => {
   const { width, height } = useWindowDimensions();
   const currentWidth = () => {
     if (width < 600) {
-      return "60%";
+      return "110%";
     } else if (width > 600 && width < 830) {
+      return "130%";
+    } else if (width >= 831 && width < 992) {
+      return "140%";
+    } else if (width < 400) {
       return "80%";
     } else {
-      return "100%";
+      return "150%";
     }
+  };
+
+  const svgStyleFunction = () => {
+    if (width < 600) {
+      return "fit-content";
+    } else {
+      return "";
+    }
+  };
+
+  const svgStyles = {
+    maxWidth: svgStyleFunction(),
   };
   return (
     <div className="content">
@@ -20,18 +36,9 @@ const Orb = () => {
         xmlns="http://www.w3.org/2000/svg"
         width={currentWidth()}
         id="blobSvg"
+        style={svgStyles}
       >
         <defs>
-          {/* <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop
-              style={{ stopColor: "hsla(89, 42%, 45%, 1)" }}
-              offset="20%"
-            ></stop>
-            <stop
-              offset="100%"
-              style={{ stopColor: "hsla(201, 96%, 40%, 1)" }}
-            ></stop>
-          </linearGradient> */}
           <linearGradient id="gradient" x1="40%" y1="0%" x2="150%" y2="100%">
             {" "}
             <stop
@@ -65,3 +72,16 @@ const Orb = () => {
 };
 
 export default Orb;
+
+{
+  /* <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop
+              style={{ stopColor: "hsla(89, 42%, 45%, 1)" }}
+              offset="20%"
+            ></stop>
+            <stop
+              offset="100%"
+              style={{ stopColor: "hsla(201, 96%, 40%, 1)" }}
+            ></stop>
+          </linearGradient> */
+}
