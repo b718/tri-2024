@@ -147,6 +147,23 @@ svg {
       margin: 0 auto;
       font-size: 18px;
     }
+
+    .page-holder-aspect-ratio-frame,
+    .page-holder-aspect-ratio-frame-active {
+      margin-left: 1rem;
+    }
+
+    .page-holder-aspect-ratio-frame {
+      margin-top: 12rem;
+      opacity: 0;
+      transition: 0.5s ease-in;
+    }
+
+    .page-holder-aspect-ratio-frame-active {
+      margin-top: 12rem;
+      opacity: 1;
+      transition: 0.5s ease-in;
+    }
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
@@ -162,6 +179,26 @@ svg {
       text-align: center;
       margin: 0 auto;
       font-size: 20px;
+    }
+
+    .page-holder-aspect-ratio-frame,
+    .page-holder-aspect-ratio-frame-active {
+      max-width: 65rem;
+      margin: 0 auto;
+      margin-top: 12rem;
+      margin: 0 auto;
+    }
+
+    .page-holder-aspect-ratio-frame {
+      margin-top: 12rem;
+      opacity: 0;
+      transition: 0.5s ease-in;
+    }
+
+    .page-holder-aspect-ratio-frame-active {
+      margin-top: 12rem;
+      opacity: 1;
+      transition: 0.5s ease-in;
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
