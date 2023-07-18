@@ -106,7 +106,7 @@
 
 .committee-image-stairs {
   margin-top: 5rem;
-  margin-left: 1rem;
+  margin-left: 0rem;
   color: rgb(26 65 119);
 }
 
@@ -249,14 +249,123 @@
   background-repeat: no-repeat;
 }
 
-.parallax-img:nth-child(1) {
-  background-image: url("https://via.placeholder.com/800x600");
+.committee-grid-column-right {
+  margin-right: 1rem;
+  max-width: fit-content;
 }
 
-.parallax-img:nth-child(2) {
-  background-image: url("https://via.placeholder.com/600x800");
+.committee-grid-column-left {
+  margin-left: 1rem;
+  max-width: 40rem;
 }
 
-.parallax-img:nth-child(3) {
-  background-image: url("https://via.placeholder.com/1000x500");
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+    .committee-grid-right-image,
+    .committee-grid-right-image-active {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+
+    .committee-text-left,
+    .committee-text-left-active {
+      max-width: 30rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+    .committee-grid-right-image,
+    .committee-grid-right-image-active {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+
+    .committee-text-left,
+    .committee-text-left-active {
+      max-width: 30rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .committee-image-bridge {
+      margin-left: 0rem;
+      margin-top: 5rem;
+    }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 601px) {
+    .committee-grid-right-image,
+    .committee-grid-right-image-active {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+
+    .committee-text-left,
+    .committee-text-left-active {
+      max-width: 30rem;
+    }
+
+    .committee-image-bridge {
+      margin-left: 0rem;
+      margin-top: 5rem;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 769px) {
+    .committee-grid-right-image,
+    .committee-grid-right-image-active {
+      margin-top: 0rem;
+      margin-bottom: 3rem;
+    }
+
+    .committee-text-left,
+    .committee-text-left-active {
+      max-width: 30rem;
+    }
+
+    .committee-image-bridge {
+      margin-left: 0rem;
+      margin-top: 5rem;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .committee-grid-column-right {
+      margin-right: 1rem;
+      max-width: fit-content;
+    }
+
+    .committee-grid-column-left {
+      margin-left: 1rem;
+      max-width: 35rem;
+    }
+
+    .committee-image-bridge {
+      margin-left: 10rem;
+      margin-top: 10rem;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1124px) {
+    .committee-grid-column-right {
+      margin-right: 1rem;
+      max-width: fit-content;
+    }
+
+    .committee-grid-column-left {
+      margin-left: 1rem;
+      max-width: 40rem;
+    }
+  }
 }

@@ -66,7 +66,7 @@ function App() {
       >
         <Navbar />
         <Home />
-        {/* <Committee /> */}
+        <Committee />
         {/* <FaQ />
         <Venue />
         <Footer /> */}
