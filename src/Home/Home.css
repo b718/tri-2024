@@ -150,7 +150,8 @@ svg {
 
     .page-holder-aspect-ratio-frame,
     .page-holder-aspect-ratio-frame-active {
-      margin-left: 0.5rem;
+      max-width: 65rem;
+      margin: 0 auto;
     }
 
     .page-holder-aspect-ratio-frame {
@@ -186,7 +187,6 @@ svg {
       max-width: 65rem;
       margin: 0 auto;
       margin-top: 12rem;
-      margin: 0 auto;
     }
 
     .page-holder-aspect-ratio-frame {
