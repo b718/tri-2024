@@ -30,11 +30,11 @@ const Committee = () => {
     // rotateZ: [0, 40],
   });
 
-  // const bridge = useParallax<HTMLDivElement>({
-  //   // rotateX: [0, 40],
-  //   rotateY: [0, 40],
-  //   // rotateZ: [0, 40],
-  // });
+  const bridge = useParallax<HTMLDivElement>({
+    // rotateX: [0, 40],
+    rotateY: [0, 40],
+    // rotateZ: [0, 40],
+  });
 
   const triCommitteePictureSize = () => {
     if (width > 1040) {
