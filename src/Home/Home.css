@@ -138,6 +138,7 @@ svg {
       max-width: 20rem;
       font-size: 50px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
 
     .home-text-under-h1 {
@@ -146,10 +147,6 @@ svg {
       margin: 0 auto;
       font-size: 18px;
     }
-
-    .page-holder-aspect-ratio-frame-active,
-    .page-holder-aspect-ratio-frame {
-    }
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
@@ -157,6 +154,7 @@ svg {
       max-width: 20rem;
       font-size: 65px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
 
     .home-text-under-h1 {
@@ -172,6 +170,7 @@ svg {
       max-width: 30rem;
       font-size: 100px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
 
     .home-text-under-h1 {
@@ -187,6 +186,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
@@ -195,6 +195,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -203,6 +204,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
+      font-weight: 600;
     }
   }
 }
