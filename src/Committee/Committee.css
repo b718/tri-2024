@@ -280,6 +280,11 @@
       margin-left: 1rem;
       margin-right: 1rem;
     }
+
+    .committee-image-bridge {
+      margin-left: 0rem;
+      margin-top: 5rem;
+    }
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
