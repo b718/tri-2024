@@ -54,8 +54,8 @@ const Committee = () => {
   const triCommitteeBridgeSize = () => {
     if (width > 1040) {
       return 650;
-    } else if (width < 400) {
-      return 150;
+    } else if (width < 501) {
+      return 300;
     } else if (width < 620) {
       return 500;
     } else if (width < 961) {
