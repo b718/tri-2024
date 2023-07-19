@@ -187,7 +187,7 @@ const Navbar = () => {
             </Flex>
           </div>
         </Center>
-        <div
+        {/* <div
           className="nav-bar-burger-overlay"
           // ref={parentRef}
           style={
@@ -274,7 +274,7 @@ const Navbar = () => {
               Location
             </Text>
           </Flex>
-        </div>
+        </div> */}
       </nav>
     </>
   );

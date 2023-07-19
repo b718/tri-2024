@@ -91,9 +91,8 @@ function App() {
         }}
       >
         <BurgerContext.Provider value={{ burger, setBurger }}>
-          {/* <div
+          <div
             className="nav-bar-burger-overlay"
-            // ref={parentRef}
             style={
               burger
                 ? {
@@ -180,7 +179,7 @@ function App() {
                 Location
               </Text>
             </Flex>
-          </div> */}
+          </div>
           <Navbar />
           <Home />
           <Committee />

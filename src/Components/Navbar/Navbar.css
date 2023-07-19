@@ -50,7 +50,7 @@
 
 .nav-bar-container {
   max-width: fit-content;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
   background-color: white;
   z-index: 10;
 }
@@ -82,9 +82,9 @@
 nav,
 .nav-bar-for-access {
   background-color: white;
-  position: sticky;
-  position: -webkit-sticky; /* Safari */
-  display: block;
+  /* position: sticky;
+  position: -webkit-sticky; Safari */
+  /* display: block; */
   top: 0px;
   z-index: 10;
 }
@@ -119,7 +119,7 @@ nav,
   margin: 0rem 0rem 0rem 0rem;
   z-index: 10;
   -webkit-backface-visibility: hidden;
-  display: block;
+  /* display: block; */
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
