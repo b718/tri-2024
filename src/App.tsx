@@ -5,7 +5,6 @@ import React, {
   useState,
   useContext,
 } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Home/Home";

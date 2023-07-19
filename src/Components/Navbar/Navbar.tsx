@@ -15,9 +15,7 @@ const Navbar = () => {
   };
   const navBarScrollRefs = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
-  // const [burger, setBurger] = useState<boolean>(false);
   const burgerContext = useContext(BurgerContext);
-  const parentRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (width > 890) {
@@ -157,6 +155,18 @@ const Navbar = () => {
                         />
                         <rect
                           className={`drop-down-burger-line-rotate-middle${
+                            burgerContext.burger ? "-active" : ""
+                          } drop-burger-line `}
+                          width="80"
+                          height="5"
+                          x="10"
+                          y="45"
+                          rx="5"
+                          fill="#184176"
+                        />
+
+                        <rect
+                          className={`drop-down-burger-line-rotate-middle-two${
                             burgerContext.burger ? "-active" : ""
                           } drop-burger-line `}
                           width="80"

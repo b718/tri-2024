@@ -57,25 +57,34 @@
 
 .drop-burger-line {
   transition: 0.5s;
+  opacity: 1;
 }
 
 .drop-down-burger-line-rotate-bottom-active {
-  y: 45;
+  /* y: 45;
   transform-origin: center;
-  transform: rotate(-45deg);
-  transition: 0.5s;
+  transform: rotate(-45deg); */
+  opacity: 0;
+  transition: 0.1s;
 }
 
 .drop-down-burger-line-rotate-top-active {
-  y: 45;
+  /* y: 45;
   transform-origin: center;
-  transform: rotate(-45deg);
-  transition: 0.5s;
+  transform: rotate(-45deg); */
+  opacity: 0;
+  transition: 0.1s;
 }
 
 .drop-down-burger-line-rotate-middle-active {
   transform-origin: center;
   transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.drop-down-burger-line-rotate-middle-two-active {
+  transform-origin: center;
+  transform: rotate(-45deg);
   transition: 0.5s;
 }
 
@@ -117,7 +126,7 @@ nav,
   overflow-x: hidden;
   transition: 0.5s;
   margin: 0rem 0rem 0rem 0rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
   z-index: 11;
   -webkit-backface-visibility: hidden;
 
