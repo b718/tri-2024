@@ -82,9 +82,9 @@
 nav,
 .nav-bar-for-access {
   background-color: white;
-  /* position: sticky;
-  position: -webkit-sticky; Safari */
-  /* display: block; */
+  position: sticky;
+  position: -webkit-sticky;
+  display: block;
   top: 0px;
   z-index: 10;
 }
@@ -117,8 +117,10 @@ nav,
   overflow-x: hidden;
   transition: 0.5s;
   margin: 0rem 0rem 0rem 0rem;
+  padding-top: 1rem;
   z-index: 11;
   -webkit-backface-visibility: hidden;
+
   /* display: block; */
 }
 

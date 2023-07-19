@@ -91,6 +91,8 @@ function App() {
         }}
       >
         <BurgerContext.Provider value={{ burger, setBurger }}>
+          <Navbar />
+
           <div
             className="nav-bar-burger-overlay"
             style={
@@ -179,7 +181,6 @@ function App() {
               </Text>
             </Flex>
           </div>
-          <Navbar />
           <Home />
           <Committee />
           {/* <FaQ />
