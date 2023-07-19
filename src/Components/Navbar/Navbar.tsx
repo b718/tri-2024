@@ -52,7 +52,7 @@ const Navbar = () => {
                 width={200}
                 src={NavBarImage}
                 className="nav-bar-picture"
-                style={{ marginRight: `${width < 890 ? "10vw" : ""}` }}
+                // style={{ marginRight: `${width < 890 ? "10vw" : ""}` }}
               />
               {width > 890 ? (
                 <Flex
