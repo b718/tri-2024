@@ -100,7 +100,7 @@ function App() {
               burger
                 ? {
                     width: "100vw",
-                    // height: overlayRef.current?.scrollHeight + "px",
+                    // height: overlayRef.current!.scrollHeight + "px",
                     // position: "fixed",
                   }
                 : {
@@ -195,6 +195,7 @@ function App() {
                 scrollToSection(venueRef);
                 setBurger(false);
               }}
+              style={{ paddingBottom: "2rem" }}
             >
               Location
             </Text>
