@@ -182,7 +182,7 @@ function App() {
           </div>
           <Home />
           <Committee />
-          {/* <FaQ /> */}
+          <FaQ />
           {/* <Venue /> */}
           <Footer />
           {/* <ConferenceProgram />

@@ -5,17 +5,32 @@ import DropDownFaQ from "./DropDownFaQ/DropDownFaQ";
 import RogersArenaPicture from "../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.jpg";
 import { NavBarContext } from "../App";
 import { Parallax, useParallax } from "react-scroll-parallax";
-import $ from "jquery";
 import { useInView } from "react-intersection-observer";
+import useWindowDimensions from "../Components/useWindowsDimensions";
+import $ from "jquery";
 
 const FaQ = () => {
   const faqRef = useContext(NavBarContext);
   const [hoverFAQ, setHoverFAQ] = useState(false);
-  const rogersArena = useParallax<HTMLDivElement>({
-    // rotateX: [0, 40],
-    rotateY: [0, 40],
-    // rotateZ: [0, 40],
-  });
+  const { width, height } = useWindowDimensions();
+
+  // const rogersArena = useParallax<HTMLDivElement>({
+  //   // rotateX: [0, 40],
+  //   rotateY: [0, 40],
+  //   // rotateZ: [0, 40],
+  // });
+
+  const triCommitteeRogersSize = () => {
+    if (width < 500) {
+      return 350;
+    } else if (width < 580) {
+      return 400;
+    } else {
+      return 500;
+    }
+    //961
+    //500
+  };
 
   const { ref: mainFaqDiv, inView: mainFaqDivVisible } = useInView({
     triggerOnce: true,
@@ -29,7 +44,7 @@ const FaQ = () => {
   //   var offset = $(".faq-parallax-rogers").offset()!.top;
   //   y =
   //     (100 * scroll!) / (height! + win!) +
-//     (100 * (win! - offset)) / (height! + win!);
+  //     (100 * (win! - offset)) / (height! + win!);
   //   if (y > 100) {
   //     y = 100;
   //   } else if (y < 0) {
@@ -87,9 +102,12 @@ const FaQ = () => {
           links={"INFORMATION LINK"}
           url="https://www.google.ca/"
         />
-        <div className="faq-rogers-arena-picture" ref={rogersArena.ref}>
+        <div
+          className="faq-rogers-arena-picture"
+          // ref={rogersArena.ref}
+        >
           <Image
-            width={500}
+            width={triCommitteeRogersSize()}
             fit="contain"
             src={RogersArenaPicture}
             onMouseEnter={() => setHoverFAQ(true)}

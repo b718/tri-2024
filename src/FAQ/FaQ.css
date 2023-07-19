@@ -63,15 +63,45 @@
   xl, extra-large: 1536px */
 
   @media only screen and (min-width: 300px) {
+    .faq-main-div-active,
+    .faq-main-div {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
+    .faq-main-div-active,
+    .faq-main-div {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      margin-top: 10rem;
+    }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
+    .faq-main-div-active,
+    .faq-main-div {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      margin-top: 10rem;
+    }
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
+    .faq-main-div-active,
+    .faq-main-div {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 10rem;
+    }
+  }
+  @media only screen and (min-width: 820px) {
+    .faq-main-div-active,
+    .faq-main-div {
+      margin: 0 auto;
+      margin-top: 10rem;
+    }
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
