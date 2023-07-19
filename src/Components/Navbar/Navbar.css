@@ -79,10 +79,12 @@
   transition: 0.5s;
 }
 
-nav {
+nav,
+.nav-bar-for-access {
   background-color: white;
   position: sticky;
   position: -webkit-sticky; /* Safari */
+  display: block;
   top: 0px;
   z-index: 10;
 }
