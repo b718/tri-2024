@@ -67,6 +67,7 @@ function App() {
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
   const [burger, setBurger] = useState<boolean>(false);
+  const overlayRef = useRef<HTMLInputElement>(null);
 
   const scrollToSection = (elementRef: any): void => {
     let offSetTopInc = elementRef!.current!.offsetTop - 130;
@@ -94,17 +95,22 @@ function App() {
 
           <div
             className="nav-bar-burger-overlay"
+            ref={overlayRef}
             style={
               burger
                 ? {
-                    width: "100%",
+                    width: "100vw",
+                    // height: overlayRef.current?.scrollHeight + "px",
+                    // position: "fixed",
                   }
                 : {
                     width: "0%",
+                    // height: "0px",
+                    // position: "absolute",
                   }
             }
           >
-            <Flex
+            {/* <Flex
               mih={50}
               gap="1.3rem"
               justify="center"
@@ -112,79 +118,87 @@ function App() {
               direction="column"
               wrap="wrap"
               className="nav-bar-burger-version"
+            > */}
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              onClick={() => {
+                scrollToSection(homeRef);
+                setBurger(false);
+              }}
             >
-              <Text
-                className="nav-bar-different-sections-burger"
-                onClick={() => {
-                  scrollToSection(homeRef);
-                  setBurger(false);
-                }}
-              >
-                About
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                onClick={() => {
-                  scrollToSection(comitteeRef);
-                  setBurger(false);
-                }}
-              >
-                Trinity
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                onClick={() => {
-                  scrollToSection(comitteeRef);
-                  setBurger(false);
-                }}
-              >
-                Committee
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                // onClick={() =>
-                //   scrollToSection(navBarScrollRefs.registrationRef)
-                // }
-              >
-                Registration
-              </Text>
-              <Text className="nav-bar-different-sections-burger">
-                Speakers
-              </Text>
-              <Text className="nav-bar-different-sections-burger">Program</Text>
-              <Text className="nav-bar-different-sections-burger">
-                Guidelines
-              </Text>
-              <Text className="nav-bar-different-sections-burger">Awards</Text>
-              <Text className="nav-bar-different-sections-burger">Socials</Text>
-              <Text className="nav-bar-different-sections-burger">PPI</Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                // onClick={() =>
-                //   scrollToSection(navBarScrollRefs.sponsorshipRef)
-                // }
-              >
-                Sponsorship
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                onClick={() => {
-                  scrollToSection(faqRef);
-                  setBurger(false);
-                }}
-              >
-                FAQ
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger"
-                onClick={() => {
-                  scrollToSection(venueRef);
-                  setBurger(false);
-                }}
-              >
-                Location
-              </Text>
-            </Flex>
+              About
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              onClick={() => {
+                scrollToSection(comitteeRef);
+                setBurger(false);
+              }}
+            >
+              Trinity
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version  nav-bar-burger-version "
+              onClick={() => {
+                scrollToSection(comitteeRef);
+                setBurger(false);
+              }}
+            >
+              Committee
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              // onClick={() =>
+              //   scrollToSection(navBarScrollRefs.registrationRef)
+              // }
+            >
+              Registration
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              Speakers
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              Program
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              Guidelines
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              Awards
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              Socials
+            </Text>
+            <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+              PPI
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              // onClick={() =>
+              //   scrollToSection(navBarScrollRefs.sponsorshipRef)
+              // }
+            >
+              Sponsorship
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              onClick={() => {
+                scrollToSection(faqRef);
+                setBurger(false);
+              }}
+            >
+              FAQ
+            </Text>
+            <Text
+              className="nav-bar-different-sections-burger nav-bar-burger-version "
+              onClick={() => {
+                scrollToSection(venueRef);
+                setBurger(false);
+              }}
+            >
+              Location
+            </Text>
+            {/* </Flex> */}
           </div>
           <Home />
           <Committee />

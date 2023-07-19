@@ -115,21 +115,21 @@ nav,
   margin-top: 0.5rem;
   padding-right: 40vw;
   padding-left: 10vw;
+  /* flex: 1; */
 }
 
 .nav-bar-burger-overlay {
-  height: 100%;
+  min-height: 100vh;
   width: 0;
   position: fixed;
-  background-color: rgb(255, 255, 255);
   background-color: white;
   overflow-x: hidden;
+  overflow-y: scroll;
   transition: 0.5s;
-  margin: 0rem 0rem 0rem 0rem;
   padding-top: 2rem;
   z-index: 11;
-  max-height: calc(100% - 50px);
-  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
   /* display: block; */
 }
 
