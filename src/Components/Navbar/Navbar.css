@@ -117,7 +117,7 @@ nav,
   overflow-x: hidden;
   transition: 0.5s;
   margin: 0rem 0rem 0rem 0rem;
-  z-index: 10;
+  z-index: 11;
   -webkit-backface-visibility: hidden;
   /* display: block; */
 }

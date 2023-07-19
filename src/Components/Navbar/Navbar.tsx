@@ -88,7 +88,6 @@ const Navbar = () => {
                   >
                     Committee
                   </Text>
-
                   <Text
                     className="nav-bar-different-sections"
                     // onClick={() =>
@@ -103,7 +102,6 @@ const Navbar = () => {
                   <Text className="nav-bar-different-sections">Awards</Text>
                   <Text className="nav-bar-different-sections">Socials</Text>
                   <Text className="nav-bar-different-sections">PPI</Text>
-
                   <Text
                     className="nav-bar-different-sections"
                     // onClick={() =>

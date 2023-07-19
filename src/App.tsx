@@ -58,6 +58,7 @@ export const BurgerContext = createContext<ContextBurger>({
 });
 
 function App() {
+  // const navBarScrollRefs = useContext(NavBarContext);
   const comitteeRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
   const conferenceProgramRef = useRef<HTMLDivElement>(null);
@@ -67,7 +68,6 @@ function App() {
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
   const [burger, setBurger] = useState<boolean>(false);
-  const navBarScrollRefs = useContext(NavBarContext);
 
   const scrollToSection = (elementRef: any): void => {
     let offSetTopInc = elementRef!.current!.offsetTop - 130;
@@ -115,7 +115,7 @@ function App() {
               <Text
                 className="nav-bar-different-sections-burger"
                 onClick={() => {
-                  scrollToSection(navBarScrollRefs.homeRef);
+                  scrollToSection(homeRef);
                   setBurger(false);
                 }}
               >
@@ -124,7 +124,7 @@ function App() {
               <Text
                 className="nav-bar-different-sections-burger"
                 onClick={() => {
-                  scrollToSection(navBarScrollRefs.committeeRef);
+                  scrollToSection(comitteeRef);
                   setBurger(false);
                 }}
               >
@@ -133,13 +133,12 @@ function App() {
               <Text
                 className="nav-bar-different-sections-burger"
                 onClick={() => {
-                  scrollToSection(navBarScrollRefs.committeeRef);
+                  scrollToSection(comitteeRef);
                   setBurger(false);
                 }}
               >
                 Committee
               </Text>
-
               <Text
                 className="nav-bar-different-sections-burger"
                 // onClick={() =>
@@ -168,13 +167,13 @@ function App() {
               </Text>
               <Text
                 className="nav-bar-different-sections-burger"
-                onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
+                onClick={() => scrollToSection(faqRef)}
               >
                 FAQ
               </Text>
               <Text
                 className="nav-bar-different-sections-burger"
-                onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+                onClick={() => scrollToSection(venueRef)}
               >
                 Location
               </Text>
