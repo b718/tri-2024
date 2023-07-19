@@ -34,6 +34,8 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
             <svg
               viewBox="0 0 100 100"
               stroke="#74a441"
+              width="40"
+              height="40"
               style={{ maxWidth: "1rem", marginRight: "1rem" }}
               className={`drop-down-svg-div${click ? "-active" : ""}`}
             >

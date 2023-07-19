@@ -168,13 +168,19 @@ function App() {
               </Text>
               <Text
                 className="nav-bar-different-sections-burger"
-                onClick={() => scrollToSection(faqRef)}
+                onClick={() => {
+                  scrollToSection(faqRef);
+                  setBurger(false);
+                }}
               >
                 FAQ
               </Text>
               <Text
                 className="nav-bar-different-sections-burger"
-                onClick={() => scrollToSection(venueRef)}
+                onClick={() => {
+                  scrollToSection(venueRef);
+                  setBurger(false);
+                }}
               >
                 Location
               </Text>

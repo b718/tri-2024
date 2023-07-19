@@ -128,8 +128,8 @@ nav,
   margin: 0rem 0rem 0rem 0rem;
   padding-top: 2rem;
   z-index: 11;
-  -webkit-backface-visibility: hidden;
-
+  max-height: calc(100% - 50px);
+  overflow-y: auto;
   /* display: block; */
 }
 
