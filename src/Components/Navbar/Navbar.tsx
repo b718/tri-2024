@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import "./Navbar.css";
 import { Flex, Text, Center, Image, Grid } from "@mantine/core";
-import { NavBarContext } from "../../App";
+import { BurgerContext, NavBarContext } from "../../App";
 import NavBarImage from "../../Images/Logos/TRI2024 NAV/TRI2024_Logo_Nav2.png";
 import useWindowDimensions from "../useWindowsDimensions";
 
@@ -15,8 +15,15 @@ const Navbar = () => {
   };
   const navBarScrollRefs = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
-  const [burger, setBurger] = useState<boolean>(false);
+  // const [burger, setBurger] = useState<boolean>(false);
+  const burgerContext = useContext(BurgerContext);
   const parentRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (width > 890) {
+      burgerContext.setBurger(false);
+    }
+  }, [width]);
 
   {
     /*
@@ -124,7 +131,7 @@ const Navbar = () => {
                     {" "}
                     <div
                       onClick={() => {
-                        setBurger(!burger);
+                        burgerContext.setBurger(!burgerContext.burger);
                       }}
                     >
                       <svg
@@ -136,12 +143,12 @@ const Navbar = () => {
                           marginRight: "1rem",
                         }}
                         className={`drop-down-svg-burger-div${
-                          burger ? "-active" : ""
+                          burgerContext.burger ? "-active" : ""
                         }`}
                       >
                         <rect
                           className={`drop-down-burger-line-rotate-top${
-                            burger ? "-active" : ""
+                            burgerContext.burger ? "-active" : ""
                           } drop-burger-line `}
                           width="80"
                           height="5"
@@ -152,7 +159,7 @@ const Navbar = () => {
                         />
                         <rect
                           className={`drop-down-burger-line-rotate-middle${
-                            burger ? "-active" : ""
+                            burgerContext.burger ? "-active" : ""
                           } drop-burger-line `}
                           width="80"
                           height="5"
@@ -163,7 +170,7 @@ const Navbar = () => {
                         />
                         <rect
                           className={`drop-down-burger-line-rotate-bottom${
-                            burger ? "-active" : ""
+                            burgerContext.burger ? "-active" : ""
                           } drop-burger-line `}
                           width="80"
                           height="5"
@@ -182,9 +189,9 @@ const Navbar = () => {
         </Center>
         <div
           className="nav-bar-burger-overlay"
-          ref={parentRef}
+          // ref={parentRef}
           style={
-            burger
+            burgerContext.burger
               ? {
                   width: "100%",
                 }
@@ -206,7 +213,7 @@ const Navbar = () => {
               className="nav-bar-different-sections-burger"
               onClick={() => {
                 scrollToSection(navBarScrollRefs.homeRef);
-                setBurger(false);
+                burgerContext.setBurger(false);
               }}
             >
               About
@@ -215,7 +222,7 @@ const Navbar = () => {
               className="nav-bar-different-sections-burger"
               onClick={() => {
                 scrollToSection(navBarScrollRefs.committeeRef);
-                setBurger(false);
+                burgerContext.setBurger(false);
               }}
             >
               Trinity
@@ -224,7 +231,7 @@ const Navbar = () => {
               className="nav-bar-different-sections-burger"
               onClick={() => {
                 scrollToSection(navBarScrollRefs.committeeRef);
-                setBurger(false);
+                burgerContext.setBurger(false);
               }}
             >
               Committee

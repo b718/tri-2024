@@ -81,7 +81,8 @@
 
 nav {
   background-color: white;
-  /* position: sticky; */
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
   top: 0px;
   z-index: 10;
 }

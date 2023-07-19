@@ -1,4 +1,10 @@
-import React, { createRef, createContext, useRef } from "react";
+import React, {
+  createRef,
+  createContext,
+  useRef,
+  useState,
+  useContext,
+} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -15,6 +21,7 @@ import Footer from "./Footer/Footer";
 import Carousel from "./Carousel/Carousel";
 import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
 import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
+import { Flex, Text } from "@mantine/core";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -29,6 +36,11 @@ interface ContextTypeNavBarRef {
 
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
+
+interface ContextBurger {
+  burger: boolean;
+  setBurger: Function;
+}
 export const NavBarContext = createContext<ContextTypeNavBarRef>({
   committeeRef: createRef(),
   homeRef: createRef(),
@@ -40,6 +52,11 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   trinityRef: createRef(),
 });
 
+export const BurgerContext = createContext<ContextBurger>({
+  burger: false,
+  setBurger: () => {},
+});
+
 function App() {
   const comitteeRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
@@ -49,7 +66,16 @@ function App() {
   const venueRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
+  const [burger, setBurger] = useState<boolean>(false);
+  const navBarScrollRefs = useContext(NavBarContext);
 
+  const scrollToSection = (elementRef: any): void => {
+    let offSetTopInc = elementRef!.current!.offsetTop - 130;
+    window.scrollTo({
+      top: offSetTopInc,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <NavBarContext.Provider
@@ -64,17 +90,109 @@ function App() {
           trinityRef: trinityRef,
         }}
       >
-        <Navbar />
-        <Home />
-        <Committee />
-        {/* <FaQ />
+        <BurgerContext.Provider value={{ burger, setBurger }}>
+          {/* <div
+            className="nav-bar-burger-overlay"
+            // ref={parentRef}
+            style={
+              burger
+                ? {
+                    width: "100%",
+                  }
+                : {
+                    width: "0%",
+                  }
+            }
+          >
+            <Flex
+              mih={50}
+              gap="1.3rem"
+              justify="center"
+              align="flex-start"
+              direction="column"
+              wrap="wrap"
+              className="nav-bar-burger-version"
+            >
+              <Text
+                className="nav-bar-different-sections-burger"
+                onClick={() => {
+                  scrollToSection(navBarScrollRefs.homeRef);
+                  setBurger(false);
+                }}
+              >
+                About
+              </Text>
+              <Text
+                className="nav-bar-different-sections-burger"
+                onClick={() => {
+                  scrollToSection(navBarScrollRefs.committeeRef);
+                  setBurger(false);
+                }}
+              >
+                Trinity
+              </Text>
+              <Text
+                className="nav-bar-different-sections-burger"
+                onClick={() => {
+                  scrollToSection(navBarScrollRefs.committeeRef);
+                  setBurger(false);
+                }}
+              >
+                Committee
+              </Text>
+
+              <Text
+                className="nav-bar-different-sections-burger"
+                // onClick={() =>
+                //   scrollToSection(navBarScrollRefs.registrationRef)
+                // }
+              >
+                Registration
+              </Text>
+              <Text className="nav-bar-different-sections-burger">
+                Speakers
+              </Text>
+              <Text className="nav-bar-different-sections-burger">Program</Text>
+              <Text className="nav-bar-different-sections-burger">
+                Guidelines
+              </Text>
+              <Text className="nav-bar-different-sections-burger">Awards</Text>
+              <Text className="nav-bar-different-sections-burger">Socials</Text>
+              <Text className="nav-bar-different-sections-burger">PPI</Text>
+              <Text
+                className="nav-bar-different-sections-burger"
+                // onClick={() =>
+                //   scrollToSection(navBarScrollRefs.sponsorshipRef)
+                // }
+              >
+                Sponsorship
+              </Text>
+              <Text
+                className="nav-bar-different-sections-burger"
+                onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
+              >
+                FAQ
+              </Text>
+              <Text
+                className="nav-bar-different-sections-burger"
+                onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+              >
+                Location
+              </Text>
+            </Flex>
+          </div> */}
+          <Navbar />
+          <Home />
+          <Committee />
+          {/* <FaQ />
         <Venue />
         <Footer /> */}
-        {/* <ConferenceProgram />
+          {/* <ConferenceProgram />
         <Registration />
         <Sponsorships /> */}
-        {/* <PageHolder /> */}
-        {/* <Carousel /> */}
+          {/* <PageHolder /> */}
+          {/* <Carousel /> */}
+        </BurgerContext.Provider>
       </NavBarContext.Provider>
     </>
   );
