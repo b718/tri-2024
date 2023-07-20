@@ -92,7 +92,6 @@ function App() {
       >
         <BurgerContext.Provider value={{ burger, setBurger }}>
           <Navbar />
-
           <div
             className="nav-bar-burger-overlay"
             ref={overlayRef}
@@ -102,11 +101,13 @@ function App() {
                     width: "100vw",
                     // height: overlayRef.current!.scrollHeight + "px",
                     // position: "fixed",
+                    // display: "block",
                   }
                 : {
                     width: "0%",
                     // height: "0px",
                     // position: "absolute",
+                    // display: "none",
                   }
             }
           >
@@ -201,6 +202,7 @@ function App() {
             </Text>
             {/* </Flex> */}
           </div>
+
           <Home />
           <Committee />
           <FaQ />
