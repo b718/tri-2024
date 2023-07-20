@@ -196,7 +196,7 @@ function App() {
                 scrollToSection(venueRef);
                 setBurger(false);
               }}
-              style={{ paddingBottom: "2rem" }}
+              style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
             >
               Location
             </Text>
