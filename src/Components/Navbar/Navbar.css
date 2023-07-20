@@ -127,6 +127,7 @@ nav,
   overflow-y: scroll;
   transition: 0.5s;
   padding-top: 3rem;
+  padding-bottom: 3rem;
   z-index: 1;
   /* display: flex;
   flex-flow: column;
