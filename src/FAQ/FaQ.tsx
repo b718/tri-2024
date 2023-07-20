@@ -21,7 +21,9 @@ const FaQ = () => {
   // });
 
   const triCommitteeRogersSize = () => {
-    if (width < 500) {
+    if (width < 400) {
+      return 300;
+    } else if (width < 500) {
       return 350;
     } else if (width < 580) {
       return 400;

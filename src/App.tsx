@@ -204,7 +204,7 @@ function App() {
           <Home />
           <Committee />
           <FaQ />
-          {/* <Venue /> */}
+          <Venue />
           <Footer />
           {/* <ConferenceProgram />
         <Registration />

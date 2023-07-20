@@ -207,7 +207,7 @@ svg {
       max-width: 30rem;
       font-size: 100px;
       font-family: Gravity-Light;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .home-text-under-h1 {
@@ -223,7 +223,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
-      font-weight: 600;
+      font-weight: bold;
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
@@ -232,7 +232,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
-      font-weight: 600;
+      font-weight: bold;
     }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -241,7 +241,7 @@ svg {
       max-width: 50rem;
       font-size: 100px;
       font-family: Gravity-Light;
-      font-weight: 600;
+      font-weight: bold;
     }
   }
 }

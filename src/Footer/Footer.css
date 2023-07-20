@@ -83,3 +83,48 @@
   text-decoration: underline;
   text-decoration-color: #85ccf3;
 }
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+    .footer-inner-top-div-title {
+      font-size: 2rem;
+      color: white;
+      max-width: fit-content;
+      margin: 0 auto;
+      padding-top: 4rem;
+      margin-top: 5rem;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 860px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .footer-inner-top-div-title {
+      font-size: 3rem;
+      color: white;
+      max-width: fit-content;
+      margin: 0 auto;
+      padding-top: 4rem;
+      margin-top: 15rem;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+}
