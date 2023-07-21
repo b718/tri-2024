@@ -106,7 +106,7 @@
 }
 
 .committee-image-stairs {
-  margin-top: 5rem;
+  margin-top: 6rem;
   margin-left: 1rem;
   color: rgb(26 65 119);
 }
@@ -286,9 +286,9 @@
       margin-right: 1rem;
       margin-top: 5rem;
     }
-    .committee-image-stairs {
-      /* margin-left: 1rem; */
-    }
+    /* .committee-image-stairs { */
+    /* margin-left: 1rem; */
+    /* } */
 
     .committee-west-coast-text,
     .committee-west-coast-text-active {
