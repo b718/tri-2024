@@ -255,6 +255,10 @@
   max-width: 40rem;
 }
 
+.committee-flex-before-961 {
+  margin-right: 1rem;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px

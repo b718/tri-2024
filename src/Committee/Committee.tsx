@@ -193,49 +193,38 @@ const Committee = () => {
             © Alexander Serzhantov
           </Text>
         </div>
-      </div>
-
-      {/* <div className="committee-west-coast-grid-div"> */}
-      {width > 961 ? (
-        <Grid
-          columns={8}
-          justify="center"
-          grow={true}
-          style={{ maxWidth: "99vw" }}
-        >
-          <Grid.Col span={2}></Grid.Col>
-          <Grid.Col span={6}>
-            {" "}
-            <Flex justify="center">
-              <div
-                className={`committee-west-coast-text${
-                  westCoastCommitteeDivVisible ? "-active" : ""
-                }`}
-                ref={westCoastCommitteeDiv}
-              >
-                <Text className="committee-west-coast-text-header">
-                  The West Coast is waiting for you
-                </Text>
-                <Text className="committee-west-coast-text-paragraph">
-                  TRI 2023 will be held at the Trinity Business School in
-                  Trinity College Dublin, the oldest academic institution in
-                  Ireland. Established in 1592 as the College of the Holy and
-                  Undivided Trinity of Queen Elizabeth in the heart of Dublin
-                  city, Trinity College draws more than 400 years of history and
-                  houses some of the oldest relics in the world. Complementing
-                  its glory is Dublin city itself, weaving centuries of culture
-                  and tradition between the modern folds of the third
-                  millennium. This year at TRI 2023, along with our vision to
-                  #BridgingAIMS, we are honoured to give our delegates a taste
-                  of the infamous Irish culture and tradition through our social
-                  events.
-                </Text>
-              </div>
-            </Flex>
+        {/* <div className="committee-west-coast-grid-div"> */}
+        {width > 961 ? (
+          <Flex
+            justify="center"
+            align={"flex-end"}
+            direction={"column"}
+            className="committee-flex-before-961"
+          >
             <div
-              className="committee-image-bridge"
-              //  ref={bridge.ref}
+              className={`committee-west-coast-text${
+                westCoastCommitteeDivVisible ? "-active" : ""
+              }`}
+              ref={westCoastCommitteeDiv}
             >
+              <Text className="committee-west-coast-text-header">
+                The West Coast is waiting for you
+              </Text>
+              <Text className="committee-west-coast-text-paragraph">
+                TRI 2023 will be held at the Trinity Business School in Trinity
+                College Dublin, the oldest academic institution in Ireland.
+                Established in 1592 as the College of the Holy and Undivided
+                Trinity of Queen Elizabeth in the heart of Dublin city, Trinity
+                College draws more than 400 years of history and houses some of
+                the oldest relics in the world. Complementing its glory is
+                Dublin city itself, weaving centuries of culture and tradition
+                between the modern folds of the third millennium. This year at
+                TRI 2023, along with our vision to #BridgingAIMS, we are
+                honoured to give our delegates a taste of the infamous Irish
+                culture and tradition through our social events.
+              </Text>
+            </div>
+            <div className="committee-image-bridge">
               <Image
                 width={650}
                 fit="contain"
@@ -251,55 +240,55 @@ const Committee = () => {
                 © Divit Sharma
               </Text>
             </div>
-          </Grid.Col>
-        </Grid>
-      ) : (
-        <Flex justify="center" align="center" direction="column">
-          {" "}
-          <div
-            className={`committee-west-coast-text${
-              westCoastCommitteeDivVisible ? "-active" : ""
-            }`}
-            ref={westCoastCommitteeDiv}
-          >
-            <Text className="committee-west-coast-text-header">
-              The West Coast is waiting for you
-            </Text>
-            <Text className="committee-west-coast-text-paragraph">
-              TRI 2023 will be held at the Trinity Business School in Trinity
-              College Dublin, the oldest academic institution in Ireland.
-              Established in 1592 as the College of the Holy and Undivided
-              Trinity of Queen Elizabeth in the heart of Dublin city, Trinity
-              College draws more than 400 years of history and houses some of
-              the oldest relics in the world. Complementing its glory is Dublin
-              city itself, weaving centuries of culture and tradition between
-              the modern folds of the third millennium. This year at TRI 2023,
-              along with our vision to #BridgingAIMS, we are honoured to give
-              our delegates a taste of the infamous Irish culture and tradition
-              through our social events.
-            </Text>
-          </div>
-          <div
-            className="committee-image-bridge"
-            // ref={bridge.ref}
-          >
-            <Image
-              width={triCommitteeBridgeSize()}
-              fit="contain"
-              src={CommitteBridgePicture}
-              onMouseEnter={() => setHoverBridge(true)}
-              onMouseLeave={() => setHoverBridge(false)}
-            />
-            <Text
-              className={`committee-bridge-roll-over${
-                hoverBridge ? "-active" : ""
+          </Flex>
+        ) : (
+          <Flex justify="center" align="center" direction="column">
+            {" "}
+            <div
+              className={`committee-west-coast-text${
+                westCoastCommitteeDivVisible ? "-active" : ""
               }`}
+              ref={westCoastCommitteeDiv}
             >
-              © Divit Sharma
-            </Text>
-          </div>
-        </Flex>
-      )}
+              <Text className="committee-west-coast-text-header">
+                The West Coast is waiting for you
+              </Text>
+              <Text className="committee-west-coast-text-paragraph">
+                TRI 2023 will be held at the Trinity Business School in Trinity
+                College Dublin, the oldest academic institution in Ireland.
+                Established in 1592 as the College of the Holy and Undivided
+                Trinity of Queen Elizabeth in the heart of Dublin city, Trinity
+                College draws more than 400 years of history and houses some of
+                the oldest relics in the world. Complementing its glory is
+                Dublin city itself, weaving centuries of culture and tradition
+                between the modern folds of the third millennium. This year at
+                TRI 2023, along with our vision to #BridgingAIMS, we are
+                honoured to give our delegates a taste of the infamous Irish
+                culture and tradition through our social events.
+              </Text>
+            </div>
+            <div
+              className="committee-image-bridge"
+              // ref={bridge.ref}
+            >
+              <Image
+                width={triCommitteeBridgeSize()}
+                fit="contain"
+                src={CommitteBridgePicture}
+                onMouseEnter={() => setHoverBridge(true)}
+                onMouseLeave={() => setHoverBridge(false)}
+              />
+              <Text
+                className={`committee-bridge-roll-over${
+                  hoverBridge ? "-active" : ""
+                }`}
+              >
+                © Divit Sharma
+              </Text>
+            </div>
+          </Flex>
+        )}
+      </div>
     </div>
     // </div>
   );

@@ -20,14 +20,16 @@
 }
 
 .venue-text-div-right {
-  margin-top: 40%;
+  margin-top: 10%;
   opacity: 0;
+  margin-left: 2rem;
 }
 
 .venue-text-div-right-active {
-  margin-top: 40%;
+  margin-top: 10%;
   opacity: 1;
   transition: 3s ease;
+  margin-left: 2rem;
 }
 
 .venue-text-location {

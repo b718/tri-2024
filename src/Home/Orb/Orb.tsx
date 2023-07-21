@@ -42,12 +42,12 @@ const Orb = () => {
           <linearGradient id="gradient" x1="40%" y1="0%" x2="150%" y2="100%">
             {" "}
             <stop
-              offset="0%"
+              offset="10%"
               style={{ stopColor: "rgb(107, 152, 62)" }}
               data-darkreader-inline-stopcolor=""
             ></stop>{" "}
             <stop
-              offset="90%"
+              offset="100%"
               style={{ stopColor: "rgb(8, 133, 201)" }}
               data-darkreader-inline-stopcolor=""
             ></stop>{" "}

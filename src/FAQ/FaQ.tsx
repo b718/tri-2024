@@ -8,6 +8,7 @@ import { Parallax, useParallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import $ from "jquery";
+import Venue from "../Venue/Venue";
 
 const FaQ = () => {
   const faqRef = useContext(NavBarContext);
@@ -22,7 +23,7 @@ const FaQ = () => {
 
   const triCommitteeRogersSize = () => {
     if (width < 400) {
-      return 300;
+    return 280;
     } else if (width < 500) {
       return 350;
     } else if (width < 580) {
@@ -120,6 +121,7 @@ const FaQ = () => {
             © Nicolas Savignat
           </Text>
         </div>{" "}
+        <Venue />
       </div>
     </div>
   );
