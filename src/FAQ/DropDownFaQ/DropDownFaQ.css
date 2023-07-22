@@ -150,6 +150,24 @@
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
+    .drop-down-faq-title {
+      font-family: Auger-Mono-Bold;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .drop-down-faq-title-active {
+      margin-top: 1rem;
+      font-family: Auger-Mono-Bold;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: 0.5s;
+      cursor: pointer;
+    }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {

@@ -15,6 +15,9 @@ const FaQ = () => {
   const [hoverFAQ, setHoverFAQ] = useState(false);
   const { width, height } = useWindowDimensions();
 
+  const { ref: rogersPicture, inView: rogersPictureVisible } = useInView({
+    triggerOnce: true,
+  });
   // const rogersArena = useParallax<HTMLDivElement>({
   //   // rotateX: [0, 40],
   //   rotateY: [0, 40],
@@ -106,8 +109,11 @@ const FaQ = () => {
           url="https://www.google.ca/"
         />
         <div
-          className="faq-rogers-arena-picture"
           // ref={rogersArena.ref}
+          className={`faq-rogers-arena-picture${
+            rogersPictureVisible ? "-active" : ""
+          }`}
+          ref={rogersPicture}
         >
           <Image
             width={triCommitteeRogersSize()}

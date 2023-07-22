@@ -24,6 +24,18 @@ const Committee = () => {
       triggerOnce: true,
     });
 
+  const { ref: bridgePicture, inView: bridgePictureVisible } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: triCommitteePhoto, inView: triCommitteePhotoVisible } =
+    useInView({
+      triggerOnce: true,
+    });
+
+  const { ref: stairsPicture, inView: stairsPictureVisible } = useInView({
+    triggerOnce: true,
+  });
   // const stairs = useParallax<HTMLDivElement>({
   //   // rotateX: [0, 40],
   //   rotateY: [-40, 0],
@@ -67,7 +79,7 @@ const Committee = () => {
   };
   return (
     <div className="committee-outer-container" ref={committeeRef.committeeRef}>
-      <div className="committee-contain-div" ref={mainCommitteeDiv}>
+      <div className="committee-contain-div">
         <Center>
           {width > 961 ? (
             <Grid columns={8} className="committee-grid" grow={true}>
@@ -76,6 +88,7 @@ const Committee = () => {
                   className={`committee-text-left${
                     mainCommitteeDivVisible ? "-active" : ""
                   }`}
+                  ref={mainCommitteeDiv}
                 >
                   <Text className="committee-text-left-header">
                     Bridging academia, industry, medicine & society
@@ -117,8 +130,9 @@ const Committee = () => {
                   width={triCommitteePictureSize()}
                   src={TriCommitteePicture}
                   className={`committee-grid-right-image${
-                    mainCommitteeDivVisible ? "-active" : ""
+                    triCommitteePhotoVisible ? "-active" : ""
                   }`}
+                  ref={triCommitteePhoto}
                 />
               </Grid.Col>
             </Grid>
@@ -129,13 +143,15 @@ const Committee = () => {
                 width={triCommitteePictureSize()}
                 src={TriCommitteePicture}
                 className={`committee-grid-right-image${
-                  mainCommitteeDivVisible ? "-active" : ""
+                  triCommitteePhotoVisible ? "-active" : ""
                 }`}
+                ref={triCommitteePhoto}
               />{" "}
               <div
                 className={`committee-text-left${
                   mainCommitteeDivVisible ? "-active" : ""
                 }`}
+                ref={mainCommitteeDiv}
               >
                 <Text className="committee-text-left-header">
                   Bridging academia, industry, medicine & society
@@ -174,8 +190,11 @@ const Committee = () => {
           )}
         </Center>
         <div
-          className="committee-image-stairs"
           // ref={stairs.ref}
+          className={`committee-image-stairs${
+            stairsPictureVisible ? "-active" : ""
+          }`}
+          ref={stairsPicture}
         >
           {/* <div className="committee-parallax-stairs"></div> */}
           <Image
@@ -224,7 +243,12 @@ const Committee = () => {
                 culture and tradition through our social events.
               </Text>
             </div>
-            <div className="committee-image-bridge">
+            <div
+              ref={bridgePicture}
+              className={`committee-image-bridge${
+                bridgePictureVisible ? "-active" : ""
+              }`}
+            >
               <Image
                 width={650}
                 fit="contain"
@@ -268,8 +292,11 @@ const Committee = () => {
               </Text>
             </div>
             <div
-              className="committee-image-bridge"
               // ref={bridge.ref}
+              ref={bridgePicture}
+              className={`committee-image-bridge${
+                bridgePictureVisible ? "-active" : ""
+              }`}
             >
               <Image
                 width={triCommitteeBridgeSize()}
