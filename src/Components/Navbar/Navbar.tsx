@@ -135,9 +135,6 @@ const Navbar = () => {
                         stroke="#184176"
                         width="40"
                         height="40"
-                        style={{
-                          marginRight: "1rem",
-                        }}
                         className={`drop-down-svg-burger-div${
                           burgerContext.burger ? "-active" : ""
                         }`}
