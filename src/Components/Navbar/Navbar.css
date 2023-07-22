@@ -96,6 +96,8 @@ nav,
   display: block;
   top: 0px;
   z-index: 10;
+  /* border-bottom: 0.1px solid black; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .nav-bar-hamburger-div {
