@@ -67,7 +67,7 @@ const FaQ = () => {
         ref={mainFaqDiv}
       >
         <Text className="faq-main-header">Event FAQs</Text>
-        <hr />
+        <hr style={{ maxWidth: "98vw" }} />
         <DropDownFaQ
           title={"What you need to know: Vancouver 101"}
           text={

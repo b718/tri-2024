@@ -17,6 +17,10 @@
   overflow: hidden;
   transition: 0.5s;
 }
+.drop-down-faq-div {
+  max-width: 98vw;
+  margin: 0 auto;
+}
 
 .drop-down-faq-title {
   /* margin-top: 1rem; */
