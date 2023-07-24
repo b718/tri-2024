@@ -98,16 +98,16 @@
 
   @media only screen and (min-width: 300px) {
     .venue-text-title-flex {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
     .venue-text-location-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-text-website-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-title-event-location-flex {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 2rem;
       margin-left: 0rem;
     }
@@ -115,16 +115,16 @@
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
     .venue-text-title-flex {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
     .venue-text-location-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-text-website-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-title-event-location-flex {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 2rem;
       margin-left: 0rem;
     }
@@ -135,10 +135,10 @@
       font-size: 1.6rem;
     }
     .venue-text-location-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-text-website-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-title-event-location-flex {
       font-size: 2.5rem;
@@ -152,12 +152,11 @@
       font-size: 1.6rem;
     }
     .venue-text-location-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .venue-text-website-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
-
     .venue-title-event-location-flex {
       font-size: 2.5rem;
       margin-bottom: 2rem;
@@ -168,13 +167,11 @@
     .venue-text-title-flex {
       font-size: 1.6rem;
     }
-
     .venue-text-location-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
-
     .venue-text-website-flex {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
 
     .venue-title-event-location-flex {
