@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useEffect, useState, useRef, useMemo } from "react";
 import "./Navbar.css";
 import { Flex, Text, Center, Image, Grid } from "@mantine/core";
 import { BurgerContext, NavBarContext } from "../../App";
 import NavBarImage from "../../Images/Logos/TRI2024 NAV/TRI2024_Logo_Nav2.png";
 import useWindowDimensions from "../useWindowsDimensions";
+import useDetectScroll from "@smakss/react-scroll-direction";
+import { useScrollDirection } from "react-use-scroll-direction";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -15,7 +17,18 @@ const Navbar = () => {
   };
   const navBarScrollRefs = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
+  const [scroll, setScroll] = useState<boolean>(false);
   const burgerContext = useContext(BurgerContext);
+  const scrollDir = useDetectScroll({});
+  const { isScrolling } = useScrollDirection();
+
+  useEffect(() => {
+    if (!isScrolling) {
+      setScroll(false);
+    } else {
+      setScroll(true);
+    }
+  }, [isScrolling]);
 
   useEffect(() => {
     if (width > 890) {
@@ -43,7 +56,7 @@ const Navbar = () => {
   }
   return (
     <>
-      <nav className="nav-bar-for-access">
+      <nav className={`nav-bar-for-access${scroll ? "-active" : ""}`}>
         <Center>
           <div className="nav-bar-container">
             {" "}

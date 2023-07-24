@@ -11,6 +11,7 @@
   margin-right: 1rem;
   margin-left: 15rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .nav-bar-different-sections {
@@ -88,7 +89,6 @@
   transition: 0.5s;
 }
 
-nav,
 .nav-bar-for-access {
   background-color: white;
   position: sticky;
@@ -97,7 +97,20 @@ nav,
   top: 0px;
   z-index: 10;
   /* border-bottom: 0.1px solid black; */
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  transition: 0.5s;
+}
+
+.nav-bar-for-access-active {
+  background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  display: block;
+  top: 0px;
+  z-index: 10;
+  /* border-bottom: 0.1px solid black; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.5s;
 }
 
 .nav-bar-hamburger-div {

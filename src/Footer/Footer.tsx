@@ -41,9 +41,10 @@ const Footer = () => {
               {" "}
               <Text style={{ color: "white" }}>Designed by</Text>
               <Text style={{ marginLeft: "0.2rem" }}>
-                <a href="https://www.google.ca/" target="blank">
+                {/* <a href="https://www.google.ca/" target="blank">
                   Shanene.com
-                </a>
+                </a> */}
+                Shanene Lau
               </Text>
               <Text
                 style={{
