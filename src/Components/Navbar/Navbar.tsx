@@ -60,7 +60,7 @@ const Navbar = () => {
         <Center>
           <div className="nav-bar-container">
             {" "}
-            <Flex direction="row">
+            <Flex direction="row" align="center">
               <Image
                 width={200}
                 src={NavBarImage}
@@ -72,7 +72,7 @@ const Navbar = () => {
                   mih={50}
                   gap="1.3rem"
                   justify="flex-start"
-                  align="flex-start"
+                  align="center"
                   direction="row"
                   wrap="wrap"
                   className="nav-bar-whole"
