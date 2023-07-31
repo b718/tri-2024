@@ -21,6 +21,9 @@ import Carousel from "./Carousel/Carousel";
 import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
 import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
 import { Flex, Text } from "@mantine/core";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Completion from "./Payment/Completion";
+import Payment from "./Payment/Payment";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -99,27 +102,12 @@ function App() {
               burger
                 ? {
                     width: "100vw",
-                    // height: overlayRef.current!.scrollHeight + "px",
-                    // position: "fixed",
-                    // display: "block",
                   }
                 : {
                     width: "0%",
-                    // height: "0px",
-                    // position: "absolute",
-                    // display: "none",
                   }
             }
           >
-            {/* <Flex
-              mih={50}
-              gap="1.3rem"
-              justify="center"
-              align="flex-start"
-              direction="column"
-              wrap="wrap"
-              className="nav-bar-burger-version"
-            > */}
             <Text
               className="nav-bar-different-sections-burger nav-bar-burger-version "
               onClick={() => {
@@ -200,19 +188,23 @@ function App() {
             >
               Location
             </Text>
-            {/* </Flex> */}
           </div>
 
           <Home />
           <Committee />
           <FaQ />
           {/* <Venue /> */}
+          <Routes>
+            <Route path="/" element={<Payment />} />
+            <Route path="/completion" element={<Completion />} />
+          </Routes>
           <Footer />
           {/* <ConferenceProgram />
         <Registration />
         <Sponsorships /> */}
           {/* <PageHolder /> */}
           {/* <Carousel /> */}
+          {/* <Payment /> */}
         </BurgerContext.Provider>
       </NavBarContext.Provider>
     </>
