@@ -9,6 +9,7 @@ export default function CheckoutForm() {
 
   const [message, setMessage] = useState<string>();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [buttonDisable, setButtonDisable] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -21,16 +22,20 @@ export default function CheckoutForm() {
 
     setIsProcessing(true);
 
-    const { error } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
         return_url: `${window.location.origin}/completion`,
       },
+      redirect: "if_required",
     });
 
-    if (error.type === "card_error" || error.type === "validation_error") {
-      setMessage(error.message);
+    if (error) {
+      setMessage(error!.message);
+    } else if (paymentIntent && paymentIntent.status == "succeeded") {
+      setMessage("Payment Status: " + paymentIntent.status + " 🎉!");
+      setButtonDisable(true);
     } else {
       setMessage("An unexpected error occured.");
     }
@@ -42,7 +47,7 @@ export default function CheckoutForm() {
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement id="payment-element" />
       <button
-        disabled={isProcessing || !stripe || !elements}
+        disabled={isProcessing || !stripe || !elements || buttonDisable}
         className="payment-submit"
       >
         <span id="button-text">

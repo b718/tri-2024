@@ -193,22 +193,33 @@ function App() {
           <Home />
           <Committee />
           <FaQ />
-          {/* <Venue /> */}
           <Routes>
             <Route path="/" element={<Payment />} />
-            <Route path="/completion" element={<Completion />} />
+            {/* <Route path="/completion" element={<Completion />} /> */}
           </Routes>
           <Footer />
-          {/* <ConferenceProgram />
-        <Registration />
-        <Sponsorships /> */}
-          {/* <PageHolder /> */}
-          {/* <Carousel /> */}
-          {/* <Payment /> */}
         </BurgerContext.Provider>
       </NavBarContext.Provider>
     </>
   );
+}
+
+{
+  /* <Venue /> */
+}
+{
+  /* <ConferenceProgram />
+        <Registration />
+        <Sponsorships /> */
+}
+{
+  /* <PageHolder /> */
+}
+{
+  /* <Carousel /> */
+}
+{
+  /* <Payment /> */
 }
 
 export default App;

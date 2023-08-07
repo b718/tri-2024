@@ -17,7 +17,7 @@ const Payment = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3001/create-payment-intent", {
+    fetch("http://localhost:3001/industry", {
       method: "POST",
       body: JSON.stringify({}),
     }).then(async (result) => {
