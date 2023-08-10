@@ -46,7 +46,7 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
                 x2="90"
                 y2="50"
                 stroke="#74a441"
-                stroke-width="10"
+                strokeWidth="10"
               />
               <line
                 className={`drop-down-faq-line-rotate${click ? "-active" : ""}`}
@@ -55,7 +55,7 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
                 x2="50"
                 y2="90"
                 stroke="#74a441"
-                stroke-width="10"
+                strokeWidth="10"
               />
             </svg>
           </Flex>

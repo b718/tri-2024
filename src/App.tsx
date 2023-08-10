@@ -204,6 +204,7 @@ function App() {
             <Home />
             <Committee />
             <FaQ />
+
             <Routes>
               <Route
                 path="/"
