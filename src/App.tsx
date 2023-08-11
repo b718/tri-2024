@@ -22,10 +22,11 @@ import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
 import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
 import { Flex, Text } from "@mantine/core";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Completion from "./Payment/Completion";
+import Completion from "./Payment/Unused/Completion";
 import Payment from "./Payment/Payment";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import PayPalPayment from "./PayPal/PayPalPayment";
+import RegistrationUpdated from "./Registration/RegistrationUpdated";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -148,9 +149,10 @@ function App() {
               </Text>
               <Text
                 className="nav-bar-different-sections-burger nav-bar-burger-version "
-                // onClick={() =>
-                //   scrollToSection(navBarScrollRefs.registrationRef)
-                // }
+                onClick={() => {
+                  scrollToSection(registrationRef);
+                  setBurger(false);
+                }}
               >
                 Registration
               </Text>
@@ -203,10 +205,10 @@ function App() {
 
             <Home />
             <Committee />
+            <RegistrationUpdated />
             <FaQ />
-
             <Routes>
-              <Route
+              {/* <Route
                 path="/"
                 element={
                   <div>
@@ -215,7 +217,7 @@ function App() {
                     <PayPalPayment />
                   </div>
                 }
-              />
+              /> */}
 
               {/* <Route path="/completion" element={<Completion />} /> */}
             </Routes>

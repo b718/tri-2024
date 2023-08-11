@@ -101,9 +101,9 @@ const Navbar = () => {
                   </Text>
                   <Text
                     className="nav-bar-different-sections"
-                    // onClick={() =>
-                    //   scrollToSection(navBarScrollRefs.registrationRef)
-                    // }
+                    onClick={() =>
+                      scrollToSection(navBarScrollRefs.registrationRef)
+                    }
                   >
                     Registration
                   </Text>

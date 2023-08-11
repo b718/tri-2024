@@ -11,7 +11,6 @@ const Registration = () => {
         fz="xl"
         fw="600"
         style={{ marginLeft: "10%", marginBottom: "1rem" }}
-        ref={registrationRef.registrationRef}
       >
         Registration
       </Text>

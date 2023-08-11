@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+.registration-updated-main-div {
+  max-width: fit-content;
+  margin: 0 auto;
+  font-family: Gravity;
+}
+
+.registration-updated-main-flex {
+  /* border: 1px solid #0482c8;
+  border-radius: 6px; */
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.registration-updated-main-flex div {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: 0.5s;
+}
+
+.registration-updated-sci-clin,
+.registration-updated-industry,
+.registration-updated-student,
+.registration-updated-patient-org {
+  border: 1px solid transparent;
+}
+
+.registration-updated-sci-clin-active,
+.registration-updated-industry-active,
+.registration-updated-student-active,
+.registration-updated-patient-org-active {
+  border: 1px solid #0482c8;
+  border-radius: 6px;
+}
+
+.registration-updated-main-header {
+  font-size: 3rem;
+}

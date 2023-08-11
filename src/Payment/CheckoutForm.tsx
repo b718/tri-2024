@@ -1,9 +1,16 @@
 import { PaymentElement } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import "./Payment.css";
+import { Text } from "@mantine/core";
+import { PaymentIntentResult } from "@stripe/stripe-js";
+interface CheckFormInterface {
+  secret: string;
+}
 
-export default function CheckoutForm() {
+const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
+  secret,
+}) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -34,7 +41,17 @@ export default function CheckoutForm() {
     if (error) {
       setMessage(error!.message);
     } else if (paymentIntent && paymentIntent.status == "succeeded") {
-      setMessage("Payment Status: " + paymentIntent.status + " 🎉!");
+      setMessage(
+        "Payment Status: " +
+          paymentIntent.status +
+          " 🎉!" +
+          " Paid: " +
+          paymentIntent.amount / 100 +
+          ".00" +
+          " " +
+          paymentIntent.currency +
+          "!"
+      );
       setButtonDisable(true);
     } else {
       setMessage("An unexpected error occured.");
@@ -58,4 +75,6 @@ export default function CheckoutForm() {
       {message && <div id="payment-message">{message}</div>}
     </form>
   );
-}
+};
+
+export default CheckoutForm;

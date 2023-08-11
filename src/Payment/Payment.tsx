@@ -3,8 +3,11 @@ import { Stripe, loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import "./Payment.css";
+interface PaymentPerson {
+  title: string;
+}
 
-const Payment = () => {
+const Payment: React.FunctionComponent<PaymentPerson> = ({ title }) => {
   const [stripePromise, setStripePromise] =
     useState<Promise<Stripe | null> | null>(null);
   const [clientSecret, setClientSecret] = useState("");
@@ -17,7 +20,7 @@ const Payment = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3001/industry", {
+    fetch(`http://localhost:3001/${title}`, {
       method: "POST",
       body: JSON.stringify({}),
     }).then(async (result) => {
@@ -32,7 +35,7 @@ const Payment = () => {
       <div className="payment-div-container">
         {clientSecret && stripePromise && (
           <Elements stripe={stripePromise} options={{ clientSecret }}>
-            <CheckoutForm />
+            <CheckoutForm secret={clientSecret} />
           </Elements>
         )}
       </div>
