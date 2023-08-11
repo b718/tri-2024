@@ -12,6 +12,7 @@ const RegistrationUpdated = () => {
   const [shownIndustry, setShownIndustry] = useState(false);
   const [shownStudent, setShownStudent] = useState(false);
   const [shownPatientOrg, setShownPatientOrg] = useState(false);
+  const [currentPayment, setCurrentPaymnet] = useState<any>();
   const correctPayment = () => {
     if (option == 1) {
       return (
@@ -54,6 +55,11 @@ const RegistrationUpdated = () => {
     }
     return <div></div>;
   };
+
+  useEffect(() => {
+    setCurrentPaymnet(correctPayment());
+  }, [option]);
+
   //API END POINTS: scientist-clinician, industry, student, patient
   return (
     <div ref={registrationRef.registrationRef}>
@@ -156,7 +162,7 @@ const RegistrationUpdated = () => {
               <Text>$500</Text>
             </Flex>
           </Flex>
-          {correctPayment()}
+          {currentPayment}
         </Flex>
       </div>
     </div>
