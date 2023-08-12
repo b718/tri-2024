@@ -1,7 +1,7 @@
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import "./PayPalPayment.css";
 import { FunctionComponent, useState } from "react";
-import { Flex, Text } from "@mantine/core";
+import { Center, Flex, Text } from "@mantine/core";
 interface PayPalPaymentInterface {
   price: string;
 }
