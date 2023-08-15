@@ -3,7 +3,7 @@ import "./PaymentForm.css";
 import RegistrationAndFees from "./PaymentFormSections/RegistrationAndFees/RegistrationAndFees";
 import AttendeeContactInformation from "./PaymentFormSections/AttendeeContactInformation/AttendeeContactInformation";
 import TermsAndConditions from "./PaymentFormSections/TermsAndConditions/TermsAndConditions";
-import { Center } from "@mantine/core";
+import { Center, Flex } from "@mantine/core";
 import PaymentFormPayment from "./PaymentFormSections/PaymentFormPayment/PaymentFormPayment";
 interface apiEndPointInterface {
   api: string;
@@ -33,8 +33,11 @@ const PaymentForm = () => {
     <>
       <apiEndPointContext.Provider value={{ api, setAPI }}>
         <paymentTotalContext.Provider value={{ total, setTotal }}>
-          <RegistrationAndFees />
-          <AttendeeContactInformation />
+          <Flex gap={"md"} className="payment-form-flex-first-two">
+            {" "}
+            <RegistrationAndFees />
+            <AttendeeContactInformation />
+          </Flex>
           <TermsAndConditions />
           <PaymentFormPayment />
         </paymentTotalContext.Provider>

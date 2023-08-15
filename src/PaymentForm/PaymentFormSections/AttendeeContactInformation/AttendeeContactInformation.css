@@ -8,8 +8,9 @@
   src: url("../../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
 }
 
-.registration-and-fees-main-flex {
+.attendee-contact-info-main-flex {
   max-width: fit-content;
+  margin-right: 1rem;
   margin-left: 1rem;
   margin-bottom: 3rem;
   margin-top: 3rem;
@@ -18,21 +19,29 @@
   border-radius: 12px;
 }
 
-.registration-and-fees-main-text {
+.attendee-contact-info-main-text {
   font-size: 1.5rem;
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   color: #0582c8;
 }
 
-.registration-and-fees-radio-options div {
+.attendee-contact-info-inputs label {
   font-family: Auger-Mono-Bold;
   color: #1a4177;
-  margin-top: 0.1rem;
 }
 
-.registration-and-fees-display {
-  color: #1a4177;
-  margin-top: 0.2rem;
+.attendee-contact-information-profession-section {
+  margin-top: 1rem;
+}
+
+.attendee-contact-information-email-section {
+  margin-top: 1rem;
+}
+
+.attendee-contact-info-italic {
+  font-style: italic;
+  font-size: 0.8rem;
   font-family: Auger-Mono-Bold;
+  color: #1a4177;
 }
