@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { NavBarContext } from "../App";
 import { Button, Flex, Text } from "@mantine/core";
 import "./RegistrationUpdate.css";
-import Payment from "../Payment/Payment";
+import Payment from "../Payment-Stripe/Payment";
 import PayPalPayment from "../PayPal/PayPalPayment";
 
 const RegistrationUpdated = () => {
@@ -75,7 +75,9 @@ const RegistrationUpdated = () => {
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
             </Text>
             <button className="registration-updated-register-button">
-              REGISTER NOW
+              <a href="register" target="_blank">
+                REGISTER NOW
+              </a>
             </button>
           </Flex>
           <hr style={{ marginTop: "4rem" }} />

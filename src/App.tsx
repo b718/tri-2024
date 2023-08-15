@@ -22,11 +22,12 @@ import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
 import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
 import { Flex, Text } from "@mantine/core";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Completion from "./Payment/Unused/Completion";
-import Payment from "./Payment/Payment";
+import Completion from "./Payment-Stripe/Unused/Completion";
+import Payment from "./Payment-Stripe/Payment";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import PayPalPayment from "./PayPal/PayPalPayment";
 import RegistrationUpdated from "./Registration/RegistrationUpdated";
+import PaymentForm from "./PaymentForm/PaymentForm";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -38,7 +39,6 @@ interface ContextTypeNavBarRef {
   venueRef: React.RefObject<HTMLDivElement>;
   faqRef: React.RefObject<HTMLDivElement>;
   trinityRef: React.RefObject<HTMLDivElement>;
-
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
 
@@ -86,7 +86,7 @@ function App() {
   const initialOptionsPaypal = {
     clientId:
       "AVwo8M09K1GyA6asqqmQuU63jB-h3BREPb6ZjExzvkToHocPxRm1aqt4CjSaFwZuT81h-jpNPq8B_VNQ",
-    currency: "EUR",
+    currency: "CAD",
     intent: "capture",
   };
 
@@ -106,122 +106,118 @@ function App() {
           }}
         >
           <BurgerContext.Provider value={{ burger, setBurger }}>
-            <Navbar />
-            <div
-              className="nav-bar-burger-overlay"
-              ref={overlayRef}
-              style={
-                burger
-                  ? {
-                      width: "100vw",
-                    }
-                  : {
-                      width: "0%",
-                    }
-              }
-            >
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(homeRef);
-                  setBurger(false);
-                }}
-              >
-                About
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(comitteeRef);
-                  setBurger(false);
-                }}
-              >
-                Trinity
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version  nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(comitteeRef);
-                  setBurger(false);
-                }}
-              >
-                Committee
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(registrationRef);
-                  setBurger(false);
-                }}
-              >
-                Registration
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                Speakers
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                Program
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                Guidelines
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                Awards
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                Socials
-              </Text>
-              <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                PPI
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                // onClick={() =>
-                //   scrollToSection(navBarScrollRefs.sponsorshipRef)
-                // }
-              >
-                Sponsorship
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(faqRef);
-                  setBurger(false);
-                }}
-              >
-                FAQ
-              </Text>
-              <Text
-                className="nav-bar-different-sections-burger nav-bar-burger-version "
-                onClick={() => {
-                  scrollToSection(venueRef);
-                  setBurger(false);
-                }}
-                style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
-              >
-                Location
-              </Text>
-            </div>
-
-            <Home />
-            <Committee />
-            <RegistrationUpdated />
-            <FaQ />
             <Routes>
-              {/* <Route
+              <Route
                 path="/"
                 element={
                   <div>
-                    {" "}
-                    <Payment />
-                    <PayPalPayment />
+                    <Navbar />
+                    <div
+                      className="nav-bar-burger-overlay"
+                      ref={overlayRef}
+                      style={
+                        burger
+                          ? {
+                              width: "100vw",
+                            }
+                          : {
+                              width: "0%",
+                            }
+                      }
+                    >
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(homeRef);
+                          setBurger(false);
+                        }}
+                      >
+                        About
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(comitteeRef);
+                          setBurger(false);
+                        }}
+                      >
+                        Trinity
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version  nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(comitteeRef);
+                          setBurger(false);
+                        }}
+                      >
+                        Committee
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(registrationRef);
+                          setBurger(false);
+                        }}
+                      >
+                        Registration
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        Speakers
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        Program
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        Guidelines
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        Awards
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        Socials
+                      </Text>
+                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                        PPI
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        // onClick={() =>
+                        //   scrollToSection(navBarScrollRefs.sponsorshipRef)
+                        // }
+                      >
+                        Sponsorship
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(faqRef);
+                          setBurger(false);
+                        }}
+                      >
+                        FAQ
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(venueRef);
+                          setBurger(false);
+                        }}
+                        style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
+                      >
+                        Location
+                      </Text>
+                    </div>
+
+                    <Home />
+                    <Committee />
+                    <RegistrationUpdated />
+                    <FaQ />
+                    <Footer />
                   </div>
                 }
-              /> */}
-
-              {/* <Route path="/completion" element={<Completion />} /> */}
+              />
+              <Route path="/register" element={<PaymentForm />} />
             </Routes>
-            <Footer />
           </BurgerContext.Provider>
         </NavBarContext.Provider>
       </PayPalScriptProvider>

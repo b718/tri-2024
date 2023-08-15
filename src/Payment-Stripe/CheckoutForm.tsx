@@ -47,7 +47,6 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
           " 🎉!" +
           " Paid: " +
           paymentIntent.amount / 100 +
-          ".00" +
           " " +
           paymentIntent.currency +
           "!"

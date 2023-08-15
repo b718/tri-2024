@@ -104,3 +104,8 @@
   max-width: 13rem;
   margin-top: 2.5rem;
 }
+
+.registration-updated-register-button a {
+  color: white;
+  text-decoration: none; /* no underline */
+}

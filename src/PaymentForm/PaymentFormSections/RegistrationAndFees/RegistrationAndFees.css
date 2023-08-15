@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+.registration-and-fees-main-flex {
+  max-width: fit-content;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.registration-and-fees-main-text {
+  font-size: 1.5rem;
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  color: #0582c8;
+}
+
+.registration-and-fees-radio-options div {
+  font-family: Gravity;
+  color: #1a4177;
+  margin-top: 0.1rem;
+}
+
+.registration-and-fees-display {
+  color: #1a4177;
+  margin-top: 0.2rem;
+  font-family: Auger-Mono-Bold;
+}
