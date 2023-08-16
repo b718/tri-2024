@@ -4,11 +4,17 @@ import "./TermsAndConditions.css";
 const TermsAndConditions = () => {
   return (
     <>
-      <Flex direction={"column"} gap={"md"}>
+      <Flex
+        direction={"column"}
+        gap={"md"}
+        className="terms-and-conditions-main-flex"
+      >
         <Flex>
           {" "}
-          <Text>Participation, Cancellation, Refund, and Privacy Policies</Text>
-          <Text style={{ color: "red" }}>*</Text>
+          <Text className="terms-and-conditions-main-text">
+            Participation, Cancellation, Refund, and Privacy Policies
+          </Text>
+          <Text style={{ color: "red", marginLeft: "0.5rem" }}>*</Text>
         </Flex>
 
         <Text className="terms-and-conditions-text">
@@ -20,14 +26,24 @@ const TermsAndConditions = () => {
           shall refer interchangeably to the VTHC and the staff responsible for
           planning and implementing the Conference.
         </Text>
-        <Checkbox
-          label="Having read and understood the Participation, Cancellation, Refund, and Privacy Policies, I hereby accept and agree
+        <Flex>
+          <Checkbox
+            className="terms-and-conditions-check-box"
+            required={true}
+            label="Having read and understood the Participation, Cancellation, Refund, and Privacy Policies, I hereby accept and agree
 that these terms are a fundamental condition of my Conference participation."
-        />
-        <Checkbox
-          label="I hereby consent to the collection and use of my Personal Information for the purposes of communications for and
+          />
+          <Text style={{ color: "red" }}>*</Text>
+        </Flex>
+        <Flex>
+          <Checkbox
+            className="terms-and-conditions-check-box"
+            required={true}
+            label="I hereby consent to the collection and use of my Personal Information for the purposes of communications for and
           about the Conference."
-        />
+          />
+          <Text style={{ color: "red" }}>*</Text>
+        </Flex>
       </Flex>
     </>
   );

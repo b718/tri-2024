@@ -7,8 +7,17 @@ const RegistrationAndFees = () => {
   const apiContext = useContext(apiEndPointContext);
   const totalContext = useContext(paymentTotalContext);
   const [registrationEndPoint, setRegistrationEndPoint] = useState("");
+  const [registrationEndPointClicked, setRegistrationEndPointClicked] =
+    useState(false);
   const [currentRegistrationPrice, setCurrentRegistrationPrice] = useState(0);
 
+  const clickChecker = (bool: boolean, str: string) => {
+    if (bool) {
+      return str.length > 0;
+    } else {
+      return true;
+    }
+  };
   useEffect(() => {
     apiContext.setAPI(registrationEndPoint);
   }, [registrationEndPoint]);
@@ -26,12 +35,22 @@ const RegistrationAndFees = () => {
           <Text className="registration-and-fees-main-text">
             Select Registration Option:
           </Text>
-          <Text style={{ color: "red" }}>*</Text>
+          <Text style={{ color: "red", marginLeft: "0.5rem" }}>*</Text>
         </Flex>
         <Radio.Group
           value={registrationEndPoint}
           onChange={setRegistrationEndPoint}
           style={{ marginLeft: "0.5rem" }}
+          withAsterisk
+          required={true}
+          onClick={() => {
+            setRegistrationEndPointClicked(true);
+          }}
+          error={
+            clickChecker(registrationEndPointClicked, registrationEndPoint)
+              ? ""
+              : "This is required."
+          }
         >
           {" "}
           <Radio

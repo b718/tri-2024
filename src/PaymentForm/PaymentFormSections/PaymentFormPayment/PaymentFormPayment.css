@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
 .payment-form-payment-button {
   padding: 0;
   border: none;
@@ -5,10 +15,10 @@
   background-color: #1a4177;
   color: white;
   border-radius: 12px;
-  font-family: Gravity;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-family: Auger-Mono-Bold;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   max-width: 13rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .payment-form-payment-button:hover {
@@ -18,8 +28,35 @@
   background-color: #1e4986;
   color: white;
   border-radius: 12px;
-  font-family: Gravity;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-family: Auger-Mono-Bold;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   max-width: 13rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+}
+
+.payment-form-payment-main-flex {
+  max-width: 26rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  border: 0.5px solid #0582c8;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 12px;
+}
+.payment-form-payment-main-text {
+  font-size: 1.5rem;
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  color: #0582c8;
+}
+
+.payment-form-payment-info-text {
+  font-family: Auger-Mono-Bold;
+  color: #1a4177;
+  margin-top: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.payment-form-payment-display-flex {
+  margin-top: 0.3rem;
 }

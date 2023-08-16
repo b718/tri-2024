@@ -1,3 +1,39 @@
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+@font-face {
+  font-family: Gravity;
+  src: url("../../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
 .terms-and-conditions-text {
   border: 0.5px solid black;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 12px;
+  font-family: Auger-Mono-Bold;
+}
+
+.terms-and-conditions-main-flex {
+  max-width: fit-content;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  border: 0.5px solid #0582c8;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 12px;
+}
+
+.terms-and-conditions-main-text {
+  font-size: 1.5rem;
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  color: #0582c8;
+}
+
+.terms-and-conditions-check-box label {
+  font-family: Auger-Mono-Bold;
+  color: #1a4177;
 }

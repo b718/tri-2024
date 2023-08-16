@@ -2,7 +2,6 @@ import { PaymentElement } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import "./Payment.css";
-import { Text } from "@mantine/core";
 import { PaymentIntentResult } from "@stripe/stripe-js";
 interface CheckFormInterface {
   secret: string;
@@ -60,11 +59,16 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
+    <div
+      id="payment-form"
+      //  onSubmit={handleSubmit}
+    >
       <PaymentElement id="payment-element" />
       <button
         disabled={isProcessing || !stripe || !elements || buttonDisable}
         className="payment-submit"
+        type="button"
+        onClick={handleSubmit}
       >
         <span id="button-text">
           {isProcessing ? "Processing ... " : "Pay now"}
@@ -72,7 +76,7 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
       </button>
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
-    </form>
+    </div>
   );
 };
 
