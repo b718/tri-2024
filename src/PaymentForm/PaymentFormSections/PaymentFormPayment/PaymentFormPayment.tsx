@@ -1,5 +1,9 @@
-import React, { useContext, useState } from "react";
-import { apiEndPointContext, paymentTotalContext } from "../../PaymentForm";
+import React, { useContext, useEffect, useState } from "react";
+import {
+  apiEndPointContext,
+  paymentStatusContext,
+  paymentTotalContext,
+} from "../../PaymentForm";
 import { Flex, Text } from "@mantine/core";
 import "./PaymentFormPayment.css";
 import PayPalPayment from "../../../PayPal/PayPalPayment";
@@ -7,7 +11,12 @@ import Payment from "../../../Payment-Stripe/Payment";
 const PaymentFormPayment = () => {
   const paymentTotal = useContext(paymentTotalContext);
   const apiEndPoint = useContext(apiEndPointContext);
+  const paymentFormPaymentStatus = useContext(paymentStatusContext);
   const [buttonConfirm, setButtonConfirm] = useState(false);
+
+  useEffect(() => {
+    setButtonConfirm(false);
+  }, [paymentFormPaymentStatus.paymentStatus]);
   return (
     <>
       <Flex direction={"column"} className="payment-form-payment-main-flex">
@@ -42,10 +51,10 @@ const PaymentFormPayment = () => {
           <Flex gap={"md"}>
             <button
               className="payment-form-payment-button"
-              disabled={buttonConfirm}
               onClick={() => {
                 setButtonConfirm(true);
               }}
+              disabled={paymentFormPaymentStatus.paymentStatus}
               type="button"
             >
               CONFIRM
@@ -55,6 +64,7 @@ const PaymentFormPayment = () => {
               onClick={() => {
                 setButtonConfirm(false);
               }}
+              disabled={paymentFormPaymentStatus.paymentStatus}
               type="button"
             >
               CANCEL

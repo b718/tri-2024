@@ -40,6 +40,10 @@ const PaymentForm = () => {
   const [total, setTotal] = useState<number>(0);
   const [paymentStatus, setPaymentStatus] = useState<boolean>(false);
 
+  const submitFunction = async (e: any) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <apiEndPointContext.Provider value={{ api, setAPI }}>
@@ -47,7 +51,7 @@ const PaymentForm = () => {
           value={{ paymentStatus, setPaymentStatus }}
         >
           <paymentTotalContext.Provider value={{ total, setTotal }}>
-            <form name="payment-form-general">
+            <form name="payment-form-general" onSubmit={submitFunction}>
               <Flex gap={"md"} className="payment-form-flex-first-two">
                 {" "}
                 <Flex direction={"column"}>
@@ -57,7 +61,7 @@ const PaymentForm = () => {
                   {paymentStatus ? (
                     <Center>
                       <Text className="payment-form-confirmation-payment">
-                        Payment Confirmed
+                        Payment Confirmed for {api} thank you!
                       </Text>
                     </Center>
                   ) : (
