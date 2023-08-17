@@ -1,8 +1,9 @@
 import { PaymentElement } from "@stripe/react-stripe-js";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import "./Payment.css";
 import { PaymentIntentResult } from "@stripe/stripe-js";
+import { paymentStatusContext } from "../PaymentForm/PaymentForm";
 interface CheckFormInterface {
   secret: string;
 }
@@ -16,6 +17,8 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
   const [message, setMessage] = useState<string>();
   const [isProcessing, setIsProcessing] = useState(false);
   const [buttonDisable, setButtonDisable] = useState(false);
+
+  const paymentFormPaymentStatus = useContext(paymentStatusContext);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -50,6 +53,7 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
           paymentIntent.currency +
           "!"
       );
+      paymentFormPaymentStatus.setPaymentStatus(true);
       setButtonDisable(true);
     } else {
       setMessage("An unexpected error occured.");

@@ -1,7 +1,8 @@
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import "./PayPalPayment.css";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useContext, useEffect, useState } from "react";
 import { Center, Flex, Text } from "@mantine/core";
+import { paymentStatusContext } from "../PaymentForm/PaymentForm";
 interface PayPalPaymentInterface {
   price: string;
 }
@@ -10,6 +11,7 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
 }) => {
   const serverURL = "http://localhost:3001";
   const [responsePayment, setResponsePayment] = useState<any>();
+  const paymentFormPaymentStatus = useContext(paymentStatusContext);
   const createOrder = (data: any) => {
     // Order is created on the server and the order id is returned
     return fetch(`${serverURL}/my-server/create-paypal-order`, {
@@ -50,6 +52,13 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
         setResponsePayment(res);
       });
   };
+
+  useEffect(() => {
+    if (responsePayment && responsePayment.status === "COMPLETED") {
+      paymentFormPaymentStatus.setPaymentStatus(true);
+    }
+  }, [responsePayment]);
+
   return (
     <>
       {" "}

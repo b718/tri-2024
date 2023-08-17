@@ -3,7 +3,7 @@ import React from "react";
 import "./TermsAndConditions.css";
 const TermsAndConditions = () => {
   return (
-    <>
+    <div style={{ maxWidth: "fit-content", margin: "0 auto" }}>
       <Flex
         direction={"column"}
         gap={"md"}
@@ -45,7 +45,7 @@ that these terms are a fundamental condition of my Conference participation."
           <Text style={{ color: "red" }}>*</Text>
         </Flex>
       </Flex>
-    </>
+    </div>
   );
 };
 

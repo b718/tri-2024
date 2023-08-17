@@ -1,4 +1,15 @@
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
 .payment-form-flex-first-two {
   max-width: fit-content;
   margin: 0 auto;
+}
+
+.payment-form-confirmation-payment {
+  color: #1a4177;
+  margin-top: 0.2rem;
+  font-family: Auger-Mono-Bold;
 }
