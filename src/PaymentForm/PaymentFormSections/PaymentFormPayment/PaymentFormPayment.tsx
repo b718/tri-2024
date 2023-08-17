@@ -47,7 +47,7 @@ const PaymentFormPayment = () => {
             {apiEndPoint.api}
           </Text>
         </Flex>
-        {paymentTotal.total > 0 ? (
+        {paymentTotal.total > 0 && !paymentFormPaymentStatus.paymentStatus ? (
           <Flex gap={"md"}>
             <button
               className="payment-form-payment-button"

@@ -19,6 +19,7 @@
   padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   max-width: 13rem;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .payment-form-payment-button:hover {
@@ -32,6 +33,7 @@
   padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   max-width: 13rem;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .payment-form-payment-main-flex {
