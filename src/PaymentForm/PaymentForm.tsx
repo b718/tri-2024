@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import "./PaymentForm.css";
 import RegistrationAndFees from "./PaymentFormSections/RegistrationAndFees/RegistrationAndFees";
 import AttendeeContactInformation from "./PaymentFormSections/AttendeeContactInformation/AttendeeContactInformation";
@@ -20,6 +20,18 @@ interface paymentStatusInterface {
   setPaymentStatus: Function;
 }
 
+interface contactInformationInterface {
+  contactObject: any;
+  setContactObject: Function;
+}
+
+//PARTICIPATION
+
+interface participationInterface {
+  participationObject: any;
+  setParticipationObject: Function;
+}
+
 export const apiEndPointContext = createContext<apiEndPointInterface>({
   api: "",
   setAPI: () => {},
@@ -35,51 +47,100 @@ export const paymentStatusContext = createContext<paymentStatusInterface>({
   setPaymentStatus: () => {},
 });
 
+export const contactObjectContext = createContext<contactInformationInterface>({
+  contactObject: {},
+  setContactObject: () => {},
+});
+
+export const participationObjectContext = createContext<participationInterface>(
+  {
+    participationObject: {},
+    setParticipationObject: () => {},
+  }
+);
+
 const PaymentForm = () => {
   const [api, setAPI] = useState<string>("");
   const [total, setTotal] = useState<number>(0);
   const [paymentStatus, setPaymentStatus] = useState<boolean>(false);
+  const [contactObject, setContactObject] = useState<any>({});
+  const [participationObject, setParticipationObject] = useState<any>({});
+  const [submitBool, setSubmitBool] = useState<boolean>(false);
 
+  useEffect(() => {
+    console.log(contactObject);
+    console.log(participationObject);
+  }, [contactObject, participationObject]);
   const submitFunction = async (e: any) => {
     e.preventDefault();
+    let date = new Date().toLocaleString() + "";
+    let finalObject = {
+      ...contactObject,
+      ...participationObject,
+      option: api,
+      registration: total,
+      gst: total * 0.05,
+      total: total * 1.05,
+      paymentStatus: paymentStatus,
+      data: date,
+    };
+    setSubmitBool(true);
+    console.log(finalObject);
   };
 
   return (
     <>
-      <apiEndPointContext.Provider value={{ api, setAPI }}>
-        <paymentStatusContext.Provider
-          value={{ paymentStatus, setPaymentStatus }}
+      <participationObjectContext.Provider
+        value={{ participationObject, setParticipationObject }}
+      >
+        <contactObjectContext.Provider
+          value={{ contactObject, setContactObject }}
         >
-          <paymentTotalContext.Provider value={{ total, setTotal }}>
-            <form name="payment-form-general" onSubmit={submitFunction}>
-              <Flex gap={"md"} className="payment-form-flex-first-two">
-                {" "}
-                <Flex direction={"column"}>
-                  {" "}
-                  <RegistrationAndFees />
-                  <PaymentFormPayment />
-                  {paymentStatus ? (
+          <apiEndPointContext.Provider value={{ api, setAPI }}>
+            <paymentStatusContext.Provider
+              value={{ paymentStatus, setPaymentStatus }}
+            >
+              <paymentTotalContext.Provider value={{ total, setTotal }}>
+                {!submitBool ? (
+                  <form name="payment-form-general" onSubmit={submitFunction}>
+                    <Flex gap={"md"} className="payment-form-flex-first-two">
+                      {" "}
+                      <Flex direction={"column"}>
+                        {" "}
+                        <RegistrationAndFees />
+                        <PaymentFormPayment />
+                        {paymentStatus ? (
+                          <Center>
+                            <Text className="payment-form-confirmation-payment">
+                              Payment Confirmed for {api} thank you!
+                            </Text>
+                          </Center>
+                        ) : (
+                          <div></div>
+                        )}
+                      </Flex>
+                      <AttendeeContactInformation />
+                    </Flex>
+                    <TermsAndConditions />
                     <Center>
-                      <Text className="payment-form-confirmation-payment">
-                        Payment Confirmed for {api} thank you!
-                      </Text>
+                      <Button type="submit" style={{ marginBottom: "2rem" }}>
+                        Submit
+                      </Button>
                     </Center>
-                  ) : (
-                    <div></div>
-                  )}
-                </Flex>
-                <AttendeeContactInformation />
-              </Flex>
-              <TermsAndConditions />
-              <Center>
-                <Button type="submit" style={{ marginBottom: "2rem" }}>
-                  Submit
-                </Button>
-              </Center>
-            </form>
-          </paymentTotalContext.Provider>
-        </paymentStatusContext.Provider>
-      </apiEndPointContext.Provider>
+                  </form>
+                ) : (
+                  <Center>
+                    <Text className="payment-form-on-submit-message">
+                      Thank you for registiring with us, we will see you soon at
+                      the 2024 Tinnitus Research Initiative Conference!{" "}
+                    </Text>
+                  </Center>
+                )}
+              </paymentTotalContext.Provider>
+            </paymentStatusContext.Provider>
+          </apiEndPointContext.Provider>
+        </contactObjectContext.Provider>
+      </participationObjectContext.Provider>
     </>
   );
 };

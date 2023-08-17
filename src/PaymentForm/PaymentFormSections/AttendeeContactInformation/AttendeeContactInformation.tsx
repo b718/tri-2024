@@ -1,6 +1,7 @@
 import { Flex, Select, Text, TextInput } from "@mantine/core";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./AttendeeContactInformation.css";
+import { contactObjectContext } from "../../PaymentForm";
 const AttendeeContactInformation = () => {
   const [profession, setProfession] = useState("");
   const [professionClicked, setProfessionClicked] = useState(false);
@@ -13,6 +14,8 @@ const AttendeeContactInformation = () => {
   const [firstClicked, setFirstClicked] = useState(false);
   const [last, setLast] = useState("");
   const [lastClicked, setLastClicked] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailClicked, setEmailClicked] = useState(false);
   const [phoneNum, setPhoneNum] = useState("");
   const [phoneNumClicked, setPhoneNumClicked] = useState(false);
   const [affliation, setAffliation] = useState("");
@@ -32,6 +35,40 @@ const AttendeeContactInformation = () => {
   const [country, setCountry] = useState("");
   const [countryClicked, setCountryClicked] = useState(false);
 
+  const paymentFormContactObject = useContext(contactObjectContext);
+
+  useEffect(() => {
+    let newObject = {
+      title: title,
+      first: first,
+      last: last,
+      profession: profession,
+      email: email,
+      phoneNum: phoneNum,
+      affliation: affliation,
+      streetAddress: streetAddress,
+      city: city,
+      province: province,
+      postal: postal,
+      country: country,
+    };
+
+    paymentFormContactObject.setContactObject(newObject);
+  }, [
+    profession,
+    address,
+    title,
+    first,
+    last,
+    email,
+    phoneNum,
+    affliation,
+    streetAddress,
+    city,
+    province,
+    postal,
+    country,
+  ]);
   const clickChecker = (bool: boolean, str: string) => {
     if (bool) {
       return str.length > 0;
@@ -47,9 +84,6 @@ const AttendeeContactInformation = () => {
       return true;
     }
   };
-
-  const [email, setEmail] = useState("");
-  const [emailClicked, setEmailClicked] = useState(false);
 
   const validateEmail = (email: string) => {
     return email.match(
@@ -248,6 +282,7 @@ const AttendeeContactInformation = () => {
               <TextInput
                 label="City"
                 withAsterisk={true}
+                required={true}
                 className="attendee-contact-info-inputs"
                 value={city}
                 onChange={(e) => {
@@ -263,6 +298,7 @@ const AttendeeContactInformation = () => {
               <TextInput
                 label="State/Region/Province"
                 withAsterisk={true}
+                required={true}
                 className="attendee-contact-info-inputs"
                 value={province}
                 onChange={(e) => {
@@ -282,6 +318,7 @@ const AttendeeContactInformation = () => {
               <TextInput
                 label="Postal/Zip Code"
                 withAsterisk={true}
+                required={true}
                 className="attendee-contact-info-inputs"
                 value={postal}
                 onChange={(e) => {
@@ -297,6 +334,7 @@ const AttendeeContactInformation = () => {
               <TextInput
                 label="Country"
                 withAsterisk={true}
+                required={true}
                 className="attendee-contact-info-inputs"
                 value={country}
                 onChange={(e) => {

@@ -13,3 +13,11 @@
   margin-top: 0.2rem;
   font-family: Auger-Mono-Bold;
 }
+
+.payment-form-on-submit-message {
+  font-family: Auger-Mono-Bold;
+  color: #1a4177;
+  text-transform: uppercase;
+  font-size: 3rem;
+  max-width: fit-content;
+}

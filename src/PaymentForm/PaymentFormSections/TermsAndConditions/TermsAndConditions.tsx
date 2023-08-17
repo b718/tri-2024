@@ -1,7 +1,19 @@
 import { Checkbox, Flex, Text } from "@mantine/core";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./TermsAndConditions.css";
+import { participationObjectContext } from "../../PaymentForm";
 const TermsAndConditions = () => {
+  const [havingRead, setHavingRead] = useState(false);
+  const [readClicked, setReadClicked] = useState(false);
+  const [personalInfo, setPersonalInfo] = useState(false);
+  const [personalClicked, setPersonalClicked] = useState(false);
+  const participationObject = useContext(participationObjectContext);
+
+  useEffect(() => {
+    let newObject = { havingRead: havingRead, personalInfo: personalInfo };
+    participationObject.setParticipationObject(newObject);
+  }, [havingRead, personalInfo]);
+
   return (
     <div style={{ maxWidth: "fit-content", margin: "0 auto" }}>
       <Flex
@@ -32,6 +44,9 @@ const TermsAndConditions = () => {
             required={true}
             label="Having read and understood the Participation, Cancellation, Refund, and Privacy Policies, I hereby accept and agree
 that these terms are a fundamental condition of my Conference participation."
+            onClick={() => {
+              setHavingRead(!havingRead);
+            }}
           />
           <Text style={{ color: "red" }}>*</Text>
         </Flex>
@@ -41,6 +56,9 @@ that these terms are a fundamental condition of my Conference participation."
             required={true}
             label="I hereby consent to the collection and use of my Personal Information for the purposes of communications for and
           about the Conference."
+            onClick={() => {
+              setPersonalInfo(!personalInfo);
+            }}
           />
           <Text style={{ color: "red" }}>*</Text>
         </Flex>
