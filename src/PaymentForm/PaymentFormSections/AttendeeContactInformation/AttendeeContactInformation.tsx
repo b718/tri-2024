@@ -188,6 +188,7 @@ const AttendeeContactInformation = () => {
           <Flex direction={"column"} gap={"md"}>
             <TextInput
               label="Email"
+              type={"email"}
               withAsterisk
               required={true}
               className="attendee-contact-info-inputs"
@@ -202,6 +203,7 @@ const AttendeeContactInformation = () => {
             ></TextInput>
             <TextInput
               label="Phone Number"
+              type={"number"}
               withAsterisk
               required={true}
               className="attendee-contact-info-inputs"
