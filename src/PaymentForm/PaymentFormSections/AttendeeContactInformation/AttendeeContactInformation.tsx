@@ -39,9 +39,7 @@ const AttendeeContactInformation = () => {
 
   useEffect(() => {
     let newObject = {
-      title: title,
-      first: first,
-      last: last,
+      name: title + "." + " " + first + " " + last,
       profession: profession,
       email: email,
       phoneNum: phoneNum,

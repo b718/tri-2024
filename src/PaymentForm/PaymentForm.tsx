@@ -67,10 +67,11 @@ const PaymentForm = () => {
   const [participationObject, setParticipationObject] = useState<any>({});
   const [submitBool, setSubmitBool] = useState<boolean>(false);
 
-  useEffect(() => {
-    console.log(contactObject);
-    console.log(participationObject);
-  }, [contactObject, participationObject]);
+  //   useEffect(() => {
+  //     console.log(contactObject);
+  //     console.log(participationObject);
+  //   }, [contactObject, participationObject]);
+
   const submitFunction = async (e: any) => {
     e.preventDefault();
     let date = new Date().toLocaleString() + "";
@@ -84,8 +85,17 @@ const PaymentForm = () => {
       paymentStatus: paymentStatus,
       data: date,
     };
+    await fetch("http://localhost:3001/submit-payment-form", {
+      method: "POST",
+      body: JSON.stringify({
+        finalObject,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
     setSubmitBool(true);
-    console.log(finalObject);
   };
 
   return (
