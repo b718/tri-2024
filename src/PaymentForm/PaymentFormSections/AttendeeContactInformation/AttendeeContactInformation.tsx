@@ -278,7 +278,7 @@ const AttendeeContactInformation = () => {
                   : "This is required."
               }
             ></TextInput>
-            <Flex gap={"md"}>
+            <Flex gap={"md"} justify={"center"} align={"center"}>
               <TextInput
                 label="City"
                 withAsterisk={true}
@@ -314,7 +314,7 @@ const AttendeeContactInformation = () => {
                 }
               ></TextInput>
             </Flex>
-            <Flex gap={"md"}>
+            <Flex gap={"md"} justify={"center"}>
               <TextInput
                 label="Postal/Zip Code"
                 withAsterisk={true}

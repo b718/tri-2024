@@ -43,7 +43,7 @@ const Home = () => {
           <Center>
             <button
               className="home-text-under-ht-text-text-button"
-              // onClick={() => scrollToSection(homeRef.registrationRef)}
+              onClick={() => scrollToSection(homeRef.registrationRef)}
             >
               <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
                 Register Now

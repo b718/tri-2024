@@ -73,7 +73,7 @@ const RegistrationAndFees = () => {
             value="student"
             label="STUDENT ($350 CAD)"
             onClick={() => {
-              setCurrentRegistrationPrice(350.0);
+              setCurrentRegistrationPrice(1);
             }}
             className="registration-and-fees-radio-options"
           />

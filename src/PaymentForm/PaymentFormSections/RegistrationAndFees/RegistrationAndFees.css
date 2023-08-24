@@ -29,10 +29,87 @@
   font-family: Auger-Mono-Bold;
   color: #1a4177;
   margin-top: 0.1rem;
+  font-size: 0.875rem;
 }
 
 .registration-and-fees-display {
   color: #1a4177;
   margin-top: 0.2rem;
   font-family: Auger-Mono-Bold;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+    .registration-and-fees-main-flex {
+      max-width: fit-content;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      border: 0.5px solid #0582c8;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      border-radius: 12px;
+    }
+
+    .registration-and-fees-radio-options div {
+      font-family: Auger-Mono-Bold;
+      color: #1a4177;
+      margin-top: 0.1rem;
+      font-size: 0.7rem;
+    }
+
+    .registration-and-fees-display {
+      color: #1a4177;
+      margin-top: 0.2rem;
+      font-family: Auger-Mono-Bold;
+      font-size: 0.7rem;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 930px) {
+    .registration-and-fees-main-flex {
+      max-width: fit-content;
+      margin-left: 1rem;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      border: 0.5px solid #0582c8;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      border-radius: 12px;
+    }
+
+    .registration-and-fees-radio-options div {
+      font-family: Auger-Mono-Bold;
+      color: #1a4177;
+      margin-top: 0.1rem;
+      font-size: 0.875rem;
+    }
+
+    .registration-and-fees-display {
+      color: #1a4177;
+      margin-top: 0.2rem;
+      font-family: Auger-Mono-Bold;
+      font-size: 0.875rem;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
 }

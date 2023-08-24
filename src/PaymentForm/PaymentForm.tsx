@@ -5,6 +5,7 @@ import AttendeeContactInformation from "./PaymentFormSections/AttendeeContactInf
 import TermsAndConditions from "./PaymentFormSections/TermsAndConditions/TermsAndConditions";
 import { Button, Center, Flex, Text } from "@mantine/core";
 import PaymentFormPayment from "./PaymentFormSections/PaymentFormPayment/PaymentFormPayment";
+import useWindowDimensions from "../Components/useWindowsDimensions";
 interface apiEndPointInterface {
   api: string;
   setAPI: Function;
@@ -66,6 +67,7 @@ const PaymentForm = () => {
   const [contactObject, setContactObject] = useState<any>({});
   const [participationObject, setParticipationObject] = useState<any>({});
   const [submitBool, setSubmitBool] = useState<boolean>(false);
+  const { width, height } = useWindowDimensions();
 
   //   useEffect(() => {
   //     console.log(contactObject);
@@ -113,7 +115,13 @@ const PaymentForm = () => {
               <paymentTotalContext.Provider value={{ total, setTotal }}>
                 {!submitBool ? (
                   <form name="payment-form-general" onSubmit={submitFunction}>
-                    <Flex gap={"md"} className="payment-form-flex-first-two">
+                    <Flex
+                      gap={"md"}
+                      className="payment-form-flex-first-two"
+                      direction={width < 930 ? "column" : "row"}
+                      justify={"center"}
+                      align={width < 930 ? "center" : "flex-start"}
+                    >
                       {" "}
                       <Flex direction={"column"}>
                         {" "}

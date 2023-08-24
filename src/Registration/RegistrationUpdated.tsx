@@ -13,52 +13,52 @@ const RegistrationUpdated = () => {
   const [shownStudent, setShownStudent] = useState(false);
   const [shownPatientOrg, setShownPatientOrg] = useState(false);
   const [currentPayment, setCurrentPaymnet] = useState<any>();
-  const correctPayment = () => {
-    if (option == 1) {
-      return (
-        <div>
-          {" "}
-          <Payment title="scientist-clinician" />
-          <PayPalPayment price="500" />
-        </div>
-      );
-    }
+  // const correctPayment = () => {
+  //   if (option == 1) {
+  //     return (
+  //       <div>
+  //         {" "}
+  //         <Payment title="scientist-clinician" />
+  //         <PayPalPayment price="500" />
+  //       </div>
+  //     );
+  //   }
 
-    if (option == 2) {
-      return (
-        <div>
-          {" "}
-          <Payment title="industry" />
-          <PayPalPayment price="600" />
-        </div>
-      );
-    }
+  //   if (option == 2) {
+  //     return (
+  //       <div>
+  //         {" "}
+  //         <Payment title="industry" />
+  //         <PayPalPayment price="600" />
+  //       </div>
+  //     );
+  //   }
 
-    if (option == 3) {
-      return (
-        <div>
-          {" "}
-          <Payment title="student" />
-          <PayPalPayment price="350" />
-        </div>
-      );
-    }
+  //   if (option == 3) {
+  //     return (
+  //       <div>
+  //         {" "}
+  //         <Payment title="student" />
+  //         <PayPalPayment price="350" />
+  //       </div>
+  //     );
+  //   }
 
-    if (option == 4) {
-      return (
-        <div>
-          {" "}
-          <Payment title="patient" />
-          <PayPalPayment price="500" />
-        </div>
-      );
-    }
-    return <div></div>;
-  };
+  //   if (option == 4) {
+  //     return (
+  //       <div>
+  //         {" "}
+  //         <Payment title="patient" />
+  //         <PayPalPayment price="500" />
+  //       </div>
+  //     );
+  //   }
+  //   return <div></div>;
+  // };
 
-  useEffect(() => {
-    setCurrentPaymnet(correctPayment());
-  }, [option]);
+  // useEffect(() => {
+  //   setCurrentPaymnet(correctPayment());
+  // }, [option]);
 
   //API END POINTS: scientist-clinician, industry, student, patient
   return (
@@ -92,13 +92,13 @@ const RegistrationUpdated = () => {
               direction={"row"}
               align={"center"}
               justify={"center"}
-              onClick={() => {
-                if (option === 1) {
-                  setOption(0);
-                } else {
-                  setOption(1);
-                }
-              }}
+              // onClick={() => {
+              //   if (option === 1) {
+              //     setOption(0);
+              //   } else {
+              //     setOption(1);
+              //   }
+              // }}
               onMouseEnter={() => setShownSciClin(true)}
               onMouseLeave={() => setShownSciClin(false)}
               className={`registration-updated-sci-clin${
@@ -116,13 +116,13 @@ const RegistrationUpdated = () => {
               direction={"row"}
               align={"center"}
               justify={"center"}
-              onClick={() => {
-                if (option === 2) {
-                  setOption(0);
-                } else {
-                  setOption(2);
-                }
-              }}
+              // onClick={() => {
+              //   if (option === 2) {
+              //     setOption(0);
+              //   } else {
+              //     setOption(2);
+              //   }
+              // }}
               onMouseEnter={() => setShownIndustry(true)}
               onMouseLeave={() => setShownIndustry(false)}
               className={`registration-updated-industry${
@@ -138,13 +138,13 @@ const RegistrationUpdated = () => {
               direction={"row"}
               align={"center"}
               justify={"center"}
-              onClick={() => {
-                if (option === 3) {
-                  setOption(0);
-                } else {
-                  setOption(3);
-                }
-              }}
+              // onClick={() => {
+              //   if (option === 3) {
+              //     setOption(0);
+              //   } else {
+              //     setOption(3);
+              //   }
+              // }}
               onMouseEnter={() => setShownStudent(true)}
               onMouseLeave={() => setShownStudent(false)}
               className={`registration-updated-student${
@@ -160,13 +160,13 @@ const RegistrationUpdated = () => {
               direction={"row"}
               align={"center"}
               justify={"center"}
-              onClick={() => {
-                if (option === 4) {
-                  setOption(0);
-                } else {
-                  setOption(4);
-                }
-              }}
+              // onClick={() => {
+              //   if (option === 4) {
+              //     setOption(0);
+              //   } else {
+              //     setOption(4);
+              //   }
+              // }}
               onMouseEnter={() => setShownPatientOrg(true)}
               onMouseLeave={() => setShownPatientOrg(false)}
               className={`registration-updated-patient-org${

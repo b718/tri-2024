@@ -85,7 +85,7 @@ function App() {
 
   const initialOptionsPaypal = {
     clientId:
-      "AVwo8M09K1GyA6asqqmQuU63jB-h3BREPb6ZjExzvkToHocPxRm1aqt4CjSaFwZuT81h-jpNPq8B_VNQ",
+      "ATaCJVQLin6ENA2I6kB6EU3lc5Xlo8cioqjFpM4pp4BSFWTGYef-M3c2w-m4ydc0SgZkF97KYvqWFXy4",
     currency: "CAD",
     intent: "capture",
   };
