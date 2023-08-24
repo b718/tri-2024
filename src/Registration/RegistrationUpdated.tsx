@@ -82,7 +82,11 @@ const RegistrationUpdated = () => {
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
             </Text>
             <button className="registration-updated-register-button">
-              <a href="register" target="_blank">
+              <a
+                href="register"
+                target="_blank"
+                className="registration-updated-a-tag"
+              >
                 REGISTER NOW
               </a>
             </button>
