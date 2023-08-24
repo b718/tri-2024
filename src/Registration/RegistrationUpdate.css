@@ -109,3 +109,163 @@
   color: white;
   text-decoration: none; /* no underline */
 }
+
+.registration-updated-line {
+  border-left: 0.5px solid rgb(186, 181, 181);
+  margin-top: 3rem;
+  height: 200px;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 300px) {
+    .registration-updated-main-header {
+      font-size: 2.5rem;
+      color: #1a4177;
+    }
+    .registration-updated-main-div {
+      max-width: fit-content;
+      font-family: Gravity;
+      margin-top: 5rem;
+      margin-bottom: 10rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .registration-updated-main-flex {
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      padding-top: 12%;
+      /* margin-left: 1rem; */
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
+    .registration-updated-text-left {
+      max-width: 25rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+      color: #1a4177;
+      font-size: 0.8rem;
+    }
+
+    .registration-updated-register-button {
+      padding: 0;
+      border: none;
+      background: none;
+      background-color: #1a4177;
+      color: white;
+      border-radius: 12px;
+      font-family: Gravity;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      max-width: 13rem;
+      margin-top: 2.5rem;
+      margin-left: 3.5rem;
+    }
+
+    .registration-updated-register-button:hover {
+      padding: 0;
+      border: none;
+      background: none;
+      background-color: #1e4986;
+      color: white;
+      border-radius: 12px;
+      font-family: Gravity;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      max-width: 13rem;
+      margin-top: 2.5rem;
+      margin-left: 3.5rem;
+    }
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+    .registration-updated-text-left {
+      max-width: 25rem;
+      margin-right: 3rem;
+      margin-top: 2rem;
+      color: #1a4177;
+      font-size: 0.9rem;
+    }
+
+    .registration-updated-register-button {
+      padding: 0;
+      border: none;
+      background: none;
+      background-color: #1a4177;
+      color: white;
+      border-radius: 12px;
+      font-family: Gravity;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      max-width: 13rem;
+      margin-top: 2.5rem;
+      margin-left: 0rem;
+    }
+
+    .registration-updated-register-button:hover {
+      padding: 0;
+      border: none;
+      background: none;
+      background-color: #1e4986;
+      color: white;
+      border-radius: 12px;
+      font-family: Gravity;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      max-width: 13rem;
+      margin-top: 2.5rem;
+      margin-left: 0rem;
+    }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .registration-updated-text-left {
+      max-width: 25rem;
+      margin-right: 0rem;
+      margin-top: 2rem;
+      color: #1a4177;
+      font-size: 1rem;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 764px) {
+    .registration-updated-main-div {
+      max-width: fit-content;
+      margin: 0 auto;
+      font-family: Gravity;
+      margin-top: 5rem;
+      margin-bottom: 10rem;
+    }
+    .registration-updated-main-header {
+      font-size: 3rem;
+      color: #1a4177;
+    }
+
+    .registration-updated-main-flex {
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      padding-top: 12%;
+      margin-left: 3rem;
+    }
+
+    .registration-updated-text-left {
+      max-width: 25rem;
+      margin-right: 3rem;
+      margin-top: 2rem;
+      color: #1a4177;
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (min-width: 930px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+}

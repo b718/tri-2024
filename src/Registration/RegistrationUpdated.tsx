@@ -4,6 +4,7 @@ import { Button, Flex, Text } from "@mantine/core";
 import "./RegistrationUpdate.css";
 import Payment from "../Payment-Stripe/Payment";
 import PayPalPayment from "../PayPal/PayPalPayment";
+import useWindowDimensions from "../Components/useWindowsDimensions";
 
 const RegistrationUpdated = () => {
   const registrationRef = useContext(NavBarContext);
@@ -13,6 +14,8 @@ const RegistrationUpdated = () => {
   const [shownStudent, setShownStudent] = useState(false);
   const [shownPatientOrg, setShownPatientOrg] = useState(false);
   const [currentPayment, setCurrentPaymnet] = useState<any>();
+  const { width, height } = useWindowDimensions();
+
   // const correctPayment = () => {
   //   if (option == 1) {
   //     return (
@@ -64,7 +67,11 @@ const RegistrationUpdated = () => {
   return (
     <div ref={registrationRef.registrationRef}>
       <div className="registration-updated-main-div">
-        <Flex>
+        <Flex
+          direction={width < 500 ? "column" : "row"}
+          justify={"center"}
+          align={width < 500 ? "center" : "flex-start"}
+        >
           {" "}
           <Flex direction={"column"}>
             <Text className="registration-updated-main-header">
@@ -80,7 +87,9 @@ const RegistrationUpdated = () => {
               </a>
             </button>
           </Flex>
-          <hr style={{ marginTop: "4rem" }} />
+          <div
+            className={`${width < 500 ? "" : "registration-updated-line"}`}
+          />
           <Flex
             gap="0.5rem"
             align="flex-start"
