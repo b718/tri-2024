@@ -41,6 +41,8 @@ interface ContextTypeNavBarRef {
   faqRef: React.RefObject<HTMLDivElement>;
   trinityRef: React.RefObject<HTMLDivElement>;
   symposiaRef: React.RefObject<HTMLDivElement>;
+  symposiaForm: React.RefObject<HTMLDivElement>;
+  postersPapers: React.RefObject<HTMLDivElement>;
 
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
@@ -59,6 +61,8 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   faqRef: createRef(),
   trinityRef: createRef(),
   symposiaRef: createRef(),
+  symposiaForm: createRef(),
+  postersPapers: createRef(),
 });
 
 export const BurgerContext = createContext<ContextBurger>({
@@ -77,6 +81,9 @@ function App() {
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
   const symposiaRef = useRef<HTMLDivElement>(null);
+  const symposiaForm = useRef<HTMLDivElement>(null);
+  const postersPapers = useRef<HTMLDivElement>(null);
+
   const [burger, setBurger] = useState<boolean>(false);
   const overlayRef = useRef<HTMLInputElement>(null);
 
@@ -109,6 +116,8 @@ function App() {
             faqRef: faqRef,
             trinityRef: trinityRef,
             symposiaRef: symposiaRef,
+            symposiaForm: symposiaForm,
+            postersPapers: postersPapers,
           }}
         >
           <BurgerContext.Provider value={{ burger, setBurger }}>
@@ -181,6 +190,28 @@ function App() {
                         }}
                       >
                         SUBMISSIONS
+                      </Text>
+
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                        onClick={() => {
+                          scrollToSection(symposiaRef);
+                          setBurger(false);
+                        }}
+                      >
+                        SYMPOSIA
+                      </Text>
+
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                        onClick={() => {
+                          scrollToSection(postersPapers);
+                          setBurger(false);
+                        }}
+                      >
+                        PAPERS/POSTERS
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Awards

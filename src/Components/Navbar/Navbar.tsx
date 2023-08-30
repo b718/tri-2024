@@ -18,6 +18,7 @@ const Navbar = () => {
   const navBarScrollRefs = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
   const [scroll, setScroll] = useState<boolean>(false);
+  const [enterSubmission, setEnterSubmission] = useState<boolean>(false);
   const burgerContext = useContext(BurgerContext);
   const scrollDir = useDetectScroll({});
   const { isScrolling } = useScrollDirection();
@@ -60,7 +61,7 @@ const Navbar = () => {
         <Center>
           <div className="nav-bar-container">
             {" "}
-            <Flex direction="row" align="center">
+            <Flex direction="row" align="flex-start">
               <Image
                 width={200}
                 src={NavBarImage}
@@ -72,7 +73,7 @@ const Navbar = () => {
                   mih={50}
                   gap="1.3rem"
                   justify="flex-start"
-                  align="center"
+                  align="flex-start"
                   direction="row"
                   wrap="wrap"
                   className="nav-bar-whole"
@@ -109,14 +110,44 @@ const Navbar = () => {
                   </Text>
                   {/* <Text className="nav-bar-different-sections">Speakers</Text>
                   <Text className="nav-bar-different-sections">Program</Text> */}
-                  <Text
-                    className="nav-bar-different-sections"
-                    onClick={() =>
-                      scrollToSection(navBarScrollRefs.symposiaRef)
-                    }
+                  <Flex
+                    direction={"column"}
+                    align={"center"}
+                    justify={"center"}
+                    onMouseEnter={() => {
+                      setEnterSubmission(true);
+                    }}
+                    onMouseLeave={() => {
+                      setEnterSubmission(false);
+                    }}
                   >
-                    SUBMISSIONS
-                  </Text>
+                    <Text
+                      className="nav-bar-different-sections"
+                      onClick={() =>
+                        scrollToSection(navBarScrollRefs.symposiaRef)
+                      }
+                    >
+                      SUBMISSIONS
+                    </Text>
+                    <Text
+                      className="nav-bar-symposia"
+                      onClick={() =>
+                        scrollToSection(navBarScrollRefs.symposiaRef)
+                      }
+                      style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                    >
+                      SYMPOSIA
+                    </Text>
+                    <Text
+                      className="nav-bar-posters"
+                      onClick={() =>
+                        scrollToSection(navBarScrollRefs.postersPapers)
+                      }
+                      style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                    >
+                      PAPERS/POSTERS
+                    </Text>
+                  </Flex>
                   {/* <Text className="nav-bar-different-sections">Awards</Text>
                   <Text className="nav-bar-different-sections">Socials</Text>
                   <Text className="nav-bar-different-sections">PPI</Text> */}

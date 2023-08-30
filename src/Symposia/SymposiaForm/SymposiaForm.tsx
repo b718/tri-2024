@@ -5,16 +5,102 @@ import useWindowDimensions from "../../Components/useWindowsDimensions";
 
 const SymposiaForm = () => {
   const [titleS, setTitleS] = useState("");
-  const [youngInvestigator, setYoungInvestigator] = useState("yes");
+  const [youngInvestigator, setYoungInvestigator] = useState("no");
+  const [leadName, setLeadName] = useState("");
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadIns, setLeadIns] = useState("");
+  const [abstract, setAbstract] = useState("");
+  const [summary, setSummary] = useState("");
+
+  const [contactOneName, setContactOneName] = useState("");
+  const [contactOneEmail, setContactOneEmail] = useState("");
+  const [contactOneIns, setContactOneIns] = useState("");
+
+  const [contactTwoName, setContactTwoName] = useState("");
+  const [contactTwoEmail, setContactTwoEmail] = useState("");
+  const [contactTwoIns, setContactTwoIns] = useState("");
+
+  const [draft, setDraft] = useState("");
+  const [invites, setInvites] = useState("");
+
   const { width, height } = useWindowDimensions();
 
+  const buttonChecker = () => {
+    return (
+      invites &&
+      draft &&
+      summary &&
+      abstract &&
+      leadIns &&
+      leadEmail &&
+      leadName &&
+      titleS
+    );
+  };
+  const submitFunction = async (e: any) => {
+    e.preventDefault();
+
+    const symposiaObject = {
+      title: titleS,
+      youngInvestigator: youngInvestigator,
+      leadName: leadName,
+      leadEmail: leadEmail,
+      leadIns: leadIns,
+      abstract: abstract,
+      summary: summary,
+      contactOne: {
+        name: contactOneName,
+        email: contactOneEmail,
+        ins: contactOneIns,
+      },
+      contactTwo: {
+        name: contactTwoName,
+        email: contactTwoEmail,
+        ins: contactTwoIns,
+      },
+      draft: draft,
+      invites: invites,
+    };
+    const x = await fetch("http://localhost:3001/submit-symposia-form", {
+      method: "POST",
+      body: JSON.stringify({
+        symposiaObject,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(x);
+
+    setTitleS("");
+    setYoungInvestigator("no");
+    setLeadName("");
+    setLeadEmail("");
+    setLeadIns("");
+    setAbstract("");
+    setSummary("");
+
+    setContactOneName("");
+    setContactOneEmail("");
+    setContactOneIns("");
+
+    setContactTwoName("");
+    setContactTwoEmail("");
+    setContactTwoIns("");
+
+    setDraft("");
+    setInvites("");
+  };
+
   return (
-    <div className="symposia-form-main-div">
+    <form className="symposia-form-main-div" onSubmit={submitFunction}>
       <Text className="symposia-form-main-text">Symposia Submissions</Text>
       <TextInput
         label="Title of symposium (25 words max)"
         className="symposia-form-label"
-        withAsterisk
+        required={true}
+        type="text"
+        autoComplete="turnoff"
         value={titleS}
         onChange={(event) => {
           setTitleS(event.target.value);
@@ -35,6 +121,7 @@ const SymposiaForm = () => {
         <Grid.Col span={2}>
           <Flex gap={"md"} direction={"column"} style={{ marginRight: "1rem" }}>
             <button
+              type="button"
               className={`symposia-form-button${
                 youngInvestigator == "yes" ? "-active" : ""
               }`}
@@ -45,6 +132,7 @@ const SymposiaForm = () => {
               Yes
             </button>
             <button
+              type="button"
               className={`symposia-form-button${
                 youngInvestigator == "no" ? "-active" : ""
               }`}
@@ -57,23 +145,66 @@ const SymposiaForm = () => {
           </Flex>
         </Grid.Col>
       </Grid>
-      <TextInput
-        label="Lead Organizer (name, affiliation, email address)"
-        className="symposia-form-label-organizer"
-        withAsterisk
-      />
+      <Flex direction={"column"} justify={"flex-start"} align={"flex-start"}>
+        {" "}
+        <Text className="symposia-form-side-text">
+          Lead Organizer (name, affiliation, email address)
+        </Text>
+        <Flex gap={"md"} justify={"center"} align={"center"}>
+          {" "}
+          <TextInput
+            className="symposia-form-label-organizer"
+            required={true}
+            label="Name"
+            type="text"
+            value={leadName}
+            onChange={(event) => {
+              setLeadName(event.target.value);
+            }}
+          />{" "}
+          <TextInput
+            className="symposia-form-label-organizer"
+            required={true}
+            label="Institutional Affiliation"
+            type="text"
+            value={leadIns}
+            onChange={(event) => {
+              setLeadIns(event.target.value);
+            }}
+          />{" "}
+          <TextInput
+            label="Email Address"
+            className="symposia-form-label-organizer"
+            required={true}
+            type="email"
+            value={leadEmail}
+            onChange={(event) => {
+              setLeadEmail(event.target.value);
+            }}
+          />
+        </Flex>
+      </Flex>
+
       <Textarea
         placeholder="A brief overview of the objectives, topics to be covered, and relevance."
         label="Abstract (250 words max)"
         className="symposia-form-label-abstract"
         autosize
         minRows={2}
-        withAsterisk
+        required={true}
+        value={abstract}
+        onChange={(event) => {
+          setAbstract(event.target.value);
+        }}
       />
       <TextInput
         label="One-sentence summary of the symposium (50 words max)"
-        className="symposia-form-label-organizer"
-        withAsterisk
+        className="symposia-form-label-summary"
+        required={true}
+        value={summary}
+        onChange={(event) => {
+          setSummary(event.target.value);
+        }}
       />
       <Grid columns={8} grow={true} className="symposia-form-grid-alternate">
         <Grid.Col span={4}>
@@ -84,17 +215,26 @@ const SymposiaForm = () => {
             <TextInput
               placeholder="Name"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactOneName}
+              onChange={(event) => {
+                setContactOneName(event.target.value);
+              }}
             />{" "}
             <TextInput
               placeholder="Institutional Affiliation"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactOneIns}
+              onChange={(event) => {
+                setContactOneIns(event.target.value);
+              }}
             />{" "}
             <TextInput
               placeholder="Email Address"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactOneEmail}
+              onChange={(event) => {
+                setContactOneEmail(event.target.value);
+              }}
             />
           </Flex>
         </Grid.Col>
@@ -106,17 +246,26 @@ const SymposiaForm = () => {
             <TextInput
               placeholder="Name"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactTwoName}
+              onChange={(event) => {
+                setContactTwoName(event.target.value);
+              }}
             />{" "}
             <TextInput
               placeholder="Institutional Affiliation"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactTwoIns}
+              onChange={(event) => {
+                setContactTwoIns(event.target.value);
+              }}
             />{" "}
             <TextInput
               placeholder="Email Address"
               className="symposia-form-label-organizer"
-              withAsterisk
+              value={contactTwoEmail}
+              onChange={(event) => {
+                setContactTwoEmail(event.target.value);
+              }}
             />
           </Flex>
         </Grid.Col>
@@ -125,20 +274,32 @@ const SymposiaForm = () => {
       <TextInput
         label="Draft program for the symposium"
         className="symposia-form-label-draft"
-        withAsterisk
+        required={true}
+        value={draft}
+        onChange={(event) => {
+          setDraft(event.target.value);
+        }}
       />
 
       <TextInput
         label="Invited speakers List"
         placeholder="Include each speaker's affiliation, location, title of their presentation, and confirmation of participation."
-        className="symposia-form-label-draft"
-        withAsterisk
+        className="symposia-form-label-speakers"
+        required={true}
+        value={invites}
+        onChange={(event) => {
+          setInvites(event.target.value);
+        }}
       />
 
-      <Button className="symposia-form-submit-button">
+      <Button
+        className="symposia-form-submit-button"
+        type={"submit"}
+        disabled={!buttonChecker()}
+      >
         SUBMIT APPLICATION
       </Button>
-    </div>
+    </form>
   );
 };
 

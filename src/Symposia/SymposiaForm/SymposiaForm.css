@@ -28,8 +28,9 @@
 .symposia-form-label label,
 .symposia-form-label-organizer label,
 .symposia-form-label-abstract label,
-.symposia-form-label-organizer label,
-.symposia-form-label-draft label {
+.symposia-form-label-summary label,
+.symposia-form-label-draft label,
+.symposia-form-label-speakers label {
   color: var(--secondary-text-color);
   font-family: Gravity;
   font-size: var(--main-font-size);
@@ -40,8 +41,28 @@
 .symposia-form-label-organizer,
 .symposia-form-label-draft,
 .symposia-form-label-abstract,
-.symposa-form-grid-young-investigator {
+.symposa-form-grid-young-investigator,
+.symposia-form-label-summary,
+.symposia-form-label-speakers {
   margin-top: 1rem;
+}
+
+.symposia-form-label input:required:valid,
+.symposia-form-label-organizer input:required:valid,
+.symposia-form-label-abstract textarea:required:valid,
+.symposia-form-label-summary input:required:valid,
+.symposia-form-label-draft input:required:valid,
+.symposia-form-label-speakers input:required:valid {
+  border: 1px solid lightgray;
+}
+
+.symposia-form-label input:focus:invalid,
+.symposia-form-label-organizer input:focus:invalid,
+.symposia-form-label-abstract textarea:focus:invalid,
+.symposia-form-label-summary input:focus:invalid,
+.symposia-form-label-draft input:focus:invalid,
+.symposia-form-label-speakers input:focus:invalid {
+  border: 1px solid red;
 }
 
 .symposia-form-text-young-investigator {

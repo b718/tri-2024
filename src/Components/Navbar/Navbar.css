@@ -5,12 +5,12 @@
 
 .nav-bar-picture {
   margin-left: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .nav-bar-whole {
   margin-right: 1rem;
   margin-left: 15rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -151,6 +151,31 @@
   top: 0;
   bottom: 0;
   /* display: block; */
+}
+
+.nav-bar-symposia,
+.nav-bar-posters {
+  display: block;
+  /* top: 55px; */
+  /* margin-top: 0.5rem; */
+  color: rgb(26 65 119);
+  cursor: pointer;
+  font-family: Gravity-Bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.5s;
+}
+
+.nav-bar-posters {
+  /* top: 75px; */
+}
+
+.nav-bar-posters:hover,
+.nav-bar-symposia:hover {
+  text-decoration-color: rgb(26 65 119);
+  text-decoration: underline;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/

@@ -31,7 +31,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="carousel-main-div">
+      <div className="carousel-main-div" ref={navBarRef.postersPapers}>
         <button
           className={`carousel-button-arrow carousel-arrow-left ${
             slide === 0 ? "carousel-arrow-left-zero" : ""
