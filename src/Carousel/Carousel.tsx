@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Carousel.css";
 import CarouselItem from "./Carousel-Item/CarouselItem";
 import { Text } from "@mantine/core";
+import { NavBarContext } from "../App";
 
 const Carousel = () => {
   const [slide, setSlide] = useState<number>(0);
+  const navBarRef = useContext(NavBarContext);
 
   const carouselItemData = [
     {

@@ -40,6 +40,8 @@ interface ContextTypeNavBarRef {
   venueRef: React.RefObject<HTMLDivElement>;
   faqRef: React.RefObject<HTMLDivElement>;
   trinityRef: React.RefObject<HTMLDivElement>;
+  symposiaRef: React.RefObject<HTMLDivElement>;
+
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
 
@@ -56,6 +58,7 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   venueRef: createRef(),
   faqRef: createRef(),
   trinityRef: createRef(),
+  symposiaRef: createRef(),
 });
 
 export const BurgerContext = createContext<ContextBurger>({
@@ -73,6 +76,7 @@ function App() {
   const venueRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
   const trinityRef = useRef<HTMLDivElement>(null);
+  const symposiaRef = useRef<HTMLDivElement>(null);
   const [burger, setBurger] = useState<boolean>(false);
   const overlayRef = useRef<HTMLInputElement>(null);
 
@@ -104,6 +108,7 @@ function App() {
             venueRef: venueRef,
             faqRef: faqRef,
             trinityRef: trinityRef,
+            symposiaRef: symposiaRef,
           }}
         >
           <BurgerContext.Provider value={{ burger, setBurger }}>
@@ -168,7 +173,13 @@ function App() {
                       <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Program
                       </Text> */}
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(symposiaRef);
+                          setBurger(false);
+                        }}
+                      >
                         SUBMISSIONS
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
@@ -182,7 +193,10 @@ function App() {
                       </Text> */}
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
-                        onClick={() => scrollToSection(sponsorshipRef)}
+                        onClick={() => {
+                          scrollToSection(sponsorshipRef);
+                          setBurger(false);
+                        }}
                       >
                         SPONSORSHIP
                       </Text>
@@ -220,6 +234,7 @@ function App() {
                     <Committee />
                     <RegistrationUpdated />
                     <Symposia />
+                    <Carousel />
                     <Sponsorships />
                     <FaQ />
                     <Footer />

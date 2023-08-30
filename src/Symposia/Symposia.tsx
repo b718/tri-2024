@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Symposia.css";
 import { Text } from "@mantine/core";
 import SymposiaDropDown from "./SymposiaDropDown/SymposiaDropDown";
 import GeneralInformation from "../FAQ/DropDownFaQ/General-Information/General-Information";
 import SymposiaForm from "./SymposiaForm/SymposiaForm";
+import { NavBarContext } from "../App";
 const Symposia = () => {
+  const symposiaRef = useContext(NavBarContext);
   return (
-    <div className="symposia-outside-div">
+    <div className="symposia-outside-div" ref={symposiaRef.symposiaRef}>
       <div className="symposia-main-div">
         <Text className="symposia-max-header">Symposia Guidelines</Text>
         <Text className="symposia-main-text">

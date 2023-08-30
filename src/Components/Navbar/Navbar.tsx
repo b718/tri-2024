@@ -109,7 +109,12 @@ const Navbar = () => {
                   </Text>
                   {/* <Text className="nav-bar-different-sections">Speakers</Text>
                   <Text className="nav-bar-different-sections">Program</Text> */}
-                  <Text className="nav-bar-different-sections">
+                  <Text
+                    className="nav-bar-different-sections"
+                    onClick={() =>
+                      scrollToSection(navBarScrollRefs.symposiaRef)
+                    }
+                  >
                     SUBMISSIONS
                   </Text>
                   {/* <Text className="nav-bar-different-sections">Awards</Text>
