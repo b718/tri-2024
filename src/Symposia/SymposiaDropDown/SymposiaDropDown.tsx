@@ -17,7 +17,7 @@ const SymposiaDropDown: FunctionComponent<SymposiaDropDownData> = ({
       <Grid
         columns={8}
         onClick={() => setClick(!click)}
-    align="center"
+        align="center"
         style={{ cursor: "pointer" }}
       >
         <Grid.Col span={6}>
@@ -25,7 +25,7 @@ const SymposiaDropDown: FunctionComponent<SymposiaDropDownData> = ({
           <Text
             className={`symposia-drop-down-div-title${click ? "-active" : ""}`}
           >
-            {title}
+          {title}
           </Text>
         </Grid.Col>
         <Grid.Col span={2}>

@@ -35,10 +35,18 @@
 }
 
 .symposia-main-div-under-text {
+  max-width: fit-content;
+  margin: 0 auto;
   margin-top: 3rem;
   padding-bottom: 1rem;
 }
 
 .symposia-form-section {
+  max-width: fit-content;
+  margin: 0 auto;
   padding-bottom: 4rem;
 }
+
+/* * {
+  border: 1px solid red;
+} */

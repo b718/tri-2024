@@ -106,8 +106,11 @@ const SymposiaForm = () => {
           setTitleS(event.target.value);
         }}
       />
-      <Grid columns={8} className="symposa-form-grid-young-investigator">
-        <Grid.Col span={6}>
+      <Grid
+        columns={width < 660 ? 1 : 8}
+        className="symposa-form-grid-young-investigator"
+      >
+        <Grid.Col span={width < 660 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text className="symposia-form-text-young-investigator">
               Does it qualify for a Young Investigator Symposium?
@@ -118,7 +121,7 @@ const SymposiaForm = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={2}>
+        <Grid.Col span={width < 660 ? 1 : 2}>
           <Flex gap={"md"} direction={"column"} style={{ marginRight: "1rem" }}>
             <button
               type="button"
@@ -150,7 +153,12 @@ const SymposiaForm = () => {
         <Text className="symposia-form-side-text">
           Lead Organizer (name, affiliation, email address)
         </Text>
-        <Flex gap={"md"} justify={"center"} align={"center"}>
+        <Flex
+          gap={"md"}
+          justify={"center"}
+          align={"center"}
+          direction={width < 660 ? "column" : "row"}
+        >
           {" "}
           <TextInput
             className="symposia-form-label-organizer"

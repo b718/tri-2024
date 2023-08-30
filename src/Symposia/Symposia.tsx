@@ -17,7 +17,7 @@ const Symposia = () => {
           Vancouver, June 10th-12th, under the theme The Science of Tinnitus.
         </Text>
         <div className="symposia-main-div-under-text">
-          <hr></hr>
+          <hr style={{ maxWidth: "98vw" }}></hr>
           <SymposiaDropDown
             title={"General Information"}
             Component={GeneralInformation}

@@ -23,6 +23,8 @@
   background-color: white;
   border-radius: 12px;
   padding: 3rem 3rem 3rem 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .symposia-form-label label,
@@ -113,6 +115,7 @@
   font-family: Gravity;
   font-size: var(--main-font-size);
   color: var(--secondary-text-color);
+  margin-top: 1rem;
 }
 
 .symposia-form-grid-alternate {
@@ -126,4 +129,41 @@
   border-radius: 16px;
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    :root {
+      --main-font-size: 0.7rem;
+    }
+  }
+
+  @media only screen and (min-width: 400px) {
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 501px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 660px) {
+    :root {
+      --main-font-size: 0.9rem;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 890px) {
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
 }

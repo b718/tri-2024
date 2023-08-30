@@ -17,6 +17,11 @@
   --symposia-text-color: #87ccf2;
 }
 
+.symposia-drop-down-div {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
 .symposia-drop-down-div-title {
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
