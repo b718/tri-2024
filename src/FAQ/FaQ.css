@@ -29,12 +29,14 @@
 .faq-rogers-arena-picture {
   color: rgb(26 65 119);
   margin-top: 10rem;
+  margin-bottom: 15rem;
   opacity: 0;
   transform: translateY(100px);
 }
 
 .faq-rogers-arena-picture-active {
   margin-top: 10rem;
+  margin-bottom: 15rem;
   opacity: 1;
   transform: translateY(0px);
   transition: 0.5s;

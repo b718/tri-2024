@@ -81,13 +81,16 @@ const RegistrationUpdated = () => {
               Registration is now open for the Tinnitus Research Initiative
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
             </Text>
-            <button className="registration-updated-register-button">
+            <button
+              className="registration-updated-register-button"
+              disabled={true}
+            >
               <a
                 href="register"
                 target="_blank"
                 className="registration-updated-a-tag"
               >
-                REGISTER NOW
+                COMING JAN 15TH
               </a>
             </button>
           </Flex>
@@ -122,7 +125,7 @@ const RegistrationUpdated = () => {
                 Scientist/Clinican
               </Text>
               <Text className="registration-updated-price-500 registration-updated-text">
-                $500
+                $50
               </Text>
             </Flex>
             <Flex
@@ -144,7 +147,7 @@ const RegistrationUpdated = () => {
             >
               <Text className="registration-updated-text">Industry</Text>
               <Text className="registration-updated-price-600 registration-updated-text">
-                $600
+                $60
               </Text>
             </Flex>{" "}
             <Flex
@@ -166,7 +169,7 @@ const RegistrationUpdated = () => {
             >
               <Text className="registration-updated-text">Student</Text>
               <Text className="registration-updated-price-350 registration-updated-text">
-                $350
+                $35
               </Text>
             </Flex>{" "}
             <Flex
@@ -190,7 +193,7 @@ const RegistrationUpdated = () => {
                 Patient Organisation
               </Text>
               <Text className="registration-updated-price-500-2 registration-updated-text">
-                $500
+                $50
               </Text>
             </Flex>
           </Flex>

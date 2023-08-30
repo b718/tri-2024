@@ -125,7 +125,7 @@ function App() {
                             }
                       }
                     >
-                      <Text
+                      {/* <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
                         onClick={() => {
                           scrollToSection(homeRef);
@@ -133,7 +133,7 @@ function App() {
                         }}
                       >
                         About
-                      </Text>
+                      </Text> */}
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
                         onClick={() => {
@@ -141,9 +141,9 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        Trinity
+                        WELCOME
                       </Text>
-                      <Text
+                      {/* <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version  nav-bar-burger-version "
                         onClick={() => {
                           scrollToSection(comitteeRef);
@@ -151,7 +151,7 @@ function App() {
                         }}
                       >
                         Committee
-                      </Text>
+                      </Text> */}
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
                         onClick={() => {
@@ -159,18 +159,18 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        Registration
+                        REGISTRATION
                       </Text>
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                      {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Speakers
                       </Text>
                       <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Program
-                      </Text>
+                      </Text> */}
                       <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        Guidelines
+                        SUBMISSIONS
                       </Text>
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
+                      {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Awards
                       </Text>
                       <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
@@ -178,14 +178,12 @@ function App() {
                       </Text>
                       <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         PPI
-                      </Text>
+                      </Text> */}
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
-                        // onClick={() =>
-                        //   scrollToSection(navBarScrollRefs.sponsorshipRef)
-                        // }
+                        onClick={() => scrollToSection(sponsorshipRef)}
                       >
-                        Sponsorship
+                        SPONSORSHIP
                       </Text>
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
@@ -194,7 +192,17 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        FAQ
+                        VENUE + TOURISM
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
+                          scrollToSection(venueRef);
+                          setBurger(false);
+                        }}
+                        // style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
+                      >
+                        LOCATION
                       </Text>
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
@@ -204,13 +212,13 @@ function App() {
                         }}
                         style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
                       >
-                        Location
+                        CONTACT US
                       </Text>
                     </div>
-
                     <Home />
                     <Committee />
                     <RegistrationUpdated />
+                    <Sponsorships />
                     <FaQ />
                     <Footer />
                   </div>

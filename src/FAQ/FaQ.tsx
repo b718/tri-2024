@@ -4,10 +4,8 @@ import { Image, Text } from "@mantine/core";
 import DropDownFaQ from "./DropDownFaQ/DropDownFaQ";
 import RogersArenaPicture from "../Images/nicolas-savignat-UxK-LXQraJ4-unsplash.jpg";
 import { NavBarContext } from "../App";
-import { Parallax, useParallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../Components/useWindowsDimensions";
-import $ from "jquery";
 import Venue from "../Venue/Venue";
 
 const FaQ = () => {
@@ -18,11 +16,6 @@ const FaQ = () => {
   const { ref: rogersPicture, inView: rogersPictureVisible } = useInView({
     triggerOnce: true,
   });
-  // const rogersArena = useParallax<HTMLDivElement>({
-  //   // rotateX: [0, 40],
-  //   rotateY: [0, 40],
-  //   // rotateZ: [0, 40],
-  // });
 
   const triCommitteeRogersSize = () => {
     if (width < 400) {
@@ -42,31 +35,32 @@ const FaQ = () => {
     triggerOnce: true,
   });
 
-  // $(window).scroll(function () {
-  //   var y = 0;
-  //   var scroll = $(window).scrollTop();
-  //   var win = $(window).height();
-  //   var height = $(".faq-parallax-rogers").height();
-  //   var offset = $(".faq-parallax-rogers").offset()!.top;
-  //   y =
-  //     (100 * scroll!) / (height! + win!) +
-  //     (100 * (win! - offset)) / (height! + win!);
-  //   if (y > 100) {
-  //     y = 100;
-  //   } else if (y < 0) {
-  //     y = 0;
-  //   }
-  //   y = 80 - y;
-  //   var out = String(y) + "px";
-  //   $(".faq-parallax-rogers").css("background-position-y", out);
-  // });
   return (
     <div ref={faqRef.faqRef}>
       <div
         className={`faq-main-div${mainFaqDivVisible ? "-active" : ""}`}
         ref={mainFaqDiv}
       >
-        <Text className="faq-main-header">Event FAQs</Text>
+        <div
+          // ref={rogersArena.ref}
+          className={`faq-rogers-arena-picture${
+            rogersPictureVisible ? "-active" : ""
+          }`}
+          ref={rogersPicture}
+        >
+          <Image
+            width={triCommitteeRogersSize()}
+            fit="contain"
+            src={RogersArenaPicture}
+            onMouseEnter={() => setHoverFAQ(true)}
+            onMouseLeave={() => setHoverFAQ(false)}
+          />
+          {/* <div className="faq-parallax-rogers"></div> */}
+          <Text className={`faq-roger-roll-over${hoverFAQ ? "-active" : ""}`}>
+            © Nicolas Savignat
+          </Text>
+        </div>{" "}
+        <Text className="faq-main-header">Tourism & Venue</Text>
         <hr style={{ maxWidth: "98vw" }} />
         <DropDownFaQ
           title={"What you need to know: Vancouver 101"}
@@ -108,25 +102,6 @@ const FaQ = () => {
           links={"INFORMATION LINK"}
           url="https://www.google.ca/"
         />
-        <div
-          // ref={rogersArena.ref}
-          className={`faq-rogers-arena-picture${
-            rogersPictureVisible ? "-active" : ""
-          }`}
-          ref={rogersPicture}
-        >
-          <Image
-            width={triCommitteeRogersSize()}
-            fit="contain"
-            src={RogersArenaPicture}
-            onMouseEnter={() => setHoverFAQ(true)}
-            onMouseLeave={() => setHoverFAQ(false)}
-          />
-          {/* <div className="faq-parallax-rogers"></div> */}
-          <Text className={`faq-roger-roll-over${hoverFAQ ? "-active" : ""}`}>
-            © Nicolas Savignat
-          </Text>
-        </div>{" "}
         <Venue />
       </div>
     </div>

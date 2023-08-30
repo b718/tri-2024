@@ -77,61 +77,70 @@ const Navbar = () => {
                   wrap="wrap"
                   className="nav-bar-whole"
                 >
-                  <Text
+                  {/* <Text
                     className="nav-bar-different-sections"
                     onClick={() => scrollToSection(navBarScrollRefs.homeRef)}
                   >
                     About
-                  </Text>
+                  </Text> */}
                   <Text
                     className="nav-bar-different-sections"
                     onClick={() =>
                       scrollToSection(navBarScrollRefs.committeeRef)
                     }
                   >
-                    Trinity
+                    WELCOME
                   </Text>
-                  <Text
+                  {/* <Text
                     className="nav-bar-different-sections"
                     onClick={() =>
                       scrollToSection(navBarScrollRefs.committeeRef)
                     }
                   >
                     Committee
-                  </Text>
+                  </Text> */}
                   <Text
                     className="nav-bar-different-sections"
                     onClick={() =>
                       scrollToSection(navBarScrollRefs.registrationRef)
                     }
                   >
-                    Registration
+                    REGISTRATION
                   </Text>
-                  <Text className="nav-bar-different-sections">Speakers</Text>
-                  <Text className="nav-bar-different-sections">Program</Text>
-                  <Text className="nav-bar-different-sections">Guidelines</Text>
-                  <Text className="nav-bar-different-sections">Awards</Text>
+                  {/* <Text className="nav-bar-different-sections">Speakers</Text>
+                  <Text className="nav-bar-different-sections">Program</Text> */}
+                  <Text className="nav-bar-different-sections">
+                    SUBMISSIONS
+                  </Text>
+                  {/* <Text className="nav-bar-different-sections">Awards</Text>
                   <Text className="nav-bar-different-sections">Socials</Text>
-                  <Text className="nav-bar-different-sections">PPI</Text>
+                  <Text className="nav-bar-different-sections">PPI</Text> */}
                   <Text
                     className="nav-bar-different-sections"
-                    // onClick={() =>
-                    //   scrollToSection(navBarScrollRefs.sponsorshipRef)
-                    // }
+                    onClick={() =>
+                      scrollToSection(navBarScrollRefs.sponsorshipRef)
+                    }
                   >
-                    Sponsorship
+                    SPONSORSHIP
                   </Text>
                   <Text
                     className="nav-bar-different-sections"
                     onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
                   >
-                    FAQ
+                    VENUE + TOURISM
                   </Text>
                   <Text
                     className="nav-bar-different-sections"
                     onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
                   >
-                    Location
+                    LOCATION
+                  </Text>
+
+                  <Text
+                    className="nav-bar-different-sections"
+                    onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+                  >
+                    CONTACT US
                   </Text>
                 </Flex>
               ) : (

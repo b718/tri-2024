@@ -8,43 +8,27 @@ const Sponsorships = () => {
   const sponsorshipRef = useContext(NavBarContext);
   const imageWidth = 240;
   return (
-    <div className="sponsorships-div-section">
-      <Text
-        fz="xl"
-        fw="600"
-        style={{ marginLeft: "10%", marginBottom: "1rem" }}
-        ref={sponsorshipRef.sponsorshipRef}
-      >
-        Sponsorships
-      </Text>
-      <Center>
+    <div
+      className="sponsorships-div-section"
+      ref={sponsorshipRef.sponsorshipRef}
+    >
+      <Text className="sponsorships-main-header">Sponsorship</Text>
+      <div className="sponsorships-main-flex">
         <Flex
-          justify="flex-start"
-          align="flex-start"
+          justify="center"
+          align="center"
           wrap="wrap"
           direction="row"
-          gap="lg"
-          className="sponsorship-flex"
+          gap={"4rem"}
         >
           <Image width={imageWidth} fit="contain" src={googleImage} />
           <Image width={imageWidth} fit="contain" src={googleImage} />
           <Image width={imageWidth} fit="contain" src={googleImage} />
-        </Flex>
-      </Center>
-      <Center>
-        <Flex
-          justify="flex-start"
-          align="flex-start"
-          wrap="wrap"
-          direction="row"
-          gap="lg"
-          className="sponsorship-flex"
-        >
           <Image width={imageWidth} fit="contain" src={googleImage} />
           <Image width={imageWidth} fit="contain" src={googleImage} />
           <Image width={imageWidth} fit="contain" src={googleImage} />
         </Flex>
-      </Center>
+      </div>
     </div>
   );
 };

@@ -1,10 +1,21 @@
-.sponsorship-flex {
-  margin-top: 2rem;
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
 }
 
 .sponsorships-div-section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  max-width: 55rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  color: rgb(26 65 119);
+  margin-top: 10rem;
+  opacity: 100;
+}
+
+.sponsorships-main-header {
+  font-size: 3rem;
+}
+
+.sponsorships-main-flex {
+  margin-top: 10rem;
 }
