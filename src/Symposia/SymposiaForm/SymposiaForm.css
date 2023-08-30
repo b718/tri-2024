@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --secondary-text-color: #0582c9;
+  --main-font-size: 0.9rem;
+  --main-large-font-size: 1.1rem;
+  --main-small-font-size: 0.7rem;
+  --main-font-weight: 500;
+}
+
+.symposia-form-main-text {
+  font-size: 2.5rem;
+}
+
+.symposia-form-main-div {
+  max-width: 35rem;
+  margin: 0 auto;
+  color: var(--main-text-color);
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.symposia-form-label label,
+.symposia-form-label-organizer label,
+.symposia-form-label-abstract label,
+.symposia-form-label-organizer label,
+.symposia-form-label-draft label {
+  color: var(--secondary-text-color);
+  font-family: Gravity;
+  font-size: var(--main-font-size);
+  font-weight: var(--main-font-weight);
+  text-transform: capitalize;
+}
+
+.symposia-form-label-organizer,
+.symposia-form-label-draft,
+.symposia-form-label-abstract,
+.symposa-form-grid-young-investigator {
+  margin-top: 1rem;
+}
+
+.symposia-form-text-young-investigator {
+  color: var(--secondary-text-color);
+  font-family: Gravity;
+  font-size: var(--main-font-size);
+  font-weight: var(--main-font-weight);
+}
+
+.symposia-form-text-young-investigator-restriction {
+  color: gray;
+  font-family: Gravity;
+  font-size: var(--main-small-font-size);
+  font-weight: var(--main-font-weight);
+  max-width: 20rem;
+}
+
+.symposia-form-button,
+.symposia-form-button-active {
+  border: 1px solid lightgray;
+  color: var(--secondary-text-color);
+  background: white;
+  border-radius: 12px;
+  font-family: Gravity;
+  font-size: var(--main-font-size);
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.symposia-form-button:hover {
+  color: white;
+  background: var(--secondary-text-color);
+  transition: 0.1s;
+}
+
+.symposia-form-button-active {
+  color: white;
+  background: var(--secondary-text-color);
+  transition: 0.1s;
+}
+
+.symposia-form-label-organizer {
+  margin-top: 1rem;
+}
+
+.symposia-form-side-text {
+  font-family: Gravity;
+  font-size: var(--main-font-size);
+  color: var(--secondary-text-color);
+}
+
+.symposia-form-grid-alternate {
+  margin-top: 1rem;
+}
+
+.symposia-form-submit-button {
+  margin-top: 2rem;
+  font-family: Gravity;
+  font-size: 0.8rem;
+  border-radius: 16px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}

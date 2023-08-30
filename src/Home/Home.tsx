@@ -30,9 +30,7 @@ const Home = () => {
           ref={mainDivRef}
         >
           <Orb />
-          <h1 className="home-h1-div-intro">
-            Engineering the Future of Tinnitus
-          </h1>
+          <h1 className="home-h1-div-intro">The Science of Tinnitus</h1>
           <Text className="home-text-under-h1">
             Tinnitus Research Initiative Conference
           </Text>

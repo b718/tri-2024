@@ -86,9 +86,11 @@ const RegistrationUpdated = () => {
               disabled={true}
             >
               <a
-                href="register"
-                target="_blank"
+                // href="register"
+                // target="_blank"
                 className="registration-updated-a-tag"
+                href="triMainPdf.pdf"
+                download="tri-2024-save-the-date"
               >
                 COMING JAN 15TH
               </a>

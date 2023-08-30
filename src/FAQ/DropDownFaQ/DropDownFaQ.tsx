@@ -17,7 +17,12 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
   const parentRef = useRef<HTMLInputElement>(null);
   return (
     <div className="drop-down-faq-div">
-      <Grid columns={8} onClick={() => setClick(!click)} align="center">
+      <Grid
+        columns={8}
+        onClick={() => setClick(!click)}
+        align="center"
+        style={{ cursor: "pointer" }}
+      >
         <Grid.Col span={4}>
           {" "}
           <Text className={`drop-down-faq-title${click ? "-active" : ""}`}>

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+}
+.general-information-main-div {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-family: Gravity;
+  color: white;
+}

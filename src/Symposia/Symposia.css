@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+}
+
+.symposia-outside-div {
+  background-color: var(--main-text-color);
+}
+.symposia-main-div {
+  max-width: 45rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+.symposia-max-header {
+  font-size: 2.5rem;
+  padding-top: 4rem;
+  color: white;
+}
+
+.symposia-main-text {
+  color: white;
+  margin-top: 2rem;
+}
+
+.symposia-main-div-under-text {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.symposia-form-section {
+  padding-bottom: 4rem;
+}

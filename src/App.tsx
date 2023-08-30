@@ -28,6 +28,7 @@ import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import PayPalPayment from "./PayPal/PayPalPayment";
 import RegistrationUpdated from "./Registration/RegistrationUpdated";
 import PaymentForm from "./PaymentForm/PaymentForm";
+import Symposia from "./Symposia/Symposia";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -218,6 +219,7 @@ function App() {
                     <Home />
                     <Committee />
                     <RegistrationUpdated />
+                    <Symposia />
                     <Sponsorships />
                     <FaQ />
                     <Footer />
