@@ -41,6 +41,7 @@
   border: 0.5px solid white;
   border-radius: 50%;
   overflow: hidden;
+  transform: translate(150px, -100px);
 }
 
 .carousel-button-arrow {

@@ -106,7 +106,8 @@ const Navbar = () => {
                       scrollToSection(navBarScrollRefs.registrationRef)
                     }
                   >
-                    REGISTRATION
+                    {/* REGISTRATION */}
+                    SAVE THE DATE
                   </Text>
                   {/* <Text className="nav-bar-different-sections">Speakers</Text>
                   <Text className="nav-bar-different-sections">Program</Text> */}
@@ -134,18 +135,20 @@ const Navbar = () => {
                       onClick={() =>
                         scrollToSection(navBarScrollRefs.symposiaRef)
                       }
-                      style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                      // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                      style={{ display: `${!enterSubmission ? "none" : ""}` }}
                     >
-                      SYMPOSIA
+                      SYMPOSIA GUIDELINES & SUBMISSIONS
                     </Text>
                     <Text
                       className="nav-bar-posters"
                       onClick={() =>
                         scrollToSection(navBarScrollRefs.postersPapers)
                       }
-                      style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                      // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                      style={{ display: `${!enterSubmission ? "none" : ""}` }}
                     >
-                      PAPERS/POSTERS
+                      PAPERS & POSTERS GUIDELINES & SUBMISSIONS
                     </Text>
                   </Flex>
                   {/* <Text className="nav-bar-different-sections">Awards</Text>

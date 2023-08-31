@@ -1,0 +1,70 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --main-button-color: #0582c8;
+  --font-size-text: 0.9rem;
+}
+
+.carousel-form-outer-div {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.carousel-form-inner-div {
+  max-width: 35rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  color: var(--main-text-color);
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem 3rem 3rem 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.carousel-form-title {
+  font-size: 2.5rem;
+}
+
+.carousel-form-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-form-button,
+.carousel-form-button-disable {
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--main-button-color);
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Gravity;
+  font-size: var(--font-size-text);
+  margin-top: 1rem;
+}
+
+.carousel-form-button-disable {
+  background-color: lightgray;
+}
+
+.carousel-form-button:hover {
+  background-color: #046aa6;
+}
+
+.carousel-form-upload-text-outer {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.carousel-form-upload-text {
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}

@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./SymposiaForm.css";
-import { Button, Flex, Grid, Text, TextInput, Textarea } from "@mantine/core";
+import {
+  Button,
+  Center,
+  Flex,
+  Grid,
+  Text,
+  TextInput,
+  Textarea,
+} from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 
 const SymposiaForm = () => {
@@ -153,44 +161,79 @@ const SymposiaForm = () => {
         <Text className="symposia-form-side-text">
           Lead Organizer (name, affiliation, email address)
         </Text>
-        <Flex
-          gap={"md"}
-          justify={"center"}
-          align={"center"}
-          direction={width < 660 ? "column" : "row"}
-        >
-          {" "}
-          <TextInput
-            className="symposia-form-label-organizer"
-            required={true}
-            label="Name"
-            type="text"
-            value={leadName}
-            onChange={(event) => {
-              setLeadName(event.target.value);
-            }}
-          />{" "}
-          <TextInput
-            className="symposia-form-label-organizer"
-            required={true}
-            label="Institutional Affiliation"
-            type="text"
-            value={leadIns}
-            onChange={(event) => {
-              setLeadIns(event.target.value);
-            }}
-          />{" "}
-          <TextInput
-            label="Email Address"
-            className="symposia-form-label-organizer"
-            required={true}
-            type="email"
-            value={leadEmail}
-            onChange={(event) => {
-              setLeadEmail(event.target.value);
-            }}
-          />
-        </Flex>
+        {width < 660 ? (
+          <div className="symposia-form-less-than-660-div">
+            <TextInput
+              className="symposia-form-label-organizer"
+              required={true}
+              label="Name"
+              type="text"
+              value={leadName}
+              onChange={(event) => {
+                setLeadName(event.target.value);
+              }}
+            />{" "}
+            <TextInput
+              className="symposia-form-label-organizer"
+              required={true}
+              label="Institutional Affiliation"
+              type="text"
+              value={leadIns}
+              onChange={(event) => {
+                setLeadIns(event.target.value);
+              }}
+            />{" "}
+            <TextInput
+              label="Email Address"
+              className="symposia-form-label-organizer"
+              required={true}
+              type="email"
+              value={leadEmail}
+              onChange={(event) => {
+                setLeadEmail(event.target.value);
+              }}
+            />
+          </div>
+        ) : (
+          <Flex
+            gap={"md"}
+            justify={"center"}
+            align={"center"}
+            direction={width < 660 ? "column" : "row"}
+          >
+            {" "}
+            <TextInput
+              className="symposia-form-label-organizer"
+              required={true}
+              label="Name"
+              type="text"
+              value={leadName}
+              onChange={(event) => {
+                setLeadName(event.target.value);
+              }}
+            />{" "}
+            <TextInput
+              className="symposia-form-label-organizer"
+              required={true}
+              label="Institutional Affiliation"
+              type="text"
+              value={leadIns}
+              onChange={(event) => {
+                setLeadIns(event.target.value);
+              }}
+            />{" "}
+            <TextInput
+              label="Email Address"
+              className="symposia-form-label-organizer"
+              required={true}
+              type="email"
+              value={leadEmail}
+              onChange={(event) => {
+                setLeadEmail(event.target.value);
+              }}
+            />
+          </Flex>
+        )}
       </Flex>
 
       <Textarea

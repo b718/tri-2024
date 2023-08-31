@@ -131,6 +131,11 @@
   padding-right: 4rem;
 }
 
+.symposia-form-less-than-660-div {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px

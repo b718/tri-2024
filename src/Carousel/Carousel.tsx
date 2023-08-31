@@ -3,6 +3,7 @@ import "./Carousel.css";
 import CarouselItem from "./Carousel-Item/CarouselItem";
 import { Text } from "@mantine/core";
 import { NavBarContext } from "../App";
+import CarouselForm from "./CarouselForm/CarouselForm";
 
 const Carousel = () => {
   const [slide, setSlide] = useState<number>(0);
@@ -94,6 +95,7 @@ const Carousel = () => {
             arrow_circle_right
           </span>
         </button>
+        <CarouselForm />
       </div>
     </>
   );

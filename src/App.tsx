@@ -176,7 +176,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        REGISTRATION
+                        SAVE THE DATE
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Speakers
@@ -202,7 +202,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        SYMPOSIA
+                        SYMPOSIA GUIDELINES & SUBMISSIONS
                       </Text>
 
                       <Text
@@ -213,7 +213,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        PAPERS/POSTERS
+                        PAPERS & POSTERS GUIDELINES & SUBMISSIONS
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Awards
