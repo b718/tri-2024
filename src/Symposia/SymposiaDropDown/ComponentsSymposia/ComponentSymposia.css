@@ -9,6 +9,11 @@
 .general-information-main-div {
   margin-top: 1rem;
   font-size: 0.8rem;
+  margin-bottom: 1rem;
   font-family: Gravity;
   color: white;
+  word-break: break-word;
+  max-width: fit-content;
+  text-transform: none;
+  text-decoration: none;
 }

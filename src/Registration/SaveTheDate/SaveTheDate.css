@@ -1,0 +1,83 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: GravityBold;
+  src: url("../../../public/Fonts/gravity/Gravity-Bold.otf");
+}
+
+:root {
+  --main-text-color: #1a4177;
+  --font-size: 0.9rem;
+}
+
+.save-the-date-main-div {
+  max-width: fit-content;
+  margin: 0 auto;
+  color: var(--main-text-color);
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+.save-the-date-download-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.save-the-date-download-button {
+  background-color: var(--main-text-color);
+  border-radius: 12px;
+  border: none;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  max-width: 15rem;
+}
+
+.save-the-date-text {
+  max-width: 25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.save-the-date-main-text {
+  font-size: 3rem;
+}
+
+.save-the-date-right-side-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.save-the-date-right-side-date {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: GravityBold;
+}
+
+.save-the-date-vertical-line {
+  height: 280px;
+  border-right: 1px solid lightgray;
+  margin-right: 4rem;
+}
+
+/* .save-the-date-dates-flex {
+  margin-left: 3rem;
+} */
+
+.save-the-date-horizontal-line {
+  border-bottom: 1px solid lightgray;
+  width: 250px;
+  /* margin-left: 3rem; */
+  margin-bottom: 1rem;
+}
+
+.save-the-date-vertical-line-730 {
+  border-bottom: 1px solid lightgray;
+  width: 250px;
+  /* margin-left: 3rem; */
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}

@@ -11,7 +11,7 @@ import Home from "./Home/Home";
 import Committee from "./Committee/Committee";
 import SpeakerSection from "./Conference Program/SpeakersComponent/SpeakerSection";
 import ConferenceProgram from "./Conference Program/ConferenceProgram";
-import Registration from "./Registration/Registration";
+import Registration from "./Registration/RegistrationOld/Registration";
 import Sponsorships from "./Sponsorship/Sponsorships";
 import PageHolder from "./PageHolder/PageHolder";
 import FaQ from "./FAQ/FaQ";
@@ -29,6 +29,8 @@ import PayPalPayment from "./PayPal/PayPalPayment";
 import RegistrationUpdated from "./Registration/RegistrationUpdated";
 import PaymentForm from "./PaymentForm/PaymentForm";
 import Symposia from "./Symposia/Symposia";
+import SaveTheDate from "./Registration/SaveTheDate/SaveTheDate";
+import CommiteeSection from "./CommitteeDropDown/CommiteeSection";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -263,7 +265,9 @@ function App() {
                     </div>
                     <Home />
                     <Committee />
-                    <RegistrationUpdated />
+                    <SaveTheDate />
+                    <CommiteeSection />
+                    {/* <RegistrationUpdated /> */}
                     <Symposia />
                     <Carousel />
                     <Sponsorships />

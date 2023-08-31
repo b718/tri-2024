@@ -12,44 +12,24 @@
   --main-text-color: rgb(26 65 119);
 }
 
-.symposia-outside-div {
-  background-color: var(--main-text-color);
-}
-.symposia-main-div {
+.commitee-section-main-div {
   max-width: 45rem;
   margin: 0 auto;
   font-family: Gravity;
-  margin-top: 5rem;
-  margin-bottom: 6rem;
+  /* margin-top: 5rem; */
+  margin-bottom: 10rem;
+  color: var(--main-text-color);
 }
 
-.symposia-max-header {
+.commitee-section-max-header {
   font-size: 2.5rem;
   padding-top: 4rem;
   margin-left: 0.5rem;
-  color: white;
 }
 
-.symposia-main-text {
-  color: white;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.symposia-main-div-under-text {
+.commitee-section-main-div-under-text {
   max-width: fit-content;
   margin: 0 auto;
   margin-top: 3rem;
   padding-bottom: 1rem;
 }
-
-.symposia-form-section {
-  max-width: fit-content;
-  margin: 0 auto;
-  padding-bottom: 4rem;
-}
-
-/* * {
-  border: 1px solid red;
-} */

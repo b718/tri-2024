@@ -1,7 +1,7 @@
 import { Grid, Text, Center, Flex, Button } from "@mantine/core";
 import React, { useContext } from "react";
 import "./Registration.css";
-import { NavBarContext } from "../App";
+import { NavBarContext } from "../../App";
 const Registration = () => {
   const registrationRef = useContext(NavBarContext);
 

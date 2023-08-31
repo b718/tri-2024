@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --symposia-text-color: #0283c9;
+}
+
+.committee-drop-down-div {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.committee-drop-down-div-title {
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.5s;
+  color: var(--symposia-text-color);
+  cursor: pointer;
+}
+
+.committee-drop-down-div-title-active {
+  margin-top: 1rem;
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.5s;
+  color: var(--symposia-text-color);
+  cursor: pointer;
+}
+
+.committee-drop-down-div-active-content {
+  overflow: hidden;
+  transition: 0.5s;
+  color: white;
+  font-size: 0.9rem;
+  font-family: Gravity;
+}
+
+.committee-drop-down-div-svg {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.committee-drop-down-div-svg-active {
+  margin-top: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.committee-drop-down-div-faq-line-middle {
+  color: #74a441;
+}
+
+.committee-drop-down-div-line-rotate {
+  color: #74a441;
+  transition: 0.5s;
+}
+
+.committee-drop-down-div-line-rotate-active {
+  color: #74a441;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
