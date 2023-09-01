@@ -53,7 +53,7 @@ const CarouselForm = () => {
             <label
               htmlFor="fileUpload"
               className="carousel-form-button"
-              style={{ fontSize: `${width < 500 ? "0.6rem" : "0.9rem"}` }}
+              style={{ fontSize: `${width < 545 ? "0.6rem" : "0.9rem"}` }}
             >
               ADD AN ATTACHMENT +
             </label>
@@ -71,7 +71,7 @@ const CarouselForm = () => {
             className={`carousel-form-button${file ? "" : "-disable"}`}
             disabled={file ? false : true}
             type={"submit"}
-            style={{ fontSize: `${width < 500 ? "0.6rem" : "0.9rem"}` }}
+            style={{ fontSize: `${width < 545 ? "0.6rem" : "0.9rem"}` }}
           >
             SUBMIT APPLICATION
           </button>

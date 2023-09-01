@@ -15,6 +15,7 @@
 
 :root {
   --symposia-text-color: #87ccf2;
+  --symposia-text-color-second: #36b8ff;
 }
 
 .symposia-drop-down-div {
@@ -28,7 +29,7 @@
   font-weight: bold;
   font-size: 0.8rem;
   transition: 0.5s;
-  color: var(--symposia-text-color);
+  color: var(--symposia-text-color-second);
   cursor: pointer;
 }
 
@@ -39,7 +40,7 @@
   font-weight: bold;
   font-size: 0.8rem;
   transition: 0.5s;
-  color: var(--symposia-text-color);
+  color: var(--symposia-text-color-second);
   cursor: pointer;
 }
 

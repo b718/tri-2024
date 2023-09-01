@@ -31,6 +31,8 @@ import PaymentForm from "./PaymentForm/PaymentForm";
 import Symposia from "./Symposia/Symposia";
 import SaveTheDate from "./Registration/SaveTheDate/SaveTheDate";
 import CommiteeSection from "./CommitteeDropDown/CommiteeSection";
+import CarouselSection from "./Carousel/CarouselSection";
+import ContactUs from "./ContactUs/ContactUs";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -45,6 +47,7 @@ interface ContextTypeNavBarRef {
   symposiaRef: React.RefObject<HTMLDivElement>;
   symposiaForm: React.RefObject<HTMLDivElement>;
   postersPapers: React.RefObject<HTMLDivElement>;
+  contactUs: React.RefObject<HTMLDivElement>;
 
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
@@ -65,6 +68,7 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   symposiaRef: createRef(),
   symposiaForm: createRef(),
   postersPapers: createRef(),
+  contactUs: createRef(),
 });
 
 export const BurgerContext = createContext<ContextBurger>({
@@ -85,6 +89,7 @@ function App() {
   const symposiaRef = useRef<HTMLDivElement>(null);
   const symposiaForm = useRef<HTMLDivElement>(null);
   const postersPapers = useRef<HTMLDivElement>(null);
+  const contactUs = useRef<HTMLDivElement>(null);
 
   const [burger, setBurger] = useState<boolean>(false);
   const overlayRef = useRef<HTMLInputElement>(null);
@@ -120,6 +125,7 @@ function App() {
             symposiaRef: symposiaRef,
             symposiaForm: symposiaForm,
             postersPapers: postersPapers,
+            contactUs: contactUs,
           }}
         >
           <BurgerContext.Provider value={{ burger, setBurger }}>
@@ -255,7 +261,7 @@ function App() {
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
                         onClick={() => {
-                          scrollToSection(venueRef);
+                          scrollToSection(contactUs);
                           setBurger(false);
                         }}
                         style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
@@ -269,9 +275,11 @@ function App() {
                     <CommiteeSection />
                     {/* <RegistrationUpdated /> */}
                     <Symposia />
-                    <Carousel />
+                    {/* <Carousel /> */}
+                    <CarouselSection />
                     <Sponsorships />
                     <FaQ />
+                    <ContactUs />
                     <Footer />
                   </div>
                 }

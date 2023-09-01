@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Sponsorship.css";
 import { NavBarContext } from "../App";
 import { Flex, Image, Text, Center } from "@mantine/core";
-import googleImage from "../Images/Sponsorships/google.png";
+import googleImage from "../Images/Sponsorships/brainhealth.jpg";
 
 const Sponsorships = () => {
   const sponsorshipRef = useContext(NavBarContext);

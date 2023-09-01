@@ -177,7 +177,7 @@ const Navbar = () => {
 
                   <Text
                     className="nav-bar-different-sections"
-                    onClick={() => scrollToSection(navBarScrollRefs.venueRef)}
+                    onClick={() => scrollToSection(navBarScrollRefs.contactUs)}
                   >
                     CONTACT US
                   </Text>

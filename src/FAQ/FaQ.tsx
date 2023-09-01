@@ -36,7 +36,7 @@ const FaQ = () => {
   });
 
   return (
-    <div ref={faqRef.faqRef}>
+    <div>
       <div
         className={`faq-main-div${mainFaqDivVisible ? "-active" : ""}`}
         ref={mainFaqDiv}
@@ -60,7 +60,9 @@ const FaQ = () => {
             © Nicolas Savignat
           </Text>
         </div>{" "}
-        <Text className="faq-main-header">Tourism & Venue</Text>
+        <Text className="faq-main-header" ref={faqRef.faqRef}>
+          Tourism & Venue
+        </Text>
         <hr style={{ maxWidth: "98vw" }} />
         <DropDownFaQ
           title={"What you need to know: Vancouver 101"}

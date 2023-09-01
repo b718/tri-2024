@@ -91,37 +91,35 @@ const Committee = () => {
                   ref={mainCommitteeDiv}
                 >
                   <Text className="committee-text-left-header">
-                    Bridging academia, industry, medicine & society
+                    A Warm Welcome
                   </Text>
                   <Text className="committee-text-left-paragraph">
-                    While tinnitus is a common symptom, current-day treatments
-                    reduce the impact than specifically address the percept
-                    itself. Globally, tinnitus sufferers demand a permanent
-                    solution to this problem. Although market research
-                    demonstrates a strong commercial opportunity, the amount of
-                    scientific research and financial investment is small
-                    compared to other chronic health conditions. TRI 2023 aims
-                    to bring together world-className scientists,
-                    industrialists, clinicians and policymakers, patients and
-                    caregivers to address these impending issues thereby seeking
-                    to bridge the gap between academia, industry, medicine &
-                    society (AIMS). We aspire to join hands with experts from
-                    emerging scientific fields such as big data science,
-                    personalized medicine, neuroinflammation, genetics etc. who
-                    can give us insights about their successful translations
-                    from bench to bedside. Through this meeting we intend to
-                    open new avenues of research, clinical practices, and
-                    patient engagement strategies in tinnitus, setting us on a
-                    path of disruptive innovation. This led us to title the
-                    conference{" "}
-                    <b>
-                      Engineering the future of tinnitus: Bridging Academia,
-                      Industry, Medicine & Society.
-                    </b>
+                    We are thrilled to return after the cancellation of TRI
+                    2020, reinvigorated and honoured to host the first-ever TRI
+                    Conference in Canada. TRI 2024 is a momentous occasion not
+                    only for our conference series but for tinnitus and
+                    hyperacusis research worldwide, as we gather an impressive
+                    international community of scientists to collaborate.{" "}
+                    <br></br>
+                    <br></br>
+                    TRI 2024 invites the global scientific community to engage
+                    in a complete, packed program exploring the diverse
+                    landscapes of tinnitus and hyperacusis research. Vibrant
+                    discussions, debates, and the exchange of ideas to improve
+                    the lives of our clients will take place over the
+                    conference’s two days as we work to bridge the gaps between
+                    research, clinical practice, and the experiences of those
+                    affected by tinnitus and hyperacusis.
+                    <br></br>
+                    <br></br>
+                    We look forward to seeing you here in beautiful Vancouver,
+                    where international collaboration and transformative
+                    discussions will take center stage.
                   </Text>
 
                   <Text className="committee-text-left-footer">
-                    Sven Vanneste & Anusha Mohan
+                    Carol Lau, Conference Organizer & <br></br>Host Sylvie
+                    Hébert, Scientific Program Chair{" "}
                   </Text>
                 </div>
               </Grid.Col>
@@ -154,36 +152,33 @@ const Committee = () => {
                 ref={mainCommitteeDiv}
               >
                 <Text className="committee-text-left-header">
-                  Bridging academia, industry, medicine & society
+                  A Warm Welcome
                 </Text>
                 <Text className="committee-text-left-paragraph">
-                  While tinnitus is a common symptom, current-day treatments
-                  reduce the impact than specifically address the percept
-                  itself. Globally, tinnitus sufferers demand a permanent
-                  solution to this problem. Although market research
-                  demonstrates a strong commercial opportunity, the amount of
-                  scientific research and financial investment is small compared
-                  to other chronic health conditions. TRI 2023 aims to bring
-                  together world-className scientists, industrialists,
-                  clinicians and policymakers, patients and caregivers to
-                  address these impending issues thereby seeking to bridge the
-                  gap between academia, industry, medicine & society (AIMS). We
-                  aspire to join hands with experts from emerging scientific
-                  fields such as big data science, personalized medicine,
-                  neuroinflammation, genetics etc. who can give us insights
-                  about their successful translations from bench to bedside.
-                  Through this meeting we intend to open new avenues of
-                  research, clinical practices, and patient engagement
-                  strategies in tinnitus, setting us on a path of disruptive
-                  innovation. This led us to title the conference{" "}
-                  <b>
-                    Engineering the future of tinnitus: Bridging Academia,
-                    Industry, Medicine & Society.
-                  </b>
+                  We are thrilled to return after the cancellation of TRI 2020,
+                  reinvigorated and honoured to host the first-ever TRI
+                  Conference in Canada. TRI 2024 is a momentous occasion not
+                  only for our conference series but for tinnitus and
+                  hyperacusis research worldwide, as we gather an impressive
+                  international community of scientists to collaborate.{" "}
+                  <br></br>
+                  <br></br> TRI 2024 invites the global scientific community to
+                  engage in a complete, packed program exploring the diverse
+                  landscapes of tinnitus and hyperacusis research. Vibrant
+                  discussions, debates, and the exchange of ideas to improve the
+                  lives of our clients will take place over the conference’s two
+                  days as we work to bridge the gaps between research, clinical
+                  practice, and the experiences of those affected by tinnitus
+                  and hyperacusis.
+                  <br></br>
+                  <br></br> We look forward to seeing you here in beautiful
+                  Vancouver, where international collaboration and
+                  transformative discussions will take center stage.
                 </Text>
 
                 <Text className="committee-text-left-footer">
-                  Sven Vanneste & Anusha Mohan
+                  Carol Lau, Conference Organizer & <br></br>Host Sylvie Hébert,
+                  Scientific Program Chair{" "}
                 </Text>
               </div>
             </Flex>
@@ -227,20 +222,25 @@ const Committee = () => {
               ref={westCoastCommitteeDiv}
             >
               <Text className="committee-west-coast-text-header">
-                The West Coast is waiting for you
+                Experience the West Coast
               </Text>
               <Text className="committee-west-coast-text-paragraph">
-                TRI 2023 will be held at the Trinity Business School in Trinity
-                College Dublin, the oldest academic institution in Ireland.
-                Established in 1592 as the College of the Holy and Undivided
-                Trinity of Queen Elizabeth in the heart of Dublin city, Trinity
-                College draws more than 400 years of history and houses some of
-                the oldest relics in the world. Complementing its glory is
-                Dublin city itself, weaving centuries of culture and tradition
-                between the modern folds of the third millennium. This year at
-                TRI 2023, along with our vision to #BridgingAIMS, we are
-                honoured to give our delegates a taste of the infamous Irish
-                culture and tradition through our social events.
+                Nestled on Canada's picturesque West Coast, Vancouver welcomes
+                travellers with open arms – whether it's your first visit or a
+                cherished return. From exploring Stanley Park's greenery, taking
+                Alaskan cruises from its bustling port, or embarking on the
+                scenic Rocky Mountain train journey, Vancouver promises an
+                unforgettable summer adventure amid breathtaking natural beauty.
+                <br></br>
+                <br></br>
+                Our conference venue at Robson Square is nestled in the heart of
+                downtown Vancouver, with easy access to shopping, dining, and
+                entertainment nearby. It's a dynamic focal point for both locals
+                and visitors seeking diverse experiences in the city. Cycle
+                along the Seawall, savour diverse cuisine, shop along Robson
+                Street, and much more. Vancouver's summer invites you to
+                experience the best of the city and nature in one captivating
+                destination.
               </Text>
             </div>
             <div
@@ -275,20 +275,25 @@ const Committee = () => {
               ref={westCoastCommitteeDiv}
             >
               <Text className="committee-west-coast-text-header">
-                The West Coast is waiting for you
+                Experience the West Coast
               </Text>
               <Text className="committee-west-coast-text-paragraph">
-                TRI 2023 will be held at the Trinity Business School in Trinity
-                College Dublin, the oldest academic institution in Ireland.
-                Established in 1592 as the College of the Holy and Undivided
-                Trinity of Queen Elizabeth in the heart of Dublin city, Trinity
-                College draws more than 400 years of history and houses some of
-                the oldest relics in the world. Complementing its glory is
-                Dublin city itself, weaving centuries of culture and tradition
-                between the modern folds of the third millennium. This year at
-                TRI 2023, along with our vision to #BridgingAIMS, we are
-                honoured to give our delegates a taste of the infamous Irish
-                culture and tradition through our social events.
+                Nestled on Canada's picturesque West Coast, Vancouver welcomes
+                travellers with open arms – whether it's your first visit or a
+                cherished return. From exploring Stanley Park's greenery, taking
+                Alaskan cruises from its bustling port, or embarking on the
+                scenic Rocky Mountain train journey, Vancouver promises an
+                unforgettable summer adventure amid breathtaking natural beauty.
+                <br></br>
+                <br></br>
+                Our conference venue at Robson Square is nestled in the heart of
+                downtown Vancouver, with easy access to shopping, dining, and
+                entertainment nearby. It's a dynamic focal point for both locals
+                and visitors seeking diverse experiences in the city. Cycle
+                along the Seawall, savour diverse cuisine, shop along Robson
+                Street, and much more. Vancouver's summer invites you to
+                experience the best of the city and nature in one captivating
+                destination.
               </Text>
             </div>
             <div

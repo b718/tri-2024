@@ -30,6 +30,44 @@
 .commitee-section-main-div-under-text {
   max-width: fit-content;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding-bottom: 1rem;
+}
+
+.commitee-section-flex-images {
+  margin-top: 10rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.commitee-section-bottom-image {
+  /* margin-left: 20rem; */
+  margin-top: 10rem;
+}
+
+.committee-section-rollover-text,
+.committee-section-rollover-text-active {
+  position: absolute;
+  transform: translate(5px, -25px);
+  transition: 0.5s;
+}
+
+.committee-section-rollover-text {
+  color: transparent;
+}
+
+.committee-section-rollover-text-active {
+  color: white;
+}
+
+.committee-section-image-appear-active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.committee-section-image-appear {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
 }

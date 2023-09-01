@@ -44,7 +44,8 @@ const Home = () => {
               onClick={() => scrollToSection(homeRef.registrationRef)}
             >
               <p style={{ paddingLeft: "1rem", paddingRight: "1rem" }}>
-                Register Now
+                {/* Register Now */}
+                SAVE THE DATE
               </p>
             </button>
           </Center>

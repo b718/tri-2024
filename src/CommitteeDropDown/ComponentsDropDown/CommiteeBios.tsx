@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentsCommitee.css";
 import { Center, Flex, Grid, Image, Text } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import cHeadShot from "../../Images/carolHS.png";
+import cHeadShot from "../../Images/Carol-Lau.jpg";
 import sHeadShot from "../../Images/sylvieHS.png";
 
 const CommiteeBios = () => {

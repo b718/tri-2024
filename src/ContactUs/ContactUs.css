@@ -1,0 +1,56 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --font-size-text: 0.9rem;
+}
+
+.contact-us-main-div {
+  max-width: 45rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  margin-top: 20rem;
+  margin-bottom: 6rem;
+}
+
+.contact-us-title {
+  font-size: 2.5rem;
+  color: var(--main-text-color);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.contact-us-label label {
+  color: var(--main-text-color);
+}
+
+.contact-us-label {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.contact-us-button,
+.contact-us-button-disable {
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--main-button-color);
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Gravity;
+  font-size: var(--font-size-text);
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.contact-us-button-disable {
+  background-color: lightgray;
+}
+
+.contact-us-button:hover {
+  background-color: #046aa6;
+}
