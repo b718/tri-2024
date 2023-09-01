@@ -21,18 +21,15 @@ const ContactUs = () => {
       email: email,
       message: message,
     };
-    const x = await fetch(
-      "https://tri-2024-back-end.onrender.com/submit-contact-us",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          contactObject,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const x = await fetch("https://tri-2024-back-end.onrender.com/contact-us", {
+      method: "POST",
+      body: JSON.stringify({
+        contactObject,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     setName("");
     setEmail("");
     setMessage("");
