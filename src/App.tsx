@@ -284,7 +284,7 @@ function App() {
                   </div>
                 }
               />
-              <Route path="/register" element={<PaymentForm />} />
+              {/* <Route path="/register" element={<PaymentForm />} /> */}
             </Routes>
           </BurgerContext.Provider>
         </NavBarContext.Provider>

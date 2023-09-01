@@ -17,10 +17,13 @@ const CarouselForm = () => {
       const formData = new FormData();
       formData.append("pdfFile", file);
 
-      const response = await fetch("http://localhost:3001/submit-poster-form", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://tri-2024-back-end.onrender.com/submit-poster-form",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
     }
     setFile(null);
   };

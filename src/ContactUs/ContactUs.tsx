@@ -14,8 +14,25 @@ const ContactUs = () => {
   const checkDisable = () => {
     return name && email;
   };
-  const onSubmit = (e: any) => {
+  const onSubmit = async (e: any) => {
     e.preventDefault();
+    const contactObject = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    const x = await fetch(
+      "https://tri-2024-back-end.onrender.com/submit-contact-us",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          contactObject,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     setName("");
     setEmail("");
     setMessage("");
@@ -25,6 +42,7 @@ const ContactUs = () => {
       <form className="contact-us-main-div" onSubmit={onSubmit}>
         <Text className="contact-us-title">Contact Us</Text>
         <TextInput
+          required={true}
           label="Name"
           className="contact-us-label"
           value={name}
@@ -33,6 +51,7 @@ const ContactUs = () => {
           }}
         ></TextInput>
         <TextInput
+          required={true}
           label="Email"
           className="contact-us-label"
           style={{ marginTop: "1rem" }}

@@ -69,15 +69,18 @@ const SymposiaForm = () => {
       draft: draft,
       invites: invites,
     };
-    const x = await fetch("http://localhost:3001/submit-symposia-form", {
-      method: "POST",
-      body: JSON.stringify({
-        symposiaObject,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const x = await fetch(
+      "https://tri-2024-back-end.onrender.com/submit-symposia-form",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          symposiaObject,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     console.log(x);
 
     setTitleS("");
