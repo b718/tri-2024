@@ -12,7 +12,7 @@ const CarouselSection = () => {
     <>
       <div className="carousel-section-main-div" ref={navBarRef.postersPapers}>
         {" "}
-        <div className="carousel-section-main-div">
+        {/* <div className="carousel-section-main-div">
           <Text className="carousel-section-max-header">
             Papers & Posters Guidelines
           </Text>
@@ -63,7 +63,7 @@ const CarouselSection = () => {
               </Text>
             </Flex>
           </Flex>
-        </div>
+        </div> */}
         <CarouselForm />
       </div>
     </>

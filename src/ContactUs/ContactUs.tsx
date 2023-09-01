@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./ContactUs.css";
-import { Button, Text, TextInput, Textarea, em } from "@mantine/core";
+import { Button, Loader, Text, TextInput, Textarea, em } from "@mantine/core";
 import { NavBarContext } from "../App";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 
@@ -10,6 +10,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState("start");
 
   const checkDisable = () => {
     return name && email;
@@ -21,6 +22,8 @@ const ContactUs = () => {
       email: email,
       message: message,
     };
+
+    setLoading("loading");
     const x = await fetch("https://tri-2024-back-end.onrender.com/contact-us", {
       method: "POST",
       body: JSON.stringify({
@@ -29,6 +32,8 @@ const ContactUs = () => {
       headers: {
         "Content-Type": "application/json",
       },
+    }).then(() => {
+      setLoading("start");
     });
     setName("");
     setEmail("");
@@ -77,7 +82,19 @@ const ContactUs = () => {
           type={"submit"}
           disabled={!checkDisable()}
         >
-          Submit
+          Submit{" "}
+          {loading === "loading" ? (
+            <Loader
+              color="gray"
+              size="0.8rem"
+              style={{
+                marginLeft: "0.5rem",
+                maxWidth: "fit-content",
+              }}
+            />
+          ) : (
+            <div></div>
+          )}
         </button>
       </form>
     </div>

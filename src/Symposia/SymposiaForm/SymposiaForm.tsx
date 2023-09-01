@@ -5,6 +5,7 @@ import {
   Center,
   Flex,
   Grid,
+  Loader,
   Text,
   TextInput,
   Textarea,
@@ -32,6 +33,8 @@ const SymposiaForm = () => {
   const [invites, setInvites] = useState("");
 
   const { width, height } = useWindowDimensions();
+
+  const [loading, setLoading] = useState("start");
 
   const buttonChecker = () => {
     return (
@@ -69,6 +72,7 @@ const SymposiaForm = () => {
       draft: draft,
       invites: invites,
     };
+    setLoading("loading");
     const x = await fetch(
       "https://tri-2024-back-end.onrender.com/submit-symposia-form",
       {
@@ -80,7 +84,9 @@ const SymposiaForm = () => {
           "Content-Type": "application/json",
         },
       }
-    );
+    ).then(() => {
+      setLoading("start");
+    });
     console.log(x);
 
     setTitleS("");
@@ -346,13 +352,27 @@ const SymposiaForm = () => {
         }}
       />
 
-      <Button
-        className="symposia-form-submit-button"
-        type={"submit"}
-        disabled={!buttonChecker()}
-      >
-        SUBMIT APPLICATION
-      </Button>
+      <Flex>
+        <Button
+          className="symposia-form-submit-button"
+          type={"submit"}
+          disabled={!buttonChecker()}
+        >
+          SUBMIT APPLICATION
+          {loading === "loading" ? (
+            <Loader
+              color="gray"
+              size="0.8rem"
+              style={{
+                marginLeft: "0.5rem",
+                maxWidth: "fit-content",
+              }}
+            />
+          ) : (
+            <div></div>
+          )}
+        </Button>
+      </Flex>
     </form>
   );
 };

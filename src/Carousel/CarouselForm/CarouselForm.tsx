@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./CarouselForm.css";
-import { FileInput, Flex, Text } from "@mantine/core";
+import { Center, FileInput, Flex, Loader, Text } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 const CarouselForm = () => {
   const [file, setFile] = useState<File | null>(null);
   const { width, height } = useWindowDimensions();
+  const [loading, setLoading] = useState("start");
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     console.log(file);
@@ -17,13 +18,16 @@ const CarouselForm = () => {
       const formData = new FormData();
       formData.append("pdfFile", file);
 
+      setLoading("loading");
       const response = await fetch(
         "https://tri-2024-back-end.onrender.com/submit-poster-form",
         {
           method: "POST",
           body: formData,
         }
-      );
+      ).then(() => {
+        setLoading("start");
+      });
     }
     setFile(null);
   };
@@ -84,6 +88,13 @@ const CarouselForm = () => {
             <Text className="carousel-form-upload-text">
               Uploaded: {file.name}
             </Text>
+            {loading === "loading" ? (
+              <Center>
+                <Loader color="gray" />
+              </Center>
+            ) : (
+              <div></div>
+            )}
           </div>
         ) : (
           <div></div>
