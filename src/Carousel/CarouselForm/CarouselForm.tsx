@@ -46,15 +46,7 @@ const CarouselForm = () => {
         <Text className="carousel-form-title">
           Papers & posters submissions
         </Text>
-        <Text className="carousel-form-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat
-          quam nec enim mollis lacinia. Morbi lobortis lectus mattis lectus
-          laoreet, sed pretium nisi fermentum. Integer vulputate, leo eget
-          fermentum luctus, tellus turpis gravida massa, non finibus tellus
-          sapien ac arcu. Maecenas sit amet vulputate leo. Etiam nulla est,
-          molestie in dolor egestas, rutrum feugiat felis. Curabitur ut dui
-          quis.
-        </Text>
+        <Text className="carousel-form-text">COMING SOON!</Text>
         <Flex direction={"row"} gap={"2rem"}>
           <Flex direction={"column"}>
             <label
