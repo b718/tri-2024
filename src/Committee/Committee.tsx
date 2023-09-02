@@ -118,7 +118,7 @@ const Committee = () => {
                   </Text>
 
                   <Text className="committee-text-left-footer">
-                    Carol Lau, Conference Organizer & <br></br>Host Sylvie
+                    Carol Lau, Conference Organizer & Host <br></br>Sylvie
                     Hébert, Scientific Program Chair{" "}
                   </Text>
                 </div>
@@ -177,7 +177,7 @@ const Committee = () => {
                 </Text>
 
                 <Text className="committee-text-left-footer">
-                  Carol Lau, Conference Organizer & <br></br>Host Sylvie Hébert,
+                  Carol Lau, Conference Organizer & Host <br></br>Sylvie Hébert,
                   Scientific Program Chair{" "}
                 </Text>
               </div>
