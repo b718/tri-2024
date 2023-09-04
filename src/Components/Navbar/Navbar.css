@@ -155,20 +155,27 @@
 
 .nav-bar-symposia,
 .nav-bar-posters {
-  display: block;
+  /* display: block; */
   /* top: 55px; */
   /* margin-top: 0.5rem; */
   color: rgb(26 65 119);
   cursor: pointer;
   font-family: Gravity-Bold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 0.5s;
   max-width: 5rem;
   -webkit-animation: fadeIn 0.2s;
   animation: fadeIn 0.2s;
+}
+
+.nav-bar-symposia-and-posters {
+  position: absolute;
+  top: 40px;
+  background-color: white;
+  padding: 0.5rem 0.8rem 0.5rem 0.5rem;
 }
 
 @-webkit-keyframes fadeIn {
@@ -189,7 +196,7 @@
 }
 
 .nav-bar-posters {
-  /* top: 75px; */
+  margin-top: 1rem;
 }
 
 .nav-bar-posters:hover,
@@ -212,6 +219,10 @@
     }
     .nav-bar-picture {
       margin-right: 5vw;
+    }
+
+    .nav-bar-picture {
+      margin-top: 0.5rem;
     }
   }
 
@@ -261,6 +272,9 @@
     }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1186px) {
+    .nav-bar-picture {
+      margin-top: 1rem;
+    }
   }
 }

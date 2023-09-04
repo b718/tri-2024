@@ -130,26 +130,28 @@ const Navbar = () => {
                     >
                       SUBMISSIONS
                     </Text>
-                    <Text
-                      className="nav-bar-symposia"
-                      onClick={() =>
-                        scrollToSection(navBarScrollRefs.symposiaRef)
-                      }
-                      // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
-                      style={{ display: `${!enterSubmission ? "none" : ""}` }}
-                    >
-                      SYMPOSIA GUIDELINES & SUBMISSIONS
-                    </Text>
-                    <Text
-                      className="nav-bar-posters"
-                      onClick={() =>
-                        scrollToSection(navBarScrollRefs.postersPapers)
-                      }
-                      // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
-                      style={{ display: `${!enterSubmission ? "none" : ""}` }}
-                    >
-                      PAPERS & POSTERS GUIDELINES & SUBMISSIONS
-                    </Text>
+                    <div className="nav-bar-symposia-and-posters">
+                      <Text
+                        className="nav-bar-symposia"
+                        onClick={() =>
+                          scrollToSection(navBarScrollRefs.symposiaRef)
+                        }
+                        // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                        style={{ display: `${!enterSubmission ? "none" : ""}` }}
+                      >
+                        SYMPOSIA GUIDELINES & SUBMISSIONS
+                      </Text>
+                      <Text
+                        className="nav-bar-posters"
+                        onClick={() =>
+                          scrollToSection(navBarScrollRefs.postersPapers)
+                        }
+                        // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                        style={{ display: `${!enterSubmission ? "none" : ""}` }}
+                      >
+                        PAPERS & POSTERS GUIDELINES & SUBMISSIONS
+                      </Text>
+                    </div>
                   </Flex>
                   {/* <Text className="nav-bar-different-sections">Awards</Text>
                   <Text className="nav-bar-different-sections">Socials</Text>
