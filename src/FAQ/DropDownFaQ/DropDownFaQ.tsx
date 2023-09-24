@@ -4,15 +4,9 @@ import { Text, Grid, Flex } from "@mantine/core";
 interface FaQData {
   title: string;
   text: string;
-  links: string;
-  url: string;
+  links: string[][];
 }
-const DropDownFaQ: FunctionComponent<FaQData> = ({
-  title,
-  text,
-  links,
-  url,
-}) => {
+const DropDownFaQ: FunctionComponent<FaQData> = ({ title, text, links }) => {
   const [click, setClick] = useState<Boolean>(false);
   const parentRef = useRef<HTMLInputElement>(null);
   return (
@@ -84,7 +78,28 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
           {text}
         </Text>
 
-        <div style={{ display: "flex" }}>
+        <Flex direction={"column"}>
+          {links.map((value) => {
+            return (
+              <Flex>
+                <Text
+                  className="drop-down-faq-links"
+                  style={{ marginRight: "0.2rem" }}
+                >
+                  +
+                </Text>
+                <Text
+                  className={`drop-down-faq-links${click ? "-active" : ""}`}
+                >
+                  <a href={value[1]} target="blank">
+                    {value[0]}
+                  </a>
+                </Text>
+              </Flex>
+            );
+          })}
+        </Flex>
+        {/* <div style={{ display: "flex" }}>
           <Text
             className="drop-down-faq-links"
             style={{ marginRight: "0.2rem" }}
@@ -97,8 +112,8 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
               {links}
             </a>
           </Text>
-        </div>
-        <div style={{ display: "flex" }}>
+        </div> */}
+        {/* <div style={{ display: "flex", marginBottom: "1rem" }}>
           <Text
             className="drop-down-faq-links"
             style={{ marginRight: "0.2rem" }}
@@ -111,21 +126,7 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({
               {links}
             </a>
           </Text>
-        </div>
-        <div style={{ display: "flex", marginBottom: "1rem" }}>
-          <Text
-            className="drop-down-faq-links"
-            style={{ marginRight: "0.2rem" }}
-          >
-            +
-          </Text>
-          <Text className={`drop-down-faq-links${click ? "-active" : ""}`}>
-            <a href={url} target="blank">
-              {" "}
-              {links}
-            </a>
-          </Text>
-        </div>
+        </div> */}
       </div>
       <hr />
     </div>

@@ -112,6 +112,10 @@ const SymposiaForm = () => {
   return (
     <form className="symposia-form-main-div" onSubmit={submitFunction}>
       <Text className="symposia-form-main-text">Symposia Submissions</Text>
+      <Text className="symposia-form-label" style={{ marginBottom: "1rem" }}>
+        The deadline for submissions is OCTOBER 31, 2023
+      </Text>
+
       <TextInput
         label="Title of symposium (25 words max)"
         className="symposia-form-label"

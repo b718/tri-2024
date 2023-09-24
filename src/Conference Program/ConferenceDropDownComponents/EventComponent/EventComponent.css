@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --location-color: #a2d7f5;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+}
+.event-component-main-div {
+  margin-top: 1rem;
+}
+
+.event-component-time-text {
+  font-weight: 500;
+  font: Gravity;
+  color: var(--happen-color);
+}
+
+.event-component-location-text {
+  color: var(--location-color);
+}
+
+.event-component-break-text {
+  opacity: 0.9;
+  font: Gravity;
+  font-weight: 500;
+  color: var(--break-color);
+}

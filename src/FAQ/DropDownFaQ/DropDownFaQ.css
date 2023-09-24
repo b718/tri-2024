@@ -124,6 +124,10 @@
   cursor: pointer;
 }
 
+.drop-down-faq-links:last-child {
+  margin-bottom: 0.1rem;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px

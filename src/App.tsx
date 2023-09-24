@@ -277,6 +277,7 @@ function App() {
                     <Symposia />
                     {/* <Carousel /> */}
                     <CarouselSection />
+                    <ConferenceProgram />
                     <Sponsorships />
                     <FaQ />
                     <ContactUs />

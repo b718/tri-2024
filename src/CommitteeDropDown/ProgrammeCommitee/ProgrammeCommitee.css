@@ -1,0 +1,14 @@
+:root {
+  --main-text-color: rgb(26 65 119);
+}
+
+.programme-commitee-text {
+  max-width: fit-content;
+  text-transform: none;
+  text-decoration: none;
+  word-break: break-word;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--main-text-color);
+  margin-bottom: 0.2rem;
+}

@@ -7,6 +7,8 @@ import { useInView } from "react-intersection-observer";
 import debbieKonrad from "../Images/debbie-konrad-KChBIglfJkA-unsplash_small.jpg";
 import dannyJong from "../Images/danny-jongerius-YpFV-5OVLp0-unsplash_small.jpg";
 import mikeBenna from "../Images/mike-benna-PvAzebLejKU-unsplash_small.jpg";
+import ScientificCommittee from "./ScientificCommittee/ScientificCommittee";
+import ProgrammeCommitee from "./ProgrammeCommitee/ProgrammeCommitee";
 
 const CommiteeSection = () => {
   const [debbie, setDebbie] = useState(false);
@@ -35,6 +37,14 @@ const CommiteeSection = () => {
           <CommitteeDropDown
             title={"Conference Hosts"}
             Component={CommiteeBios}
+          />
+          <CommitteeDropDown
+            title={"Scientific commitee"}
+            Component={ScientificCommittee}
+          />
+          <CommitteeDropDown
+            title={"Programme commitee"}
+            Component={ProgrammeCommitee}
           />
         </div>
 

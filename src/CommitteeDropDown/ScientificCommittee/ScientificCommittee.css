@@ -1,0 +1,16 @@
+:root {
+  --main-text-color: rgb(26 65 119);
+}
+
+.scientific-committee-text {
+  max-width: fit-content;
+  text-transform: none;
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 0.9rem;
+  color: var(--main-text-color);
+}
+
+.scientific-committee-text:last-child {
+  margin-bottom: 0.2rem;
+}

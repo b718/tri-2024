@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+}
+
+.conference-program-section-main-div {
+  max-width: 45rem;
+  margin: 0 auto;
+  font-family: Gravity;
+  margin-bottom: 10rem;
+  color: var(--main-text-color);
+}
+
+.conference-program-section-max-header {
+  font-size: 2.5rem;
+  padding-top: 4rem;
+  margin-left: 0.5rem;
+}
+
+.conference-program-main-div-under-text {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.conference-program-world-peter {
+  margin-top: 6rem;
+  margin-left: 4.5rem;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.conference-program-world-peter-active {
+  margin-top: 6rem;
+  margin-left: 4.5rem;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .conference-program-section-main-div {
+      max-width: 45rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-family: Gravity;
+      margin-bottom: 10rem;
+      color: var(--main-text-color);
+    }
+
+    .conference-program-world-peter {
+      margin-top: 6rem;
+      margin-left: 0rem;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    .conference-program-world-peter-active {
+      margin-top: 6rem;
+      margin-left: 0rem;
+      opacity: 1;
+      transform: translateY(0px);
+      transition: 0.5s;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+    .conference-program-section-main-div {
+      max-width: 45rem;
+      margin: 0 auto;
+      font-family: Gravity;
+      margin-bottom: 10rem;
+      color: var(--main-text-color);
+    }
+
+    .conference-program-world-peter {
+      margin-top: 6rem;
+      margin-left: 4.5rem;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    .conference-program-world-peter-active {
+      margin-top: 6rem;
+      margin-left: 4.5rem;
+      opacity: 1;
+      transform: translateY(0px);
+      transition: 0.5s;
+    }
+  }
+}
