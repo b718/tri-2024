@@ -9,11 +9,13 @@ import dannyJong from "../Images/danny-jongerius-YpFV-5OVLp0-unsplash_small.jpg"
 import mikeBenna from "../Images/mike-benna-PvAzebLejKU-unsplash_small.jpg";
 import ScientificCommittee from "./ScientificCommittee/ScientificCommittee";
 import ProgrammeCommitee from "./ProgrammeCommitee/ProgrammeCommitee";
+import useWindowDimensions from "../Components/useWindowsDimensions";
 
 const CommiteeSection = () => {
   const [debbie, setDebbie] = useState(false);
   const [danny, setDanny] = useState(false);
   const [mike, setMike] = useState(false);
+  const { width, height } = useWindowDimensions();
 
   const { ref: debbieDiv, inView: debbieDivVisible } = useInView({
     triggerOnce: true,
@@ -96,7 +98,7 @@ const CommiteeSection = () => {
               <Image
                 src={debbieKonrad}
                 fit="contain"
-                width={400}
+                width={width > 500 ? 400 : 300}
                 onMouseEnter={() => setDebbie(true)}
                 onMouseLeave={() => setDebbie(false)}
                 ref={debbieDiv}
