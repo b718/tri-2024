@@ -272,8 +272,8 @@ function App() {
                     <Home />
                     <Committee />
                     <SaveTheDate />
-                    <CommiteeSection />
                     {/* <RegistrationUpdated /> */}
+                    <CommiteeSection />
                     <Symposia />
                     <Carousel />
                     {/* <CarouselSection /> */}

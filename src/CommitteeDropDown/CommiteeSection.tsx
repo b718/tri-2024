@@ -70,7 +70,7 @@ const CommiteeSection = () => {
               </Text>
             </div>
 
-            <div>
+            <div style={{ marginLeft: "2rem" }}>
               {" "}
               <Image
                 src={mikeBenna}
@@ -96,6 +96,7 @@ const CommiteeSection = () => {
               <Image
                 src={debbieKonrad}
                 fit="contain"
+                width={400}
                 onMouseEnter={() => setDebbie(true)}
                 onMouseLeave={() => setDebbie(false)}
                 ref={debbieDiv}

@@ -92,7 +92,7 @@ const RegistrationUpdated = () => {
                 href="triMainPdf.pdf"
                 download="tri-2024-save-the-date"
               >
-                COMING JAN 15TH
+                REGISTER NOW
               </a>
             </button>
           </Flex>
@@ -117,18 +117,24 @@ const RegistrationUpdated = () => {
               //     setOption(1);
               //   }
               // }}
+              gap={"1.9rem"}
               onMouseEnter={() => setShownSciClin(true)}
               onMouseLeave={() => setShownSciClin(false)}
               className={`registration-updated-sci-clin${
-                shownSciClin || option === 1 ? "-active" : ""
+                shownSciClin || option === 1 ? "" : ""
               }`}
             >
-              <Text className="registration-updated-text">
-                Scientist/Clinican
-              </Text>
-              <Text className="registration-updated-price-500 registration-updated-text">
-                $50
-              </Text>
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-text">
+                  Scientist/Clinican
+                </Text>
+              </Flex>
+
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-price-500 registration-updated-text">
+                  $50
+                </Text>
+              </Flex>
             </Flex>
             <Flex
               direction={"row"}
@@ -141,16 +147,22 @@ const RegistrationUpdated = () => {
               //     setOption(2);
               //   }
               // }}
+              gap={"2rem"}
               onMouseEnter={() => setShownIndustry(true)}
               onMouseLeave={() => setShownIndustry(false)}
               className={`registration-updated-industry${
-                shownIndustry || option === 2 ? "-active" : ""
+                shownIndustry || option === 2 ? "" : ""
               }`}
             >
-              <Text className="registration-updated-text">Industry</Text>
-              <Text className="registration-updated-price-600 registration-updated-text">
-                $60
-              </Text>
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-text">Industry</Text>
+              </Flex>
+
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-price-600 registration-updated-text">
+                  $60
+                </Text>
+              </Flex>
             </Flex>{" "}
             <Flex
               direction={"row"}
@@ -163,16 +175,22 @@ const RegistrationUpdated = () => {
               //     setOption(3);
               //   }
               // }}
+              gap={"1.7rem"}
               onMouseEnter={() => setShownStudent(true)}
               onMouseLeave={() => setShownStudent(false)}
               className={`registration-updated-student${
-                shownStudent || option === 3 ? "-active" : ""
+                shownStudent || option === 3 ? "" : ""
               }`}
             >
-              <Text className="registration-updated-text">Student</Text>
-              <Text className="registration-updated-price-350 registration-updated-text">
-                $35
-              </Text>
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-text">Student</Text>
+              </Flex>
+
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-price-350 registration-updated-text">
+                  $35
+                </Text>
+              </Flex>
             </Flex>{" "}
             <Flex
               direction={"row"}
@@ -185,18 +203,24 @@ const RegistrationUpdated = () => {
               //     setOption(4);
               //   }
               // }}
+              gap={"1.7rem"}
               onMouseEnter={() => setShownPatientOrg(true)}
               onMouseLeave={() => setShownPatientOrg(false)}
               className={`registration-updated-patient-org${
-                shownPatientOrg || option === 4 ? "-active" : ""
+                shownPatientOrg || option === 4 ? "" : ""
               }`}
             >
-              <Text className="registration-updated-text">
-                Patient Organisation
-              </Text>
-              <Text className="registration-updated-price-500-2 registration-updated-text">
-                $50
-              </Text>
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-text">
+                  Patient Organisation
+                </Text>
+              </Flex>
+
+              <Flex style={{ minWidth: "5rem" }}>
+                <Text className="registration-updated-price-500-2 registration-updated-text">
+                  $50
+                </Text>
+              </Flex>
             </Flex>
           </Flex>
         </Flex>

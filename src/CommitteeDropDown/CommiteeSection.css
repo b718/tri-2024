@@ -41,7 +41,7 @@
 }
 
 .commitee-section-bottom-image {
-  /* margin-left: 20rem; */
+  margin-left: 18rem;
   margin-top: 10rem;
 }
 
@@ -70,4 +70,31 @@
   transform: translateY(100px);
   opacity: 0;
   transition: 0.5s;
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .commitee-section-bottom-image {
+      max-width: fit-content;
+      margin: 0 auto;
+      margin-top: 10rem;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 800px) {
+    .commitee-section-bottom-image {
+      margin-left: 18rem;
+      margin-top: 10rem;
+    }
+  }
 }
