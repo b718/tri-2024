@@ -10,7 +10,11 @@ interface CI {
 const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
   return (
     <>
-      <Flex className="carousel-item-display" style={{ width: "100%" }}>
+      <Flex
+        className="carousel-item-display"
+        style={{ width: "100%" }}
+        gap={"1rem"}
+      >
         <Image src={TestImage} width={200} className="carousel-item-image" />
 
         <Flex
@@ -18,7 +22,6 @@ const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
           align="flex-start"
           direction="column"
           wrap="wrap"
-          style={{ marginLeft: "4rem" }}
         >
           <Text className="carousel-item-title">{title}</Text>
           <Text className="carousel-item-para">{paragraph}</Text>

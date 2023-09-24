@@ -275,8 +275,8 @@ function App() {
                     <CommiteeSection />
                     {/* <RegistrationUpdated /> */}
                     <Symposia />
-                    {/* <Carousel /> */}
-                    <CarouselSection />
+                    <Carousel />
+                    {/* <CarouselSection /> */}
                     <ConferenceProgram />
                     <Sponsorships />
                     <FaQ />

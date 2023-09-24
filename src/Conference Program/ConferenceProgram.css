@@ -67,15 +67,19 @@
     }
 
     .conference-program-world-peter {
+      max-width: fit-content;
+      margin: 0 auto;
       margin-top: 6rem;
-      margin-left: 0rem;
+
       opacity: 0;
       transform: translateY(100px);
     }
 
     .conference-program-world-peter-active {
+      max-width: fit-content;
+      margin: 0 auto;
       margin-top: 6rem;
-      margin-left: 0rem;
+
       opacity: 1;
       transform: translateY(0px);
       transition: 0.5s;

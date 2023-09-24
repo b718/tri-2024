@@ -55,11 +55,13 @@
 }
 
 .carousel-arrow-right {
-  right: 2rem;
+  margin-top: 20px;
+  right: 10px;
 }
 
 .carousel-arrow-left {
-  left: 2rem;
+  margin-top: 20px;
+  left: 10px;
 }
 
 .carousel-no-display-slide {
@@ -98,7 +100,8 @@
 }
 
 .carousel-arrow-right-zero {
-  right: 10rem;
+  margin-bottom: 400px;
+  right: 300px;
   background: none;
   border: none;
   cursor: pointer;
@@ -124,5 +127,83 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .carousel-main-text {
+      font-size: 2.5rem;
+      margin-left: 1rem;
+    }
+    .carousel-arrow-right-zero {
+      margin-top: 65px;
+      right: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+    }
+
+    .carousel-arrow-right {
+      margin-top: 250px;
+      right: 10px;
+    }
+
+    .carousel-arrow-left {
+      margin-top: 250px;
+      left: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    .carousel-main-text {
+      font-size: 3rem;
+      margin-left: 1rem;
+    }
+    .carousel-arrow-right-zero {
+      margin-top: 0px;
+      right: 80px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+    }
+
+    .carousel-arrow-right {
+      margin-top: 20px;
+      right: 10px;
+    }
+
+    .carousel-arrow-left {
+      margin-top: 20px;
+      left: 10px;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 800px) {
+    .carousel-arrow-right-zero {
+      margin-top: 50px;
+      right: 250px;
+    }
+
+    .carousel-arrow-right {
+      margin-top: 20px;
+      right: 10px;
+    }
+
+    .carousel-arrow-left {
+      margin-top: 20px;
+      left: 10px;
+    }
   }
 }

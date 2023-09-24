@@ -44,15 +44,20 @@ const CarouselForm = () => {
         onSubmit={onSubmit}
       >
         <Text className="carousel-form-title">
-          Papers & posters submissions
+          Papers + posters submissions
         </Text>
-        <Text className="carousel-form-text">COMING SOON!</Text>
+        <Text className="carousel-form-text">
+          Lorem ipsum dolor sit amet, ex scripta ornatus mea. Duo propriae
+          percipit ne, in mei nostrud torquatos assueverit. Et sale oblique eum,
+          est eu ullum suscipit. Id facilisi postulant mel, tritani viderer
+          senserit.
+        </Text>
         <Flex direction={"row"} gap={"2rem"}>
           <Flex direction={"column"}>
             <label
               htmlFor="fileUpload"
               className="carousel-form-button"
-              style={{ fontSize: `${width < 545 ? "0.6rem" : "0.9rem"}` }}
+              style={{ fontSize: `${width < 545 ? "0.6rem" : "0.8rem"}` }}
             >
               ADD AN ATTACHMENT +
             </label>
@@ -70,7 +75,7 @@ const CarouselForm = () => {
             className={`carousel-form-button${file ? "" : "-disable"}`}
             disabled={file ? false : true}
             type={"submit"}
-            style={{ fontSize: `${width < 545 ? "0.6rem" : "0.9rem"}` }}
+            style={{ fontSize: `${width < 545 ? "0.6rem" : "0.8rem"}` }}
           >
             SUBMIT APPLICATION
           </button>

@@ -28,3 +28,55 @@
   font-weight: 500;
   color: var(--break-color);
 }
+
+@media all {
+  /* xs, extra-small: 0px
+    sm, small: 600px
+    md, medium: 900px
+    lg, large: 1200px
+    xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .event-component-time-text {
+      font-weight: 500;
+      font: Gravity;
+      color: var(--happen-color);
+      font-size: 0.7rem;
+    }
+
+    .event-component-location-text {
+      color: var(--location-color);
+      font-size: 0.7rem;
+    }
+
+    .event-component-break-text {
+      opacity: 0.9;
+      font: Gravity;
+      font-weight: 500;
+      color: var(--break-color);
+      font-size: 0.7rem;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 500px) {
+    .event-component-time-text {
+      font-weight: 500;
+      font: Gravity;
+      color: var(--happen-color);
+      font-size: 0.875rem;
+    }
+
+    .event-component-location-text {
+      color: var(--location-color);
+      font-size: 0.875rem;
+    }
+
+    .event-component-break-text {
+      opacity: 0.9;
+      font: Gravity;
+      font-weight: 500;
+      color: var(--break-color);
+      font-size: 0.875rem;
+    }
+  }
+}

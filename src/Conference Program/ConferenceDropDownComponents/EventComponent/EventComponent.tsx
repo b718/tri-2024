@@ -14,17 +14,21 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
   return (
     <div className="event-component-main-div">
       {happen === "Break" || happen === "Lunch" ? (
-        <Flex gap={"4rem"}>
-          <Text className="event-component-break-text">{time}</Text>
-          <Text className="event-component-break-text">{happen}</Text>
+        <Flex gap={"2rem"}>
+          <Flex direction={"column"} style={{ minWidth: "10rem" }}>
+            <Text className="event-component-break-text">{time}</Text>
+          </Flex>
+          <Flex style={{ minWidth: "10rem" }} justify={"flex-start"}>
+            <Text className="event-component-break-text">{happen}</Text>
+          </Flex>
         </Flex>
       ) : (
-        <Flex gap={`${location === "Room C400/C420" ? "2rem" : "4rem"}`}>
-          <Flex direction={"column"}>
+        <Flex gap={"2rem"}>
+          <Flex direction={"column"} style={{ minWidth: "10rem" }}>
             <Text className="event-component-time-text">{time}</Text>
             <Text className="event-component-location-text">{location}</Text>
           </Flex>
-          <Flex justify={"center"}>
+          <Flex justify={"flex-start"} style={{ minWidth: "10rem" }}>
             <Text className="event-component-time-text">{happen}</Text>
           </Flex>
         </Flex>

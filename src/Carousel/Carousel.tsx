@@ -46,7 +46,12 @@ const Carousel = () => {
           }}
           style={{ display: `${slide === 0 ? "none" : ""}` }}
         >
-          <span className="material-symbols-outlined">arrow_circle_left</span>{" "}
+          <span
+            className="material-symbols-outlined"
+            style={{ fontSize: `${slide === 0 ? "0px" : "30px"}` }}
+          >
+            arrow_circle_left
+          </span>{" "}
         </button>
         {carouselItemData.map((item, index) => {
           return (
@@ -57,7 +62,9 @@ const Carousel = () => {
                     slide === 0 ? "-active" : ""
                   }`}
                 >
-                  <Text>Poster & Presentations Guidelines</Text>
+                  <Text className="carousel-main-text">
+                    Poster & Presentations Guidelines
+                  </Text>
                 </div>
               ) : (
                 <div
@@ -77,8 +84,10 @@ const Carousel = () => {
         })}
 
         <button
-          className={`carousel-button-arrow carousel-arrow-right ${
-            slide === 0 ? "carousel-arrow-right-zero" : ""
+          className={` ${
+            slide === 0
+              ? "carousel-arrow-right-zero"
+              : "carousel-button-arrow carousel-arrow-right"
           }`}
           onClick={() => {
             if (slide + 1 >= carouselItemData.length) {
@@ -90,7 +99,7 @@ const Carousel = () => {
         >
           <span
             className={`material-symbols-outlined`}
-            style={{ fontSize: `${slide === 0 ? "40px" : ""}` }}
+            style={{ fontSize: `${slide === 0 ? "80px" : "30px"}` }}
           >
             arrow_circle_right
           </span>
