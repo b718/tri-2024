@@ -33,6 +33,8 @@ import SaveTheDate from "./Registration/SaveTheDate/SaveTheDate";
 import CommiteeSection from "./CommitteeDropDown/CommiteeSection";
 import CarouselSection from "./Carousel/CarouselSection";
 import ContactUs from "./ContactUs/ContactUs";
+import NewNews from "./NewNews/NewNews";
+import LatestUpdates from "./LatestUpdates/LatestUpdates";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -134,6 +136,7 @@ function App() {
                 path="/"
                 element={
                   <div>
+                    <NewNews />
                     <Navbar />
                     <div
                       className="nav-bar-burger-overlay"
@@ -274,6 +277,7 @@ function App() {
                     <SaveTheDate />
                     {/* <RegistrationUpdated /> */}
                     <CommiteeSection />
+                    <LatestUpdates />
                     <Symposia />
                     <Carousel />
                     {/* <CarouselSection /> */}

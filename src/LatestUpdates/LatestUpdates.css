@@ -1,0 +1,37 @@
+:root {
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+}
+
+.latest-updates-main {
+  background-color: var(--var-light-blue);
+}
+
+.latest-updates-text {
+  color: var(--var-dark-blue);
+  font-size: 3rem;
+}
+
+.latest-updates-main-flex {
+  background-color: var(--var-white);
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.latest-updates-center-div {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.latest-updates-small-text {
+  color: var(--var-med-blue);
+}
+
+.latest-updates-min-width-button-div {
+  min-width: 5vw;
+  justify-content: right;
+}

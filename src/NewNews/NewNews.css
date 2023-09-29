@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+}
+
+.new-news-main {
+  background-color: var(--var-dark-blue);
+  color: var(--var-white);
+  white-space: nowrap;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500px;
+  cursor: pointer;
+}
+
+.new-news-moving-text {
+  font-family: Auger-Mono-Bold;
+  white-space: nowrap;
+  -webkit-animation: rightThenLeft 20s linear infinite;
+}
+
+@keyframes rightThenLeft {
+  0% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+}
