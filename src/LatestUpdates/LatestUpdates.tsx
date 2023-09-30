@@ -46,7 +46,7 @@ const LatestUpdates = () => {
                 <div
                   className="latest-updates-min-width-button-div"
                   onClick={() => {
-                    scrollToSection(navBarContext.venueRef);
+                    scrollToSection(navBarContext.programRef);
                   }}
                 >
                   <span className={`material-symbols-outlined`}>

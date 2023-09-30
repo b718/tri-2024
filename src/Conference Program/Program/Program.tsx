@@ -5,9 +5,9 @@ import { Text, Center } from "@mantine/core";
 import { NavBarContext } from "../../App";
 
 const Program = () => {
-  const navBarContext = useContext(NavBarContext);
+  // const navBarContext = useContext(NavBarContext);
   return (
-    <div className="program-section-div" ref={navBarContext.programRef}>
+    <div className="program-section-div">
       <Text
         fz="xl"
         fw="600"

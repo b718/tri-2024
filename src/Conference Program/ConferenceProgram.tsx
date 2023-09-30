@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./ConferenceProgram.css";
 import SpeakerSection from "./SpeakersComponent/SpeakerSection";
 import Program from "./Program/Program";
@@ -10,9 +10,11 @@ import June12 from "./ConferenceDropDownComponents/June12";
 import PeterScienceWorld from "../Images/peter-skaronis-XH82uGMB8H8-unsplash copy.jpg";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import { useInView } from "react-intersection-observer";
+import { NavBarContext } from "../App";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
+  const navBarContext = useContext(NavBarContext);
   const { ref: peterScienceWorld, inView: peterScienceWorldVisible } =
     useInView({
       triggerOnce: true,
@@ -35,7 +37,10 @@ const ConferenceProgram = () => {
   return (
     <div>
       <div className="conference-program-section-main-div">
-        <Text className="conference-program-section-max-header">
+        <Text
+          className="conference-program-section-max-header"
+          ref={navBarContext.programRef}
+        >
           Conference program
         </Text>
 
