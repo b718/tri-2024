@@ -14,6 +14,7 @@
 
 .symposia-form-main-text {
   font-size: 2.5rem;
+  padding-top: 2rem;
 }
 
 .symposia-form-main-div {
@@ -87,7 +88,7 @@
   border: 1px solid lightgray;
   color: var(--secondary-text-color);
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   font-family: Gravity;
   font-size: var(--main-font-size);
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;

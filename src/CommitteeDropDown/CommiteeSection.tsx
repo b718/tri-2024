@@ -40,14 +40,14 @@ const CommiteeSection = () => {
             title={"Conference Hosts"}
             Component={CommiteeBios}
           />
-          <CommitteeDropDown
+          {/* <CommitteeDropDown
             title={"Scientific commitee"}
             Component={ScientificCommittee}
           />
           <CommitteeDropDown
             title={"Programme commitee"}
             Component={ProgrammeCommitee}
-          />
+          /> */}
         </div>
 
         <Flex direction={"column"} className="commitee-section-flex-images">

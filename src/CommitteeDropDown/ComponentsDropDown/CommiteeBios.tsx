@@ -36,6 +36,7 @@ const CommiteeBios = () => {
           {width < 720 ? (
             <Image
               src={cHeadShot}
+              radius={"10rem"}
               height={160}
               fit="contain"
               className="componenets-commitee-image-middle"
@@ -43,6 +44,7 @@ const CommiteeBios = () => {
           ) : (
             <Image
               src={cHeadShot}
+              radius={"10rem"}
               height={160}
               fit="contain"
               className="componenets-commitee-image"
@@ -82,6 +84,7 @@ const CommiteeBios = () => {
           {width < 720 ? (
             <Image
               src={sHeadShot}
+              radius={"10rem"}
               height={160}
               fit="contain"
               className="componenets-commitee-image-middle"
@@ -89,6 +92,7 @@ const CommiteeBios = () => {
           ) : (
             <Image
               src={sHeadShot}
+              radius={"10rem"}
               height={160}
               fit="contain"
               className="componenets-commitee-image"

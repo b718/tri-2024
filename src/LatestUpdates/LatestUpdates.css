@@ -18,8 +18,9 @@
 
 .latest-updates-text {
   color: var(--var-dark-blue);
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .latest-updates-main-flex {

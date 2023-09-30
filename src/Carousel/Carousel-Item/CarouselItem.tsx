@@ -13,7 +13,7 @@ const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
       <Flex
         className="carousel-item-display"
         style={{ width: "100%" }}
-        gap={"1rem"}
+        gap={"2rem"}
       >
         <Image src={TestImage} width={200} className="carousel-item-image" />
 
@@ -25,7 +25,7 @@ const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
         >
           <Text className="carousel-item-title">{title}</Text>
           <Text className="carousel-item-para">{paragraph}</Text>
-          <a
+          {/* <a
             href={link}
             style={{ color: "white", textDecoration: "none" }}
             target="blank"
@@ -39,7 +39,7 @@ const CarouselItem: FunctionComponent<CI> = ({ title, paragraph, link }) => {
               </Text>
               <Text className="carousel-item-link">READ MORE</Text>
             </Flex>
-          </a>
+          </a> */}
         </Flex>
       </Flex>
     </>

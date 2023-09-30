@@ -12,20 +12,17 @@ const Carousel = () => {
   const carouselItemData = [
     {
       title: "dummdy",
-      paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat mauris, rhoncus accumsan lacus sed, posuere fringilla elit. Donec eleifend tellus porta, elementum augue sed, suscipit lectus. Vivamus vitae tortor sit amet diam malesuada feugiat vel eget metus. Aenean vulputate leo in volutpat lacinia. In nec mauris purus. Sed nunc dolor, mollis iaculis dictum tristique, ornare blandit nulla. Nunc tincidunt mauris sit amet nulla volutpat pretium.",
+      paragraph: "Coming Soon",
       link: "https://www.google.ca/",
     },
     {
       title: "Posters",
-      paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat mauris, rhoncus accumsan lacus sed, posuere fringilla elit. Donec eleifend tellus porta, elementum augue sed, suscipit lectus. Vivamus vitae tortor sit amet diam malesuada feugiat vel eget metus. Aenean vulputate leo in volutpat lacinia. In nec mauris purus. Sed nunc dolor, mollis iaculis dictum tristique, ornare blandit nulla. Nunc tincidunt mauris sit amet nulla volutpat pretium.",
+      paragraph: "Guidelines will be coming soon.",
       link: "https://www.google.ca/",
     },
     {
       title: "Presentations",
-      paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat mauris, rhoncus accumsan lacus sed, posuere fringilla elit. Donec eleifend tellus porta, elementum augue sed, suscipit lectus. Vivamus vitae tortor sit amet diam malesuada feugiat vel eget metus. Aenean vulputate leo in volutpat lacinia. In nec mauris purus. Sed nunc dolor, mollis iaculis dictum tristique, ornare blandit nulla. Nunc tincidunt mauris sit amet nulla volutpat pretium.",
+      paragraph: "Guidelines will be coming soon.",
       link: "https://www.google.ca/",
     },
   ];

@@ -154,19 +154,19 @@
     }
 
     .carousel-arrow-right {
-      margin-top: 100px;
+      margin-top: 10px;
       right: 10px;
     }
 
     .carousel-arrow-left {
-      margin-top: 100px;
+      margin-top: 10px;
       left: 10px;
     }
   }
 
   @media only screen and (min-width: 500px) {
     .carousel-main-text {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-left: 1rem;
     }
     .carousel-arrow-right-zero {
@@ -180,12 +180,12 @@
     }
 
     .carousel-arrow-right {
-      margin-top: 20px;
+      margin-top: 10px;
       right: 10px;
     }
 
     .carousel-arrow-left {
-      margin-top: 20px;
+      margin-top: 10px;
       left: 10px;
     }
   }

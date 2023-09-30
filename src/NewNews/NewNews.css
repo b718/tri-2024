@@ -20,6 +20,7 @@
   padding-bottom: 0.5rem;
   font-weight: 500px;
   cursor: pointer;
+  overflow-x: hidden;
 }
 
 .new-news-moving-text {
@@ -30,9 +31,9 @@
 
 @keyframes rightThenLeft {
   0% {
-    -moz-transform: translateX(-100%); /* Firefox bug fix */
-    -webkit-transform: translateX(-100%); /* Firefox bug fix */
-    transform: translateX(-100%);
+    -moz-transform: translateX(-80%); /* Firefox bug fix */
+    -webkit-transform: translateX(-80%); /* Firefox bug fix */
+    transform: translateX(-80%);
   }
   100% {
     -moz-transform: translateX(100%); /* Firefox bug fix */
