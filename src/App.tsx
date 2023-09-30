@@ -50,6 +50,7 @@ interface ContextTypeNavBarRef {
   symposiaForm: React.RefObject<HTMLDivElement>;
   postersPapers: React.RefObject<HTMLDivElement>;
   contactUs: React.RefObject<HTMLDivElement>;
+  programRef: React.RefObject<HTMLDivElement>;
 
   // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
@@ -71,6 +72,7 @@ export const NavBarContext = createContext<ContextTypeNavBarRef>({
   symposiaForm: createRef(),
   postersPapers: createRef(),
   contactUs: createRef(),
+  programRef: createRef(),
 });
 
 export const BurgerContext = createContext<ContextBurger>({
@@ -92,6 +94,7 @@ function App() {
   const symposiaForm = useRef<HTMLDivElement>(null);
   const postersPapers = useRef<HTMLDivElement>(null);
   const contactUs = useRef<HTMLDivElement>(null);
+  const programRef = useRef<HTMLDivElement>(null);
 
   const [burger, setBurger] = useState<boolean>(false);
   const overlayRef = useRef<HTMLInputElement>(null);
@@ -128,6 +131,7 @@ function App() {
             symposiaForm: symposiaForm,
             postersPapers: postersPapers,
             contactUs: contactUs,
+            programRef: programRef,
           }}
         >
           <BurgerContext.Provider value={{ burger, setBurger }}>
@@ -236,6 +240,15 @@ function App() {
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "
                         onClick={() => {
+                          scrollToSection(programRef);
+                          setBurger(false);
+                        }}
+                      >
+                        PROGRAM
+                      </Text>
+                      <Text
+                        className="nav-bar-different-sections-burger nav-bar-burger-version "
+                        onClick={() => {
                           scrollToSection(sponsorshipRef);
                           setBurger(false);
                         }}
@@ -249,7 +262,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        VENUE + TOURISM
+                        Travel + tourism
                       </Text>
                       <Text
                         className="nav-bar-different-sections-burger nav-bar-burger-version "

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Program.css";
 import ProgramBase from "./ProgramBase";
 import { Text, Center } from "@mantine/core";
+import { NavBarContext } from "../../App";
 
 const Program = () => {
+  const navBarContext = useContext(NavBarContext);
   return (
-    <div className="program-section-div">
+    <div className="program-section-div" ref={navBarContext.programRef}>
       <Text
         fz="xl"
         fw="600"

@@ -120,7 +120,7 @@ const FaQ = () => {
           </Text>
         </div>{" "}
         <Text className="faq-main-header" ref={faqRef.faqRef}>
-          Tourism & Venue
+          Travel + Tourism
         </Text>
         <hr style={{ maxWidth: "98vw" }} />
         <DropDownFaQ

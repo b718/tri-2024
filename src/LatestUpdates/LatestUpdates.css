@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
 :root {
   --var-white: #ffffff;
   --var-black: #000000;
@@ -14,24 +19,89 @@
 .latest-updates-text {
   color: var(--var-dark-blue);
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .latest-updates-main-flex {
   background-color: var(--var-white);
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 4rem 4rem 4rem 4rem;
+  border-radius: 12px;
 }
 
 .latest-updates-center-div {
   max-width: fit-content;
   margin: 0 auto;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 5rem 5rem 5rem 5rem;
 }
 
 .latest-updates-small-text {
+  font-family: Gravity;
+  font-size: 1rem;
+  font-weight: bold;
   color: var(--var-med-blue);
+  min-width: 30vw;
+  max-width: 30vw;
+  margin-bottom: 0.8rem;
+  margin-top: 1rem;
 }
 
 .latest-updates-min-width-button-div {
-  min-width: 5vw;
-  justify-content: right;
+  color: var(--var-med-blue);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  max-width: fit-content;
+}
+
+.latest-updates-hr {
+  color: lightgray;
+}
+
+.latest-update-flex-text-button {
+  border-bottom: 1px solid lightgray;
+  max-width: fit-content;
+}
+
+@media all {
+  /* xs, extra-small: 0px
+    sm, small: 600px
+    md, medium: 900px
+    lg, large: 1200px
+    xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .latest-updates-main-flex {
+      background-color: var(--var-white);
+      padding: 1rem 1rem 1rem 1rem;
+      border-radius: 12px;
+    }
+  }
+
+  @media only screen and (min-width: 400px) {
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 501px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 890px) {
+    .latest-updates-main-flex {
+      background-color: var(--var-white);
+      padding: 4rem 4rem 4rem 4rem;
+      border-radius: 12px;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1186px) {
+  }
+
+  @media only screen and (min-width: 1300px) {
+  }
 }

@@ -158,6 +158,12 @@ const Navbar = () => {
                   <Text className="nav-bar-different-sections">PPI</Text> */}
                   <Text
                     className="nav-bar-different-sections"
+                    onClick={() => scrollToSection(navBarScrollRefs.programRef)}
+                  >
+                    PROGRAM
+                  </Text>
+                  <Text
+                    className="nav-bar-different-sections"
                     onClick={() =>
                       scrollToSection(navBarScrollRefs.sponsorshipRef)
                     }
@@ -168,7 +174,7 @@ const Navbar = () => {
                     className="nav-bar-different-sections"
                     onClick={() => scrollToSection(navBarScrollRefs.faqRef)}
                   >
-                    VENUE + TOURISM
+                    Travel + tourism
                   </Text>
                   <Text
                     className="nav-bar-different-sections"
