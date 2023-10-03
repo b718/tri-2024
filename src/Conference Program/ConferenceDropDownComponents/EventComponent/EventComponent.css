@@ -1,13 +1,12 @@
 @font-face {
   font-family: Gravity;
-  src: url("../../../../public/Fonts/gravity/Gravity-Regular.otf");
+  src: url("../../../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
 }
 
 :root {
   --location-color: #86ccf2;
   --happen-color: rgb(26 65 119);
   --break-color: gray;
-
   --var-white: #ffffff;
   --var-black: #000000;
   --var-dark-blue: #194177;
@@ -21,7 +20,7 @@
 
 .event-component-time-text {
   font-weight: 500;
-  font: Gravity;
+  font-family: Gravity;
   color: var(--happen-color);
 }
 
@@ -31,7 +30,7 @@
 
 .event-component-break-text {
   opacity: 0.9;
-  font: Gravity;
+  font-family: Gravity;
   font-weight: 500;
   color: var(--break-color);
 }
@@ -46,7 +45,7 @@
   @media only screen and (min-width: 200px) {
     .event-component-time-text {
       font-weight: 500;
-      font: Gravity;
+      font-family: Gravity;
       color: var(--happen-color);
       font-size: 0.7rem;
     }
@@ -58,7 +57,7 @@
 
     .event-component-break-text {
       opacity: 0.9;
-      font: Gravity;
+      font-family: Gravity;
       font-weight: 500;
       color: var(--break-color);
       font-size: 0.7rem;
@@ -68,7 +67,7 @@
   @media only screen and (min-width: 500px) {
     .event-component-time-text {
       font-weight: 500;
-      font: Gravity;
+      font-family: Gravity;
       color: var(--happen-color);
       font-size: 0.875rem;
     }
@@ -80,7 +79,7 @@
 
     .event-component-break-text {
       opacity: 0.9;
-      font: Gravity;
+      font-family: Gravity;
       font-weight: 500;
       color: var(--break-color);
       font-size: 0.875rem;

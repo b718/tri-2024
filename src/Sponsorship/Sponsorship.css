@@ -3,6 +3,14 @@
   src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
 }
 
+:root {
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+}
 .sponsorships-div-section {
   max-width: 55rem;
   margin: 0 auto;
@@ -19,4 +27,8 @@
 
 .sponsorships-main-flex {
   margin-top: 5rem;
+}
+
+.sponsorships-main-coming-soon-text {
+  color: var(--var-med-blue);
 }

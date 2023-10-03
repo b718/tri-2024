@@ -20,11 +20,36 @@ const NewNews = () => {
           scrollToSection(navBarContext.symposiaRef);
         }}
       >
-        <Text className="new-news-moving-text">
-          {" "}
-          SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER 31ST
-          2023
-        </Text>
+        <div className="marquee enable-animation">
+          <ul className="marquee__content">
+            <li>
+              {" "}
+              <Text className="new-news-moving-text">
+                {" "}
+                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER
+                31ST 2023
+              </Text>
+            </li>
+          </ul>
+
+          <ul aria-hidden="true" className="marquee__content">
+            <li>
+              {" "}
+              <Text className="new-news-moving-text">
+                {" "}
+                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER
+                31ST 2023
+              </Text>
+            </li>
+          </ul>
+        </div>
+        {/* <div className="new-news-animation-state">
+          <Text className="new-news-moving-text">
+            {" "}
+            SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER 31ST
+            2023
+          </Text>
+        </div> */}
       </div>
     </div>
   );

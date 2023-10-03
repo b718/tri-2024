@@ -286,11 +286,11 @@ function App() {
                       </Text>
                     </div>
                     <Home />
+                    <LatestUpdates />
                     <Committee />
                     <SaveTheDate />
                     {/* <RegistrationUpdated /> */}
                     <CommiteeSection />
-                    <LatestUpdates />
                     <Symposia />
                     <Carousel />
                     {/* <CarouselSection /> */}

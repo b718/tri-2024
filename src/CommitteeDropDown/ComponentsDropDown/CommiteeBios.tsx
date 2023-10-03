@@ -13,7 +13,7 @@ const CommiteeBios = () => {
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>
             <Text
-              className="components-commitee-style-text"
+              className="components-commitee-style-text-title"
               style={{
                 marginBottom: "0rem",
                 fontSize: "1rem",
@@ -57,7 +57,7 @@ const CommiteeBios = () => {
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>
             <Text
-              className="components-commitee-style-text"
+              className="components-commitee-style-text-title"
               style={{
                 marginBottom: "0rem",
                 fontSize: "1rem",

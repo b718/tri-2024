@@ -5,19 +5,32 @@
 
 :root {
   --main-text-color: rgb(26 65 119);
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
 }
 .components-commitee-style-text {
   margin-top: 1rem;
   font-size: 0.8rem;
   margin-bottom: 1rem;
   font-family: Gravity;
-  color: var(--main-text-color);
+  color: var(--var-med-blue);
   word-break: break-word;
   max-width: fit-content;
   text-transform: none;
   text-decoration: none;
 }
 
+.components-commitee-style-text-title {
+  color: var(--var-dark-blue);
+  font-family: Gravity;
+}
 .componenets-commitee-image img,
 .componenets-commitee-image-middle img {
   border-radius: 10rem;

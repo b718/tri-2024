@@ -16,6 +16,15 @@
 :root {
   --symposia-text-color: #87ccf2;
   --symposia-text-color-second: #36b8ff;
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
 }
 
 .symposia-drop-down-div {
@@ -29,7 +38,7 @@
   font-weight: bold;
   font-size: 0.8rem;
   transition: 0.5s;
-  color: var(--symposia-text-color-second);
+  color: var(--var-light-blue);
   cursor: pointer;
 }
 
@@ -40,7 +49,7 @@
   font-weight: bold;
   font-size: 0.8rem;
   transition: 0.5s;
-  color: var(--symposia-text-color-second);
+  color: var(--var-light-blue);
   cursor: pointer;
 }
 

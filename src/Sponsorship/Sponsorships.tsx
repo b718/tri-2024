@@ -29,7 +29,11 @@ const Sponsorships = () => {
           <Image width={imageWidth} fit="contain" src={comingSoon} />
         </Flex> */}
         <Flex justify="center" align="center">
-          <Text size={"3rem"} style={{ fontStyle: "italic" }}>
+          <Text
+            size={"3rem"}
+            style={{ fontStyle: "italic" }}
+            className="sponsorships-main-coming-soon-text"
+          >
             COMING SOON
           </Text>
         </Flex>
