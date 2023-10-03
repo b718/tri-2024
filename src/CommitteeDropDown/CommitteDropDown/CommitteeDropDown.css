@@ -10,6 +10,7 @@
 
 :root {
   --symposia-text-color: #0283c9;
+  --font-size: 0.875rem;
 }
 
 .committee-drop-down-div {
@@ -21,7 +22,7 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   transition: 0.5s;
   color: var(--symposia-text-color);
   cursor: pointer;
@@ -32,7 +33,7 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   transition: 0.5s;
   color: var(--symposia-text-color);
   cursor: pointer;
@@ -42,7 +43,7 @@
   overflow: hidden;
   transition: 0.5s;
   color: white;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
   font-family: Gravity;
 }
 

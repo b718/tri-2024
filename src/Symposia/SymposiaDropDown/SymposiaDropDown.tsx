@@ -25,7 +25,7 @@ const SymposiaDropDown: FunctionComponent<SymposiaDropDownData> = ({
           <Text
             className={`symposia-drop-down-div-title${click ? "-active" : ""}`}
           >
-          {title}
+            {title}
           </Text>
         </Grid.Col>
         <Grid.Col span={2}>

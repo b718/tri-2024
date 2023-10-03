@@ -14,10 +14,11 @@
   --var-med-blue: #0482c8;
   --var-light-blue: #86ccf2;
   --var-green: #73a441;
+  --font-size: 0.875rem;
 }
 .components-commitee-style-text {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   margin-bottom: 1rem;
   font-family: Gravity;
   color: var(--var-med-blue);

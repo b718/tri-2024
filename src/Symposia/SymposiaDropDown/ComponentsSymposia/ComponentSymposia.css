@@ -5,10 +5,11 @@
 
 :root {
   --main-text-color: rgb(26 65 119);
+  --font-size: 0.875rem;
 }
 .general-information-main-div {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   margin-bottom: 1rem;
   font-family: Gravity;
   color: white;

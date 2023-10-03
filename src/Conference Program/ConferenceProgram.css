@@ -10,6 +10,7 @@
 
 :root {
   --main-text-color: rgb(26 65 119);
+  --font-size: 0.875rem;
 }
 
 .conference-program-section-main-div {

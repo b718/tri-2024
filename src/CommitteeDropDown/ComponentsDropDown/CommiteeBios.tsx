@@ -9,7 +9,12 @@ const CommiteeBios = () => {
   const { width, height } = useWindowDimensions();
   return (
     <div>
-      <Grid columns={width < 720 ? 1 : 8} justify={"center"} align={"center"}>
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"center"}
+        style={{ marginTop: "1rem" }}
+      >
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>
             <Text

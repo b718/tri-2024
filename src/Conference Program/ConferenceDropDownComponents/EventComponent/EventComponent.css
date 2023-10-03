@@ -13,6 +13,7 @@
   --var-med-blue: #0482c8;
   --var-light-blue: #86ccf2;
   --var-green: #73a441;
+  --font-size: 0.875rem;
 }
 .event-component-main-div {
   margin-top: 1rem;
@@ -47,12 +48,12 @@
       font-weight: 500;
       font-family: Gravity;
       color: var(--happen-color);
-      font-size: 0.7rem;
+      font-size: var(--font-size);
     }
 
     .event-component-location-text {
       color: var(--location-color);
-      font-size: 0.7rem;
+      font-size: var(--font-size);
     }
 
     .event-component-break-text {
@@ -60,7 +61,7 @@
       font-family: Gravity;
       font-weight: 500;
       color: var(--break-color);
-      font-size: 0.7rem;
+      font-size: var(--font-size);
     }
   }
   /* Extra small devices (phones, 600px and down) */
@@ -69,12 +70,12 @@
       font-weight: 500;
       font-family: Gravity;
       color: var(--happen-color);
-      font-size: 0.875rem;
+      font-size: var(--font-size);
     }
 
     .event-component-location-text {
       color: var(--location-color);
-      font-size: 0.875rem;
+      font-size: var(--font-size);
     }
 
     .event-component-break-text {
@@ -82,7 +83,7 @@
       font-family: Gravity;
       font-weight: 500;
       color: var(--break-color);
-      font-size: 0.875rem;
+      font-size: var(--font-size);
     }
   }
 }

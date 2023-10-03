@@ -7,6 +7,15 @@
   --main-text-color: rgb(26 65 119);
   --main-button-color: #0582c8;
   --font-size-text: 0.9rem;
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
 }
 
 .carousel-form-outer-div {
@@ -35,6 +44,8 @@
 .carousel-form-text {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: var(--var-med-blue);
+  font-style: italic;
 }
 
 .carousel-form-button,

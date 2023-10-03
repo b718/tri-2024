@@ -21,6 +21,7 @@
   --var-light-blue: #86ccf2;
   --var-green: #73a441;
   --gap: 1rem;
+  --font-size: 0.875rem;
 }
 
 .drop-down-faq-div-active-content {
@@ -37,7 +38,7 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
   transition: 0.5s;
   cursor: pointer;
 }
@@ -47,14 +48,14 @@
   font-family: Auger-Mono-Bold;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
   transition: 0.5s;
   cursor: pointer;
 }
 
 .drop-down-faq-paragraph {
   font-family: Gravity;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
   max-width: 90%;
   margin-top: 1rem;
   transition: 0.5s;
@@ -63,7 +64,7 @@
 
 .drop-down-faq-paragraph-active {
   font-family: Gravity;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
   max-width: 90%;
   margin-top: 1rem;
   /* margin-top: 1rem; */
@@ -74,7 +75,7 @@
 .drop-down-faq-links {
   color: #81c0e3;
   font-family: Gravity;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   transition: 0.5s;
   margin-top: 1.5rem;
 }
@@ -82,7 +83,7 @@
 .drop-down-faq-links-active {
   color: #0082c8;
   font-family: Gravity;
-  font-size: 0.8rem;
+  font-size: var(--font-size);
   margin-top: 1.5rem;
   /* margin-top: 2rem; */
   transition: 0.5s;
@@ -153,7 +154,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }
@@ -163,7 +164,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }
@@ -174,7 +175,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }
@@ -184,7 +185,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }
@@ -201,7 +202,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }
@@ -211,7 +212,7 @@
       font-family: Auger-Mono-Bold;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: var(--font-size);
       transition: 0.5s;
       cursor: pointer;
     }

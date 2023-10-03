@@ -46,12 +46,7 @@ const CarouselForm = () => {
         <Text className="carousel-form-title">
           Papers + posters submissions
         </Text>
-        <Text className="carousel-form-text">
-          Lorem ipsum dolor sit amet, ex scripta ornatus mea. Duo propriae
-          percipit ne, in mei nostrud torquatos assueverit. Et sale oblique eum,
-          est eu ullum suscipit. Id facilisi postulant mel, tritani viderer
-          senserit.
-        </Text>
+        <Text className="carousel-form-text">Coming Soon</Text>
         <Flex direction={"row"} gap={"2rem"}>
           <Flex direction={"column"}>
             <label
@@ -67,6 +62,7 @@ const CarouselForm = () => {
               id="fileUpload"
               accept=".pdf"
               style={{ display: "none" }}
+              disabled={true}
               onChange={handleFileChange}
             ></input>
           </Flex>
