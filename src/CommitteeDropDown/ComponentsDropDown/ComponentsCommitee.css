@@ -42,5 +42,10 @@
 }
 
 .componenets-commitee-image-middle img {
+  max-width: fit-content;
   margin: 0 auto;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -khtml-border-radius: 10rem;
 }
