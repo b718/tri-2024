@@ -32,7 +32,7 @@
   color: var(--var-dark-blue);
   font-family: Gravity;
 }
-.componenets-commitee-image img {
+.componenets-commitee-image {
   border-radius: 10rem;
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
@@ -41,7 +41,7 @@
   max-width: fit-content;
 }
 
-.componenets-commitee-image-middle img {
+.componenets-commitee-image-middle {
   max-width: fit-content;
   margin: 0 auto;
   border-radius: 10rem;
