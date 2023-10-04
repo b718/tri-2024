@@ -38,22 +38,32 @@ const CommiteeBios = () => {
         </Grid.Col>
         <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
-          <div
-            className={`${
-              width < 720
-                ? "componenets-commitee-image-middle"
-                : "componenets-commitee-image"
-            }`}
-          >
-            {width < 720 ? (
-              <Image
-                src={cHeadShot}
-                // radius={"10rem"}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image-middle"
-              ></Image>
-            ) : (
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              {/* {width < 720 ? (
+                <Image
+                  src={cHeadShot}
+                  // radius={"10rem"}
+                  height={160}
+                  fit="contain"
+                  // className="componenets-commitee-image-middle"
+                ></Image>
+              ) : (
+                <Image
+                  src={cHeadShot}
+                  // radius={"10rem"}
+                  height={160}
+                  fit="contain"
+                  // className="componenets-commitee-image"
+                ></Image>
+              )} */}
+
               <Image
                 src={cHeadShot}
                 // radius={"10rem"}
@@ -61,8 +71,8 @@ const CommiteeBios = () => {
                 fit="contain"
                 // className="componenets-commitee-image"
               ></Image>
-            )}
-          </div>
+            </div>
+          </Center>
         </Grid.Col>
       </Grid>
 
@@ -94,23 +104,41 @@ const CommiteeBios = () => {
         </Grid.Col>
         <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
-          {width < 720 ? (
-            <Image
-              src={sHeadShot}
-              radius={"10rem"}
-              height={160}
-              fit="contain"
-              className="componenets-commitee-image-middle"
-            ></Image>
-          ) : (
-            <Image
-              src={sHeadShot}
-              radius={"10rem"}
-              height={160}
-              fit="contain"
-              className="componenets-commitee-image"
-            ></Image>
-          )}
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              {/* {width < 720 ? (
+                <Image
+                  src={sHeadShot}
+                  // radius={"10rem"}
+                  height={160}
+                  fit="contain"
+                  // className="componenets-commitee-image-middle"
+                ></Image>
+              ) : (
+                <Image
+                  src={sHeadShot}
+                  // radius={"10rem"}
+                  height={160}
+                  fit="contain"
+                  // className="componenets-commitee-image"
+                ></Image>
+              )} */}
+
+              <Image
+                src={sHeadShot}
+                // radius={"10rem"}
+                height={160}
+                fit="contain"
+                // className="componenets-commitee-image"
+              ></Image>
+            </div>
+          </Center>
         </Grid.Col>
       </Grid>
     </div>
