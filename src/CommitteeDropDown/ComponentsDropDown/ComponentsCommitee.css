@@ -37,6 +37,7 @@
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
   -khtml-border-radius: 10rem;
+  border: 3px solid #fff;
   max-width: fit-content;
 }
 
