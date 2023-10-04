@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        fill: #0482c8;
+      }
+
+      .cls-5 {
+        opacity: .25;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: .75px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g id="Mask_Group_12" data-name="Mask Group 12">
+      <path id="Path_88" data-name="Path 88" class="cls-4" d="M1214.01,2319.4L-897.88,298.23,709.01-1239.63,2820.9,781.54l-1606.89,1537.86Z"/>
+    </g>
+  </g>
+  <g id="Mask_Group_14" data-name="Mask Group 14">
+    <g id="Group_343" data-name="Group 343" class="cls-5">
+      <g id="Ellipse_17" data-name="Ellipse 17">
+        <circle class="cls-1" cx="4.64" cy="935.33" r="108.05"/>
+        <circle class="cls-2" cx="4.64" cy="935.33" r="107.55"/>
+      </g>
+      <g id="Ellipse_18" data-name="Ellipse 18">
+        <circle class="cls-1" cx="4.64" cy="935.33" r="399.72"/>
+        <circle class="cls-2" cx="4.64" cy="935.33" r="399.22"/>
+      </g>
+      <g id="Ellipse_19" data-name="Ellipse 19">
+        <circle class="cls-1" cx="4.64" cy="935.33" r="965.82"/>
+        <circle class="cls-2" cx="4.64" cy="935.33" r="965.33"/>
+      </g>
+      <g id="Ellipse_20" data-name="Ellipse 20">
+        <circle class="cls-1" cx="4.64" cy="935.33" r="1786.47"/>
+        <circle class="cls-2" cx="4.64" cy="935.33" r="1785.98"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -59,7 +59,7 @@
   max-width: 90%;
   margin-top: 1rem;
   transition: 0.5s;
-  color: var(--var-med-blue);
+  color: var(--var-dark-blue);
 }
 
 .drop-down-faq-paragraph-active {
@@ -69,7 +69,7 @@
   margin-top: 1rem;
   /* margin-top: 1rem; */
   transition: 0.5s;
-  color: var(--var-med-blue);
+  color: var(--var-dark-blue);
 }
 
 .drop-down-faq-links {

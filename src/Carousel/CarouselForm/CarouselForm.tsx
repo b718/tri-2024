@@ -51,7 +51,8 @@ const CarouselForm = () => {
           <Flex direction={"column"}>
             <label
               htmlFor="fileUpload"
-              className="carousel-form-button"
+              // className="carousel-form-button"
+              className={`carousel-form-button${file ? "" : "-disable"}`}
               style={{ fontSize: `${width < 545 ? "0.6rem" : "0.8rem"}` }}
             >
               ADD AN ATTACHMENT +

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3701.83 3572.95">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        opacity: .25;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: .75px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="1781.83" y="851.14" width="1920" height="1080"/>
+  <g id="Mask_Group_14" data-name="Mask Group 14">
+    <g id="Group_343" data-name="Group 343" class="cls-3">
+      <g id="Ellipse_17" data-name="Ellipse 17">
+        <circle class="cls-1" cx="1786.47" cy="1786.47" r="108.05"/>
+        <circle class="cls-2" cx="1786.47" cy="1786.47" r="107.55"/>
+      </g>
+      <g id="Ellipse_18" data-name="Ellipse 18">
+        <circle class="cls-1" cx="1786.47" cy="1786.47" r="399.72"/>
+        <circle class="cls-2" cx="1786.47" cy="1786.47" r="399.22"/>
+      </g>
+      <g id="Ellipse_19" data-name="Ellipse 19">
+        <circle class="cls-1" cx="1786.47" cy="1786.47" r="965.82"/>
+        <circle class="cls-2" cx="1786.47" cy="1786.47" r="965.33"/>
+      </g>
+      <g id="Ellipse_20" data-name="Ellipse 20">
+        <circle class="cls-1" cx="1786.47" cy="1786.47" r="1786.47"/>
+        <circle class="cls-2" cx="1786.47" cy="1786.47" r="1785.98"/>
+      </g>
+    </g>
+  </g>
+</svg>
