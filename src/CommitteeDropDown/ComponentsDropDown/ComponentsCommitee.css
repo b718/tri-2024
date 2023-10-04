@@ -35,6 +35,9 @@
 .componenets-commitee-image img,
 .componenets-commitee-image-middle img {
   border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -khtml-border-radius: 10rem;
   max-width: fit-content;
 }
 
