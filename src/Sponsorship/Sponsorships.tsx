@@ -4,10 +4,10 @@ import { NavBarContext } from "../App";
 import { Flex, Image, Text, Center } from "@mantine/core";
 import googleImage from "../Images/Sponsorships/brainhealth.jpg";
 import comingSoon from "../Images/null_image.png";
-import oticonImage from "../Images/Oticon_Logo_LCT_160px_rgb_pos.png";
+import oticonImage from "../Images/Oticon_Logo_LCT_260px_rgb_pos.png";
 const Sponsorships = () => {
   const sponsorshipRef = useContext(NavBarContext);
-  const imageWidth = 240;
+  const imageWidth = 200;
   const oticonLink = "https://www.oticon.ca/hearing-aid-users";
   return (
     <div
