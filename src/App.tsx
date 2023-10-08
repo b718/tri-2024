@@ -140,7 +140,12 @@ function App() {
                 path="/"
                 element={
                   <div>
-                    <NewNews />
+                    {burger ? (
+                      <div style={{ display: "none" }}></div>
+                    ) : (
+                      <NewNews />
+                    )}
+
                     <Navbar />
                     <div
                       className="nav-bar-burger-overlay"

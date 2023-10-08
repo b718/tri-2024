@@ -6,6 +6,7 @@ import NavBarImage from "../../Images/Logos/TRI2024 NAV/TRI2024_Logo_Nav2.png";
 import useWindowDimensions from "../useWindowsDimensions";
 import useDetectScroll from "@smakss/react-scroll-direction";
 import { useScrollDirection } from "react-use-scroll-direction";
+import NewNews from "../../NewNews/NewNews";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
