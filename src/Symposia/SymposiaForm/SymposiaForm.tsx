@@ -75,6 +75,7 @@ const SymposiaForm = () => {
     setLoading("loading");
     const x = await fetch(
       "https://tri-2024-back-end.onrender.com/submit-symposia-form",
+      // "http://localhost:3001/submit-symposia-form",
       {
         method: "POST",
         body: JSON.stringify({
