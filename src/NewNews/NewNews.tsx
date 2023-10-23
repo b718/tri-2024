@@ -26,8 +26,8 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER
-                31ST 2023
+                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE NOVEMBER
+                15th 2023
               </Text>
             </li>
           </ul>
@@ -37,8 +37,8 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE OCTOBER
-                31ST 2023
+                SUBMIT YOUR SYMPOSIUM PROPOSALS NOW – CLOSING DEADLINE NOVEMBER
+                15th 2023
               </Text>
             </li>
           </ul>

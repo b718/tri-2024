@@ -46,7 +46,7 @@ const SaveTheDate = () => {
                 call for symposia
               </Text>
               <Text className="save-the-date-right-side-date">
-                October 31, 2023
+                November 15, 2023
               </Text>
             </Flex>
             <div className="save-the-date-horizontal-line"></div>
