@@ -188,7 +188,7 @@ const CarouselForm = () => {
               className={`carousel-form-button`}
               style={{ fontSize: `${width < 545 ? "0.6rem" : "0.8rem"}` }}
             >
-              ADD AN ATTACHMENT +
+              ATTACH ABSTRACT +
             </label>
             <input
               className="carousel-form-button"
