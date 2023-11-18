@@ -21,6 +21,7 @@
 .carousel-form-outer-div {
   max-width: fit-content;
   margin: 0 auto;
+  margin-top: 5rem;
   padding-bottom: 4rem;
 }
 
@@ -28,7 +29,7 @@
   max-width: 35rem;
   margin: 0 auto;
   font-family: Gravity;
-  color: var(--main-text-color);
+  color: var(--var-med-blue);
   background-color: white;
   border-radius: 12px;
   padding: 3rem 3rem 3rem 3rem;
@@ -38,7 +39,7 @@
 
 .carousel-form-title {
   font-size: 2.5rem;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
 }
 
 .carousel-form-text {
@@ -79,4 +80,9 @@
   margin-right: 1rem; */
   margin-top: 1rem;
   font-size: 0.8rem;
+}
+
+.carousel-download-a {
+  text-decoration: none;
+  color: white;
 }

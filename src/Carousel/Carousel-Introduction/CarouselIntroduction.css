@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+}
+
+.carousel-introduction-main-div {
+  max-width: 45rem;
+  margin: 0 auto;
+  color: var(--var-white);
+  margin-bottom: 1rem;
+}
+
+.carousel-introduction-main-text > * {
+  margin-top: 1rem;
+}
+
+.carousel-introduction-title {
+  font-size: 2.5rem;
+  color: var(--var-white);
+  margin-top: 0rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.carousel-introduction-main-text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

@@ -4,6 +4,7 @@ import CarouselItem from "./Carousel-Item/CarouselItem";
 import { Text } from "@mantine/core";
 import { NavBarContext } from "../App";
 import CarouselForm from "./CarouselForm/CarouselForm";
+import CarouselIntroduction from "./Carousel-Introduction/CarouselIntroduction";
 
 const Carousel = () => {
   const [slide, setSlide] = useState<number>(0);
@@ -30,7 +31,7 @@ const Carousel = () => {
   return (
     <>
       <div className="carousel-main-div" ref={navBarRef.postersPapers}>
-        <button
+        {/* <button
           className={`carousel-button-arrow carousel-arrow-left ${
             slide === 0 ? "carousel-arrow-left-zero" : ""
           }`}
@@ -100,7 +101,8 @@ const Carousel = () => {
           >
             arrow_circle_right
           </span>
-        </button>
+        </button> */}
+        <CarouselIntroduction />
         <CarouselForm />
       </div>
     </>
