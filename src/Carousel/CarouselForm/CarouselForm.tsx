@@ -48,6 +48,7 @@ const CarouselForm = () => {
       formData.append("state", state);
       formData.append("suite", suite);
       formData.append("city", city);
+      formData.append("postal", postal);
       formData.append("country", country);
       formData.append("title", title);
       formData.append("topic", topic);
