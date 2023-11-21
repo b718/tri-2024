@@ -8,7 +8,7 @@ const Proposal = () => {
       <Text className="general-information-main-div">
         Information that will be needed for submitting a Symposium proposal:
       </Text>
-      <List className="general-information-main-div">
+      <List className="general-information-main-div" spacing={"1rem"}>
         <List.Item>Title of the symposium (25 words max.).</List.Item>
         <List.Item>
           Abstract – a brief overview of the objectives, topic to be covered,
@@ -27,8 +27,8 @@ const Proposal = () => {
         <List.Item>A draft program for the symposium.</List.Item>
         <List.Item>
           A list of invited speakers including their affiliation and location,
-          the title of their presentation, and an indication of <br></br>{" "}
-          whether their participation is confirmed.
+          the title of their presentation, and an <br></br>indication of whether
+          their participation is confirmed.
         </List.Item>
       </List>
     </div>

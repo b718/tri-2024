@@ -4,7 +4,7 @@ import { List } from "@mantine/core";
 const KeyDifferences = () => {
   return (
     <div>
-      <List className="general-information-main-div">
+      <List className="general-information-main-div" spacing={"1rem"}>
         <List.Item>
           The topics are proposed and organized by the participants rather than
           by the program committee.

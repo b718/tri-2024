@@ -1,9 +1,10 @@
 import React from "react";
 import "./ComponentSymposia.css";
+import { Text } from "@mantine/core";
 
 const GeneralInformation = () => {
   return (
-    <div className="general-information-main-div">
+    <Text className="general-information-main-div">
       The abstracts submitted as part of a symposium will not differ from the
       abstracts normally submitted for the annual meeting. However, earlier
       submission will allow for designation of these presentations separate from
@@ -13,7 +14,7 @@ const GeneralInformation = () => {
       so they are grouped together. If your symposium proposal is not accepted
       you will still be able to submit your individual abstracts through the
       normal TRI submission process.
-    </div>
+    </Text>
   );
 };
 

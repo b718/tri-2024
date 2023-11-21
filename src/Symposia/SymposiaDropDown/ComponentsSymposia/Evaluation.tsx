@@ -10,19 +10,19 @@ const Evaluation = () => {
         All submitted proposals will be peer-reviewed by members of the Program
         Committee based on the following criteria:{" "}
       </Text>
-      <List className="general-information-main-div">
+      <List className="general-information-main-div" spacing={"1rem"}>
         <List.Item>
           {" "}
           Scientific merit, with emphasis on new research results, cutting-edge
-          developments, novel perspectives, and <br />
-          innovative or interdisciplinary approaches
+          developments, novel perspectives, <br></br>and innovative or
+          interdisciplinary approaches
         </List.Item>
         <List.Item>
           Clear relevance to the conference themes of Tinnitus or Hyperacusis
         </List.Item>
         <List.Item>
           Integrated treatment of the topic, such that presentations go beyond
-          individual case studies and contribute to a <br /> cohesive,
+          individual case studies and <br></br>contribute to a cohesive,
           overarching synthesis
         </List.Item>
         <List.Item>

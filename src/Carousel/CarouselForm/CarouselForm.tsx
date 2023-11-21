@@ -85,7 +85,7 @@ const CarouselForm = () => {
         className="carousel-form-inner-div"
         style={{
           padding: `${
-            width < 500 ? "1rem 1rem 1rem 1rem" : "6rem 6rem 6rem 6rem"
+            width < 500 ? "1rem 1rem 1rem 1rem" : "5rem 5rem 5rem 5rem"
           }`,
         }}
         onSubmit={onSubmit}
@@ -93,17 +93,40 @@ const CarouselForm = () => {
         <Text className="carousel-form-title">Abstract Submissions</Text>
 
         <Flex direction={"column"} style={{ marginTop: "2rem" }}>
-          <Text className="">Author</Text>
+          <Text className="">
+            Author{" "}
+            <Text
+              style={{
+                color: "red",
+                marginLeft: "0.1rem",
+                display: "inline-block",
+              }}
+            >
+              *
+            </Text>
+          </Text>
           <TextInput
             placeholder="Author (name, affiliation, email address)"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
 
-          <Text style={{ marginTop: "2rem" }}>Address</Text>
+          <Text style={{ marginTop: "2rem" }}>
+            Address{" "}
+            <Text
+              style={{
+                color: "red",
+                marginLeft: "0.1rem",
+                display: "inline-block",
+              }}
+            >
+              *
+            </Text>
+          </Text>
           <Flex gap={"3rem"}>
             <Flex direction={"column"} gap={"1rem"}>
               <TextInput
+                required={true}
                 placeholder="Street Address"
                 value={street}
                 onChange={(e) => setStreet(e.target.value)}
@@ -114,6 +137,7 @@ const CarouselForm = () => {
                 onChange={(e) => setSuite(e.target.value)}
               />
               <TextInput
+                required={true}
                 placeholder="City"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
@@ -121,16 +145,19 @@ const CarouselForm = () => {
             </Flex>
             <Flex direction={"column"} gap={"1rem"}>
               <TextInput
+                required={true}
                 placeholder="Province/State"
                 value={state}
                 onChange={(e) => setstate(e.target.value)}
               />
               <TextInput
+                required={true}
                 placeholder="Postal Code"
                 value={postal}
                 onChange={(e) => setPostal(e.target.value)}
               />
               <TextInput
+                required={true}
                 placeholder="Country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
@@ -141,8 +168,18 @@ const CarouselForm = () => {
           <Flex direction={"column"}>
             <Text className="" style={{ marginTop: "2rem" }}>
               Title Of Abstract
+              <Text
+                style={{
+                  color: "red",
+                  marginLeft: "0.1rem",
+                  display: "inline-block",
+                }}
+              >
+                *
+              </Text>
             </Text>
             <TextInput
+              required={true}
               maxLength={120}
               placeholder="Title of abstract (120 characters max)"
               value={title}
@@ -150,16 +187,36 @@ const CarouselForm = () => {
             />
             <Text className="" style={{ marginTop: "1rem" }}>
               Primary Topic
+              <Text
+                style={{
+                  color: "red",
+                  marginLeft: "0.1rem",
+                  display: "inline-block",
+                }}
+              >
+                *
+              </Text>
             </Text>
             <TextInput
+              required={true}
               placeholder="Primary Topic"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
             />
             <Text className="" style={{ marginTop: "1rem" }}>
               Keywords
+              <Text
+                style={{
+                  color: "red",
+                  marginLeft: "0.1rem",
+                  display: "inline-block",
+                }}
+              >
+                *
+              </Text>
             </Text>
             <TextInput
+              required={true}
               placeholder="Keywords (5 max)"
               value={keyWords}
               onChange={(e) => setKeyWords(e.target.value)}
@@ -175,8 +232,8 @@ const CarouselForm = () => {
             style={{ fontSize: `${width < 545 ? "0.6rem" : "0.8rem"}` }}
           >
             <a
-              href="triMainPdf.pdf"
-              download="tri-2024-save-the-date"
+              href="TRI2024AbstractTemplate.docx"
+              download="TRI2024AbstractTemplate"
               className="carousel-download-a"
             >
               DOWNLOAD FORM

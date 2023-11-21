@@ -220,7 +220,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        SYMPOSIA GUIDELINES & SUBMISSIONS
+                        SYMPOSIA GUIDELINES + SUBMISSIONS
                       </Text>
 
                       <Text
@@ -231,7 +231,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        PAPERS & POSTERS GUIDELINES & SUBMISSIONS
+                        Paper + Poster Guidelines + Submissions{" "}
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Awards

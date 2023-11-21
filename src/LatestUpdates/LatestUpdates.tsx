@@ -28,12 +28,12 @@ const LatestUpdates = () => {
             <div className="latest-updates-div-with-buttons">
               <Flex className="latest-update-flex-text-button">
                 <Text className="latest-updates-small-text">
-                  Symposia submissions
+                  Paper + Poster Guidelines + Submissions
                 </Text>
                 <div
                   className="latest-updates-min-width-button-div"
                   onClick={() => {
-                    scrollToSection(navBarContext.symposiaRef);
+                    scrollToSection(navBarContext.postersPapers);
                   }}
                 >
                   <span className={`material-symbols-outlined`}>

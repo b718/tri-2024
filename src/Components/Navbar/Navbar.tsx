@@ -140,7 +140,7 @@ const Navbar = () => {
                         // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
                         style={{ display: `${!enterSubmission ? "none" : ""}` }}
                       >
-                        SYMPOSIA GUIDELINES & SUBMISSIONS
+                        SYMPOSIA GUIDELINES + SUBMISSIONS
                       </Text>
                       <Text
                         className="nav-bar-posters"
@@ -150,7 +150,7 @@ const Navbar = () => {
                         // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
                         style={{ display: `${!enterSubmission ? "none" : ""}` }}
                       >
-                        PAPERS & POSTERS GUIDELINES & SUBMISSIONS
+                        Paper + Poster Guidelines + Submissions{" "}
                       </Text>
                     </div>
                   </Flex>
