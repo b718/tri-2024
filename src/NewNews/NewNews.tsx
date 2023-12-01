@@ -17,7 +17,7 @@ const NewNews = () => {
       <div
         className="new-news-main"
         onClick={() => {
-          scrollToSection(navBarContext.symposiaRef);
+          scrollToSection(navBarContext.postersPapers);
         }}
       >
         <div className="marquee enable-animation">
