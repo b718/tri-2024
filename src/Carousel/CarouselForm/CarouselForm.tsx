@@ -34,7 +34,7 @@ const CarouselForm = () => {
       title.length > 0 &&
       topic.length > 0 &&
       keyWords.length > 0 &&
-      file
+      file !== null
     );
   };
 
@@ -64,7 +64,7 @@ const CarouselForm = () => {
           body: formData,
         }
       ).then(() => {
-        setLoading("start");
+        setLoading("submitted");
       });
     }
     setAuthor("");
@@ -292,6 +292,15 @@ const CarouselForm = () => {
         >
           SUBMIT APPLICATION
         </button>
+
+        <Text
+          style={{
+            display: `${loading === "submitted" ? "block" : "none"}`,
+            color: "green",
+          }}
+        >
+          Abstract Sent!
+        </Text>
       </form>
     </div>
   );
