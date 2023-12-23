@@ -27,7 +27,7 @@ const SaveTheDate = () => {
               className="save-the-date-text"
               style={{ textAlign: `${width < 730 ? "center" : "left"}` }}
             >
-              Keep these conference dates close with our downloadable PDF.
+              Keep these conference dsates close with our downloadable PDF.
             </Text>
             <button className="save-the-date-download-button">
               <a href="triMainPdf.pdf" download="tri-2024-save-the-date">

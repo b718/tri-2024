@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+}
+
+.registration-component-main-div {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.registration-component-package {
+  font-weight: bold;
+  font-family: Gravity;
+  color: var(--var-med-blue);
+}
+
+.registration-component-price {
+  font-family: Gravity;
+  font-weight: bold;
+  color: var(--var-med-blue);
+}

@@ -21,13 +21,13 @@
 
 .attendee-contact-info-main-text {
   font-size: 1.5rem;
-  font-family: Auger-Mono-Bold;
+  font-family: Gravity;
   text-transform: uppercase;
   color: #0582c8;
 }
 
 .attendee-contact-info-inputs label {
-  font-family: Auger-Mono-Bold;
+  font-family: Gravity;
   color: #1a4177;
 }
 
@@ -42,7 +42,7 @@
 .attendee-contact-info-italic {
   font-style: italic;
   font-size: 0.8rem;
-  font-family: Auger-Mono-Bold;
+  font-family: Gravity;
   color: #1a4177;
 }
 
@@ -56,7 +56,7 @@
 
   @media only screen and (min-width: 300px) {
     .attendee-contact-info-inputs label {
-      font-family: Auger-Mono-Bold;
+      font-family: Gravity;
       color: #1a4177;
       font-size: 0.7rem;
     }
@@ -72,7 +72,7 @@
   }
   @media only screen and (min-width: 930px) {
     .attendee-contact-info-inputs label {
-      font-family: Auger-Mono-Bold;
+      font-family: Gravity;
       color: #1a4177;
       font-size: 0.875rem;
     }

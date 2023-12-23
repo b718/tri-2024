@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts-Two/Gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+}
+
+.registration-form-nrs-main-div {
+  max-width: fit-content;
+  margin: 0 auto;
+  color: var(--var-dark-blue);
+}
+
+.registration-form-nrs-main-text {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+  font-family: Gravity;
+}

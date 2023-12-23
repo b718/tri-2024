@@ -107,8 +107,8 @@ const Navbar = () => {
                       scrollToSection(navBarScrollRefs.registrationRef)
                     }
                   >
-                    {/* REGISTRATION */}
-                    SAVE THE DATE
+                    REGISTRATION
+                    {/* SAVE THE DATE */}
                   </Text>
                   {/* <Text className="nav-bar-different-sections">Speakers</Text>
                   <Text className="nav-bar-different-sections">Program</Text> */}

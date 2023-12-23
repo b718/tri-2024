@@ -35,6 +35,8 @@ import CarouselSection from "./Carousel/CarouselSection";
 import ContactUs from "./ContactUs/ContactUs";
 import NewNews from "./NewNews/NewNews";
 import LatestUpdates from "./LatestUpdates/LatestUpdates";
+import PricingNRS from "./NewRegistrationSystem/PricingNRS";
+import RegistrationFormNRS from "./NewRegistrationSystem/RegistrationFormNRS";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -194,7 +196,7 @@ function App() {
                           setBurger(false);
                         }}
                       >
-                        SAVE THE DATE
+                        REGISTRATION
                       </Text>
                       {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
                         Speakers
@@ -293,8 +295,11 @@ function App() {
                     <Home />
                     <LatestUpdates />
                     <Committee />
-                    <SaveTheDate />
+                    {/* <SaveTheDate /> */}
                     {/* <RegistrationUpdated /> */}
+                    <PricingNRS />
+                    <RegistrationFormNRS />
+                    <PaymentForm />
                     <CommiteeSection />
                     <Symposia />
                     <Carousel />

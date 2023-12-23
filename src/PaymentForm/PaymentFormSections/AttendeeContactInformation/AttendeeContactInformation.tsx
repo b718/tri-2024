@@ -2,6 +2,7 @@ import { Flex, Select, Text, TextInput } from "@mantine/core";
 import React, { useContext, useEffect, useState } from "react";
 import "./AttendeeContactInformation.css";
 import { contactObjectContext } from "../../PaymentForm";
+
 const AttendeeContactInformation = () => {
   const [profession, setProfession] = useState("");
   const [professionClicked, setProfessionClicked] = useState(false);
@@ -96,6 +97,7 @@ const AttendeeContactInformation = () => {
       return true;
     }
   };
+
   return (
     <>
       <Flex direction={"column"} className="attendee-contact-info-main-flex">
@@ -107,6 +109,7 @@ const AttendeeContactInformation = () => {
           <Flex gap={"md"}>
             <TextInput
               label="Title"
+              // placeholder="Title"
               required={true}
               withAsterisk
               className="attendee-contact-info-inputs"
@@ -120,9 +123,10 @@ const AttendeeContactInformation = () => {
               error={
                 clickChecker(titleClicked, title) ? "" : "This is required."
               }
-            ></TextInput>
+            />
             <TextInput
               label="First"
+              // placeholder="First"
               required={true}
               withAsterisk
               className="attendee-contact-info-inputs"
@@ -139,6 +143,7 @@ const AttendeeContactInformation = () => {
             ></TextInput>
             <TextInput
               label="Last"
+              // placeholder="Last"
               required={true}
               withAsterisk
               className="attendee-contact-info-inputs"
@@ -156,6 +161,7 @@ const AttendeeContactInformation = () => {
 
         <div className="attendee-contact-information-profession-section">
           <Select
+            placeholder="This will appear on your name badge at the conferece."
             label="Profession/Attendee Type"
             searchable
             withAsterisk={true}
@@ -179,13 +185,21 @@ const AttendeeContactInformation = () => {
                 : "This is required."
             }
           />
-          <Text className="attendee-contact-info-italic">
+          {/* <Text className="attendee-contact-info-italic">
             This will appear on your name badge at the conferece.
-          </Text>
+          </Text> */}
         </div>
 
         <div className="attendee-contact-information-email-section">
           <Flex direction={"column"} gap={"md"}>
+            <TextInput
+              label="Affiliation/Organization"
+              className="attendee-contact-info-inputs"
+              value={affliation}
+              onChange={(e) => {
+                setAffliation(e.currentTarget.value);
+              }}
+            />
             <TextInput
               label="Email"
               type={"email"}
@@ -200,7 +214,7 @@ const AttendeeContactInformation = () => {
                 setEmailClicked(true);
               }}
               error={emailClickChecker() ? "" : "Invalid Email."}
-            ></TextInput>
+            />
             <TextInput
               label="Phone Number"
               type={"number"}
@@ -219,15 +233,7 @@ const AttendeeContactInformation = () => {
                   ? ""
                   : "Must be at least 10 digits."
               }
-            ></TextInput>
-            <TextInput
-              label="Affiliation/Organization"
-              className="attendee-contact-info-inputs"
-              value={affliation}
-              onChange={(e) => {
-                setAffliation(e.currentTarget.value);
-              }}
-            ></TextInput>
+            />
           </Flex>
         </div>
 
@@ -254,7 +260,7 @@ const AttendeeContactInformation = () => {
               onClick={() => {
                 setAddressClicked(true);
               }}
-              data={["Home Address", "Work Address", "Academic Address"]}
+              data={["Home Address", "Work Address"]}
               className="attendee-contact-info-inputs"
               error={
                 clickChecker(addressClicked, address) ? "" : "This is required."
@@ -277,7 +283,7 @@ const AttendeeContactInformation = () => {
                   ? ""
                   : "This is required."
               }
-            ></TextInput>
+            />
             <Flex gap={"md"} justify={"center"} align={"center"}>
               <TextInput
                 label="City"
@@ -294,7 +300,7 @@ const AttendeeContactInformation = () => {
                 error={
                   clickChecker(cityClicked, city) ? "" : "This is required."
                 }
-              ></TextInput>
+              />
               <TextInput
                 label="State/Region/Province"
                 withAsterisk={true}
@@ -312,7 +318,7 @@ const AttendeeContactInformation = () => {
                     ? ""
                     : "This is required."
                 }
-              ></TextInput>
+              />
             </Flex>
             <Flex gap={"md"} justify={"center"}>
               <TextInput
@@ -330,7 +336,7 @@ const AttendeeContactInformation = () => {
                 error={
                   clickChecker(postalClicked, postal) ? "" : "This is required."
                 }
-              ></TextInput>
+              />
               <TextInput
                 label="Country"
                 withAsterisk={true}
@@ -348,7 +354,7 @@ const AttendeeContactInformation = () => {
                     ? ""
                     : "This is required."
                 }
-              ></TextInput>
+              />
             </Flex>
           </Flex>
         </div>
