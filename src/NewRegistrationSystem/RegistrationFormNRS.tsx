@@ -3,6 +3,8 @@ import "./RegistrationFormNRS.css";
 import { Button, Flex, Select, Text, TextInput, em } from "@mantine/core";
 import PaymentFormPayment from "../PaymentForm/PaymentFormSections/PaymentFormPayment/PaymentFormPayment";
 import RegistrationAndFees from "../PaymentForm/PaymentFormSections/RegistrationAndFees/RegistrationAndFees";
+import Payment from "../Payment-Stripe/Payment";
+import PayPalPayment from "../PayPal/PayPalPayment";
 
 interface contactInformationInterface {
   contactObject: any;
@@ -44,42 +46,56 @@ const RegistrationFormNRS = () => {
   const [addOn, setAddOn] = useState<string | null>("");
   const [price, setPrice] = useState(0);
   const [btn, setBtn] = useState("no");
+  const [guest, setGuest] = useState<string | null>("");
 
   useEffect(() => {
     let values = [
-      "Early Bird $725 CAD",
-      "Student $575 CAD, Requires proof of enrolment",
-      "Regular $875 CAD",
-      "On-site $1500 CAD",
-      "One day, June 10 only $575 CAD",
-      "One day, June 11 only $500 CAD",
-      "One day, June 12 only $500 CAD",
+      "Early Bird (closes 1 March 2024) $825 CAD",
+      "Regular Rate (closes 8 June 2024) $975 CAD",
+      "On-site Registration $1475 CAD",
+      "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD",
+      "One day, June 10 only $525 CAD",
+      "One day, June 11 only $525 CAD",
+      "One day, June 12 only $525 CAD",
     ];
 
     switch (ticketType) {
       case values[0]:
-        setPrice(725.0);
+        setPrice(825.0 + guestHelper());
         break;
       case values[1]:
-        setPrice(575.0);
+        setPrice(975.0 + guestHelper());
         break;
       case values[2]:
-        setPrice(875.0);
+        setPrice(1475.0 + guestHelper());
         break;
       case values[3]:
-        setPrice(1500.0);
+        setPrice(625.0 + guestHelper());
         break;
       case values[4]:
-        setPrice(575.0);
+        setPrice(525.0 + guestHelper());
         break;
       case values[5]:
-        setPrice(500.0);
+        setPrice(525.0 + guestHelper());
         break;
       case values[6]:
-        setPrice(500.0);
+        setPrice(525.0 + guestHelper());
         break;
     }
-  }, [ticketType]);
+  }, [ticketType, guest]);
+
+  const guestHelper = () => {
+    let values = ["Yes – ($95 to be added to conference registration)", "No"];
+
+    switch (guest) {
+      case values[0]:
+        return 95;
+      case values[1]:
+        return 0;
+      default:
+        return 0;
+    }
+  };
 
   return (
     <div>
@@ -353,13 +369,13 @@ const RegistrationFormNRS = () => {
                     withAsterisk={true}
                     required={true}
                     data={[
-                      "Early Bird $725 CAD",
-                      "Student $575 CAD, Requires proof of enrolment",
-                      "Regular $875 CAD",
-                      "On-site $1500 CAD",
-                      "One day, June 10 only $575 CAD",
-                      "One day, June 11 only $500 CAD",
-                      "One day, June 12 only $500 CAD",
+                      "Early Bird (closes 1 March 2024) $825 CAD",
+                      "Regular Rate (closes 8 June 2024) $975 CAD",
+                      "On-site Registration $1475 CAD",
+                      "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD",
+                      "One day, June 10 only $525 CAD",
+                      "One day, June 11 only $525 CAD",
+                      "One day, June 12 only $525 CAD",
                     ]}
                     transitionProps={{
                       transition: "pop-top-left",
@@ -367,6 +383,16 @@ const RegistrationFormNRS = () => {
                       timingFunction: "ease",
                     }}
                   />
+                  <Text
+                    style={{
+                      maxWidth: "40rem",
+                      wordBreak: "break-word",
+                      fontSize: "0.65rem",
+                    }}
+                  >
+                    Full Conference Registration includes daily conference lunch
+                    and the TRI Networking Dinner Event on Monday 10th June.
+                  </Text>
                 </div>
 
                 <div>
@@ -403,6 +429,38 @@ const RegistrationFormNRS = () => {
                   />
                 </div>
 
+                <div>
+                  <Text className="">
+                    Will you be bringing a guest to the Event?
+                    <Text
+                      style={{
+                        color: "red",
+                        marginLeft: "0.1rem",
+                        display: "inline-block",
+                      }}
+                    >
+                      *
+                    </Text>
+                  </Text>
+
+                  <Select
+                    size={"xs"}
+                    placeholder="Workshop registrations are limited in number, first-come, first-served."
+                    value={guest}
+                    onChange={setGuest}
+                    withAsterisk={true}
+                    required={true}
+                    data={[
+                      "Yes – ($95 to be added to conference registration)",
+                      "No",
+                    ]}
+                    transitionProps={{
+                      transition: "pop-top-left",
+                      duration: 80,
+                      timingFunction: "ease",
+                    }}
+                  />
+                </div>
                 <div>
                   <Flex style={{ wordBreak: "break-word" }} gap={"4rem"}>
                     <Text style={{ maxWidth: "30rem" }}>
@@ -486,6 +544,8 @@ const RegistrationFormNRS = () => {
               >
                 <RegistrationAndFees />
                 <PaymentFormPayment />
+                {/* <Payment title={apiEndPoint.api} />
+                <PayPalPayment price={paymentTotal.total.toString()} /> */}
               </Flex>
             ),
           }[page]

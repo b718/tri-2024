@@ -35,7 +35,7 @@ const Payment: React.FunctionComponent<PaymentPerson> = ({ title }) => {
       <div className="payment-div-container">
         {clientSecret && stripePromise && (
           <Elements stripe={stripePromise} options={{ clientSecret }}>
-            <CheckoutForm secret={clientSecret} />
+            <CheckoutForm secret={clientSecret} price={"600"} />
           </Elements>
         )}
       </div>
