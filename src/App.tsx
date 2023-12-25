@@ -299,7 +299,7 @@ function App() {
                     {/* <RegistrationUpdated /> */}
                     <PricingNRS />
                     <RegistrationFormNRS />
-                    <PaymentForm />
+                    {/* <PaymentForm /> */}
                     <CommiteeSection />
                     <Symposia />
                     <Carousel />

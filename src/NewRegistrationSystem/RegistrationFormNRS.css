@@ -27,3 +27,29 @@
   padding-bottom: 0.5rem;
   font-family: Gravity;
 }
+
+.registration-form-nrs-button-active {
+  background-color: var(--var-med-blue);
+  color: var(--var-white);
+  border-radius: 16px;
+  border: none;
+  max-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.registration-form-nrs-button {
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid lightgray;
+  color: var(--var-dark-blue);
+  max-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.registration-form-nrs-flex-2,
+.registration-form-nrs-flex-1,
+.registration-form-nrs-flex-0 {
+  color: var(--var-med-blue);
+}
