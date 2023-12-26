@@ -59,7 +59,7 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
           "!"
       );
       paymentFormPaymentStatus.setPaymentStatus(true);
-      stripePaymentChecking.setPaymentStatus("done");
+      stripePaymentChecking.setPaymentStatus("done-stripe");
       setButtonDisable(true);
     } else {
       setMessage("An unexpected error occured.");

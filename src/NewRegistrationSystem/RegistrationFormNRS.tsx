@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import "./RegistrationFormNRS.css";
-import { Button, Flex, Select, Text, TextInput, em } from "@mantine/core";
+import { Button, Flex, Loader, Select, Text, TextInput } from "@mantine/core";
 import PaymentFormPayment from "../PaymentForm/PaymentFormSections/PaymentFormPayment/PaymentFormPayment";
 import RegistrationAndFees from "../PaymentForm/PaymentFormSections/RegistrationAndFees/RegistrationAndFees";
 import Payment from "../Payment-Stripe/Payment";
 import PayPalPayment from "../PayPal/PayPalPayment";
 import { NavBarContext } from "../App";
 import useWindowDimensions from "../Components/useWindowsDimensions";
+import ProgressBar from "react-customizable-progressbar";
 
 interface PaymentCheckingInterface {
   paymentStatus: any;
@@ -131,17 +132,93 @@ const RegistrationFormNRS = () => {
       return false;
     } else if (page == 1 && checkTicket()) {
       return false;
-    } else if (page == 2 && paymentStatus === "done") {
+    } else if (
+      page == 2 &&
+      (paymentStatus === "done-stripe" || paymentStatus === "done-pp")
+    ) {
       return false;
     } else {
       return true;
     }
   };
 
+  const [loading, setLoading] = useState("start");
+  const FormSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const RegistrationObject = {
+      contactInfo: {
+        title: title,
+        first: first,
+        last: last,
+        profession: profession,
+        org: org,
+        email: email,
+        phone: phone,
+        addressType: addressType,
+        street: street,
+        state: state,
+        suite: suite,
+        postal: postal,
+        city: city,
+        country: country,
+      },
+      ticketInfo: {
+        ticketType: ticketType,
+        addOn: addOn,
+        price: price,
+        guest: guest,
+        paymentStatus: paymentStatus,
+      },
+    };
+    setLoading("loading");
+    const x = await fetch(
+      "https://tri-2024-back-end.onrender.com/submit-registration-form",
+      // "http://localhost:3001/submit-symposia-form",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          RegistrationObject,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    ).then(() => {
+      setLoading("end");
+    });
+
+    //ContactInfo
+    setTitle("");
+    setFirst("");
+    setLast("");
+    setProfession("");
+    setOrg("");
+    setEmail("");
+    setPhone("");
+    setAddressType("");
+    setStreet("");
+    setstate("");
+    setSuite("");
+    setPostal("");
+    setCity("");
+    setCountry("");
+
+    //Ticket
+    setTicketType("");
+    setAddOn("");
+    setPrice(0);
+    setBtn("no");
+    setGuest("");
+
+    //Payment
+    setPaymentStatus("");
+  };
+
   return (
     <paymentCheckingObject.Provider value={{ paymentStatus, setPaymentStatus }}>
       <div ref={PaymentRef.registrationRef}>
-        <form className="registration-form-nrs-main-div">
+        <form className="registration-form-nrs-main-div" onSubmit={FormSubmit}>
           <Text className="registration-form-nrs-main-text">
             TRI 2024 Registration
           </Text>
@@ -171,9 +248,52 @@ const RegistrationFormNRS = () => {
             }
             {
               {
-                0: <progress value={0.33} />,
-                1: <progress value={0.67} />,
-                2: <progress value={1} />,
+                0: (
+                  <ProgressBar
+                    progress={33}
+                    radius={15}
+                    fillColor={"white"}
+                    strokeWidth={2}
+                    strokeColor="#5d9cec"
+                    trackStrokeWidth={2}
+                    pointerRadius={5}
+                    pointerStrokeWidth={2}
+                    pointerStrokeColor="#5d9cec"
+                  />
+                ),
+
+                // <progress value={0.33}
+
+                1: (
+                  <ProgressBar
+                    progress={67}
+                    radius={15}
+                    fillColor={"white"}
+                    strokeWidth={2}
+                    strokeColor="#5d9cec"
+                    trackStrokeWidth={2}
+                    pointerRadius={5}
+                    pointerStrokeWidth={2}
+                    pointerStrokeColor="#5d9cec"
+                  />
+                ),
+
+                // <progress value={0.67} />
+
+                2: (
+                  <ProgressBar
+                    progress={100}
+                    radius={15}
+                    fillColor={"white"}
+                    strokeWidth={2}
+                    strokeColor="#5d9cec"
+                    trackStrokeWidth={2}
+                    pointerRadius={0}
+                    pointerStrokeWidth={2}
+                    pointerStrokeColor="#5d9cec"
+                  />
+                ),
+                // <progress value={1} />
               }[page]
             }
           </Flex>
@@ -603,7 +723,8 @@ const RegistrationFormNRS = () => {
                 >
                   {/* <RegistrationAndFees />
                 <PaymentFormPayment /> */}
-                  {paymentStatus === "done" ? (
+                  {paymentStatus === "done-stripe" ||
+                  paymentStatus === "done-pp" ? (
                     <Flex direction={"column"} style={{ margin: "1rem" }}>
                       <Text>
                         Payment Completed For{" "}
@@ -638,6 +759,13 @@ const RegistrationFormNRS = () => {
             >
               PREV
             </Button>
+            {loading === "loading" ? (
+              <Loader></Loader>
+            ) : loading === "end" ? (
+              <Text>Registration Form Sent!</Text>
+            ) : (
+              <div style={{ display: "none" }}></div>
+            )}
             <Button
               onClick={() => {
                 if (page < 2) {
@@ -645,6 +773,7 @@ const RegistrationFormNRS = () => {
                 }
               }}
               disabled={nextDisabler()}
+              type={page == 2 ? "submit" : "button"}
             >
               {page == 2 ? "SUBMIT" : "NEXT"}
             </Button>

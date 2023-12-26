@@ -61,7 +61,7 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
   useEffect(() => {
     if (responsePayment && responsePayment.status === "COMPLETED") {
       paymentFormPaymentStatus.setPaymentStatus(true);
-      ppPaymentChecking.setPaymentStatus("done");
+      ppPaymentChecking.setPaymentStatus("done-pp");
     }
   }, [responsePayment]);
 
