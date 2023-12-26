@@ -16,8 +16,8 @@ const Venue = () => {
   const iframeWidth = () => {
     if (width < 400) {
       return 335;
-    } else if (width < 422) {
-      return 370;
+    } else if (width < 460) {
+      return 350;
     } else if (width < 522) {
       return 420;
     } else if (width < 622) {
@@ -38,6 +38,7 @@ const Venue = () => {
       return 350;
     }
   };
+
   return (
     <div ref={venueRef.venueRef}>
       {width > 982 ? (

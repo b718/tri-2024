@@ -3,15 +3,20 @@ import "./PayPalPayment.css";
 import { FunctionComponent, useContext, useEffect, useState } from "react";
 import { Center, Flex, Text } from "@mantine/core";
 import { paymentStatusContext } from "../PaymentForm/PaymentForm";
+import { paymentCheckingObject } from "../NewRegistrationSystem/RegistrationFormNRS";
 interface PayPalPaymentInterface {
   price: string;
+  desc: string;
 }
 const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
   price,
+  desc,
 }) => {
-  const serverURL = "http://localhost:3001";
+  // const serverURL = "http://localhost:3001";
+  const serverURL = "https://tri-2024-back-end.onrender.com";
   const [responsePayment, setResponsePayment] = useState<any>();
   const paymentFormPaymentStatus = useContext(paymentStatusContext);
+  const ppPaymentChecking = useContext(paymentCheckingObject);
   const createOrder = (data: any) => {
     // Order is created on the server and the order id is returned
     return fetch(`${serverURL}/my-server/create-paypal-order`, {
@@ -22,8 +27,8 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
       // use the "body" param to optionally pass additional order information
       // like product skus and quantities
       body: JSON.stringify({
-        scientistClinician: {
-          description: "scientist-clinician",
+        paymentObject: {
+          description: desc,
           cost: price,
         },
       }),
@@ -56,6 +61,7 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
   useEffect(() => {
     if (responsePayment && responsePayment.status === "COMPLETED") {
       paymentFormPaymentStatus.setPaymentStatus(true);
+      ppPaymentChecking.setPaymentStatus("done");
     }
   }, [responsePayment]);
 
@@ -71,13 +77,15 @@ const PayPalPayment: FunctionComponent<PayPalPaymentInterface> = ({
         {responsePayment ? (
           <Flex align={"center"} direction={"column"}>
             <Flex>
-              <Text>Payment Status:</Text>
-              <Text>{responsePayment.status}</Text>
+              <Text style={{ marginRight: "0.3rem" }}>Payment Status:</Text>
+              <Text style={{ marginRight: "0.3rem" }}>
+                {responsePayment.status}
+              </Text>
               <Text>🎉!</Text>
             </Flex>
             <Flex>
-              <Text> Paid: </Text>
-              <Text>
+              <Text style={{ marginRight: "0.3rem" }}>Paid:</Text>
+              <Text style={{ marginRight: "0.3rem" }}>
                 {" "}
                 {
                   responsePayment.purchase_units[0].payments.captures[0].amount

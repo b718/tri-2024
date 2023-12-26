@@ -26,6 +26,8 @@
   font-size: 2.5rem;
   padding-bottom: 0.5rem;
   font-family: Gravity;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .registration-form-nrs-button-active {
@@ -34,8 +36,8 @@
   border-radius: 16px;
   border: none;
   max-height: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
 }
 
 .registration-form-nrs-button {
@@ -44,12 +46,79 @@
   border: 1px solid lightgray;
   color: var(--var-dark-blue);
   max-height: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
 }
 
 .registration-form-nrs-flex-2,
 .registration-form-nrs-flex-1,
 .registration-form-nrs-flex-0 {
   color: var(--var-med-blue);
+}
+
+/*Max-width is basically saying 500px, if youre in that this will happen*/
+@media all {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px */
+
+  @media only screen and (min-width: 200px) {
+    .registration-form-nrs-button-active {
+      background-color: var(--var-med-blue);
+      color: var(--var-white);
+      border-radius: 16px;
+      border: none;
+      max-height: 3rem;
+      font-size: 0.6rem;
+      /* padding-left: 1rem;
+      padding-right: 1rem; */
+    }
+
+    .registration-form-nrs-button {
+      background-color: white;
+      border-radius: 16px;
+      border: 1px solid lightgray;
+      color: var(--var-dark-blue);
+      max-height: 3rem;
+      font-size: 0.6rem;
+      /* padding-left: 1rem;
+      padding-right: 1rem; */
+    }
+
+    .registration-form-nrs-dinner-text {
+      max-width: 15rem;
+      font-size: 0.6rem;
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 600px) {
+    .registration-form-nrs-button-active {
+      background-color: var(--var-med-blue);
+      color: var(--var-white);
+      border-radius: 16px;
+      border: none;
+      max-height: 3rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: var(--font-size);
+    }
+
+    .registration-form-nrs-button {
+      background-color: white;
+      border-radius: 16px;
+      border: 1px solid lightgray;
+      color: var(--var-dark-blue);
+      max-height: 3rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: var(--font-size);
+    }
+
+    .registration-form-nrs-dinner-text {
+      max-width: 30rem;
+      font-size: var(--font-size);
+    }
+  }
 }

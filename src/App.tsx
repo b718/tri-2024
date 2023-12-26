@@ -116,9 +116,16 @@ function App() {
     intent: "capture",
   };
 
+  const initialOptionsTestPP = {
+    clientId:
+      "AVwo8M09K1GyA6asqqmQuU63jB-h3BREPb6ZjExzvkToHocPxRm1aqt4CjSaFwZuT81h-jpNPq8B_VNQ",
+    currency: "CAD",
+    intent: "capture",
+  };
+
   return (
     <>
-      <PayPalScriptProvider options={initialOptionsPaypal}>
+      <PayPalScriptProvider options={initialOptionsTestPP}>
         <NavBarContext.Provider
           value={{
             committeeRef: comitteeRef,
@@ -295,20 +302,19 @@ function App() {
                     <Home />
                     <LatestUpdates />
                     <Committee />
-                    {/* <SaveTheDate /> */}
-                    {/* <RegistrationUpdated /> */}
                     <PricingNRS />
                     <RegistrationFormNRS />
-                    <PaymentForm />
                     <CommiteeSection />
                     <Symposia />
                     <Carousel />
-                    {/* <CarouselSection /> */}
                     <ConferenceProgram />
                     <Sponsorships />
                     <FaQ />
                     <ContactUs />
                     <Footer />
+                    {/* <SaveTheDate /> */}
+                    {/* <RegistrationUpdated /> */}
+                    {/* <PaymentForm /> */}
                   </div>
                 }
               />

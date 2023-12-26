@@ -26,7 +26,7 @@ const ConferenceProgram = () => {
     } else if (width < 501) {
       return 350;
     } else if (width < 620) {
-      return 500;
+      return 450;
     } else if (width < 961) {
       return 500;
     } else {

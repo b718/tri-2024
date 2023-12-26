@@ -16,7 +16,7 @@ const PricingNRS = () => {
     });
   };
   return (
-    <div ref={registration.registrationRef}>
+    <div>
       <div className="pricing-nrs-main-div">
         <Flex
           direction={width < 730 ? "column" : "row"}
@@ -37,7 +37,12 @@ const PricingNRS = () => {
               Registration is now open for the Tinnitus Research Initiative
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
             </Text>
-            <button className="pricing-nrs-register-button">
+            <button
+              className="pricing-nrs-register-button"
+              onClick={() => {
+                scrollToSection(registration.registrationRef);
+              }}
+            >
               REGISTER NOW
             </button>
           </Flex>
@@ -50,23 +55,32 @@ const PricingNRS = () => {
 
           <Flex direction={"column"} align={"center"} justify={"center"}>
             <RegistrationComponent
-              regPackage={"EARLY BIRD"}
-              price={"$725 CAD"}
+              regPackage={"Early Bird"}
+              price={"$825 CAD"}
             />
-            <RegistrationComponent regPackage={"Student"} price={"$575 CAD"} />
-            <RegistrationComponent regPackage={"Regular"} price={"$875 CAD"} />
-            <RegistrationComponent regPackage={"On-site"} price={"$1500 CAD"} />
+            <RegistrationComponent
+              regPackage={"Regular Rate"}
+              price={"$975 CAD"}
+            />
+            <RegistrationComponent
+              regPackage={"On-Site Registration"}
+              price={"$1475 CAD"}
+            />
+            <RegistrationComponent
+              regPackage={"Student Rate"}
+              price={"$625 CAD"}
+            />
             <RegistrationComponent
               regPackage={"One day, June 10 only"}
-              price={"$575 CAD"}
+              price={"$525 CAD"}
             />
             <RegistrationComponent
               regPackage={"One day, June 11 only"}
-              price={"$500 CAD"}
+              price={"$525 CAD"}
             />
             <RegistrationComponent
               regPackage={"One day, June 12 only "}
-              price={"$500 CAD"}
+              price={"$525 CAD"}
             />
           </Flex>
         </Flex>

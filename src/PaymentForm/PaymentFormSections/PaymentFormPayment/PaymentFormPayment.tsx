@@ -77,8 +77,8 @@ const PaymentFormPayment = () => {
 
       {buttonConfirm ? (
         <Flex direction={"column"}>
-          <Payment title={apiEndPoint.api} />
-          <PayPalPayment price={paymentTotal.total.toString()} />
+          {/* <Payment title={apiEndPoint.api} /> */}
+          {/* <PayPalPayment price={paymentTotal.total.toString()} /> */}
         </Flex>
       ) : (
         <div></div>

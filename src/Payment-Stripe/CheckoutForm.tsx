@@ -5,6 +5,7 @@ import "./Payment.css";
 import { PaymentIntentResult } from "@stripe/stripe-js";
 import { paymentStatusContext } from "../PaymentForm/PaymentForm";
 import { Center } from "@mantine/core";
+import { paymentCheckingObject } from "../NewRegistrationSystem/RegistrationFormNRS";
 interface CheckFormInterface {
   secret: string;
   price: string;
@@ -22,6 +23,7 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
   const [buttonDisable, setButtonDisable] = useState(false);
 
   const paymentFormPaymentStatus = useContext(paymentStatusContext);
+  const stripePaymentChecking = useContext(paymentCheckingObject);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -51,12 +53,13 @@ const CheckoutForm: React.FunctionComponent<CheckFormInterface> = ({
           paymentIntent.status +
           " 🎉!" +
           " Paid: " +
-          paymentIntent.amount / 100 +
+          (paymentIntent.amount / 100).toFixed(2) +
           " " +
           paymentIntent.currency +
           "!"
       );
       paymentFormPaymentStatus.setPaymentStatus(true);
+      stripePaymentChecking.setPaymentStatus("done");
       setButtonDisable(true);
     } else {
       setMessage("An unexpected error occured.");

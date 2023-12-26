@@ -5,24 +5,31 @@ import CheckoutForm from "./CheckoutForm";
 import "./Payment.css";
 interface PaymentPerson {
   title: string;
+  price: number;
 }
 
-const Payment: React.FunctionComponent<PaymentPerson> = ({ title }) => {
+const Payment: React.FunctionComponent<PaymentPerson> = ({ title, price }) => {
   const [stripePromise, setStripePromise] =
     useState<Promise<Stripe | null> | null>(null);
   const [clientSecret, setClientSecret] = useState("");
+  const serverURL = "https://tri-2024-back-end.onrender.com";
 
   useEffect(() => {
-    fetch("http://localhost:3001/config").then(async (r) => {
+    fetch(`${serverURL}/config`).then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
     });
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/${title}`, {
+    fetch(`${serverURL}/${title}`, {
       method: "POST",
-      body: JSON.stringify({}),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        price: (price * 100).toString(),
+      }),
     }).then(async (result) => {
       var { clientSecret } = await result.json();
       setClientSecret(clientSecret);
@@ -35,7 +42,7 @@ const Payment: React.FunctionComponent<PaymentPerson> = ({ title }) => {
       <div className="payment-div-container">
         {clientSecret && stripePromise && (
           <Elements stripe={stripePromise} options={{ clientSecret }}>
-            <CheckoutForm secret={clientSecret} price={"600"} />
+            <CheckoutForm secret={clientSecret} price={price.toString()} />
           </Elements>
         )}
       </div>
