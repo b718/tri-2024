@@ -56,6 +56,18 @@
   color: var(--var-med-blue);
 }
 
+.registration-form-nrs-flex-3 {
+  color: black;
+  max-width: 40rem;
+  font-size: var(--font-size);
+  word-break: normal;
+  overflow-y: scroll;
+  max-height: 15rem;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px

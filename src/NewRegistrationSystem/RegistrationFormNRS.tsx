@@ -1,6 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import "./RegistrationFormNRS.css";
-import { Button, Flex, Loader, Select, Text, TextInput } from "@mantine/core";
+import {
+  Button,
+  Checkbox,
+  Flex,
+  Loader,
+  Select,
+  Text,
+  TextInput,
+} from "@mantine/core";
 import PaymentFormPayment from "../PaymentForm/PaymentFormSections/PaymentFormPayment/PaymentFormPayment";
 import RegistrationAndFees from "../PaymentForm/PaymentFormSections/RegistrationAndFees/RegistrationAndFees";
 import Payment from "../Payment-Stripe/Payment";
@@ -25,7 +33,7 @@ const RegistrationFormNRS = () => {
 
   const [paymentStatus, setPaymentStatus] = useState<any>("");
 
-  //ContactInfo
+  //PageInfo
   const [page, setPage] = useState<number>(0);
 
   //Contact Info
@@ -63,6 +71,15 @@ const RegistrationFormNRS = () => {
       city.length > 0 &&
       country.length > 0
     );
+  };
+
+  //TUA Info
+  const [communicationConsent, setCommunicationConsent] = useState(false);
+  const [conferenceParticipation, setConferenceParticipation] = useState(false);
+  const [releaseInfo, setReleaseInfo] = useState(false);
+
+  const checkTUA = () => {
+    return communicationConsent && conferenceParticipation;
   };
 
   //Ticket Types
@@ -132,8 +149,10 @@ const RegistrationFormNRS = () => {
       return false;
     } else if (page == 1 && checkTicket()) {
       return false;
+    } else if (page == 2 && checkTUA()) {
+      return false;
     } else if (
-      page == 2 &&
+      page == 3 &&
       (paymentStatus === "done-stripe" || paymentStatus === "done-pp")
     ) {
       return false;
@@ -241,6 +260,13 @@ const RegistrationFormNRS = () => {
                 ),
                 2: (
                   <Flex direction={"column"} style={{ fontSize: "0.7rem" }}>
+                    <Text>
+                      Participation, Cancellation, Refund, and Privacy Policies
+                    </Text>
+                  </Flex>
+                ),
+                3: (
+                  <Flex direction={"column"} style={{ fontSize: "0.7rem" }}>
                     <Text>Payment Options</Text>
                   </Flex>
                 ),
@@ -250,7 +276,7 @@ const RegistrationFormNRS = () => {
               {
                 0: (
                   <ProgressBar
-                    progress={33}
+                    progress={25}
                     radius={15}
                     fillColor={"white"}
                     strokeWidth={2}
@@ -261,12 +287,9 @@ const RegistrationFormNRS = () => {
                     pointerStrokeColor="#5d9cec"
                   />
                 ),
-
-                // <progress value={0.33}
-
                 1: (
                   <ProgressBar
-                    progress={67}
+                    progress={50}
                     radius={15}
                     fillColor={"white"}
                     strokeWidth={2}
@@ -277,10 +300,20 @@ const RegistrationFormNRS = () => {
                     pointerStrokeColor="#5d9cec"
                   />
                 ),
-
-                // <progress value={0.67} />
-
                 2: (
+                  <ProgressBar
+                    progress={75}
+                    radius={15}
+                    fillColor={"white"}
+                    strokeWidth={2}
+                    strokeColor="#5d9cec"
+                    trackStrokeWidth={2}
+                    pointerRadius={5}
+                    pointerStrokeWidth={2}
+                    pointerStrokeColor="#5d9cec"
+                  />
+                ),
+                3: (
                   <ProgressBar
                     progress={100}
                     radius={15}
@@ -719,6 +752,477 @@ const RegistrationFormNRS = () => {
               2: (
                 <Flex
                   direction={"column"}
+                  style={{
+                    marginTop: "1rem",
+                    marginBottom: "1rem",
+                    marginLeft: "1rem",
+                    marginRight: "1rem",
+                  }}
+                  gap={"0.5rem"}
+                >
+                  <Flex
+                    direction={"column"}
+                    className="registration-form-nrs-flex-3"
+                    gap={"0.5rem"}
+                  >
+                    <Text>
+                      The Tinnitus Research Initiative-2024 Vancouver Conference
+                      (<b>“Conference”</b> and/or <b>“TRI-2024 Conference”</b>)
+                      is managed and implemented by the Vancouver Tinnitus &
+                      Hyperacusis Clinic, Inc. (“VTHC”) its staff, designates,
+                      and agents (“collectively known as <b>“TRI-2024”</b>).
+                      TRI-2024 and VTHC shall refer interchangeably to the VTHC
+                      and the staff responsible for planning and implementing
+                      the Conference.
+                    </Text>
+
+                    <Text>
+                      The TRI-2024 Conference will be held in designated areas (
+                      <b>“Conference Facility”</b>) at the University of British
+                      Columbia Robson Square (<b>“UBC Robson”</b>) and/or any
+                      other venues designated, from time to time, by TRI-2024,
+                      from June 10, 2024 to June 12, 2024.
+                    </Text>
+
+                    <Text style={{ fontWeight: "bold" }}>
+                      The headings and bolded words in this Registration
+                      agreement are solely for convenience of reference and
+                      shall not be used for purposes of interpreting or
+                      construing the provisions thereof.
+                    </Text>
+
+                    <Text>
+                      Where appropriate, “Attendee” and “Participant” shall be
+                      used interchangeably and refer to the Conference Attendee
+                      registered in the TRI-2024 conference system and/or, where
+                      applicable, any individual registered to accompany the
+                      Conference Attendee to any designated Conference function.
+                    </Text>
+
+                    <Text>
+                      These Terms and Conditions may be amended at any time by
+                      TRI-2024 at its sole discretion, and all amendments shall
+                      be binding upon the Attendee upon publication or issuance
+                      of notice. Any area not specifically covered in these
+                      terms and conditions is subject to the sole discretion and
+                      decision of TRI-2024, such discretion and decision shall
+                      be final. Terms and Conditions and all other guidelines
+                      shall be available to the Attendee on the TRI-2024
+                      Registration receipt and on the TRI-2024 website. The
+                      TRI-2024 website shall be deemed to hold the current
+                      version of the in-effect Terms and Conditions.
+                    </Text>
+
+                    <Text>
+                      <b>Participation:</b> Participation by Attendee in any and
+                      all Conference events/functions shall be governed by these
+                      Terms and Conditions and/or any subsequent amendments
+                      therein. TRI-2024 is managed using the conference app
+                      Whova (
+                      <a href="https://whova.com/" target="_blank">
+                        www.Whova.com
+                      </a>
+                      ). With the exception of those Attendees who are
+                      Networking Dinner Event Guests, all Attendees must be
+                      registered in Whova to access the live conference
+                      schedule, event polling, and other functions used by
+                      TRI-2024 to manage Attendee programs and events.
+                    </Text>
+
+                    <Text>
+                      Notwithstanding any other term or condition in these Terms
+                      and Conditions, the Participant hereby acknowledges and
+                      accepts that TRI-2024 may, at its sole discretion, limit,
+                      terminate, or cancel the Participant’s access, in whole or
+                      in part, to the Conference or any Conference Function
+                      where the Participant’s actions, conduct, or effect on any
+                      aspect of the Conference is deemed to be inappropriate,
+                      deemed to be disruptive, or deemed to pose a risk to any
+                      other Attendee or aspect of the Conference. Such
+                      limitation, termination, or cancellation of the
+                      Participant’s access, for any reason whatsoever, shall not
+                      be deemed a waiver of any of TRI-2024’s other rights and
+                      remedies.
+                    </Text>
+
+                    <Text>
+                      <b>Registration and Badges:</b> All Attendees must be
+                      registered and wear the applicable badge(s) to access the
+                      Conference Facilities and Events/ Functions.
+                    </Text>
+
+                    <Text>
+                      <b>Photography, Recording, and any Other Media:</b> The
+                      Attendee may not engage in photography, video production
+                      and/or graphic reproduction of any conference materials
+                      unless authorization is obtained from the owner/presenter
+                      of that material. Commercial use of photographs of
+                      attendees is prohibited unless written consent is given by
+                      the attendee and by TRI-2024. Personal photography is
+                      permitted at social functions. Audio, video and digital
+                      recordings, live streaming or broadcasting, and
+                      photography whether for personal or commercial use, are
+                      all strictly prohibited during any Conference sessions.
+                    </Text>
+
+                    <Text>
+                      The Attendee hereby authorizes TRI-2024 to use any
+                      photographs, video, social media communications, graphic
+                      reproductions of materials, and any other materials
+                      TRI-2024 deems appropriate to create/promote Conference
+                      communications and engagement prior-to, during, and after
+                      the Conference. The Attendee hereby releases to TRI-2024
+                      any and all rights for such communications and engagement
+                      use. TRI-2024 will not sell or otherwise make available
+                      for commercial sale or licensing any of the materials
+                      referenced above.
+                    </Text>
+
+                    <Text>
+                      <b>Security</b>: UBC Robson, TRI-2024, official
+                      contractors, or any Conference Services provided by UBC or
+                      TRI-2024 will NOT be held responsible for bodily injury,
+                      theft or damage to the Attendee’s personal, commercial, or
+                      academic property. All Attendees are responsible for
+                      safe-guarding their own property.
+                    </Text>
+
+                    <Text>
+                      <b>Refunds</b>: All requests for registration cancellation
+                      must be received via email on or before{" "}
+                      <b>4:00PM Pacific May 31st , 2024 </b>in order for the
+                      Participant to be eligible to receive a refund, less a{" "}
+                      <b>15%</b>
+                      administration fee. If a registration cancellation request
+                      is received after <b>4:00PM Pacific on May 31st, 2024</b>,
+                      the Participant will not be eligible for a refund. There
+                      are no exceptions to this policy.
+                    </Text>
+
+                    <Text>
+                      <b>Cancellation (Force Majeure):</b> TRI-2024 may postpone
+                      or terminate the Conference or any of its obligations
+                      hereunder without penalty in the event the designated
+                      Conference facilities at UBC Robson becomes unavailable,
+                      is destroyed or damaged, or if it becomes inadvisable,
+                      impracticable, illegal, or impossible to hold the
+                      Conference as scheduled due to any event beyond the
+                      control of TRI-2024 or the UBC Robson. In such an event,
+                      Participant hereby waives any and all damages and claims
+                      for damages and agrees that the sole liability of TRI-2024
+                      shall be to refund to the Participant the full
+                      registration fee paid by the Participant to register for
+                      the Conference.
+                    </Text>
+
+                    <Text>
+                      <b>Indemnification and Liability:</b> The Participant
+                      agrees to indemnify, defend and hold harmless TRI-2024,
+                      the UBC Robson, and the City of Vancouver from all losses
+                      arising from (a) any violation of any law, regulation or
+                      ordinance by the Participant or any associated designated
+                      Guest , (b) any failure by the Participant to comply
+                      strictly with these Terms, and (c) personal injury or
+                      property damage caused by the Participant or any
+                      associated designated Guest, except to the extent that
+                      such loss or damage is caused by the sole negligence or
+                      intentional acts of TRI-2024, the UBC Robson, the City of
+                      Vancouver: THE MAXIMUM LIABILITY OF TRI-2024 AND THE UBC
+                      ROBSON FOR ANY REASON SHALL BE LIMITED TO THE AMOUNT OF
+                      REGISTRATION FEES PAID BY PARTICIPANT. IN NO EVENT SHALL
+                      TRI-2024 BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL,
+                      PUNITIVE, OR INCIDENTAL DAMAGES, EVEN IF ADVISED OF THE
+                      POSSIBILITY OF SUCH DAMAGES.  TRI-2024 MAKES NO WARRANTIES
+                      OR REPRESENTATIONS, EXPRESS OR IMPLIED, REGARDING THE
+                      CONFERENCE OR THE MATERIALS PRESENTED THEREIN, INCLUDING,
+                      WITHOUT LIMITATION, WARRANTIES OR MERCHANTABILITY OR
+                      FITNESS FOR A PARTICULAR PURPOSE.
+                    </Text>
+                    <Text>
+                      <b>No Waiver:</b>  If any part of any provision of these
+                      Terms or any subsequent amendments shall be invalid or
+                      unenforceable in any respect, such part shall be
+                      ineffective to the extent of such invalidity or
+                      unenforceability only, without in any way affecting the
+                      remaining parts of such provisions of these Terms.
+                    </Text>
+
+                    <Text>
+                      <b>Dispute Resolution; Governing Law and Venue:</b> These
+                      Terms and any subsequent amendments shall be construed,
+                      interpreted and governed by the laws of the Province of
+                      British Columbia, Canada.
+                    </Text>
+
+                    <Text>
+                      Any controversy or claim arising out of or relating to
+                      these Terms, or breach thereof, shall first be discussed
+                      informally for an amicable settlement between the
+                      Participant and TRI-2024. Should that not succeed the
+                      parties shall attempt to resolve the matter by mediation.
+                      Should mediation not resolve the matter, it shall be
+                      settled by binding arbitration in the Province of British
+                      Columbia, Canada by a single arbitrator pursuant to the
+                      Arbitration Act RSBC 1996 as amended, or any successor
+                      legislation. The arbitrator’s decision on all issues or
+                      matters submitted to the arbitrator for resolution shall
+                      be conclusive, final and bind the parties. The arbitrator
+                      shall determine who shall bear the costs of arbitration or
+                      in what proportions the costs shall be borne. The parties
+                      hereto agree that the right to a trial by jury shall be
+                      waived regarding any and all claims related to this
+                      Conference. The parties hereto further agree that any
+                      mediation meetings and/or trials, as the case may be,
+                      shall all be situated in the region known, generally, as
+                      the Lower Mainland, in the Province of British Columbia,
+                      Canada.
+                    </Text>
+
+                    <Text>
+                      <b>
+                        Privacy Policy (updated and effective as of December 27,
+                        2023):
+                      </b>{" "}
+                      TRI-2024 operates under The Ten Privacy Principles
+                      outlined by the Canadian Standard Association in its Model
+                      Code for the Protection of Personal Information. “Personal
+                      Information” means information about an identifiable
+                      individual. This may include, without limitation, the
+                      individual’s name, home address, age, income, credit
+                      history or other financial information, credit card
+                      information, personal preferences and other information
+                      about his or her family. Personal Information does not
+                      include the name, title, business address or telephone
+                      number of an employee of an organization. Canada’s
+                      Personal Information Protection and Electronic Documents
+                      Act (“PIPEDA”), includes the Ten Privacy Principles
+                      outlined in the Canadian Standards Association Model Code
+                      for the Protection of Personal Privacy. <br />
+                      Those ten principles are:
+                      <ol
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "10px",
+                        }}
+                      >
+                        <li>
+                          Accountability: An organization is responsible for
+                          personal information under its control and shall
+                          designate an individual or individuals who are
+                          accountable for the organization’s compliance with the
+                          following principles.
+                        </li>
+                        <li>
+                          Identifying Purposes: The purposes for which personal
+                          information is collected shall be identified by the
+                          organization at or before the time the information is
+                          collected.
+                        </li>
+                        <li>
+                          Consent: The knowledge and consent of the individual
+                          are required for the collection, use or disclosure of
+                          personal information, except when inappropriate.
+                        </li>
+                        <li>
+                          Limiting Collection: The collection of personal
+                          information shall be limited to that which is
+                          necessary for the purposes identified by the
+                          organization. Information shall be collected by fair
+                          and lawful means.
+                        </li>
+                        <li>
+                          {" "}
+                          Limiting Use, Disclosure, and Retention: Personal
+                          information shall not be used or disclosed for
+                          purposes other than those for which it was collected,
+                          except with the consent of the individual or as
+                          required by the law. Personal information shall be
+                          retained only as long as necessary for fulfillment of
+                          those purposes.
+                        </li>
+                        <li>
+                          {" "}
+                          Accuracy: Personal information shall be as accurate,
+                          complete, and up-to-date as is necessary for the
+                          purposes for which it is to be used.
+                        </li>
+                        <li>
+                          {" "}
+                          Safeguards: Personal information shall be protected by
+                          security safeguards appropriate to the sensitivity of
+                          the information.
+                        </li>
+                        <li>
+                          Openness: An organization shall make readily available
+                          to individuals specific information about its policies
+                          and practices relating to the management of personal
+                          information.
+                        </li>
+                        <li>
+                          {" "}
+                          Individual Access: Upon request, an individual shall
+                          be informed of the existence, use and disclosure of
+                          his or her personal information and shall be given
+                          access to that information. An individual shall be
+                          able to challenge the accuracy and completeness of the
+                          information and have it amended as appropriate.
+                        </li>
+                        <li>
+                          Challenging Compliance: An individual shall be able to
+                          address a challenge concerning compliance with the
+                          above principles to the designated individual or
+                          individuals for the organization’s compliance.
+                        </li>
+                      </ol>
+                      Like all other organizations, TRI-2024 is obliged to keep
+                      Personal Information confidential except under the
+                      following circumstances:
+                    </Text>
+
+                    <Text>(I) WHEN AUTHORIZED BY YOU</Text>
+                    <Text>
+                      The products and services offered by TRI-2024 require us
+                      to obtain Personal Information about you in order to
+                      deliver the products and services you have engaged us to
+                      provide. We will always operate on the basis of consent
+                      from you first. We will never use any information for
+                      purposes other than those that we have told you about. You
+                      may withdraw your consent at any time, subject to any
+                      legal implications (which we will inform you about). In
+                      some cases, if you do not consent to our use or disclosure
+                      of certain Personal Information, we may be unable to
+                      continue to provide all or part of the products and/or
+                      services that you have requested or for which you are
+                      registered.
+                    </Text>
+                    <Text>(II) WHEN REQUIRED BY LAW</Text>
+                    <Text>
+                      The type of information we are legally required to
+                      disclose usually relates to government tax reporting
+                      requirements. In some cases, however, such as under a
+                      court order, we may be required to disclose certain
+                      information to persons specified in the court order. We
+                      will only provide the specific information requested and
+                      only upon being satisfied that the authorities have
+                      legitimate grounds to request the information.
+                    </Text>
+                    <Text>(III) WHEN PERMITTED BY LAW</Text>
+                    <Text>
+                      The legislation has provided certain situations where
+                      TRI-2024 is legally permitted to disclose Personal
+                      Information without your consent. Examples include
+                      situations involving the collection of debt in arrears,
+                      medical emergencies, or suspicion of illegal activities.
+                    </Text>
+                    <Text>
+                      All hard-copy, aged records that are to be destroyed or
+                      disposed-of are shredded/destroyed in compliance with
+                      Section 35(2) of the Province of British Columbia’s
+                      Personal Information Protection Act (PIPA) – “An
+                      organization must destroy its documents containing
+                      personal information, or remove the means by which the
+                      personal information can be associated with particular
+                      individuals, as soon as it is reasonable to assume that
+                      (a) the purpose for which that personal information was
+                      collected is no longer being served by retention of that
+                      personal information, and (b) retention is no longer
+                      necessary for legal or business purposes”.
+                    </Text>
+
+                    <Text>
+                      <b>EU Data Subject Rights:</b> If you are a resident of
+                      the European Economic Area (EEA), you have the right to:
+                      (a) request access to your Personal Data and rectification
+                      of inaccurate Personal Data; (b) request erasure of your
+                      Personal Data; (c) request restrictions on the processing
+                      of your Personal Data; (d) object to processing your
+                      Personal Data; and/or (e) the right to data portability
+                      ("collectively, "Requests"). We can only process Requests
+                      from a user whose identity has been verified. To verify
+                      your identity, please provide your email address when you
+                      make a request. For more information about how to get
+                      access to Personal Data and for exercising your rights,
+                      you can submit a request to tri2024Vancouver@gmail.com and
+                      indicate "I am an EU resident and would like to exercise
+                      my individual rights" option. You also have the right to
+                      lodge a complaint with a supervisory authority.
+                    </Text>
+                  </Flex>
+
+                  <Flex
+                    direction={"column"}
+                    gap={"1rem"}
+                    style={{ maxWidth: "40rem", marginTop: "1rem" }}
+                  >
+                    <Flex justify={"center"} align={"center"} gap={"1rem"}>
+                      <Checkbox
+                        checked={communicationConsent}
+                        onChange={(event) =>
+                          setCommunicationConsent(event.currentTarget.checked)
+                        }
+                      />
+                      <Text className="">
+                        Having read and understood the Participation,
+                        Cancellation, Refund, and Privacy Policies, I hereby
+                        accept and agree that these terms are a fundamental
+                        condition of my Conference participation.
+                        <Text
+                          style={{
+                            color: "red",
+                            marginLeft: "0.1rem",
+                            display: "inline-block",
+                          }}
+                        >
+                          *
+                        </Text>
+                      </Text>
+                    </Flex>
+
+                    <Flex justify={"center"} align={"center"} gap={"1rem"}>
+                      <Checkbox
+                        checked={conferenceParticipation}
+                        required={true}
+                        onChange={(event) =>
+                          setConferenceParticipation(
+                            event.currentTarget.checked
+                          )
+                        }
+                      />
+                      <Text className="">
+                        I hereby consent to the collection and use of my
+                        Personal Information for the purposes of communications
+                        for and about the Conference.
+                        <Text
+                          style={{
+                            color: "red",
+                            marginLeft: "0.1rem",
+                            display: "inline-block",
+                          }}
+                        >
+                          *
+                        </Text>
+                      </Text>
+                    </Flex>
+
+                    <Flex justify={"center"} align={"center"} gap={"1rem"}>
+                      <Checkbox
+                        checked={releaseInfo}
+                        onChange={(event) =>
+                          setReleaseInfo(event.currentTarget.checked)
+                        }
+                      />
+                      <Text className="">
+                        I hereby consent to the release of my contact
+                        information to TRI for future communications.
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Flex>
+              ),
+              3: (
+                <Flex
+                  direction={"column"}
                   className="registration-form-nrs-flex-2"
                 >
                   {/* <RegistrationAndFees />
@@ -768,14 +1272,14 @@ const RegistrationFormNRS = () => {
             )}
             <Button
               onClick={() => {
-                if (page < 2) {
+                if (page < 3) {
                   setPage(page + 1);
                 }
               }}
               disabled={nextDisabler()}
-              type={page == 2 ? "submit" : "button"}
+              type={page == 3 ? "submit" : "button"}
             >
-              {page == 2 ? "SUBMIT" : "NEXT"}
+              {page == 3 ? "SUBMIT" : "NEXT"}
             </Button>
           </Flex>
         </form>
