@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import "./RegistrationFormNRS.css";
 import {
   Button,
@@ -28,6 +34,17 @@ export const paymentCheckingObject = createContext<PaymentCheckingInterface>({
 });
 
 const RegistrationFormNRS = () => {
+  const snapTitle = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (elementRef: any): void => {
+    let offSetTopInc = elementRef!.current!.offsetTop - 130;
+
+    window.scrollTo({
+      top: offSetTopInc,
+      behavior: "smooth",
+    });
+  };
+
   const PaymentRef = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
 
@@ -136,11 +153,11 @@ const RegistrationFormNRS = () => {
 
     switch (guest) {
       case values[0]:
-        return 95;
+        return 95.0;
       case values[1]:
-        return 0;
+        return 0.0;
       default:
-        return 0;
+        return 0.0;
     }
   };
 
@@ -160,6 +177,10 @@ const RegistrationFormNRS = () => {
       return true;
     }
   };
+
+  useEffect(() => {
+    scrollToSection(snapTitle);
+  }, [page]);
 
   const [loading, setLoading] = useState("start");
   const FormSubmit = async (e: any) => {
@@ -239,6 +260,7 @@ const RegistrationFormNRS = () => {
       <div ref={PaymentRef.registrationRef}>
         <form className="registration-form-nrs-main-div" onSubmit={FormSubmit}>
           <Text className="registration-form-nrs-main-text">
+            <div ref={snapTitle}></div>
             TRI 2024 Registration
           </Text>
           <Flex
@@ -669,7 +691,7 @@ const RegistrationFormNRS = () => {
                       }}
                     />
                   </div>
-                  <div>
+                  {/* <div>
                     <Flex style={{ wordBreak: "break-word" }} gap={"4rem"}>
                       <Text className="registration-form-nrs-dinner-text">
                         Your full Conference Registration includes the TRI
@@ -714,12 +736,15 @@ const RegistrationFormNRS = () => {
                         </button>
                       </Flex>
                     </Flex>
-                  </div>
+                  </div> */}
 
                   <div>
-                    <Flex justify={"space-between"}>
+                    <Flex
+                      justify={"space-between"}
+                      style={{ marginTop: "0.5rem" }}
+                    >
                       <Text style={{ color: "gray" }}>Subtotal</Text>
-                      <Text style={{ color: "gray" }}>${price}</Text>
+                      <Text style={{ color: "gray" }}>${price.toFixed(2)}</Text>
                     </Flex>
                     <hr style={{ border: "1px solid lightgray" }} />
                   </div>
@@ -732,7 +757,9 @@ const RegistrationFormNRS = () => {
                           attendees)
                         </Text>
                       </Flex>
-                      <Text style={{ color: "gray" }}>${price * 0.05}</Text>
+                      <Text style={{ color: "gray" }}>
+                        ${(price * 0.05).toFixed(2)}
+                      </Text>
                     </Flex>
                     <hr style={{ border: "1px solid lightgray" }} />
                   </div>
@@ -743,7 +770,7 @@ const RegistrationFormNRS = () => {
                         <Text style={{ color: "gray", marginRight: "0.5rem" }}>
                           Total (CAD)
                         </Text>
-                        <Text>${price * 1.05}</Text>
+                        <Text>${(price * 1.05).toFixed(2)}</Text>
                       </Flex>
                     </Flex>
                   </div>
@@ -1153,7 +1180,11 @@ const RegistrationFormNRS = () => {
                   <Flex
                     direction={"column"}
                     gap={"1rem"}
-                    style={{ maxWidth: "40rem", marginTop: "1rem" }}
+                    style={{
+                      maxWidth: "40rem",
+                      marginTop: "1rem",
+                      color: "#0482c8",
+                    }}
                   >
                     <Flex justify={"center"} align={"center"} gap={"1rem"}>
                       <Checkbox
@@ -1260,16 +1291,28 @@ const RegistrationFormNRS = () => {
                 }
               }}
               disabled={page == 0}
+              style={{ display: `${loading === "end" ? "none" : ""}` }}
             >
               PREV
             </Button>
+
             {loading === "loading" ? (
               <Loader></Loader>
             ) : loading === "end" ? (
-              <Text>Registration Form Sent!</Text>
+              <Text
+                style={{
+                  maxWidth: "25rem",
+                  marginLeft: "1rem",
+                  marginRight: "1rem",
+                }}
+              >
+                Thank you! Your registration for TRI 2024 is complete. You will
+                receive a confirmation and receipt in your email inbox shortly.
+              </Text>
             ) : (
               <div style={{ display: "none" }}></div>
             )}
+
             <Button
               onClick={() => {
                 if (page < 3) {
@@ -1278,6 +1321,7 @@ const RegistrationFormNRS = () => {
               }}
               disabled={nextDisabler()}
               type={page == 3 ? "submit" : "button"}
+              style={{ display: `${loading === "end" ? "none" : ""}` }}
             >
               {page == 3 ? "SUBMIT" : "NEXT"}
             </Button>
