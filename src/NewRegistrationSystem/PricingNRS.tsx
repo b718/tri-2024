@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./PricingNRS.css";
 import useWindowDimensions from "../Components/useWindowsDimensions";
-import { NavBarContext } from "../App";
+import { ButtonClickedContext, NavBarContext } from "../App";
 import { Flex, Text } from "@mantine/core";
 import EventComponent from "../Conference Program/ConferenceDropDownComponents/EventComponent/EventComponent";
 import RegistrationComponent from "./RegistrationComponent";
@@ -9,14 +9,17 @@ const PricingNRS = () => {
   const { width, height } = useWindowDimensions();
   const registration = useContext(NavBarContext);
   const scrollToSection = (elementRef: any): void => {
-    let offSetTopInc = elementRef!.current!.offsetTop - 130;
+    let offSetTopInc = elementRef!.current!.offsetTop - 100;
     window.scrollTo({
       top: offSetTopInc,
       behavior: "smooth",
     });
   };
+
+  const buttonClickedContext = useContext(ButtonClickedContext);
+
   return (
-    <div>
+    <div ref={registration.registrationRef}>
       <div className="pricing-nrs-main-div">
         <Flex
           direction={width < 730 ? "column" : "row"}
@@ -40,7 +43,10 @@ const PricingNRS = () => {
             <button
               className="pricing-nrs-register-button"
               onClick={() => {
-                scrollToSection(registration.registrationRef);
+                buttonClickedContext.setButtonClicked(true);
+                setTimeout(() => {
+                  scrollToSection(registration.innerRegistrationRef);
+                }, 100);
               }}
             >
               REGISTER NOW
