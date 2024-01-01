@@ -264,8 +264,8 @@ const RegistrationFormNRS = () => {
     };
     setLoading("loading");
     const x = await fetch(
-      // "https://tri-2024-back-end.onrender.com/submit-registration-form",
-      "http://localhost:3001/submit-registration-form",
+      "https://tri-2024-back-end.onrender.com/submit-registration-form",
+      // "http://localhost:3001/submit-registration-form",
       {
         method: "POST",
         body: JSON.stringify({
