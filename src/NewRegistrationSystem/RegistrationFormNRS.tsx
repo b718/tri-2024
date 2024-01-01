@@ -128,6 +128,9 @@ const RegistrationFormNRS = () => {
     setGuest(event.target.value as string);
   };
 
+  const [dietaryMain, setDietaryMain] = useState("");
+  const [dietaryGuest, setDietaryGuest] = useState("");
+
   const checkTicket = () => {
     return ticketType && price > 0 && guest;
   };
@@ -239,6 +242,10 @@ const RegistrationFormNRS = () => {
         paymentStatus: NewPaymentStatus,
         data: pstDate,
       },
+      dietInfo: {
+        mainContact: dietaryMain,
+        guestContact: dietaryGuest,
+      },
       tua: {
         communicationConsent: communicationConsent,
         conferenceParticipation: conferenceParticipation,
@@ -257,8 +264,8 @@ const RegistrationFormNRS = () => {
     };
     setLoading("loading");
     const x = await fetch(
-      "https://tri-2024-back-end.onrender.com/submit-registration-form",
-      // "http://localhost:3001/submit-symposia-form",
+      // "https://tri-2024-back-end.onrender.com/submit-registration-form",
+      "http://localhost:3001/submit-registration-form",
       {
         method: "POST",
         body: JSON.stringify({
@@ -794,27 +801,6 @@ const RegistrationFormNRS = () => {
                       </Text>
                     </Text>
 
-                    {/* <Select
-                      value={ticketType}
-                      onChange={setTicketType}
-                      withAsterisk={true}
-                      required={true}
-                      data={[
-                        "Early Bird (closes 1 March 2024) $825 CAD",
-                        "Regular Rate (closes 8 June 2024) $975 CAD",
-                        "On-site Registration $1475 CAD",
-                        "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD",
-                        "One day, June 10 only $525 CAD",
-                        "One day, June 11 only $525 CAD",
-                        "One day, June 12 only $525 CAD",
-                      ]}
-                      transitionProps={{
-                        transition: "pop-top-left",
-                        duration: 80,
-                        timingFunction: "ease",
-                      }}
-                    /> */}
-
                     <FormControl fullWidth size="small">
                       <Select
                         value={ticketType}
@@ -874,12 +860,24 @@ const RegistrationFormNRS = () => {
                         maxWidth: "40rem",
                         wordBreak: "break-word",
                         fontSize: "0.65rem",
+                        marginBottom: "1rem",
                       }}
                     >
                       Full Conference Registration includes daily conference
                       lunch and the TRI Networking Dinner Event on Monday 10th
                       June.
                     </Text>
+
+                    <Text className="">
+                      Dietary Requirements (applies to lunches and to the
+                      dinner)
+                    </Text>
+                    <TextInput
+                      value={dietaryMain}
+                      onChange={(e) => {
+                        setDietaryMain(e.target.value);
+                      }}
+                    />
                   </div>
 
                   {/* <div>
@@ -930,24 +928,6 @@ const RegistrationFormNRS = () => {
                       </Text>
                     </Text>
 
-                    {/* <Select
-                      size={"xs"}
-                      placeholder="Workshop registrations are limited in number, first-come, first-served."
-                      value={guest}
-                      onChange={setGuest}
-                      withAsterisk={true}
-                      required={true}
-                      data={[
-                        "Yes – ($95 to be added to conference registration)",
-                        "No",
-                      ]}
-                      transitionProps={{
-                        transition: "pop-top-left",
-                        duration: 80,
-                        timingFunction: "ease",
-                      }}
-                    /> */}
-
                     <FormControl fullWidth size="small">
                       <Select
                         value={guest}
@@ -970,6 +950,25 @@ const RegistrationFormNRS = () => {
                         </MenuItem>
                       </Select>
                     </FormControl>
+
+                    {guest ===
+                    "Yes – ($95 to be added to conference registration)" ? (
+                      <div style={{ marginTop: "1rem" }}>
+                        {" "}
+                        <Text className="">
+                          Dietary Requirements (applies to lunches and to the
+                          dinner)
+                        </Text>
+                        <TextInput
+                          value={dietaryGuest}
+                          onChange={(e) => {
+                            setDietaryGuest(e.target.value);
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
 
                   {/* <div>
@@ -1076,7 +1075,7 @@ const RegistrationFormNRS = () => {
                     gap={"0.5rem"}
                   >
                     <Text style={{ fontSize: "1rem" }}>
-                      Terminal Use Agreement
+                      Terms of Use Agreement
                     </Text>
                     <Text>
                       The Tinnitus Research Initiative-2024 Vancouver Conference
