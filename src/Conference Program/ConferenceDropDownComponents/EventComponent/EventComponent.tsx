@@ -29,7 +29,16 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
             <Text className="event-component-location-text">{location}</Text>
           </Flex>
           <Flex justify={"flex-start"} style={{ minWidth: "10rem" }}>
-            <Text className="event-component-time-text">{happen}</Text>
+            <Text className="event-component-time-text">
+              {happen === "Aage Moller - Lecture on Tinnitus" ? (
+                <Text>
+                  Aage M<span>&#248;</span>
+                  ller - Lecture on Tinnitus
+                </Text>
+              ) : (
+                happen
+              )}
+            </Text>
           </Flex>
         </Flex>
       )}

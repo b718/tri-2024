@@ -17,7 +17,7 @@ const NewNews = () => {
       <div
         className="new-news-main"
         onClick={() => {
-          scrollToSection(navBarContext.postersPapers);
+          scrollToSection(navBarContext.registrationRef);
         }}
       >
         <div className="marquee enable-animation">
@@ -26,7 +26,7 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                PAPER + POSTER SUBMISSIONS OPENING DECEMBER 1ST 2023
+                conference registration is open now - be ready for launch
               </Text>
             </li>
           </ul>
@@ -36,7 +36,7 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                PAPER + POSTER SUBMISSIONS OPENING DECEMBER 1ST 2023
+                conference registration is open now - be ready for launch
               </Text>
             </li>
           </ul>

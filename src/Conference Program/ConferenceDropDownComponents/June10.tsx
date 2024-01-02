@@ -66,7 +66,7 @@ const June10 = () => {
         />
 
         <div style={{ marginBottom: "0.5rem" }}>
-          <EventComponent time="18:30 - Late " happen="TRI networking dinner" />
+          <EventComponent time="18:30 - Late " happen="TRI Welcome Dinner" />
         </div>
       </Flex>
     </div>

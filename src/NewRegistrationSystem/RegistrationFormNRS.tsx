@@ -240,7 +240,7 @@ const RegistrationFormNRS = () => {
         gst: (price * 0.05).toFixed(2),
         guest: guest,
         paymentStatus: NewPaymentStatus,
-        data: pstDate,
+        date: pstDate,
       },
       dietInfo: {
         mainContact: dietaryMain,
@@ -916,7 +916,7 @@ const RegistrationFormNRS = () => {
 
                   <div>
                     <Text className="">
-                      Will you be bringing a guest to the TRI Networking Dinner?
+                      Will you be bringing a guest to the TRI Welcome Dinner?
                       <Text
                         style={{
                           color: "red",

@@ -361,7 +361,7 @@ const SymposiaForm = () => {
         <Button
           className="symposia-form-submit-button"
           type={"submit"}
-          disabled={!buttonChecker()}
+          disabled={!buttonChecker() || true}
         >
           SUBMIT APPLICATION
           {loading === "loading" ? (

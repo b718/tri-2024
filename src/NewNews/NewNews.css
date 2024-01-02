@@ -26,6 +26,7 @@
 
 .new-news-moving-text {
   font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
   /* white-space: nowrap; */
   /* -webkit-animation: rightThenLeft 10s linear infinite; */
   /* animation: scroll 10s linear infinite; */

@@ -92,6 +92,10 @@ const FaQ = () => {
       "https://www.affordabletours.com/cruises/d/port/alaska-all/vancouver-canada/",
     ],
     ["ROCKY MOUNTAINEER", "https://www.rockymountaineer.com/"],
+    [
+      "JUNE CALENDAR OF EVENTS",
+      "https://www.destinationvancouver.com/events/calendar-of-events/vancouver-events-in-june/",
+    ],
   ];
 
   return (
