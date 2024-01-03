@@ -2,13 +2,21 @@ import React, { useContext } from "react";
 import "./Sponsorship.css";
 import { NavBarContext } from "../App";
 import { Flex, Image, Text, Center } from "@mantine/core";
-import googleImage from "../Images/Sponsorships/brainhealth.jpg";
-import comingSoon from "../Images/null_image.png";
 import oticonImage from "../Images/Oticon_Logo_LCT_260px_rgb_pos.png";
+import signia from "../Images/Sponsorships/signia.png";
+import neuromod from "../Images/Sponsorships/new_neuro_white.png";
+import widex from "../Images/Sponsorships/widex.jpg";
+import useWindowDimensions from "../Components/useWindowsDimensions";
+
 const Sponsorships = () => {
   const sponsorshipRef = useContext(NavBarContext);
   const imageWidth = 200;
   const oticonLink = "https://www.oticon.ca/hearing-aid-users";
+  const signialink = "https://www.signia.net/en/";
+  const neurmodlink = "https://neuromoddevices.com/";
+  const widexlink = "https://www.widex.com/";
+  const { width, height } = useWindowDimensions();
+
   return (
     <div
       className="sponsorships-div-section"
@@ -20,17 +28,24 @@ const Sponsorships = () => {
           justify="center"
           align="center"
           wrap="wrap"
-          direction="row"
+          direction={`${width < 600 ? "column" : "row"}`}
           gap={"4rem"}
         >
           <a href={oticonLink} target="_blank">
             <Image width={imageWidth} fit="contain" src={oticonImage} />
           </a>
-          {/* <Image width={imageWidth} fit="contain" src={comingSoon} />
-          <Image width={imageWidth} fit="contain" src={comingSoon} />
-          <Image width={imageWidth} fit="contain" src={comingSoon} />
-          <Image width={imageWidth} fit="contain" src={comingSoon} />
-          <Image width={imageWidth} fit="contain" src={comingSoon} /> */}
+          <a href={signialink} target="_blank">
+            <Image width={110} fit="contain" src={signia} />
+          </a>
+          <a href={neurmodlink} target="_blank">
+            <Image width={210} fit="contain" src={neuromod} />
+          </a>
+          <a href={widexlink} target="_blank">
+            <Image width={imageWidth} fit="contain" src={widex} />
+          </a>
+
+          {/* <Image width={imageWidth} fit="contain" src={comingSoon} /> */}
+          {/* <Image width={imageWidth} fit="contain" src={comingSoon} /> */}
         </Flex>
         {/* <Flex justify="center" align="center">
           <Text
