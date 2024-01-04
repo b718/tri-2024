@@ -58,7 +58,7 @@ const Footer = () => {
               <Text style={{ color: "white" }}>Developed by </Text>
               <Text style={{ marginLeft: "0.2rem" }}>
                 {" "}
-                <a href="https://bryanzhao.netlify.app/" target="blank">
+                <a href="https://linkedin.com/in/bryan-zhao-" target="blank">
                   Bryan Zhao
                 </a>
               </Text>

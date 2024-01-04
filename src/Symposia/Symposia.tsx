@@ -52,7 +52,8 @@ const Symposia = () => {
       </div>
 
       <div className="symposia-form-section">
-        <SymposiaForm />
+        <Text style={{ color: "white" }}>Submissions are now closed. </Text>
+        {/* <SymposiaForm /> */}
       </div>
     </div>
   );

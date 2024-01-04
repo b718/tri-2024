@@ -45,7 +45,7 @@
 
   @media only screen and (min-width: 200px) {
     .event-component-time-text {
-      font-weight: 500;
+      font-weight: 400;
       font-family: Gravity;
       color: var(--happen-color);
       font-size: var(--font-size);
@@ -68,7 +68,7 @@
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (min-width: 500px) {
     .event-component-time-text {
-      font-weight: 500;
+      font-weight: 400;
       font-family: Gravity;
       color: var(--happen-color);
       font-size: var(--font-size);
