@@ -8,7 +8,7 @@ const June12 = () => {
       <Flex direction={"column"}>
         <EventComponent
           time="08:00 - 09:00"
-          happen="Opening session"
+          happen='Opening session - "Tinnitus Research in Canada"'
           location="Theatre"
         />
 
@@ -28,7 +28,7 @@ const June12 = () => {
 
         <EventComponent
           time="10:30 - 12:00"
-          happen="Symposium 3"
+          happen="Symposium 3 - “TINNITUS AND PHYSICAL LINKS” LEAD: SARAH MICHIELS, HASSELT UNIVERSITY, BELGIUM."
           location="Theatre"
         />
 

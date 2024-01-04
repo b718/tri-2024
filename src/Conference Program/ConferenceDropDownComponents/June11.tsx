@@ -1,6 +1,7 @@
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import { Flex } from "@mantine/core";
+import June11th8AM from "../HelperComponents/June11th8AM";
 
 const June11 = () => {
   return (
@@ -9,8 +10,9 @@ const June11 = () => {
       <Flex direction={"column"}>
         <EventComponent
           time="08:00 - 09:00"
-          happen="Opening session"
+          happen="Opening session - “MEASURING TINNITUS IN THE CLINIC AND RESEARCH” BY DR RICHARD TYLER."
           location="Theatre"
+          Component={June11th8AM}
         />
         <EventComponent
           time="09:00 - 10:00"
@@ -30,7 +32,8 @@ const June11 = () => {
         <EventComponent time="10:00 - 10:30" happen="Break" />
         <EventComponent
           time="10:30 - 12:00"
-          happen="Symposium 2"
+          happen="INTERVENTIONS” 
+          LEAD: HAZEL GOEDHART, TINNITUS HUB, THE NETHERLANDS."
           location="Theatre"
         />
         <EventComponent time="12:00 - 13:00" happen="Lunch" />

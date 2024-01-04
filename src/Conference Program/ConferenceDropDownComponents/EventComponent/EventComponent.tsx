@@ -5,11 +5,13 @@ interface EventComponentData {
   time: string;
   happen: string;
   location?: string;
+  Component?: React.ComponentType;
 }
 const EventComponent: FunctionComponent<EventComponentData> = ({
   time,
   happen,
   location,
+  Component,
 }) => {
   return (
     <div className="event-component-main-div">
@@ -28,7 +30,11 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
             <Text className="event-component-time-text">{time}</Text>
             <Text className="event-component-location-text">{location}</Text>
           </Flex>
-          <Flex justify={"flex-start"} style={{ minWidth: "10rem" }}>
+          <Flex
+            justify={"flex-start"}
+            style={{ minWidth: "10rem" }}
+            direction={"column"}
+          >
             <Text className="event-component-time-text">
               {happen === "Aage Moller - Lecture on Tinnitus" ? (
                 <Text>
@@ -39,6 +45,13 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
                 happen
               )}
             </Text>
+            {Component ? (
+              <div className="event-component-time-text">
+                <Component />
+              </div>
+            ) : (
+              <div></div>
+            )}
           </Flex>
         </Flex>
       )}

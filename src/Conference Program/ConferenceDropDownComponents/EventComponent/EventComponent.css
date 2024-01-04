@@ -49,6 +49,7 @@
       font-family: Gravity;
       color: var(--happen-color);
       font-size: var(--font-size);
+      max-width: 10rem;
     }
 
     .event-component-location-text {
@@ -71,6 +72,7 @@
       font-family: Gravity;
       color: var(--happen-color);
       font-size: var(--font-size);
+      max-width: none;
     }
 
     .event-component-location-text {
