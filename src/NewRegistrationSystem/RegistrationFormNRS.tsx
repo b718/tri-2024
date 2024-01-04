@@ -59,6 +59,10 @@ const RegistrationFormNRS = () => {
   const handleProfession = (event: SelectChangeEvent) => {
     setProfession(event.target.value as string);
   };
+
+  useEffect(() => {
+    console.log(profession);
+  }, [profession]);
   const [org, setOrg] = useState("");
 
   const [email, setEmail] = useState("");
@@ -469,7 +473,7 @@ const RegistrationFormNRS = () => {
                   <div>
                     <Text className="">Profession/Attendee Type </Text>
 
-                    <FormControl fullWidth size="small">
+                    {/* <FormControl fullWidth size="small">
                       <Select
                         value={profession}
                         onChange={handleProfession}
@@ -518,7 +522,59 @@ const RegistrationFormNRS = () => {
                           Other
                         </MenuItem>
                       </Select>
-                    </FormControl>
+                    </FormControl> */}
+
+                    <select
+                      className="registration-form-select"
+                      style={{ width: "100%", padding: "0.5rem" }}
+                      onChange={(e) => {
+                        setProfession(e.target.value);
+                      }}
+                    >
+                      <option value="" selected disabled hidden></option>
+                      <option
+                        value={"Advocacy"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Advocacy
+                      </option>
+                      <option
+                        value={"Audiology/Hearing"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Audiology/Hearing
+                      </option>
+                      <option
+                        value={"Education"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Education
+                      </option>
+                      <option
+                        value={"Medicine"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Medicine
+                      </option>
+                      <option
+                        value={"Psychology"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Psychology
+                      </option>
+                      <option
+                        value={"Research"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Research
+                      </option>
+                      <option
+                        value={"Other"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Other
+                      </option>
+                    </select>
                   </div>
 
                   <div>
@@ -624,7 +680,7 @@ const RegistrationFormNRS = () => {
                       placeholder={"Address Type"}
                     /> */}
 
-                    <FormControl
+                    {/* <FormControl
                       fullWidth
                       size={"small"}
                       style={{ marginBottom: "1rem" }}
@@ -647,7 +703,19 @@ const RegistrationFormNRS = () => {
                           Home
                         </MenuItem>
                       </Select>
-                    </FormControl>
+                    </FormControl> */}
+
+                    <select
+                      className="registration-form-select"
+                      onChange={(e) => {
+                        setAddressType(e.target.value);
+                      }}
+                      style={{ marginBottom: "1rem" }}
+                    >
+                      <option value="" selected disabled hidden></option>
+                      <option value={"Work"}>Work</option>
+                      <option value={"Home"}>Home</option>
+                    </select>
 
                     <Flex gap={"1rem"} direction={"column"} justify={"center"}>
                       <Flex gap={"1rem"}>
@@ -801,7 +869,7 @@ const RegistrationFormNRS = () => {
                       </Text>
                     </Text>
 
-                    <FormControl fullWidth size="small">
+                    {/* <FormControl fullWidth size="small">
                       <Select
                         value={ticketType}
                         onChange={handleTicketType}
@@ -853,7 +921,62 @@ const RegistrationFormNRS = () => {
                           One day, June 12 only $525 CAD
                         </MenuItem>
                       </Select>
-                    </FormControl>
+                    </FormControl> */}
+
+                    <select
+                      className="registration-form-select"
+                      onChange={(e) => {
+                        setTicketType(e.target.value);
+                      }}
+                      style={{ marginBottom: "1rem" }}
+                    >
+                      <option value="" selected disabled hidden></option>
+                      <option
+                        value={"Early Bird (closes 1 March 2024) $825 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Early Bird (closes 1 March 2024) $825 CAD
+                      </option>
+                      <option
+                        value={"Regular Rate (closes 8 June 2024) $975 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Regular Rate (closes 8 June 2024) $975 CAD
+                      </option>
+                      <option
+                        value={"On-site Registration $1475 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        On-site Registration $1475 CAD
+                      </option>
+                      <option
+                        value={
+                          "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD"
+                        }
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Student Rate (requires proof of enrolment – closes 8
+                        June 2024) $625 CAD
+                      </option>
+                      <option
+                        value={"One day, June 10 only $525 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        One day, June 10 only $525 CAD
+                      </option>
+                      <option
+                        value={"One day, June 11 only $525 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        One day, June 11 only $525 CAD
+                      </option>
+                      <option
+                        value={"One day, June 12 only $525 CAD"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        One day, June 12 only $525 CAD
+                      </option>
+                    </select>
 
                     <Text
                       style={{
@@ -928,7 +1051,7 @@ const RegistrationFormNRS = () => {
                       </Text>
                     </Text>
 
-                    <FormControl fullWidth size="small">
+                    {/* <FormControl fullWidth size="small">
                       <Select
                         value={guest}
                         onChange={handleGuest}
@@ -949,7 +1072,29 @@ const RegistrationFormNRS = () => {
                           No
                         </MenuItem>
                       </Select>
-                    </FormControl>
+                    </FormControl> */}
+
+                    <select
+                      className="registration-form-select"
+                      onChange={(e) => {
+                        setGuest(e.target.value);
+                      }}
+                      style={{ marginBottom: "1rem" }}
+                    >
+                      <option value="" selected disabled hidden></option>
+
+                      <option
+                        value={
+                          "Yes – ($95 to be added to conference registration)"
+                        }
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        Yes – ($95 to be added to conference registration)
+                      </option>
+                      <option value={"No"} style={{ fontSize: `${fontSize}` }}>
+                        No
+                      </option>
+                    </select>
 
                     {guest ===
                     "Yes – ($95 to be added to conference registration)" ? (

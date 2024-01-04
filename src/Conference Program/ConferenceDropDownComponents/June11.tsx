@@ -32,7 +32,7 @@ const June11 = () => {
         <EventComponent time="10:00 - 10:30" happen="Break" />
         <EventComponent
           time="10:30 - 12:00"
-          happen="INTERVENTIONS” 
+          happen="Symposium 2 - “HOW SHOULD WE MEASURE THE SUCCESS OF TINNITUS TRIALS AND INTERVENTIONS” 
           LEAD: HAZEL GOEDHART, TINNITUS HUB, THE NETHERLANDS."
           location="Theatre"
         />

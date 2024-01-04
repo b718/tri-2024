@@ -93,7 +93,7 @@ const FaQ = () => {
     ],
     ["ROCKY MOUNTAINEER", "https://www.rockymountaineer.com/"],
     [
-      "JUNE CALENDAR OF EVENTS",
+      "DESTINATION CANADA–EVENTS IN JUNE",
       "https://www.destinationvancouver.com/events/calendar-of-events/vancouver-events-in-june/",
     ],
   ];

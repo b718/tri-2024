@@ -26,7 +26,7 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                conference registration is open now - be ready for launch
+                CONFERENCE REGISTRATION OPEN NOW
               </Text>
             </li>
           </ul>
@@ -36,7 +36,7 @@ const NewNews = () => {
               {" "}
               <Text className="new-news-moving-text">
                 {" "}
-                conference registration is open now - be ready for launch
+                CONFERENCE REGISTRATION OPEN NOW
               </Text>
             </li>
           </ul>

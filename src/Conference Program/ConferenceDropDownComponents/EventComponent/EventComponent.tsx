@@ -38,8 +38,8 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
             <Text className="event-component-time-text">
               {happen === "Aage Moller - Lecture on Tinnitus" ? (
                 <Text>
-                  Aage M<span>&#248;</span>
-                  ller - Lecture on Tinnitus
+                  AAGE M<span>&#248;</span>
+                  LLER - LECTURE ON TINNITUS
                 </Text>
               ) : (
                 happen

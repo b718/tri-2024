@@ -68,6 +68,14 @@
   padding: 1rem 1rem 1rem 1rem;
 }
 
+.registration-form-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px
