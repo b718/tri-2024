@@ -1058,28 +1058,28 @@ const RegistrationFormNRS = () => {
                       </Text>
                     </Text>
 
-                    {/* <FormControl fullWidth size="small">
-                      <Select
-                        value={guest}
-                        onChange={handleGuest}
-                        style={{ fontSize: "0.875rem" }}
+                    {/* <FormControl fullWidth size="small"> */}
+                    {/* <Select
+                      value={guest}
+                      onChange={handleGuest}
+                      style={{ fontSize: "0.875rem" }}
+                    >
+                      <MenuItem
+                        value={
+                          "Yes – ($95 to be added to conference registration)"
+                        }
+                        style={{ fontSize: `${fontSize}` }}
                       >
-                        <MenuItem
-                          value={
-                            "Yes – ($95 to be added to conference registration)"
-                          }
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Yes – ($95 to be added to conference registration)
-                        </MenuItem>
-                        <MenuItem
-                          value={"No"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          No
-                        </MenuItem>
-                      </Select>
-                    </FormControl> */}
+                        Yes – ($95 to be added to conference registration)
+                      </MenuItem>
+                      <MenuItem
+                        value={"No"}
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        No
+                      </MenuItem>
+                    </Select> */}
+                    {/* </FormControl> */}
 
                     <select
                       className="registration-form-select"

@@ -113,6 +113,9 @@ const SymposiaForm = () => {
   return (
     <form className="symposia-form-main-div" onSubmit={submitFunction}>
       <Text className="symposia-form-main-text">Symposia Submissions</Text>
+      <Text className="symposia-form-label">Submissions are now closed. </Text>
+
+      {/* <Text className="symposia-form-main-text">Symposia Submissions</Text>
       <Text className="symposia-form-label" style={{ marginBottom: "1rem" }}>
         The deadline for submissions is November 15, 2023
       </Text>
@@ -377,7 +380,7 @@ const SymposiaForm = () => {
             <div></div>
           )}
         </Button>
-      </Flex>
+      </Flex> */}
     </form>
   );
 };
