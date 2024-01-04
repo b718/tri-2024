@@ -1096,7 +1096,11 @@ const RegistrationFormNRS = () => {
                       >
                         Yes – ($95 to be added to conference registration)
                       </option>
-                      <option value={"No"} style={{ fontSize: `${fontSize}` }}>
+                      <option
+                        value={"No"}
+                        style={{ fontSize: `${fontSize}` }}
+                        selected
+                      >
                         No
                       </option>
                     </select>
