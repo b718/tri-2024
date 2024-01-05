@@ -539,6 +539,7 @@ const RegistrationFormNRS = () => {
 
                     <select
                       className="registration-form-select"
+                      value={profession}
                       onChange={(e) => {
                         setProfession(e.target.value);
                       }}
@@ -732,6 +733,7 @@ const RegistrationFormNRS = () => {
 
                     <select
                       className="registration-form-select"
+                      value={addressType}
                       onChange={(e) => {
                         setAddressType(e.target.value);
                       }}
@@ -950,6 +952,7 @@ const RegistrationFormNRS = () => {
 
                     <select
                       className="registration-form-select"
+                      value={ticketType}
                       onChange={(e) => {
                         setTicketType(e.target.value);
                       }}

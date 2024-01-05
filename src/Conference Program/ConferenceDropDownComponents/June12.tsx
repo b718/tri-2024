@@ -1,6 +1,7 @@
 import { Flex, Grid } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
+import June12th8AM from "../HelperComponents/June12th8AM";
 
 const June12 = () => {
   return (
@@ -8,7 +9,8 @@ const June12 = () => {
       <Flex direction={"column"}>
         <EventComponent
           time="08:00 - 09:00"
-          happen='Opening session - "Tinnitus Research in Canada"'
+          // happen='Opening session - "Tinnitus Research in Canada"'
+          Component={June12th8AM}
           location="Theatre"
         />
 

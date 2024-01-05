@@ -39,6 +39,7 @@
   border-radius: 50%;
   -khtml-border-radius: 50%;
   border: 3px solid #fff;
+  -webkit-transform: translateZ(0);
 }
 
 .componenets-commitee-image img {
@@ -47,6 +48,7 @@
   border-radius: 50%;
   -khtml-border-radius: 50%;
   vertical-align: middle;
+  -webkit-transform: translateZ(0);
 }
 
 .componenets-commitee-image-middle {
@@ -56,6 +58,7 @@
   border-radius: 50%;
   -khtml-border-radius: 50%;
   border: 3px solid #fff;
+  -webkit-transform: translateZ(0);
 }
 
 .componenets-commitee-image-middle img {
@@ -64,4 +67,5 @@
   border-radius: 50%;
   -khtml-border-radius: 50%;
   vertical-align: middle;
+  -webkit-transform: translateZ(0);
 }

@@ -4,16 +4,21 @@ import React from "react";
 const June11th8AM = () => {
   return (
     <div>
-      <Text>
-        Presented by{" "}
+      <Text style={{ color: "#0482c8" }}>Opening session-</Text>
+      <Text style={{ color: "#194177" }}>
+        “MEASURING TINNITUS IN THE CLINIC AND IN RESEARCH”
+      </Text>
+      <Text style={{ color: "#0482c8" }}>
+        PRESENTED BY:{" "}
         <a
           href="https://www.audiology.org/honors-and-awards/award-winners/richard-tyler-phd/"
           target={"_blank"}
         >
-          Dr Richard Tyler
+          DR RICHARD TYLER,
         </a>
-        , University of Iowa Health Care.
       </Text>
+
+      <Text style={{ color: "#0482c8" }}> UNIVERSITY OF IOWA HEALTH CARE.</Text>
     </div>
   );
 };

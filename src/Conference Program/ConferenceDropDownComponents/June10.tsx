@@ -2,6 +2,7 @@ import { Flex } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June10th9AM from "../HelperComponents/June10th9AM";
+import June10th1030AM from "../HelperComponents/June10th1030AM";
 
 const June10 = () => {
   return (
@@ -21,7 +22,7 @@ const June10 = () => {
 
         <EventComponent
           time="09:00 - 10:00"
-          happen="The Aage Moller - Lecture on Tinnitus"
+          // happen="The Aage Moller - Lecture on Tinnitus"
           Component={June10th9AM}
           location="Theatre"
         />
@@ -30,7 +31,8 @@ const June10 = () => {
 
         <EventComponent
           time="10:30 - 12:00"
-          happen="Symposium 1 - “SOUND TOLERANCE DISORDERS AND TINNITUS: INVESTIGATING HYPERACUSIS AND MISOPHONIA”. LEAD: FATIMA HUSAIN, UNIVERSITY OF ILLINOISE URBANA-CHAMPAIGN, USA"
+          // happen="Symposium 1 - “SOUND TOLERANCE DISORDERS AND TINNITUS: INVESTIGATING HYPERACUSIS AND MISOPHONIA”. LEAD: FATIMA HUSAIN, UNIVERSITY OF ILLINOISE URBANA-CHAMPAIGN, USA"
+          Component={June10th1030AM}
           location="Theatre"
         />
 

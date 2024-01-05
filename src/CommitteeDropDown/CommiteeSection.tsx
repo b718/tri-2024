@@ -10,6 +10,7 @@ import mikeBenna from "../Images/mike-benna-PvAzebLejKU-unsplash_small.jpg";
 import ScientificCommittee from "./ScientificCommittee/ScientificCommittee";
 import ProgrammeCommitee from "./ProgrammeCommitee/ProgrammeCommitee";
 import useWindowDimensions from "../Components/useWindowsDimensions";
+import SpeakerBios from "./ComponentsDropDown/SpeakerBios";
 
 const CommiteeSection = () => {
   const [debbie, setDebbie] = useState(false);
@@ -32,7 +33,9 @@ const CommiteeSection = () => {
   return (
     <div>
       <div className="commitee-section-main-div">
-        <Text className="commitee-section-max-header">Committee</Text>
+        <Text className="commitee-section-max-header">
+          Committee + Speakers
+        </Text>
 
         <div className="commitee-section-main-div-under-text">
           <hr style={{ maxWidth: "98vw" }}></hr>
@@ -40,14 +43,7 @@ const CommiteeSection = () => {
             title={"Conference Hosts"}
             Component={CommiteeBios}
           />
-          {/* <CommitteeDropDown
-            title={"Scientific commitee"}
-            Component={ScientificCommittee}
-          />
-          <CommitteeDropDown
-            title={"Programme commitee"}
-            Component={ProgrammeCommitee}
-          /> */}
+          <CommitteeDropDown title={"Speakers"} Component={SpeakerBios} />
         </div>
 
         <Flex direction={"column"} className="commitee-section-flex-images">

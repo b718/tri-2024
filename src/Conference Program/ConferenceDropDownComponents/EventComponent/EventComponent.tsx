@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import "./EventComponent.css";
 interface EventComponentData {
   time: string;
-  happen: string;
+  happen?: string;
   location?: string;
   Component?: React.ComponentType;
 }
@@ -38,9 +38,8 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
             <Text className="event-component-time-text">
               {happen === "The Aage Moller - Lecture on Tinnitus" ? (
                 <Text>
-                  THE AAGE M
-                  <span style={{ textTransform: "uppercase" }}>&#248;</span>
-                  LLER - LECTURE ON TINNITUS
+                  The Aage M<span>&#248;</span>
+                  ller Tinnitus Lecture -
                 </Text>
               ) : (
                 happen

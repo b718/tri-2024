@@ -82,6 +82,7 @@
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   resize: none;
+  background-color: white;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
