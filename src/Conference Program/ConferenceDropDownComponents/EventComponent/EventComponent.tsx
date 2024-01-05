@@ -36,9 +36,10 @@ const EventComponent: FunctionComponent<EventComponentData> = ({
             direction={"column"}
           >
             <Text className="event-component-time-text">
-              {happen === "Aage Moller - Lecture on Tinnitus" ? (
+              {happen === "The Aage Moller - Lecture on Tinnitus" ? (
                 <Text>
-                  AAGE M<span>&#248;</span>
+                  THE AAGE M
+                  <span style={{ textTransform: "uppercase" }}>&#248;</span>
                   LLER - LECTURE ON TINNITUS
                 </Text>
               ) : (

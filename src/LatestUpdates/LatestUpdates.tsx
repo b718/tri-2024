@@ -28,7 +28,22 @@ const LatestUpdates = () => {
             <div className="latest-updates-div-with-buttons">
               <Flex className="latest-update-flex-text-button">
                 <Text className="latest-updates-small-text">
-                  Paper + Poster Guidelines + Submissions
+                  Conference Registration{" "}
+                </Text>
+                <div
+                  className="latest-updates-min-width-button-div"
+                  onClick={() => {
+                    scrollToSection(navBarContext.registrationRef);
+                  }}
+                >
+                  <span className={`material-symbols-outlined`}>
+                    arrow_circle_right
+                  </span>{" "}
+                </div>
+              </Flex>
+              <Flex className="latest-update-flex-text-button">
+                <Text className="latest-updates-small-text">
+                  Paper + Poster Submissions
                 </Text>
                 <div
                   className="latest-updates-min-width-button-div"
@@ -41,28 +56,13 @@ const LatestUpdates = () => {
                   </span>{" "}
                 </div>
               </Flex>
-              <Flex className="latest-update-flex-text-button">
+
+              <Flex>
                 <Text className="latest-updates-small-text">Program</Text>
                 <div
                   className="latest-updates-min-width-button-div"
                   onClick={() => {
                     scrollToSection(navBarContext.programRef);
-                  }}
-                >
-                  <span className={`material-symbols-outlined`}>
-                    arrow_circle_right
-                  </span>{" "}
-                </div>
-              </Flex>
-
-              <Flex>
-                <Text className="latest-updates-small-text">
-                  Travel + tourism
-                </Text>
-                <div
-                  className="latest-updates-min-width-button-div"
-                  onClick={() => {
-                    scrollToSection(navBarContext.faqRef);
                   }}
                 >
                   <span className={`material-symbols-outlined`}>

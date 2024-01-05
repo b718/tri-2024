@@ -92,8 +92,8 @@ const CarouselForm = () => {
         onSubmit={onSubmit}
       >
         <Text className="carousel-form-title">Abstract Submissions</Text>
-        <Text>Submissions are now closed.</Text>
-        {/* <Flex direction={"column"} style={{ marginTop: "2rem" }}>
+        {/* <Text>Submissions are now closed.</Text> */}
+        <Flex direction={"column"} style={{ marginTop: "2rem" }}>
           <Text className="">
             Author{" "}
             <Text
@@ -300,7 +300,7 @@ const CarouselForm = () => {
           }}
         >
           Abstract Sent!
-        </Text> */}
+        </Text>
       </form>
     </div>
   );

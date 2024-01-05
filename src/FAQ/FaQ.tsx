@@ -69,7 +69,7 @@ const FaQ = () => {
     ],
 
     [
-      "TRIwP ADVISOR–HOTELS",
+      "TRIP ADVISOR–HOTELS",
       "https://www.tripadvisor.ca/Hotels-g154943-Vancouver_British_Columbia-Hotels.html",
     ],
   ];

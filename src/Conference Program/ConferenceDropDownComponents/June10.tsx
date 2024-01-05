@@ -21,7 +21,7 @@ const June10 = () => {
 
         <EventComponent
           time="09:00 - 10:00"
-          happen="Aage Moller - Lecture on Tinnitus"
+          happen="The Aage Moller - Lecture on Tinnitus"
           Component={June10th9AM}
           location="Theatre"
         />

@@ -13,6 +13,7 @@ import { ButtonClickedContext, NavBarContext } from "../App";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import ProgressBar from "react-customizable-progressbar";
 import {
+  Box,
   FormControl,
   MenuItem,
   Select,
@@ -56,6 +57,7 @@ const RegistrationFormNRS = () => {
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [profession, setProfession] = useState<any>("");
+  const [otherProfession, setOtherProfession] = useState<any>("");
   const handleProfession = (event: SelectChangeEvent) => {
     setProfession(event.target.value as string);
   };
@@ -190,6 +192,10 @@ const RegistrationFormNRS = () => {
 
   const nextDisabler = () => {
     if (page == 0 && checkContact()) {
+      if (profession === "Other" && !(otherProfession.length > 0)) {
+        return true;
+      }
+
       return false;
     } else if (page == 1 && checkTicket()) {
       return false;
@@ -221,12 +227,17 @@ const RegistrationFormNRS = () => {
     const splitData = paymentStatus.split("-");
     const NewPaymentStatus = "Successful through " + splitData[1];
 
+    let objectProfession = profession;
+
+    if (profession === "Other") {
+      objectProfession = otherProfession;
+    }
     const RegistrationObject = {
       contactInfo: {
         title: title,
         first: first,
         last: last,
-        profession: profession,
+        profession: objectProfession,
         org: org,
         email: email,
         phone: phone,
@@ -473,65 +484,66 @@ const RegistrationFormNRS = () => {
                   <div>
                     <Text className="">Profession/Attendee Type </Text>
 
-                    {/* <FormControl fullWidth size="small">
-                      <Select
-                        value={profession}
-                        onChange={handleProfession}
-                        style={{ fontSize: "0.875rem" }}
-                      >
-                        <MenuItem
-                          value={"Advocacy"}
-                          style={{ fontSize: `${fontSize}` }}
+                    {/* <Box sx={{ minWidth: 120 }}>
+                      <FormControl fullWidth size="small">
+                        <Select
+                          value={profession}
+                          onChange={handleProfession}
+                          style={{ fontSize: "0.875rem" }}
                         >
-                          Advocacy
-                        </MenuItem>
-                        <MenuItem
-                          value={"Audiology/Hearing"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Audiology/Hearing
-                        </MenuItem>
-                        <MenuItem
-                          value={"Education"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Education
-                        </MenuItem>
-                        <MenuItem
-                          value={"Medicine"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Medicine
-                        </MenuItem>
-                        <MenuItem
-                          value={"Psychology"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Psychology
-                        </MenuItem>
-                        <MenuItem
-                          value={"Research"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Research
-                        </MenuItem>
-                        <MenuItem
-                          value={"Other"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Other
-                        </MenuItem>
-                      </Select>
-                    </FormControl> */}
+                          <MenuItem
+                            value={"Advocacy"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Advocacy
+                          </MenuItem>
+                          <MenuItem
+                            value={"Audiology/Hearing"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Audiology/Hearing
+                          </MenuItem>
+                          <MenuItem
+                            value={"Education"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Education
+                          </MenuItem>
+                          <MenuItem
+                            value={"Medicine"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Medicine
+                          </MenuItem>
+                          <MenuItem
+                            value={"Psychology"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Psychology
+                          </MenuItem>
+                          <MenuItem
+                            value={"Research"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Research
+                          </MenuItem>
+                          <MenuItem
+                            value={"Other"}
+                            style={{ fontSize: `${fontSize}` }}
+                          >
+                            Other
+                          </MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box> */}
 
                     <select
                       className="registration-form-select"
-                      style={{ width: "100%", padding: "0.5rem" }}
                       onChange={(e) => {
                         setProfession(e.target.value);
                       }}
                     >
-                      <option value="" selected disabled hidden></option>
+                      <option value="" selected disabled></option>
                       <option
                         value={"Advocacy"}
                         style={{ fontSize: `${fontSize}` }}
@@ -575,6 +587,19 @@ const RegistrationFormNRS = () => {
                         Other
                       </option>
                     </select>
+
+                    {profession === "Other" ? (
+                      <TextInput
+                        placeholder={"Example: Teacher"}
+                        style={{ marginTop: "1rem" }}
+                        value={otherProfession}
+                        onChange={(e) => {
+                          setOtherProfession(e.target.value);
+                        }}
+                      ></TextInput>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
 
                   <div>
@@ -712,7 +737,7 @@ const RegistrationFormNRS = () => {
                       }}
                       style={{ marginBottom: "1rem" }}
                     >
-                      <option value="" selected disabled hidden></option>
+                      <option value="" selected disabled></option>
                       <option value={"Work"}>Work</option>
                       <option value={"Home"}>Home</option>
                     </select>
@@ -928,9 +953,8 @@ const RegistrationFormNRS = () => {
                       onChange={(e) => {
                         setTicketType(e.target.value);
                       }}
-                      style={{ marginBottom: "1rem" }}
                     >
-                      <option value="" selected disabled hidden></option>
+                      <option value="" selected disabled></option>
                       <option
                         value={"Early Bird (closes 1 March 2024) $825 CAD"}
                         style={{ fontSize: `${fontSize}` }}
@@ -1004,9 +1028,8 @@ const RegistrationFormNRS = () => {
                         fontSize: "0.65rem",
                       }}
                     >
-                      This applies to lunches and to the dinner. Please note
-                      restrictions for primary attendant and guest if
-                      applicable.
+                      This applies to lunches and to the dinner. (Will be
+                      accommodated if possible)
                     </Text>
                   </div>
 
@@ -1083,11 +1106,12 @@ const RegistrationFormNRS = () => {
 
                     <select
                       className="registration-form-select"
+                      value={guest}
                       onChange={(e) => {
                         setGuest(e.target.value);
                       }}
-                      style={{ marginBottom: "1rem" }}
                     >
+                      <option value="" selected disabled></option>
                       <option
                         value={
                           "Yes – ($95 to be added to conference registration)"
@@ -1096,11 +1120,7 @@ const RegistrationFormNRS = () => {
                       >
                         Yes – ($95 to be added to conference registration)
                       </option>
-                      <option
-                        value={"No"}
-                        style={{ fontSize: `${fontSize}` }}
-                        selected
-                      >
+                      <option value={"No"} style={{ fontSize: `${fontSize}` }}>
                         No
                       </option>
                     </select>
@@ -1109,13 +1129,23 @@ const RegistrationFormNRS = () => {
                     "Yes – ($95 to be added to conference registration)" ? (
                       <div style={{ marginTop: "1rem" }}>
                         {" "}
-                        <Text className="">Dietary Requirements</Text>
+                        <Text className="">Dietary Requirements - Guest</Text>
                         <TextInput
                           value={dietaryGuest}
                           onChange={(e) => {
                             setDietaryGuest(e.target.value);
                           }}
                         />
+                        <Text
+                          style={{
+                            maxWidth: "40rem",
+                            wordBreak: "break-word",
+                            fontSize: "0.65rem",
+                          }}
+                        >
+                          This applies to lunches and to the dinner. (Will be
+                          accommodated if possible)
+                        </Text>
                       </div>
                     ) : (
                       <div></div>
