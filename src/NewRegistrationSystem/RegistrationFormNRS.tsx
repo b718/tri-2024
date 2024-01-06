@@ -1010,29 +1010,10 @@ const RegistrationFormNRS = () => {
                         maxWidth: "40rem",
                         wordBreak: "break-word",
                         fontSize: "0.65rem",
-                        marginBottom: "1rem",
                       }}
                     >
                       Full Conference Registration includes daily conference
                       lunch and the TRI Welcome Dinner on Monday 10th June.
-                    </Text>
-
-                    <Text className="">Dietary Requirements</Text>
-                    <TextInput
-                      value={dietaryMain}
-                      onChange={(e) => {
-                        setDietaryMain(e.target.value);
-                      }}
-                    />
-                    <Text
-                      style={{
-                        maxWidth: "40rem",
-                        wordBreak: "break-word",
-                        fontSize: "0.65rem",
-                      }}
-                    >
-                      This applies to lunches and to the dinner. Please note
-                      restrictions will be accommodated if possible*
                     </Text>
                   </div>
 
@@ -1127,6 +1108,26 @@ const RegistrationFormNRS = () => {
                         No
                       </option>
                     </select>
+
+                    <Text className="" style={{ marginTop: "1rem" }}>
+                      Dietary Requirements
+                    </Text>
+                    <TextInput
+                      value={dietaryMain}
+                      onChange={(e) => {
+                        setDietaryMain(e.target.value);
+                      }}
+                    />
+                    <Text
+                      style={{
+                        maxWidth: "40rem",
+                        wordBreak: "break-word",
+                        fontSize: "0.65rem",
+                      }}
+                    >
+                      This applies to lunches and to the dinner. Please note
+                      restrictions will be accommodated if possible*
+                    </Text>
 
                     {guest ===
                     "Yes – ($95 to be added to conference registration)" ? (
