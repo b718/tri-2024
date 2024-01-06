@@ -154,7 +154,7 @@ const RegistrationFormNRS = () => {
 
     switch (ticketType) {
       case values[0]:
-        setPrice(825.0 + guestHelper());
+        setPrice(1 + guestHelper());
         break;
       case values[1]:
         setPrice(975.0 + guestHelper());
@@ -1031,8 +1031,8 @@ const RegistrationFormNRS = () => {
                         fontSize: "0.65rem",
                       }}
                     >
-                      This applies to lunches and to the dinner. (Will be
-                      accommodated if possible)
+                      This applies to lunches and to the dinner. Please note
+                      restrictions will be accommodated if possible*
                     </Text>
                   </div>
 
@@ -1146,8 +1146,8 @@ const RegistrationFormNRS = () => {
                             fontSize: "0.65rem",
                           }}
                         >
-                          This applies to lunches and to the dinner. (Will be
-                          accommodated if possible)
+                          This applies to lunches and to the dinner. Please note
+                          restrictions will be accommodated if possible*
                         </Text>
                       </div>
                     ) : (

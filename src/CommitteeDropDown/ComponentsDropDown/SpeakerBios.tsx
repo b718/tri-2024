@@ -46,7 +46,7 @@ const SpeakerBios = () => {
                 src={DJPHeadshot}
                 height={160}
                 fit="contain"
-                className="componenets-commitee-image"
+                // className="componenets-commitee-image"
               ></Image>
             </div>
           </Center>
@@ -85,7 +85,7 @@ const SpeakerBios = () => {
                 src={DRTHeadshot}
                 height={160}
                 fit="contain"
-                className="componenets-commitee-image"
+                // className="componenets-commitee-image"
               ></Image>
             </div>
           </Center>

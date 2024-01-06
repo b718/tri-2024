@@ -58,7 +58,9 @@ const LatestUpdates = () => {
               </Flex>
 
               <Flex>
-                <Text className="latest-updates-small-text">Program</Text>
+                <Text className="latest-updates-small-text">
+                  Program - Topics and Speakers
+                </Text>
                 <div
                   className="latest-updates-min-width-button-div"
                   onClick={() => {

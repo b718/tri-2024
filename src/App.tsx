@@ -143,7 +143,7 @@ function App() {
       <ButtonClickedContext.Provider
         value={{ buttonClicked, setButtonClicked }}
       >
-        <PayPalScriptProvider options={initialOptionsTestPP}>
+        <PayPalScriptProvider options={initialOptionsPaypal}>
           <NavBarContext.Provider
             value={{
               committeeRef: comitteeRef,
