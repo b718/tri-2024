@@ -2,6 +2,7 @@ import { Flex, Grid } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June12th8AM from "../HelperComponents/June12th8AM";
+import June12th1030AM from "../HelperComponents/June12th1030AM";
 
 const June12 = () => {
   return (
@@ -30,8 +31,9 @@ const June12 = () => {
 
         <EventComponent
           time="10:30 - 12:00"
-          happen="Symposium 3 - “TINNITUS AND PHYSICAL LINKS” LEAD: SARAH MICHIELS, HASSELT UNIVERSITY, BELGIUM."
+          // happen="Symposium 3 - “TINNITUS AND PHYSICAL LINKS” LEAD: SARAH MICHIELS, HASSELT UNIVERSITY, BELGIUM."
           location="Theatre"
+          Component={June12th1030AM}
         />
 
         <EventComponent time="12:00 - 13:00" happen="Lunch" />
