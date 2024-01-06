@@ -232,6 +232,7 @@ const RegistrationFormNRS = () => {
     if (profession === "Other") {
       objectProfession = otherProfession;
     }
+
     const RegistrationObject = {
       contactInfo: {
         title: title,
