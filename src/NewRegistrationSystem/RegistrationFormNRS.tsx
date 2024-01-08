@@ -154,7 +154,7 @@ const RegistrationFormNRS = () => {
 
     switch (ticketType) {
       case values[0]:
-        setPrice(1 + guestHelper());
+        setPrice(1.0 + guestHelper());
         break;
       case values[1]:
         setPrice(975.0 + guestHelper());
@@ -280,8 +280,8 @@ const RegistrationFormNRS = () => {
     };
     setLoading("loading");
     const x = await fetch(
-      "https://tri-2024-back-end.onrender.com/submit-registration-form",
-      // "http://localhost:3001/submit-registration-form",
+      // "https://tri-2024-back-end.onrender.com/submit-registration-form",
+      "http://localhost:3001/submit-registration-form",
       {
         method: "POST",
         body: JSON.stringify({

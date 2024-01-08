@@ -26,6 +26,8 @@
   max-width: fit-content;
   text-transform: none;
   text-decoration: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .components-commitee-style-text-title {
@@ -42,6 +44,7 @@
   border: 3px solid #fff;
   -webkit-transform: translateZ(0);
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .componenets-commitee-image img {
@@ -52,6 +55,7 @@
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .componenets-commitee-image-middle {
@@ -62,6 +66,7 @@
   -khtml-border-radius: 50%; */
   border: 3px solid #fff;
   -webkit-transform: translateZ(0);
+  margin-bottom: 1rem;
 }
 
 .componenets-commitee-image-middle img {
@@ -71,4 +76,5 @@
   -khtml-border-radius: 50%; */
   vertical-align: middle;
   -webkit-transform: translateZ(0);
+  margin-bottom: 1rem;
 }

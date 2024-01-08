@@ -13,6 +13,7 @@ const Payment: React.FunctionComponent<PaymentPerson> = ({ title, price }) => {
     useState<Promise<Stripe | null> | null>(null);
   const [clientSecret, setClientSecret] = useState("");
   const serverURL = "https://tri-2024-back-end.onrender.com";
+  const testURL = "http://localhost:3001";
 
   useEffect(() => {
     fetch(`${serverURL}/config`).then(async (r) => {
