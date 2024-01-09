@@ -12,7 +12,7 @@ const SpeakerBios = () => {
       <Grid
         columns={width < 720 ? 1 : 8}
         justify={"center"}
-        align={"center"}
+        align={"flex-start"}
         style={{ marginTop: "1rem" }}
       >
         <Grid.Col span={width < 720 ? 1 : 5}>
@@ -73,20 +73,26 @@ const SpeakerBios = () => {
         <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
-            <div
-              className={`${
-                width < 720
-                  ? "componenets-commitee-image-middle"
-                  : "componenets-commitee-image"
-              }`}
+            <Flex
+              direction={"column"}
+              justify={"flex-start"}
+              align={"flex-start"}
             >
-              <Image
-                src={DJPHeadshot}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
-            </div>
+              <div
+                className={`${
+                  width < 720
+                    ? "componenets-commitee-image-middle"
+                    : "componenets-commitee-image"
+                }`}
+              >
+                <Image
+                  src={DJPHeadshot}
+                  height={160}
+                  fit="contain"
+                  // className="componenets-commitee-image"
+                ></Image>
+              </div>
+            </Flex>
           </Center>
         </Grid.Col>
       </Grid>

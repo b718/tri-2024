@@ -12,7 +12,7 @@ const CommiteeBios = () => {
       <Grid
         columns={width < 720 ? 1 : 8}
         justify={"center"}
-        align={"center"}
+        align={"flex-start"}
         style={{ marginTop: "1rem" }}
       >
         <Grid.Col span={width < 720 ? 1 : 5}>

@@ -9,7 +9,7 @@ const June10th9AM = () => {
         ller Tinnitus Lecture -
       </Text>
       <Text style={{ color: "#0482c8", textTransform: "uppercase" }}>
-        Lead:{" "}
+        SPEAKER:{" "}
         <a
           href={"https://www.linkedin.com/in/pawel-jastreboff-9581527/"}
           target={"_blank"}

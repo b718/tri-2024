@@ -252,7 +252,7 @@ const RegistrationFormNRS = () => {
       },
       ticketInfo: {
         ticketType: ticketType,
-        price: price,
+        price: price.toFixed(2),
         gst: (price * 0.05).toFixed(2),
         guest: guest,
         paymentStatus: NewPaymentStatus,
@@ -280,8 +280,8 @@ const RegistrationFormNRS = () => {
     };
     setLoading("loading");
     const x = await fetch(
-      // "https://tri-2024-back-end.onrender.com/submit-registration-form",
-      "http://localhost:3001/submit-registration-form",
+      "https://tri-2024-back-end.onrender.com/submit-registration-form",
+      // "http://localhost:3001/submit-registration-form",
       {
         method: "POST",
         body: JSON.stringify({

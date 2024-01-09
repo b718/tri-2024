@@ -9,7 +9,7 @@ const June11th8AM = () => {
         “MEASURING TINNITUS IN THE CLINIC AND IN RESEARCH”
       </Text>
       <Text style={{ color: "#0482c8" }}>
-        PRESENTED BY:{" "}
+        SPEAKER:{" "}
         <a
           href="https://www.audiology.org/honors-and-awards/award-winners/richard-tyler-phd/"
           target={"_blank"}
