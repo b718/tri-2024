@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentsCommitee.css";
 import { Center, Flex, Grid, Image, Text } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import DJPHeadshot from "../../Images/dpj-headshot.jpeg";
+import DJPHeadshot from "../../Images/PawelJastreboff.png";
 import DRTHeadshot from "../../Images/drt-headshot.jpg";
 
 const SpeakerBios = () => {
