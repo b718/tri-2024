@@ -97,7 +97,11 @@ const SpeakerBios = () => {
         </Grid.Col>
       </Grid>
 
-      <Grid columns={width < 720 ? 1 : 8} justify={"center"} align={"center"}>
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>
             <Text
@@ -111,7 +115,36 @@ const SpeakerBios = () => {
               Dr Richard Tyler
             </Text>
             <Text className="components-commitee-style-text">
-              Bio coming soon
+              <div>
+                Richard Tyler graduated as one of the first clinical
+                audiologists in Canada at The University of Western Ontario. He
+                completed a Ph.D. in Psychoacoustics at The University of Iowa
+                and followed that with three years at the Medical Research
+                Council in England.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                Dr. Tyler then returned to the University of Iowa as a faculty
+                member in both the Department of Otolaryngology Head and Neck
+                Surgery and in the Department of Communication Sciences and
+                Disorders. His research contributions in audiology, cochlear
+                implants, tinnitus, and hyperacusis are recognized the
+                world-over.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                His scientific work includes the quantification of tinnitus,
+                necessary for its investigation, as well as the investigation of
+                different treatments. Dr. Tyler sees tinnitus patients weekly
+                and hosts an international conference on the management of
+                tinnitus and hyperacusis patients to educate clinicians on
+                cutting-edge evaluation and management strategies. He has edited
+                The Tinnitus Handbook (2000), Tinnitus Treatments: Clinical
+                Protocols Tyler, R.S. (Ed.). (2006), and The Consumer Handbook
+                on Tinnitus (2008, 2016).
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                It is an honor to welcome him as a keynote speaker to the first
+                Tinnitus Research Initiative conference held in Canada.
+              </div>
             </Text>
           </Flex>
         </Grid.Col>

@@ -76,7 +76,11 @@ const CommiteeBios = () => {
         </Grid.Col>
       </Grid>
 
-      <Grid columns={width < 720 ? 1 : 8} justify={"center"} align={"center"}>
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>
             <Text
