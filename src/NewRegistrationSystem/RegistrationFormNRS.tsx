@@ -154,7 +154,7 @@ const RegistrationFormNRS = () => {
 
     switch (ticketType) {
       case values[0]:
-        setPrice(1.0 + guestHelper());
+        setPrice(825.0 + guestHelper());
         break;
       case values[1]:
         setPrice(975.0 + guestHelper());
