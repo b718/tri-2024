@@ -224,8 +224,14 @@ const RegistrationFormNRS = () => {
     const options = { timeZone: "America/Los_Angeles" };
     const pstDate = currentDate.toLocaleString("en-US", options);
 
-    const splitData = paymentStatus.split("-");
-    const NewPaymentStatus = "Successful through " + splitData[1];
+    // const splitData = paymentStatus.split("-");
+    let NewPaymentStatus = "";
+
+    if (paymentStatus === "done-stripe") {
+      NewPaymentStatus = "Successful through Stripe";
+    } else if (paymentStatus === "done-pp") {
+      NewPaymentStatus = "Successful through PayPal";
+    }
 
     let objectProfession = profession;
 
