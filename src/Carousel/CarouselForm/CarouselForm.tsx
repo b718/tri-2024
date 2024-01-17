@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CarouselForm.css";
-import { Center, Flex, Loader, Text, TextInput } from "@mantine/core";
+import { Center, Flex, Loader, Text, TextInput, em } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 const CarouselForm = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -22,6 +22,7 @@ const CarouselForm = () => {
   const [title, setTitle] = useState("");
   const [topic, setTopic] = useState("");
   const [keyWords, setKeyWords] = useState("");
+  const [email, setEmail] = useState("");
 
   const checkUpload = () => {
     return (
@@ -34,6 +35,7 @@ const CarouselForm = () => {
       title.length > 0 &&
       topic.length > 0 &&
       keyWords.length > 0 &&
+      email.length > 0 &&
       file !== null
     );
   };
@@ -53,6 +55,7 @@ const CarouselForm = () => {
       formData.append("title", title);
       formData.append("topic", topic);
       formData.append("keyWords", keyWords);
+      formData.append("email", email);
       formData.append("pdfFile", file);
 
       setLoading("loading");
@@ -77,6 +80,7 @@ const CarouselForm = () => {
     setTitle("");
     setTopic("");
     setKeyWords("");
+    setEmail("");
     setFile(null);
   };
 
@@ -92,6 +96,8 @@ const CarouselForm = () => {
         onSubmit={onSubmit}
       >
         <Text className="carousel-form-title">Abstract Submissions</Text>
+        <Text style={{ fontStyle: "italic" }}>Closing February 15th!</Text>
+
         {/* <Text>Submissions are now closed.</Text> */}
         <Flex direction={"column"} style={{ marginTop: "2rem" }}>
           <Text className="">
@@ -107,9 +113,15 @@ const CarouselForm = () => {
             </Text>
           </Text>
           <TextInput
-            placeholder="Author (name, affiliation, email address)"
+            placeholder="Author (name, affiliation)"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
+          />
+          <TextInput
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={{ marginTop: "1rem" }}
           />
 
           <Text style={{ marginTop: "2rem" }}>
