@@ -39,7 +39,13 @@ const PricingNRS = () => {
             >
               Registration is now open for the Tinnitus Research Initiative
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
+              <br />
+              <br />
+              Early Bird, Closes March 1st, 2024
+              <br />
+              Regular Rate, Closes June 8th, 2024
             </Text>
+
             <button
               className="pricing-nrs-register-button"
               onClick={() => {
@@ -64,6 +70,7 @@ const PricingNRS = () => {
               regPackage={"Early Bird"}
               price={"$825 CAD"}
             />
+
             <RegistrationComponent
               regPackage={"Regular Rate"}
               price={"$975 CAD"}

@@ -117,11 +117,22 @@ const CarouselForm = () => {
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
+          <Text style={{ marginTop: "1rem" }}>
+            Email{" "}
+            <Text
+              style={{
+                color: "red",
+                marginLeft: "0.1rem",
+                display: "inline-block",
+              }}
+            >
+              *
+            </Text>
+          </Text>
           <TextInput
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginTop: "1rem" }}
           />
 
           <Text style={{ marginTop: "2rem" }}>
