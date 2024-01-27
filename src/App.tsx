@@ -18,25 +18,18 @@ import FaQ from "./FAQ/FaQ";
 import Venue from "./Venue/Venue";
 import Footer from "./Footer/Footer";
 import Carousel from "./Carousel/Carousel";
-import MeshGradientOrb from "./MeshGradientOrb/MeshGradientOrb";
-import MeshGradientSvg from "./MeshGradientOrb/MeshGradient";
 import { Flex, Text } from "@mantine/core";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Completion from "./Payment-Stripe/Unused/Completion";
-import Payment from "./Payment-Stripe/Payment";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
-import PayPalPayment from "./PayPal/PayPalPayment";
-import RegistrationUpdated from "./Registration/RegistrationUpdated";
 import PaymentForm from "./PaymentForm/PaymentForm";
 import Symposia from "./Symposia/Symposia";
-import SaveTheDate from "./Registration/SaveTheDate/SaveTheDate";
-import CommiteeSection from "./CommitteeDropDown/CommiteeSection";
-import CarouselSection from "./Carousel/CarouselSection";
 import ContactUs from "./ContactUs/ContactUs";
 import NewNews from "./NewNews/NewNews";
-import LatestUpdates from "./LatestUpdates/LatestUpdates";
 import PricingNRS from "./NewRegistrationSystem/PricingNRS";
 import RegistrationFormNRS from "./NewRegistrationSystem/RegistrationFormNRS";
+import SpeakerPage from "./SpeakerPage/SpeakerPage";
+import CommiteePage from "./CommiteePage/CommiteePage";
+import ScientificCommitee from "./ScientificCommitee/ScientificCommitee";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -188,15 +181,6 @@ function App() {
                               }
                         }
                       >
-                        {/* <Text
-                        className="nav-bar-different-sections-burger nav-bar-burger-version "
-                        onClick={() => {
-                          scrollToSection(homeRef);
-                          setBurger(false);
-                        }}
-                      >
-                        About
-                      </Text> */}
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
@@ -206,15 +190,7 @@ function App() {
                         >
                           WELCOME
                         </Text>
-                        {/* <Text
-                        className="nav-bar-different-sections-burger nav-bar-burger-version  nav-bar-burger-version "
-                        onClick={() => {
-                          scrollToSection(comitteeRef);
-                          setBurger(false);
-                        }}
-                      >
-                        Committee
-                      </Text> */}
+
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
@@ -224,12 +200,7 @@ function App() {
                         >
                           REGISTRATION
                         </Text>
-                        {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        Speakers
-                      </Text>
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        Program
-                      </Text> */}
+
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
@@ -261,15 +232,7 @@ function App() {
                         >
                           Paper + Poster Guidelines + Submissions{" "}
                         </Text>
-                        {/* <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        Awards
-                      </Text>
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        Socials
-                      </Text>
-                      <Text className="nav-bar-different-sections-burger nav-bar-burger-version ">
-                        PPI
-                      </Text> */}
+
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
@@ -322,11 +285,13 @@ function App() {
                         </Text>
                       </div>
                       <Home />
-                      <LatestUpdates />
+                      {/* <LatestUpdates /> */}
                       <Committee />
                       <PricingNRS />
                       <RegistrationFormNRS />
-                      <CommiteeSection />
+                      {/* <CommiteeSection /> */}
+                      <CommiteePage />
+                      <ScientificCommitee />
                       <Symposia />
                       <Carousel />
                       <ConferenceProgram />
@@ -340,7 +305,139 @@ function App() {
                     </div>
                   }
                 />
-                {/* <Route path="/register" element={<PaymentForm />} /> */}
+                <Route path="/abstracts" element={<PaymentForm />} />
+                <Route
+                  path="/speakers"
+                  element={
+                    <div>
+                      {burger ? (
+                        <div style={{ display: "none" }}></div>
+                      ) : (
+                        <NewNews />
+                      )}
+
+                      <Navbar />
+                      <div
+                        className="nav-bar-burger-overlay"
+                        ref={overlayRef}
+                        style={
+                          burger
+                            ? {
+                                width: "100vw",
+                              }
+                            : {
+                                width: "0%",
+                              }
+                        }
+                      >
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(comitteeRef);
+                            setBurger(false);
+                          }}
+                        >
+                          WELCOME
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(registrationRef);
+                            setBurger(false);
+                          }}
+                        >
+                          REGISTRATION
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(symposiaRef);
+                            setBurger(false);
+                          }}
+                        >
+                          SUBMISSIONS
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                          onClick={() => {
+                            scrollToSection(symposiaRef);
+                            setBurger(false);
+                          }}
+                        >
+                          SYMPOSIA GUIDELINES + SUBMISSIONS
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                          onClick={() => {
+                            scrollToSection(postersPapers);
+                            setBurger(false);
+                          }}
+                        >
+                          Paper + Poster Guidelines + Submissions{" "}
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(programRef);
+                            setBurger(false);
+                          }}
+                        >
+                          PROGRAM
+                        </Text>
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(sponsorshipRef);
+                            setBurger(false);
+                          }}
+                        >
+                          SPONSORSHIP
+                        </Text>
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(faqRef);
+                            setBurger(false);
+                          }}
+                        >
+                          Travel + tourism
+                        </Text>
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(venueRef);
+                            setBurger(false);
+                          }}
+                          // style={{ paddingBottom: "2rem", marginBottom: "2rem" }}
+                        >
+                          LOCATION
+                        </Text>
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          onClick={() => {
+                            scrollToSection(contactUs);
+                            setBurger(false);
+                          }}
+                          style={{
+                            paddingBottom: "2rem",
+                            marginBottom: "2rem",
+                          }}
+                        >
+                          CONTACT US
+                        </Text>
+                      </div>
+                      <SpeakerPage />
+                      <Footer />
+                    </div>
+                  }
+                />
               </Routes>
             </BurgerContext.Provider>
           </NavBarContext.Provider>

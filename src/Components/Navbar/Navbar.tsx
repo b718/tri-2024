@@ -7,6 +7,7 @@ import useWindowDimensions from "../useWindowsDimensions";
 import useDetectScroll from "@smakss/react-scroll-direction";
 import { useScrollDirection } from "react-use-scroll-direction";
 import NewNews from "../../NewNews/NewNews";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -20,6 +21,7 @@ const Navbar = () => {
   const { width, height } = useWindowDimensions();
   const [scroll, setScroll] = useState<boolean>(false);
   const [enterSubmission, setEnterSubmission] = useState<boolean>(false);
+  const [enterProgram, setEnterProgram] = useState<boolean>(false);
   const burgerContext = useContext(BurgerContext);
   const scrollDir = useDetectScroll({});
   const { isScrolling } = useScrollDirection();
@@ -154,15 +156,47 @@ const Navbar = () => {
                       </Text>
                     </div>
                   </Flex>
-                  {/* <Text className="nav-bar-different-sections">Awards</Text>
-                  <Text className="nav-bar-different-sections">Socials</Text>
-                  <Text className="nav-bar-different-sections">PPI</Text> */}
-                  <Text
-                    className="nav-bar-different-sections"
-                    onClick={() => scrollToSection(navBarScrollRefs.programRef)}
+
+                  <Flex
+                    direction={"column"}
+                    align={"center"}
+                    justify={"center"}
+                    onMouseEnter={() => {
+                      setEnterProgram(true);
+                    }}
+                    onMouseLeave={() => {
+                      setEnterProgram(false);
+                    }}
                   >
-                    PROGRAM
-                  </Text>
+                    <Text
+                      className="nav-bar-different-sections"
+                      onClick={() =>
+                        scrollToSection(navBarScrollRefs.programRef)
+                      }
+                    >
+                      PROGRAM
+                    </Text>
+                    <div className="nav-bar-symposia-and-posters">
+                      <Text
+                        className="nav-bar-symposia"
+                        // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                        style={{ display: `${!enterProgram ? "none" : ""}` }}
+                      >
+                        <Link to={"speakers"} className="nav-bar-posters">
+                          Speakers
+                        </Link>
+                      </Text>
+                      <Text
+                        className="nav-bar-posters"
+                        // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
+                        style={{ display: `${!enterProgram ? "none" : ""}` }}
+                      >
+                        <Link to={"abstracts"} className="nav-bar-posters">
+                          ABSTRACTS
+                        </Link>
+                      </Text>
+                    </div>
+                  </Flex>
                   <Text
                     className="nav-bar-different-sections"
                     onClick={() =>

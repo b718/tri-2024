@@ -76,10 +76,18 @@ const CommiteeBios = () => {
         </Grid.Col>
       </Grid>
 
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
       <Grid
         columns={width < 720 ? 1 : 8}
         justify={"center"}
         align={"flex-start"}
+        style={{ marginBottom: "5rem" }}
       >
         <Grid.Col span={width < 720 ? 1 : 5}>
           <Flex direction={"column"}>

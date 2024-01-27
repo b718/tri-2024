@@ -36,6 +36,25 @@ const ConferenceProgram = () => {
   };
   return (
     <div>
+      <div
+        className={`conference-program-world-peter${
+          peterScienceWorldVisible ? "-active" : ""
+        }`}
+        ref={peterScienceWorld}
+      >
+        <img
+          src={PeterScienceWorld}
+          className="conference-program-world-peter-image"
+          onMouseEnter={() => setHoverPeter(true)}
+          onMouseLeave={() => setHoverPeter(false)}
+        />
+        <Text
+          className={`committee-text-roll-over${hoverPeter ? "-active" : ""}`}
+        >
+          © Peter Skaronis
+        </Text>
+      </div>
+
       <div className="conference-program-section-main-div">
         <Text
           className="conference-program-section-max-header"
@@ -58,28 +77,6 @@ const ConferenceProgram = () => {
             title="wednesday, june 12"
             Component={June12}
           />
-        </div>
-
-        <div
-          // ref={stairs.ref}
-          className={`conference-program-world-peter${
-            peterScienceWorldVisible ? "-active" : ""
-          }`}
-          ref={peterScienceWorld}
-        >
-          {/* <div className="committee-parallax-stairs"></div> */}
-          <Image
-            width={peterWorldSize()}
-            fit="contain"
-            src={PeterScienceWorld}
-            onMouseEnter={() => setHoverPeter(true)}
-            onMouseLeave={() => setHoverPeter(false)}
-          />
-          <Text
-            className={`committee-text-roll-over${hoverPeter ? "-active" : ""}`}
-          >
-            © Peter Skaronis
-          </Text>
         </div>
       </div>
       {/* <SpeakerSection />

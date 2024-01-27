@@ -37,17 +37,20 @@
 
 .conference-program-world-peter {
   margin-top: 6rem;
-  margin-left: 4.5rem;
   opacity: 0;
   transform: translateY(100px);
 }
 
 .conference-program-world-peter-active {
   margin-top: 6rem;
-  margin-left: 4.5rem;
   opacity: 1;
   transform: translateY(0px);
   transition: 0.5s;
+}
+
+.conference-program-world-peter-image {
+  width: 100%;
+  height: 100%;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/
@@ -71,8 +74,7 @@
     .conference-program-world-peter {
       max-width: fit-content;
       margin: 0 auto;
-      margin-top: 6rem;
-
+      /* margin-top: 6rem; */
       opacity: 0;
       transform: translateY(100px);
     }
@@ -80,7 +82,7 @@
     .conference-program-world-peter-active {
       max-width: fit-content;
       margin: 0 auto;
-      margin-top: 6rem;
+      /* margin-top: 6rem; */
 
       opacity: 1;
       transform: translateY(0px);
@@ -98,15 +100,13 @@
     }
 
     .conference-program-world-peter {
-      margin-top: 6rem;
-      margin-left: 4.5rem;
+      /* margin-top: 6rem; */
       opacity: 0;
       transform: translateY(100px);
     }
 
     .conference-program-world-peter-active {
-      margin-top: 6rem;
-      margin-left: 4.5rem;
+      /* margin-top: 6rem; */
       opacity: 1;
       transform: translateY(0px);
       transition: 0.5s;
