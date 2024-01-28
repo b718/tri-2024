@@ -6,7 +6,7 @@ const June12th8AM = () => {
     <div>
       {" "}
       <Text style={{ color: "#0482c8" }}>Opening session-</Text>
-      <Text style={{ color: "#194177" }}>“TINNITUS RESEARCH IN CANADA”</Text>
+      <Text style={{ color: "#194177" }}>“TBD”</Text>
     </div>
   );
 };

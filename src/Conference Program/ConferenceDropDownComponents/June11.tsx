@@ -3,6 +3,7 @@ import EventComponent from "./EventComponent/EventComponent";
 import { Flex } from "@mantine/core";
 import June11th8AM from "../HelperComponents/June11th8AM";
 import June11th1030AM from "../HelperComponents/June11th1030AM";
+import June11th1PM from "../HelperComponents/June11th1PM";
 
 const June11 = () => {
   return (
@@ -41,8 +42,8 @@ const June11 = () => {
         <EventComponent time="12:00 - 13:00" happen="Lunch" />
         <EventComponent
           time="13:00 - 15:00"
-          happen="Paper presentations"
           location="Theatre"
+          Component={June11th1PM}
         />
         <EventComponent
           time="13:00 - 15:00"
