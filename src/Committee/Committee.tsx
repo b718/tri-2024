@@ -9,6 +9,7 @@ import { Parallax, useParallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import CommiteePage from "../CommiteePage/CommiteePage";
+import ScientificCommitee from "../ScientificCommitee/ScientificCommitee";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
@@ -186,7 +187,7 @@ const Committee = () => {
           )}
         </Center>
         <CommiteePage />
-
+        <ScientificCommitee />
         <div
           // ref={stairs.ref}
           className={`committee-image-stairs${

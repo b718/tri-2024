@@ -246,6 +246,37 @@ function App() {
                         >
                           PROGRAM
                         </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                          onClick={() => {
+                            setBurger(false);
+                          }}
+                        >
+                          <a
+                            href="/speakers"
+                            style={{ textDecoration: "none", color: "#194177" }}
+                          >
+                            SPEAKERS
+                          </a>
+                        </Text>
+
+                        <Text
+                          className="nav-bar-different-sections-burger nav-bar-burger-version "
+                          style={{ fontSize: "20px", paddingLeft: "15vw" }}
+                          onClick={() => {
+                            setBurger(false);
+                          }}
+                        >
+                          <a
+                            href="/abstracts"
+                            style={{ textDecoration: "none", color: "#194177" }}
+                          >
+                            ABSTRACTS
+                          </a>
+                        </Text>
+
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
@@ -291,11 +322,9 @@ function App() {
                       <Home />
                       {/* <LatestUpdates /> */}
                       <Committee />
-
                       <PricingNRS />
                       <RegistrationFormNRS />
                       {/* <CommiteeSection /> */}
-                      <ScientificCommitee />
                       <Symposia />
                       <Carousel />
                       <ConferenceProgram />

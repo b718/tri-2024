@@ -28,7 +28,7 @@ const Footer = () => {
               <Text style={{ color: "white" }}>HOSTED BY </Text>
               <Text style={{ marginLeft: "0.2rem" }}>
                 <a href="https://www.soundidears.com/" target="blank">
-                  Sound idEARS
+                  Carol Lau
                 </a>
               </Text>
             </Flex>
