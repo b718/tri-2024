@@ -28,6 +28,7 @@ const WholeAbstract = () => {
           fontSize: "2.5rem",
           color: "#194177",
           marginTop: "3rem",
+          marginLeft: "1rem",
         }}
       >
         Abstracts
