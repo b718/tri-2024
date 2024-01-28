@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+  --var-gray: #f7f7f7;
+}
+
+.respsective-sectons-title,
+.respsective-sectons-title-two {
+  font-size: 2rem;
+}
+
+.respsective-sectons-title {
+  color: var(--var-dark-blue);
+}
+
+.respsective-sectons-title-two {
+  color: var(--var-white);
+}
+
+.respsective-sectons-speakers {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.respsective-sectons-abstracts {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.respective-sections-div-one {
+  background-color: var(--var-gray);
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.respective-sections-div-two {
+  background-color: var(--var-dark-blue);
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.respsective-sectons-speakers-button {
+  border: none;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: var(--main-button-color);
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Gravity;
+  font-size: var(--font-size-text);
+}
+
+.respsective-sectons-abstracts-button {
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--main-button-color);
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Gravity;
+  font-size: var(--font-size-text);
+}
+
+.respsective-sectons-abstracts-button a,
+.respsective-sectons-speakers-button a {
+  color: white;
+  text-decoration: none;
+}
+
+

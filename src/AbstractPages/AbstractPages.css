@@ -1,0 +1,62 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+  --var-gray: #f7f7f7;
+}
+
+.abstract-page-main-div {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.abstract-page-date {
+  font-family: Auger-Mono-Bold;
+  font-size: var(--font-size);
+  color: var(--var-dark-blue);
+  text-decoration: underline;
+}
+
+.abstract-page-time-and-location {
+  font-family: Gravity;
+  font-size: var(--font-size);
+  color: var(--var-dark-blue);
+}
+
+.abstract-page-main-title {
+  font-family: Gravity;
+  font-size: 1rem;
+  color: var(--var-dark-blue);
+}
+
+.abstract-page-main-type {
+  margin-top: 1rem;
+  font-family: Gravity;
+  font-size: 1rem;
+  color: var(--var-med-blue);
+}
+
+.abstract-page-inner-div {
+  max-width: 50rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

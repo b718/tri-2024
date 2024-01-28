@@ -8,6 +8,7 @@ import CommitteeStairsPicture from "../Images/alexander-serzhantov-xN0zxqQSdCk-u
 import { Parallax, useParallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../Components/useWindowsDimensions";
+import CommiteePage from "../CommiteePage/CommiteePage";
 
 const Committee = () => {
   const committeeRef = useContext(NavBarContext);
@@ -184,6 +185,8 @@ const Committee = () => {
             </Flex>
           )}
         </Center>
+        <CommiteePage />
+
         <div
           // ref={stairs.ref}
           className={`committee-image-stairs${

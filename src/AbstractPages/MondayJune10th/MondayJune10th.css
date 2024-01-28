@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+:root {
+  --main-text-color: rgb(26 65 119);
+  --location-color: #86ccf2;
+  --happen-color: rgb(26 65 119);
+  --break-color: gray;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+  --font-size: 0.875rem;
+  --var-gray: #f7f7f7;
+}
+
+.mj10-host {
+  margin-top: 1rem;
+  color: var(--var-med-blue);
+  font-size: var(--font-size);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.mj10-list {
+  margin-top: 1rem;
+  color: var(--var-med-blue);
+}
+
+.mj10-text {
+  margin-top: 1rem;
+  color: var(--var-dark-blue);
+  font-size: var(--font-size);
+}
+
+.mj10-inner-list {
+  font-size: 0.8rem;
+}
