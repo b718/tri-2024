@@ -1,13 +1,36 @@
-import { Flex } from "@mantine/core";
+import { Flex, Image } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June10th9AM from "../HelperComponents/June10th9AM";
 import June10th1030AM from "../HelperComponents/June10th1030AM";
-
+import useWindowDimensions from "../../Components/useWindowsDimensions";
+import June10thSchedule from "../../Images/june10.png";
 const June10 = () => {
+  const { width, height } = useWindowDimensions();
+
+  const triCommitteeRogersSize = () => {
+    if (width < 400) {
+      return 300;
+    } else if (width < 500) {
+      return 350;
+    } else if (width < 580) {
+      return 400;
+    } else {
+      return 600;
+    }
+    //961
+    //500
+  };
   return (
     <div>
       <Flex direction={"column"}>
+        <div style={{ marginTop: "1rem", marginLeft: "1rem" }}>
+          <Image
+            src={June10thSchedule}
+            fit={"cover"}
+            width={triCommitteeRogersSize()}
+          />
+        </div>
         <EventComponent
           time="08:00 - 08:30"
           happen="Registration"

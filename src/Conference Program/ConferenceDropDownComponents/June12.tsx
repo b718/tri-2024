@@ -1,13 +1,37 @@
-import { Flex, Grid } from "@mantine/core";
+import { Center, Flex, Grid, Image } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June12th8AM from "../HelperComponents/June12th8AM";
 import June12th1030AM from "../HelperComponents/June12th1030AM";
+import June12thSchedule from "../../Images/june12.png";
+import useWindowDimensions from "../../Components/useWindowsDimensions";
 
 const June12 = () => {
+  const { width, height } = useWindowDimensions();
+
+  const triCommitteeRogersSize = () => {
+    if (width < 400) {
+      return 300;
+    } else if (width < 500) {
+      return 350;
+    } else if (width < 580) {
+      return 400;
+    } else {
+      return 600;
+    }
+    //961
+    //500
+  };
   return (
     <div style={{ minWidth: "45rem" }}>
       <Flex direction={"column"}>
+        <div style={{ marginTop: "1rem", marginLeft: "1rem" }}>
+          <Image
+            src={June12thSchedule}
+            fit={"cover"}
+            width={triCommitteeRogersSize()}
+          />
+        </div>
         <EventComponent
           time="08:00 - 09:00"
           // happen='Opening session - "Tinnitus Research in Canada"'
