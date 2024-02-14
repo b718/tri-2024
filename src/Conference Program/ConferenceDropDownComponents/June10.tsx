@@ -1,12 +1,21 @@
 import { Flex, Image } from "@mantine/core";
-import React from "react";
+import React, { useState } from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June10th9AM from "../HelperComponents/June10th9AM";
 import June10th1030AM from "../HelperComponents/June10th1030AM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June10thSchedule from "../../Images/june10.png";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+
 const June10 = () => {
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const { width, height } = useWindowDimensions();
+  const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
 
   const triCommitteeRogersSize = () => {
     if (width < 400) {
@@ -18,9 +27,8 @@ const June10 = () => {
     } else {
       return 600;
     }
-    //961
-    //500
   };
+
   return (
     <div>
       <Flex direction={"column"}>
@@ -31,6 +39,14 @@ const June10 = () => {
             width={triCommitteeRogersSize()}
           />
         </div>
+
+        <Document
+          file={"./trijune10th.pdf"}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={1} />
+        </Document>
+
         <EventComponent
           time="08:00 - 08:30"
           happen="Registration"

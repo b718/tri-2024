@@ -320,11 +320,9 @@ function App() {
                         </Text>
                       </div>
                       <Home />
-                      {/* <LatestUpdates /> */}
                       <Committee />
                       <PricingNRS />
                       <RegistrationFormNRS />
-                      {/* <CommiteeSection /> */}
                       <Symposia />
                       <Carousel />
                       <ConferenceProgram />
@@ -333,6 +331,8 @@ function App() {
                       <FaQ />
                       <ContactUs />
                       <Footer />
+                      {/* <LatestUpdates /> */}
+                      {/* <CommiteeSection /> */}
                       {/* <SaveTheDate /> */}
                       {/* <RegistrationUpdated /> */}
                       {/* <PaymentForm /> */}
