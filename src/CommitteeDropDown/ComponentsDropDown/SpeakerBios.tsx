@@ -4,6 +4,8 @@ import { Center, Flex, Grid, Image, Text } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import DJPHeadshot from "../../Images/PawelJastreboff.png";
 import DRTHeadshot from "../../Images/drt-headshot.jpg";
+import hazelHart from "../../Images/Goedhart-Photo.jpeg";
+import husain from "../../Images/Husain-Photo.png";
 
 const SpeakerBios = () => {
   const { width, height } = useWindowDimensions();
@@ -167,6 +169,149 @@ const SpeakerBios = () => {
             >
               <Image
                 src={DRTHeadshot}
+                height={160}
+                fit="contain"
+                // className="componenets-commitee-image"
+              ></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 5}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Hazel Goedhart
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Hazel received her Bachelor’s degree in Geology and Master’s
+                degree in Political Science, both from the Free University of
+                Amsterdam. She started her career in the non-profit sector
+                working on human rights and sustainability issues.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                For the past twelve years Hazel has worked for Sustainalytics, a
+                company that provides environmental, social and governance (ESG)
+                data to institutional investors. She initially worked as an ESG
+                analyst researching companies in the healthcare and chemicals
+                sector. She then ventured into more operational roles, focusing
+                on project management and team management. She currently leads a
+                team of client service experts and is building a new team to
+                facilitate client communications.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                In 2018, Hazel developed tinnitus, and struggled for months to
+                find a way to cope with a condition that can be debilitating for
+                some. She started volunteering for Tinnitus Hub, a non- profit
+                patient organization that aims to improve the lives of people
+                suffering from tinnitus. She currently manages Tinnitus Hub – in
+                a volunteer capacity, next to her day job — together with Markku
+                Vesala, the founder.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                Her volunteer work for Tinnitus Hub has made Hazel passionate
+                about representing the voice of the patient, empowering people
+                with tinnitus through education, influencing the medical
+                community to take tinnitus more seriously, and advocating for
+                more cure focused tinnitus research. She strongly believes in
+                the power of online communities to affect change.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={1}></Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image
+                src={hazelHart}
+                height={160}
+                fit="contain"
+                // className="componenets-commitee-image"
+              ></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 5}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Dr. Fatima T. Husain{" "}
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Dr. Fatima T. Husain is an auditory cognitive neuroscientist by
+                training and a Professor at the University of Illinois
+                Urbana-Champaign, USA, where she is affiliated with the
+                Department of Speech and Hearing Science, the Neuroscience
+                Program, and the Beckman Institute for Advanced Science and
+                Technology. She also presently serves as the Associate Dean for
+                Diversity, Equity, and Inclusion in the College of Applied
+                Health Sciences. Dr. Husain uses behavioral studies, advanced
+                brain imaging, and computational modeling to better understand
+                brain function as related to all aspects of hearing.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={1}></Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image
+                src={husain}
                 height={160}
                 fit="contain"
                 // className="componenets-commitee-image"

@@ -1,10 +1,11 @@
-import { Flex, Image } from "@mantine/core";
+import { Flex, Image, Table } from "@mantine/core";
 import React, { useState } from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June10th9AM from "../HelperComponents/June10th9AM";
 import June10th1030AM from "../HelperComponents/June10th1030AM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import June10thSchedule from "../../Images/june10.png";
+import June10thSchedule from "../../Images/june10th.png";
+import June10tScheduleTwo from "../../Images/june10th-2.png";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "@bitnoi.se/react-scheduler/dist/style.css";
@@ -25,6 +26,51 @@ const June10 = () => {
     }
   };
 
+  // const elements = [
+  //   {
+  //     position: "8:00 - 8:30",
+  //     mass: "Registration",
+  //     symbol: "",
+  //     name: "",
+  //   },
+  //   {
+  //     position: "8:30 - 9:00",
+  //     mass: "Welcome + Opening Ceremony",
+  //     symbol: "",
+  //     name: "",
+  //   },
+  //   {
+  //     position: "9:00 - 9:30",
+  //     mass: <June10th9AM />,
+  //     symbol: "",
+  //     name: "",
+  //   },
+  //   { position: "9:30 - 10:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "10:00 - 10:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "10:30 - 11:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "11:00 - 11:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "11:30 - 12:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "12:00 - 12:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "12:30 - 1:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "1:00 - 1:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "1:30 - 2:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "2:00 - 2:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "3:00 - 3:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "3:30 - 4:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "4:00 - 4:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "4:30 - 5:00", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "5:00 - 6:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  //   { position: "6:30 - 11:30", mass: 137.33, symbol: "Ba", name: "Barium" },
+  // ];
+
+  // const rows = elements.map((element) => (
+  //   <tr key={element.name}>
+  //     <td>{element.position}</td>
+  //     <td>{element.name}</td>
+  //     <td>{element.symbol}</td>
+  //     <td>{element.mass}</td>
+  //   </tr>
+  // ));
   return (
     <div>
       <Flex direction={"column"}>
@@ -41,6 +87,18 @@ const June10 = () => {
             width={triCommitteeRogersSize()}
           />
         </div>
+        <div
+          style={{
+            maxWidth: "fit-content",
+            margin: "0 auto",
+          }}
+        >
+          <Image
+            src={June10tScheduleTwo}
+            fit={"cover"}
+            width={triCommitteeRogersSize()}
+          />
+        </div>
 
         {/* <Document
           file={"./trijune10th.pdf"}
@@ -48,6 +106,18 @@ const June10 = () => {
         >
           <Page pageNumber={1} />
         </Document> */}
+
+        {/* <Table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Theatre</th>
+              <th>C400/C420</th>
+              <th>C440</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </Table> */}
 
         <EventComponent
           time="08:00 - 08:30"

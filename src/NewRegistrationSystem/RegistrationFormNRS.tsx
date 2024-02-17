@@ -966,7 +966,7 @@ const RegistrationFormNRS = () => {
                     >
                       <option value="" selected disabled></option>
                       <option
-                        value={"Early Bird (closes 1 March 2024) $825 CAD"}
+                        value={"Early Bird (closes 8 March 2024) $825 CAD"}
                         style={{ fontSize: `${fontSize}` }}
                       >
                         Early Bird (closes 1 March 2024) $825 CAD

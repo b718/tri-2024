@@ -3,7 +3,9 @@ import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June12th8AM from "../HelperComponents/June12th8AM";
 import June12th1030AM from "../HelperComponents/June12th1030AM";
-import June12thSchedule from "../../Images/june12.png";
+import June12thSchedule from "../../Images/june12th.png";
+import June12thScheduleTwo from "../../Images/june12th-2.png";
+
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 
 const June12 = () => {
@@ -34,6 +36,18 @@ const June12 = () => {
         >
           <Image
             src={June12thSchedule}
+            fit={"cover"}
+            width={triCommitteeRogersSize()}
+          />
+        </div>
+        <div
+          style={{
+            maxWidth: "fit-content",
+            margin: "0 auto",
+          }}
+        >
+          <Image
+            src={June12thScheduleTwo}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />

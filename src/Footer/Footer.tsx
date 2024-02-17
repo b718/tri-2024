@@ -33,9 +33,9 @@ const Footer = () => {
               </Text>
             </Flex>
           </div>
-          <div className="footer-div-details-picture">
+          {/* <div className="footer-div-details-picture">
             <Image width={60} fit="contain" src={SoundDidEars} />
-          </div>
+          </div> */}
           <div className="footer-div-details-text-lower">
             <Flex>
               {" "}
