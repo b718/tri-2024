@@ -7,6 +7,7 @@ import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June10thSchedule from "../../Images/june10th.png";
 import June10tScheduleTwo from "../../Images/june10th-2.png";
 import { Document, Page, pdfjs } from "react-pdf";
+import NewJune10thSchedule from "../../Images/june10th-new.png";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "@bitnoi.se/react-scheduler/dist/style.css";
 
@@ -82,19 +83,7 @@ const June10 = () => {
           }}
         >
           <Image
-            src={June10thSchedule}
-            fit={"cover"}
-            width={triCommitteeRogersSize()}
-          />
-        </div>
-        <div
-          style={{
-            maxWidth: "fit-content",
-            margin: "0 auto",
-          }}
-        >
-          <Image
-            src={June10tScheduleTwo}
+            src={NewJune10thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />

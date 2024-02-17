@@ -5,8 +5,7 @@ import June12th8AM from "../HelperComponents/June12th8AM";
 import June12th1030AM from "../HelperComponents/June12th1030AM";
 import June12thSchedule from "../../Images/june12th.png";
 import June12thScheduleTwo from "../../Images/june12th-2.png";
-import June11th from "../../Images/june11th.png";
-import June11thTwo from "../../Images/june11th-2.png";
+import NewJune12thSchedule from "../../Images/june12th-new.png";
 
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 
@@ -37,23 +36,12 @@ const June12 = () => {
           }}
         >
           <Image
-            src={June12thSchedule}
+            src={NewJune12thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
         </div>
-        <div
-          style={{
-            maxWidth: "fit-content",
-            margin: "0 auto",
-          }}
-        >
-          <Image
-            src={June12thScheduleTwo}
-            fit={"cover"}
-            width={triCommitteeRogersSize()}
-          />
-        </div>
+
         <EventComponent
           time="08:00 - 09:00"
           // happen='Opening session - "Tinnitus Research in Canada"'

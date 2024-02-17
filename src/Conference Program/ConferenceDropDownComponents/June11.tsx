@@ -7,6 +7,7 @@ import June11th1PM from "../HelperComponents/June11th1PM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June11thSchedule from "../../Images/june11th.png";
 import June11thScheduleTwo from "../../Images/june11th-2.png";
+import NewJune11thSchedule from "../../Images/june11th-new.png";
 
 const June11 = () => {
   const { width, height } = useWindowDimensions();
@@ -36,24 +37,12 @@ const June11 = () => {
           }}
         >
           <Image
-            src={June11thSchedule}
+            src={NewJune11thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
         </div>
 
-        <div
-          style={{
-            maxWidth: "fit-content",
-            margin: "0 auto",
-          }}
-        >
-          <Image
-            src={June11thScheduleTwo}
-            fit={"cover"}
-            width={triCommitteeRogersSize()}
-          />
-        </div>
         <EventComponent
           time="08:00 - 09:00"
           // happen="Opening session - “MEASURING TINNITUS IN THE CLINIC AND RESEARCH” BY DR RICHARD TYLER."
