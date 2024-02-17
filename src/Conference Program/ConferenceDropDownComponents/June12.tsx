@@ -1,4 +1,4 @@
-import { Center, Flex, Grid, Image } from "@mantine/core";
+import { Center, Flex, Grid, Image, Text } from "@mantine/core";
 import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June12th8AM from "../HelperComponents/June12th8AM";

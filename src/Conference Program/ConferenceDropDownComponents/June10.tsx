@@ -40,12 +40,12 @@ const June10 = () => {
           />
         </div>
 
-        <Document
+        {/* <Document
           file={"./trijune10th.pdf"}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page pageNumber={1} />
-        </Document>
+        </Document> */}
 
         <EventComponent
           time="08:00 - 08:30"
