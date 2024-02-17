@@ -7,15 +7,11 @@ import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June10thSchedule from "../../Images/june10.png";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
+import "@bitnoi.se/react-scheduler/dist/style.css";
 
 const June10 = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const { width, height } = useWindowDimensions();
-  const [numPages, setNumPages] = useState<number>();
-  const [pageNumber, setPageNumber] = useState<number>(1);
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    setNumPages(numPages);
-  }
 
   const triCommitteeRogersSize = () => {
     if (width < 400) {
@@ -32,7 +28,13 @@ const June10 = () => {
   return (
     <div>
       <Flex direction={"column"}>
-        <div style={{ marginTop: "1rem", marginLeft: "1rem" }}>
+        <div
+          style={{
+            maxWidth: "fit-content",
+            margin: "0 auto",
+            marginTop: "1rem",
+          }}
+        >
           <Image
             src={June10thSchedule}
             fit={"cover"}

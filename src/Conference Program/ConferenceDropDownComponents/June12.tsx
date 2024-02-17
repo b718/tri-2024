@@ -25,7 +25,13 @@ const June12 = () => {
   return (
     <div style={{ minWidth: "45rem" }}>
       <Flex direction={"column"}>
-        <div style={{ marginTop: "1rem", marginLeft: "1rem" }}>
+        <div
+          style={{
+            maxWidth: "fit-content",
+            margin: "0 auto",
+            marginTop: "1rem",
+          }}
+        >
           <Image
             src={June12thSchedule}
             fit={"cover"}
