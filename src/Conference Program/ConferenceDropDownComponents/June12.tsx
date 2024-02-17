@@ -5,6 +5,8 @@ import June12th8AM from "../HelperComponents/June12th8AM";
 import June12th1030AM from "../HelperComponents/June12th1030AM";
 import June12thSchedule from "../../Images/june12th.png";
 import June12thScheduleTwo from "../../Images/june12th-2.png";
+import June11th from "../../Images/june11th.png";
+import June11thTwo from "../../Images/june11th-2.png";
 
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 
@@ -25,7 +27,7 @@ const June12 = () => {
     //500
   };
   return (
-    <div style={{ minWidth: "45rem" }}>
+    <div>
       <Flex direction={"column"}>
         <div
           style={{
