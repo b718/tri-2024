@@ -10,10 +10,7 @@ const June10th9AM = () => {
       </Text>
       <Text style={{ color: "#0482c8", textTransform: "uppercase" }}>
         SPEAKER:{" "}
-        <a
-          href={"https://www.linkedin.com/in/pawel-jastreboff-9581527/"}
-          target={"_blank"}
-        >
+        <a href={"https://www.tri2024.com/speakers"} target={"_blank"}>
           Dr Pawel Jastreboff,
         </a>
         <br />

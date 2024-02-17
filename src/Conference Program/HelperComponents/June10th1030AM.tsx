@@ -6,8 +6,10 @@ const June10th1030AM = () => {
     <div>
       <Text style={{ color: "#0482c8" }}>Symposium 1 -</Text>
       <Text style={{ color: "#194177" }}>
-        “SOUND TOLERANCE DISORDERS AND TINNITUS: INVESTIGATING HYPERACUSIS AND
-        MISOPHONIA”.
+        <a href="https://www.tri2024.com/abstracts" target={"_blank"}>
+          “SOUND TOLERANCE DISORDERS AND TINNITUS: INVESTIGATING HYPERACUSIS AND
+          MISOPHONIA”.
+        </a>
       </Text>
       <Text style={{ color: "#0482c8" }}>LEAD: FATIMA HUSAIN,</Text>
       <Text style={{ color: "#0482c8" }}>

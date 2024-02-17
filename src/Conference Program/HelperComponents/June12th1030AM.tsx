@@ -6,7 +6,11 @@ const June12th1030AM = () => {
     <div>
       {" "}
       <Text style={{ color: "#0482c8" }}>Symposium 3 - </Text>
-      <Text style={{ color: "#194177" }}>“TINNITUS AND PHYSICAL LINKS”</Text>
+      <Text style={{ color: "#194177" }}>
+        <a href="https://www.tri2024.com/abstracts" target={"_blank"}>
+          “TINNITUS AND PHYSICAL LINKS”
+        </a>
+      </Text>
       <Text style={{ color: "#0482c8" }}>LEAD: SARAH MICHIELS,</Text>
       <Text style={{ color: "#0482c8" }}>HASSELT UNIVERSITY, BELGIUM.</Text>
     </div>

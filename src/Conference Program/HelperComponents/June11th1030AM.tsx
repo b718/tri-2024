@@ -7,7 +7,10 @@ const June11th1030AM = () => {
       {" "}
       <Text style={{ color: "#0482c8" }}>Symposium 2 - </Text>
       <Text style={{ color: "#194177" }}>
-        “HOW SHOULD WE MEASURE THE SUCCESS OF TINNITUS TRIALS AND INTERVENTIONS”
+        <a href="https://www.tri2024.com/abstracts" target={"_blank"}>
+          “HOW SHOULD WE MEASURE THE SUCCESS OF TINNITUS TRIALS AND
+          INTERVENTIONS”
+        </a>
       </Text>
       <Text style={{ color: "#0482c8" }}>LEAD: HAZEL GOEDHART,</Text>
       <Text style={{ color: "#0482c8" }}>TINNITUS HUB, THE NETHERLANDS.</Text>

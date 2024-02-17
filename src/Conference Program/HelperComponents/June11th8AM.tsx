@@ -10,10 +10,7 @@ const June11th8AM = () => {
       </Text>
       <Text style={{ color: "#0482c8" }}>
         SPEAKER:{" "}
-        <a
-          href="https://www.audiology.org/honors-and-awards/award-winners/richard-tyler-phd/"
-          target={"_blank"}
-        >
+        <a href="https://www.tri2024.com/speakers" target={"_blank"}>
           DR RICHARD TYLER,
         </a>
       </Text>
