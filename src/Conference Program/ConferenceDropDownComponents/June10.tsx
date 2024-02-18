@@ -149,6 +149,7 @@ const June10 = () => {
           happen="Paper presentations"
           location="Room C400/C420"
         />
+
         <EventComponent
           time="13:00 - 15:00"
           happen="Sponsor presentation"
@@ -163,11 +164,11 @@ const June10 = () => {
 
         <EventComponent time="15:00 - 15:30" happen="Break" />
 
-        {/* <EventComponent
+        <EventComponent
           time="15:30 - 17:00"
-          happen="Poster session"
-          location="HSBC Hall"
-        /> */}
+          happen="Posters + Exhibititon"
+          location="Room C440"
+        />
 
         <div style={{ marginBottom: "0.5rem" }}>
           <EventComponent
