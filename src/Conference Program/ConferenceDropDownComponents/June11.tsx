@@ -8,6 +8,9 @@ import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June11thSchedule from "../../Images/june11th.png";
 import June11thScheduleTwo from "../../Images/june11th-2.png";
 import NewJune11thSchedule from "../../Images/june11th-new.png";
+import C440June11th9AM from "../HelperComponents/C440-June11th9AM";
+import C440June11th1PM from "../HelperComponents/C440June11th1PM";
+import C440June11th230PM from "../HelperComponents/C440June11th230PM";
 
 const June11 = () => {
   const { width, height } = useWindowDimensions();
@@ -60,8 +63,8 @@ const June11 = () => {
           location="Room C400/C420"
         />
         <EventComponent
-          time="09:00 - 10:00"
-          happen="Paper presentations"
+          time="09:00 - 09:30"
+          Component={C440June11th9AM}
           location="Room C440"
         />
         <EventComponent time="10:00 - 10:30" happen="Break" />
@@ -85,24 +88,30 @@ const June11 = () => {
         />
 
         <EventComponent
-          time="13:00 - 15:00"
-          happen="Sponsor presentation"
+          time="13:00 - 13:30"
           location="Room C440"
+          Component={C440June11th1PM}
         />
 
         <EventComponent
-          time="13:00 - 15:00"
-          happen="Exhibit Hall"
-          location="HSBC Hall"
+          time="14:30 - 15:00"
+          location="Room C440"
+          Component={C440June11th230PM}
         />
+
+        {/* <EventComponent
+          time="04:30 - 05:00"
+          happen="Sponsor presentation"
+          location="Room C440"
+        /> */}
 
         <EventComponent time="15:00 - 15:30" happen="Break" />
 
         <div style={{ marginBottom: "0.5rem" }}>
           <EventComponent
             time="15:30 - 17:00"
-            happen="Poster session"
-            location="HSBC Hall"
+            happen="Poster + Exhibitions"
+            location="C440"
           />{" "}
         </div>
       </Flex>

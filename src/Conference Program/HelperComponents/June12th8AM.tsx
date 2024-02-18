@@ -5,7 +5,7 @@ const June12th8AM = () => {
   return (
     <div>
       {" "}
-      <Text style={{ color: "#0482c8" }}>Opening session-</Text>
+      <Text style={{ color: "#0482c8" }}>Opening session -</Text>
       <Text style={{ color: "#194177" }}>“TBD”</Text>
     </div>
   );

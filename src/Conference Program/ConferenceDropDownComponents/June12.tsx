@@ -8,6 +8,10 @@ import June12thScheduleTwo from "../../Images/june12th-2.png";
 import NewJune12thSchedule from "../../Images/june12th-new.png";
 
 import useWindowDimensions from "../../Components/useWindowsDimensions";
+import C440June12th9AM from "../HelperComponents/C440June12th9AM";
+import C440June12th930AM from "../HelperComponents/C440June12th930AM";
+import C440June12th1PM from "../HelperComponents/C440June12th1PM";
+import C440June12th2PM from "../HelperComponents/C440June12th2PM";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -61,6 +65,18 @@ const June12 = () => {
           location="Room C400/C420"
         />
 
+        <EventComponent
+          time="09:00 - 09:30"
+          location="Room C440"
+          Component={C440June12th9AM}
+        />
+
+        <EventComponent
+          time="09:30 - 10:00"
+          location="Room C440"
+          Component={C440June12th930AM}
+        />
+
         <EventComponent time="10:00 - 10:30" happen="Break" />
 
         <EventComponent
@@ -83,10 +99,17 @@ const June12 = () => {
           happen="Paper presentations"
           location="Room C400/C420"
         />
+
         <EventComponent
-          time="13:00 - 15:00"
-          happen="Sponsor session"
+          time="13:00 - 13:30"
           location="Room C440"
+          Component={C440June12th1PM}
+        />
+
+        <EventComponent
+          time="14:00 - 14:30"
+          location="Room C440"
+          Component={C440June12th2PM}
         />
 
         <EventComponent time="15:00 - 15:30" happen="Break" />
@@ -100,7 +123,7 @@ const June12 = () => {
         <div style={{ marginBottom: "0.5rem" }}>
           <EventComponent
             time="16:30 - 17:00"
-            happen="Farewell and closing remarks"
+            happen="Farewell + Closing Remarks"
             location="Theatre"
           />
         </div>
