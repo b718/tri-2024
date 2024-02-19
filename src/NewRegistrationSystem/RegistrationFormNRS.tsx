@@ -143,7 +143,7 @@ const RegistrationFormNRS = () => {
 
   useEffect(() => {
     let values = [
-      "Early Bird (closes 1 March 2024) $825 CAD",
+      "Early Bird (closes 8 March 2024) $825 CAD",
       "Regular Rate (closes 8 June 2024) $975 CAD",
       "On-site Registration $1475 CAD",
       "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD",
@@ -969,7 +969,7 @@ const RegistrationFormNRS = () => {
                         value={"Early Bird (closes 8 March 2024) $825 CAD"}
                         style={{ fontSize: `${fontSize}` }}
                       >
-                        Early Bird (closes 1 March 2024) $825 CAD
+                        Early Bird (closes 8 March 2024) $825 CAD
                       </option>
                       <option
                         value={"Regular Rate (closes 8 June 2024) $975 CAD"}
