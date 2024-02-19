@@ -6,6 +6,8 @@ import DJPHeadshot from "../../Images/PawelJastreboff.png";
 import DRTHeadshot from "../../Images/drt-headshot.jpg";
 import hazelHart from "../../Images/Goedhart-Photo.jpeg";
 import husain from "../../Images/Husain-Photo.png";
+import michesl from "../../Images/Michiels-Photo.jpg";
+import mcmahan from "../../Images/McMahan Photo.jpg";
 
 const SpeakerBios = () => {
   const { width, height } = useWindowDimensions();
@@ -312,6 +314,146 @@ const SpeakerBios = () => {
             >
               <Image
                 src={husain}
+                height={160}
+                fit="contain"
+                // className="componenets-commitee-image"
+              ></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 5}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Sarah Michiels
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Sarah Michiels is Assistant Professor in Musculoskeletal
+                Rehabiliation at REVAL Rehabilitation Research Center of Hasselt
+                University. After graduating as a Master in Physiotherapy in
+                2005 she obtained an additional Master in Manual Therapy at the
+                Free University of Brussels. After working fulltime as a
+                physiotherapist in her private practice for four years, Sarah
+                started teaching physiotherapy students in 2009, at the
+                University of Antwerp.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                After successfully completing her PhD, studying neck-related
+                tinnitus complaints, in 2015, she continued studying somatic
+                tinnitus, now focusing on temporomandibular-related tinnitus
+                complaints.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                In 2020 she joined the Faculty of Rehabilitation Sciences and
+                Physiotherapy of Hasselt University as Assistant Professor,
+                teaching physiotherapy students and continuing her research on
+                tinnitus complaints and other head and neck-related conditions.
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                In the meantime, she also continues her clinical work in the
+                multidisciplinary tinnitus team of the Antwerp University
+                Hospital, where she is responsible for diagnostic assessment and
+                treatment of patients with somatic tinnitus and other neck or
+                jaw-related ENT complaints.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={1}></Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image
+                src={michesl}
+                height={160}
+                fit="contain"
+                // className="componenets-commitee-image"
+              ></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 5}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Dr. Emily E. McMahan
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Dr. Emily E. McMahan is an audiologist and the owner of Alaska
+                Hearing &amp; Tinnitus Center in Anchorage. In addition to her
+                physical practices in Alaska she serves high needs tinnitus
+                patients via Telehealth and in-person field clinics across the
+                United States.  She holds multi-state licensure in order to help
+                patients receive access to care closer to home. She is
+                passionate about tinnitus patient care, audiology, and best
+                practices.  She  dedicates a considerable amount of time to
+                educating audiologists on evidence-based tinnitus care and how
+                to establish a tinnitus clinic. Dr. McMahan earned her Doctorate
+                in Audiology and graduated from Salus University.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={1}></Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image
+                src={mcmahan}
                 height={160}
                 fit="contain"
                 // className="componenets-commitee-image"
