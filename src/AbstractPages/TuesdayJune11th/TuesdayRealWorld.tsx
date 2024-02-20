@@ -14,17 +14,25 @@ const TuesdayRealWorld = () => {
         <Text>SPEAKERS: </Text>
 
         <ol className="mj10-inner-list">
-          <li>Mr. Robin Guillard, University of Grenoble Alpes, France</li>
-          <li>Mr. Antonios Chalimourdas, Hasselt University, Belgium</li>
-          <li>Ms. Sara Demoen, Hasselt University, Belgium</li>
           <li>
-            Dr. Annemarie van der Wal, ACTA Academic Center for Dentistry,
-            Amsterdam, The Netherlands
+            Sven Vanneste, Trinity College Institute for Neuroscience, &amp;
+            School of Psychology, Trinity College Dublin, Ireland.
+          </li>
+          <li>Emily McMahan, Founder of Alaska Hearing and Tinnitus Center.</li>
+          <li>
+            Craig Kasper, Founder and Managing Director of New York Hearing
+            Doctors – Institute for Hearing and Balance, New York, U.S.A.
           </li>
           <li>
-            Prof. dr. Tanit Ganz Sanchez, University of Sao Paulo, ENT
-            Department, School of Medicine, Brazil
+            Brian Fligor – Co-Founder and Clinical Strategic Advisor at Lantos
+            Technologies. President and Owner of Tobias and Battite Inc, Boston,
+            Massachusetts, U.S.A.
           </li>
+          <li>
+            Stefan Schoisswohl, Universität der Bundeswehr München, Munich,
+            Germany.
+          </li>
+          <li>Milena Engelke, Universitätsklinikum Regensburg, Germany.</li>
         </ol>
       </div>
       <Text className="mj10-text">
