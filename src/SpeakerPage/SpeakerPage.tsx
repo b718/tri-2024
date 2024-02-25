@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import SpeakerBios from "../CommitteeDropDown/ComponentsDropDown/SpeakerBios";
 import "./SpeakerPage.css";
-import { Text } from "@mantine/core";
+import { Image, Text } from "@mantine/core";
+import crowdImage from "../Images/headway-F2KRf_QfCqw-unsplash.jpg";
 
 const SpeakerPage = () => {
   const scrollToSection = (elementRef: any): void => {
@@ -18,6 +19,8 @@ const SpeakerPage = () => {
 
   return (
     <div className="speaker-page-main-div">
+      <Image src={crowdImage} height={350} />
+
       <div className="speaker-page-inner-div">
         <Text className="speaker-page-main-text">Speakers</Text>
         <SpeakerBios />

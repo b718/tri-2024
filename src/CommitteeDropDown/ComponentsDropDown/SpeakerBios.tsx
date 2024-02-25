@@ -8,9 +8,15 @@ import hazelHart from "../../Images/Goedhart-Photo.jpeg";
 import husain from "../../Images/Husain-Photo.png";
 import michesl from "../../Images/Michiels-Photo.jpg";
 import mcmahan from "../../Images/McMahan Photo.jpg";
+import norena from "../../Images/Norena Photo.jpg";
+import dirk from "../../Images/Dirk-De-Ridder Photo.jpg";
+import jaste from "../../Images/JastreboffM Photo.jpg";
+import carol from "../../Images/Carol-Lau.jpg";
+import slyvie from "../../Images/sylvieHS.png";
 
 const SpeakerBios = () => {
   const { width, height } = useWindowDimensions();
+
   return (
     <div>
       <Grid
@@ -19,7 +25,7 @@ const SpeakerBios = () => {
         align={"flex-start"}
         style={{ marginTop: "1rem" }}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -74,7 +80,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <Flex
@@ -89,12 +94,7 @@ const SpeakerBios = () => {
                     : "componenets-commitee-image"
                 }`}
               >
-                <Image
-                  src={DJPHeadshot}
-                  height={160}
-                  fit="contain"
-                  // className="componenets-commitee-image"
-                ></Image>
+                <Image src={DJPHeadshot} height={160} fit="contain"></Image>
               </div>
             </Flex>
           </Center>
@@ -113,7 +113,7 @@ const SpeakerBios = () => {
         justify={"center"}
         align={"flex-start"}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -159,7 +159,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <div
@@ -169,12 +168,7 @@ const SpeakerBios = () => {
                   : "componenets-commitee-image"
               }`}
             >
-              <Image
-                src={DRTHeadshot}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
+              <Image src={DRTHeadshot} height={160} fit="contain"></Image>
             </div>
           </Center>
         </Grid.Col>
@@ -192,7 +186,7 @@ const SpeakerBios = () => {
         justify={"center"}
         align={"flex-start"}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -241,7 +235,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <div
@@ -251,12 +244,7 @@ const SpeakerBios = () => {
                   : "componenets-commitee-image"
               }`}
             >
-              <Image
-                src={hazelHart}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
+              <Image src={hazelHart} height={160} fit="contain"></Image>
             </div>
           </Center>
         </Grid.Col>
@@ -274,7 +262,7 @@ const SpeakerBios = () => {
         justify={"center"}
         align={"flex-start"}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -302,7 +290,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <div
@@ -312,12 +299,7 @@ const SpeakerBios = () => {
                   : "componenets-commitee-image"
               }`}
             >
-              <Image
-                src={husain}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
+              <Image src={husain} height={160} fit="contain"></Image>
             </div>
           </Center>
         </Grid.Col>
@@ -335,7 +317,7 @@ const SpeakerBios = () => {
         justify={"center"}
         align={"flex-start"}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -380,7 +362,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <div
@@ -390,12 +371,7 @@ const SpeakerBios = () => {
                   : "componenets-commitee-image"
               }`}
             >
-              <Image
-                src={michesl}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
+              <Image src={michesl} height={160} fit="contain"></Image>
             </div>
           </Center>
         </Grid.Col>
@@ -413,7 +389,7 @@ const SpeakerBios = () => {
         justify={"center"}
         align={"flex-start"}
       >
-        <Grid.Col span={width < 720 ? 1 : 5}>
+        <Grid.Col span={width < 720 ? 1 : 6}>
           <Flex direction={"column"}>
             <Text
               className="components-commitee-style-text-title"
@@ -442,7 +418,6 @@ const SpeakerBios = () => {
             </Text>
           </Flex>
         </Grid.Col>
-        <Grid.Col span={1}></Grid.Col>
         <Grid.Col span={width < 720 ? 1 : 2}>
           <Center>
             <div
@@ -452,12 +427,250 @@ const SpeakerBios = () => {
                   : "componenets-commitee-image"
               }`}
             >
-              <Image
-                src={mcmahan}
-                height={160}
-                fit="contain"
-                // className="componenets-commitee-image"
-              ></Image>
+              <Image src={mcmahan} height={160} fit="contain"></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 6}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Dr Arnaud Norena
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                I am Professor in Marseille, France, working on both humans and
+                animals. My work focuses on trying to understand the mechanisms
+                of &quot;normal&quot; audiitory perception and the auditory
+                perception disorders such as tinnitus, hyperacusis and
+                misophonia.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image src={norena} height={160} fit="contain"></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 6}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Dr Dirk de Ridder
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div></div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image src={dirk} height={160} fit="contain"></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 6}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Dr Margaret Jastreboff
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div></div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image src={jaste} height={160} fit="contain"></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 6}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Carol Lau
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Carol Lau is an audiologist and owner of a private practice
+                clinic, Sound idEARS Hearing & Listening Clinic and the
+                Vancouver Tinnitus & Hyperacusis Clinic in Vancouver since 1998.
+                Specialty areas are tinnitus, decreased sound tolerance,
+                auditory processing disorders and amplification in adults,
+                seniors and children.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image src={carol} height={160} fit="contain"></Image>
+            </div>
+          </Center>
+        </Grid.Col>
+      </Grid>
+
+      <hr
+        style={{
+          marginBottom: "2rem",
+          marginTop: "1rem",
+        }}
+      />
+
+      <Grid
+        columns={width < 720 ? 1 : 8}
+        justify={"center"}
+        align={"flex-start"}
+      >
+        <Grid.Col span={width < 720 ? 1 : 6}>
+          <Flex direction={"column"}>
+            <Text
+              className="components-commitee-style-text-title"
+              style={{
+                marginBottom: "0rem",
+                fontSize: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              Sylvie Hébert
+            </Text>
+            <Text className="components-commitee-style-text">
+              <div>
+                Sylvie Hébert Sylvie Hébert is Professor and Program director of
+                Audiology at Université de Montréal, where she teaches
+                evidence-based practice in audiology and specialized courses on
+                tinnitus and hyperacusis. She is a member of the BRAMS
+                (International Laboratory for research on Brain, Music, and
+                Sound) and of the Center of Research on Brain, Language, and
+                Music (CRBLM). Her research expertise includes auditory and
+                non-auditory factors involved in loudness perception, tinnitus
+                and hyperacusis, and objective measures of tinnitus.
+              </div>
+            </Text>
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={width < 720 ? 1 : 2}>
+          <Center>
+            <div
+              className={`${
+                width < 720
+                  ? "componenets-commitee-image-middle"
+                  : "componenets-commitee-image"
+              }`}
+            >
+              <Image src={slyvie} height={160} fit="contain"></Image>
             </div>
           </Center>
         </Grid.Col>

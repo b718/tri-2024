@@ -1,32 +1,36 @@
-import { Text } from "@mantine/core";
+import { Flex, Text } from "@mantine/core";
 import React from "react";
 
 const June12thPhysicalLinks = () => {
   return (
     <div>
       {" "}
-      <div className="mj10-host">
-        <Text>CHAIR:</Text>
-        <Text>Sarah Michiels, </Text>
-        <Text>Hasselt University, Belgium</Text>
-      </div>
-      <div className="mj10-list">
-        <Text>SPEAKERS: </Text>
+      <hr style={{ marginTop: "1rem" }} />
+      <Flex align={"flex-start"} justify={"center"}>
+        <div className="mj10-host">
+          <Text>CHAIR:</Text>
+          <Text>Sarah Michiels, </Text>
+          <Text>Hasselt University, Belgium</Text>
+        </div>
+        <div className="mj10-list">
+          <Text>SPEAKERS: </Text>
 
-        <ol className="mj10-inner-list">
-          <li>Mr. Robin Guillard, University of Grenoble Alpes, France</li>
-          <li>Mr. Antonios Chalimourdas, Hasselt University, Belgium</li>
-          <li>Ms. Sara Demoen, Hasselt University, Belgium</li>
-          <li>
-            Dr. Annemarie van der Wal, ACTA Academic Center for Dentistry,
-            Amsterdam, The Netherlands
-          </li>
-          <li>
-            Prof. dr. Tanit Ganz Sanchez, University of Sao Paulo, ENT
-            Department, School of Medicine, Brazil
-          </li>
-        </ol>
-      </div>
+          <ol className="mj10-inner-list">
+            <li>Mr. Robin Guillard, University of Grenoble Alpes, France</li>
+            <li>Mr. Antonios Chalimourdas, Hasselt University, Belgium</li>
+            <li>Ms. Sara Demoen, Hasselt University, Belgium</li>
+            <li>
+              Dr. Annemarie van der Wal, ACTA Academic Center for Dentistry,
+              Amsterdam, The Netherlands
+            </li>
+            <li>
+              Prof. dr. Tanit Ganz Sanchez, University of Sao Paulo, ENT
+              Department, School of Medicine, Brazil
+            </li>
+          </ol>
+        </div>
+      </Flex>
+      <hr style={{ marginTop: "1rem" }} />
       <Text className="mj10-text">
         Science shows us that several physical symptoms or dysfunctions may be
         present in patients with tinnitus. In this symposium, we aim to give a

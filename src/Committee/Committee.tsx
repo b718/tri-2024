@@ -38,17 +38,6 @@ const Committee = () => {
   const { ref: stairsPicture, inView: stairsPictureVisible } = useInView({
     triggerOnce: true,
   });
-  // const stairs = useParallax<HTMLDivElement>({
-  //   // rotateX: [0, 40],
-  //   rotateY: [-40, 0],
-  //   // rotateZ: [0, 40],
-  // });
-
-  // const bridge = useParallax<HTMLDivElement>({
-  //   // rotateX: [0, 40],
-  //   rotateY: [0, 40],
-  //   // rotateZ: [0, 40],
-  // });
 
   const triCommitteePictureSize = () => {
     if (width > 1040) {
@@ -62,7 +51,6 @@ const Committee = () => {
     } else {
       return 320;
     }
-    //961
   };
 
   const triCommitteeBridgeSize = () => {
@@ -77,7 +65,6 @@ const Committee = () => {
     } else {
       return 650;
     }
-    //650
   };
   return (
     <div className="committee-outer-container" ref={committeeRef.committeeRef}>
@@ -186,7 +173,6 @@ const Committee = () => {
             </Flex>
           )}
         </Center>
-        <CommiteePage />
         <ScientificCommitee />
         <div
           // ref={stairs.ref}

@@ -331,11 +331,6 @@ function App() {
                       <FaQ />
                       <ContactUs />
                       <Footer />
-                      {/* <LatestUpdates /> */}
-                      {/* <CommiteeSection /> */}
-                      {/* <SaveTheDate /> */}
-                      {/* <RegistrationUpdated /> */}
-                      {/* <PaymentForm /> */}
                     </div>
                   }
                 />
@@ -366,24 +361,6 @@ function App() {
       </ButtonClickedContext.Provider>
     </>
   );
-}
-
-{
-  /* <Venue /> */
-}
-{
-  /* <ConferenceProgram />
-        <Registration />
-        <Sponsorships /> */
-}
-{
-  /* <PageHolder /> */
-}
-{
-  /* <Carousel /> */
-}
-{
-  /* <Payment /> */
 }
 
 export default App;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useContext, useState } from "react";
 import "./ConferenceProgram.css";
 import SpeakerSection from "./SpeakersComponent/SpeakerSection";
@@ -11,6 +12,8 @@ import PeterScienceWorld from "../Images/peter-skaronis-XH82uGMB8H8-unsplash cop
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import { useInView } from "react-intersection-observer";
 import { NavBarContext } from "../App";
+import AbstractDropDown from "../AbstractPages/AbstractDropDown";
+import June12thPhysicalLinks from "../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
@@ -69,6 +72,15 @@ const ConferenceProgram = () => {
             title="monday, june 10"
             Component={June10}
           />
+
+          <AbstractDropDown
+            title={"Tinnitus and Physical Links"}
+            date={"WEDNESDAY, JUNE 12"}
+            time={"1:00 - 2:00"}
+            type={"Symposium:"}
+            Component={June12thPhysicalLinks}
+          />
+
           <ConferenceProgramDropDown
             title="tuesday, june 11"
             Component={June11}
