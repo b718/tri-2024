@@ -117,7 +117,7 @@ const ConferenceProgram = () => {
             }
             date={"TUESDAY, JUNE 11th"}
             time={"10:30 - 12:00"}
-            type={"Opening Session:"}
+            type={"Symposium:"}
             Component={TuesdayHowMeasureSuccess}
           />
 
