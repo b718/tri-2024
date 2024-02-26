@@ -18,12 +18,14 @@ const SpeakerPage = () => {
   }, []);
 
   return (
-    <div className="speaker-page-main-div">
+    <div>
       <Image src={crowdImage} height={350} />
 
-      <div className="speaker-page-inner-div">
-        <Text className="speaker-page-main-text">Speakers</Text>
-        <SpeakerBios />
+      <div className="speaker-page-main-div">
+        <div className="speaker-page-inner-div">
+          <Text className="speaker-page-main-text">Speakers</Text>
+          <SpeakerBios />
+        </div>
       </div>
     </div>
   );
