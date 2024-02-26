@@ -98,12 +98,7 @@ const FaQ = () => {
     ],
   ];
 
-  const HotelBooking = [
-    [
-      "HYATT REGENCY HOTEL GROUP BOOKING LINK",
-      "https://www.hyatt.com/en-US/group-booking/YVRRV/G-TI36",
-    ],
-  ];
+  const HotelBooking = [["", ""]];
 
   return (
     <div>
@@ -167,7 +162,6 @@ const FaQ = () => {
           text={
             "TRI-2024 has managed to secure some hotel rooms at the Hyatt Regency Hotel, Downtown Vancouver at a significantly discounted rate.  The hotel is a 5 minutes walk to the conference centre and all rooms have 2 beds allowing for shared accommodation.  A link to the hotel group booking will be provided with your conference registration receipt."
           }
-          links={HotelBooking}
         />
         <Venue />
       </div>

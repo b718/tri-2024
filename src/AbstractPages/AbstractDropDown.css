@@ -23,6 +23,7 @@
 .a-dd-div {
   max-width: 95vw;
   margin: 0 auto;
+  color: var(--var-dark-blue);
 }
 
 .a-dd-div-title-left {
@@ -66,7 +67,8 @@
 .a-dd-div-active-content {
   overflow: hidden;
   transition: 0.5s;
-  color: white;
+  color: var(--var-dark-blue);
+
   font-size: var(--font-size);
   font-family: Gravity;
 }

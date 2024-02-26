@@ -5,7 +5,7 @@ import June11th8AM from "../HelperComponents/June11th8AM";
 import June11th1030AM from "../HelperComponents/June11th1030AM";
 import June11th1PM from "../HelperComponents/June11th1PM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import June11thSchedule from "../../Images/june11th.png";
+import June11thSchedule from "../../Images/june-11th-schedule.png";
 import June11thScheduleTwo from "../../Images/june11th-2.png";
 import NewJune11thSchedule from "../../Images/june11th-new.png";
 import C440June11th9AM from "../HelperComponents/C440-June11th9AM";
@@ -23,7 +23,7 @@ const June11 = () => {
     } else if (width < 580) {
       return 400;
     } else {
-      return 600;
+      return 700;
     }
     //961
     //500
@@ -40,13 +40,13 @@ const June11 = () => {
           }}
         >
           <Image
-            src={NewJune11thSchedule}
+            src={June11thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
         </div>
 
-        <EventComponent
+        {/* <EventComponent
           time="08:00 - 09:00"
           // happen="Opening session - “MEASURING TINNITUS IN THE CLINIC AND RESEARCH” BY DR RICHARD TYLER."
           location="Theatre"
@@ -99,11 +99,11 @@ const June11 = () => {
           Component={C440June11th230PM}
         />
 
-        {/* <EventComponent
+        <EventComponent
           time="04:30 - 05:00"
           happen="Sponsor presentation"
           location="Room C440"
-        /> */}
+        />
 
         <EventComponent time="15:00 - 15:30" happen="Break" />
 
@@ -113,7 +113,7 @@ const June11 = () => {
             happen="Poster + Exhibitions"
             location="C440"
           />{" "}
-        </div>
+        </div> */}
       </Flex>
     </div>
   );

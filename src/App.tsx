@@ -264,21 +264,6 @@ function App() {
 
                         <Text
                           className="nav-bar-different-sections-burger nav-bar-burger-version "
-                          style={{ fontSize: "20px", paddingLeft: "15vw" }}
-                          onClick={() => {
-                            setBurger(false);
-                          }}
-                        >
-                          <a
-                            href="/abstracts"
-                            style={{ textDecoration: "none", color: "#194177" }}
-                          >
-                            ABSTRACTS
-                          </a>
-                        </Text>
-
-                        <Text
-                          className="nav-bar-different-sections-burger nav-bar-burger-version "
                           onClick={() => {
                             scrollToSection(sponsorshipRef);
                             setBurger(false);
@@ -334,16 +319,7 @@ function App() {
                     </div>
                   }
                 />
-                <Route
-                  path="/abstracts"
-                  element={
-                    <div>
-                      <NewNews />
-                      <WholeAbstract />
-                      <Footer />
-                    </div>
-                  }
-                />
+
                 <Route
                   path="/speakers"
                   element={

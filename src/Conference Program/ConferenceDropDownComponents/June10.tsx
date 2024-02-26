@@ -4,14 +4,12 @@ import EventComponent from "./EventComponent/EventComponent";
 import June10th9AM from "../HelperComponents/June10th9AM";
 import June10th1030AM from "../HelperComponents/June10th1030AM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import June10thSchedule from "../../Images/june10th.png";
 import June10tScheduleTwo from "../../Images/june10th-2.png";
 import { Document, Page, pdfjs } from "react-pdf";
 import NewJune10thSchedule from "../../Images/june10th-new.png";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "@bitnoi.se/react-scheduler/dist/style.css";
-import AbstractDropDown from "../../AbstractPages/AbstractDropDown";
-import June12thPhysicalLinks from "../../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
+import June10thSchedule from "../../Images/june-10th-schedule.png";
 
 const June10 = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -25,7 +23,7 @@ const June10 = () => {
     } else if (width < 580) {
       return 400;
     } else {
-      return 600;
+      return 700;
     }
   };
 
@@ -40,7 +38,7 @@ const June10 = () => {
           }}
         >
           <Image
-            src={NewJune10thSchedule}
+            src={June10thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
@@ -53,15 +51,15 @@ const June10 = () => {
           }}
         ></hr>
 
-        <AbstractDropDown
+        {/* <AbstractDropDown
           title={"Tinnitus and Physical Links"}
           date={"WEDNESDAY, JUNE 12"}
           time={"1:00 - 2:00"}
           type={"Symposium:"}
           Component={June12thPhysicalLinks}
-        />
+        /> */}
 
-        <EventComponent
+        {/* <EventComponent
           time="08:00 - 08:30"
           happen="Registration"
           location="Theatre"
@@ -121,7 +119,7 @@ const June10 = () => {
             location="Hyatt Regency Hotel"
             happen="TRI Networking Dinner"
           />
-        </div>
+        </div> */}
       </Flex>
     </div>
   );

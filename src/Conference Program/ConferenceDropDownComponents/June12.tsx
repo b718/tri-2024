@@ -3,15 +3,14 @@ import React from "react";
 import EventComponent from "./EventComponent/EventComponent";
 import June12th8AM from "../HelperComponents/June12th8AM";
 import June12th1030AM from "../HelperComponents/June12th1030AM";
-import June12thSchedule from "../../Images/june12th.png";
 import June12thScheduleTwo from "../../Images/june12th-2.png";
 import NewJune12thSchedule from "../../Images/june12th-new.png";
-
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import C440June12th9AM from "../HelperComponents/C440June12th9AM";
 import C440June12th930AM from "../HelperComponents/C440June12th930AM";
 import C440June12th1PM from "../HelperComponents/C440June12th1PM";
 import C440June12th2PM from "../HelperComponents/C440June12th2PM";
+import June12thSchedule from "../../Images/june-12th-schedule.png";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -24,7 +23,7 @@ const June12 = () => {
     } else if (width < 580) {
       return 400;
     } else {
-      return 600;
+      return 700;
     }
     //961
     //500
@@ -40,13 +39,13 @@ const June12 = () => {
           }}
         >
           <Image
-            src={NewJune12thSchedule}
+            src={June12thSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
         </div>
 
-        <EventComponent
+        {/* <EventComponent
           time="08:00 - 09:00"
           // happen='Opening session - "Tinnitus Research in Canada"'
           Component={June12th8AM}
@@ -126,7 +125,7 @@ const June12 = () => {
             happen="Farewell + Closing Remarks"
             location="Theatre"
           />
-        </div>
+        </div> */}
       </Flex>
     </div>
   );

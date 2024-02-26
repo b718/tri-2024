@@ -1,6 +1,9 @@
 import React, { FunctionComponent, useRef, useState } from "react";
 import "./AbstractDropDown.css";
 import { Flex, Grid, Text } from "@mantine/core";
+import Cal10 from "../Images/TRI2024_CalIcon-01.png";
+import Cal11 from "../Images/TRI2024_CalIcon-02.png";
+import Cal12 from "../Images/TRI2024_CalIcon-03.png";
 
 interface CommiteeDropDownData {
   title: string;
@@ -21,24 +24,29 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
   const parentRef = useRef<HTMLInputElement>(null);
   return (
     <div className="a-dd-div">
-      <hr />{" "}
       <Grid
-        columns={8}
+        columns={12}
         onClick={() => setClick(!click)}
         align="center"
         style={{ cursor: "pointer" }}
       >
-        <Grid.Col span={6}>
+        <Grid.Col span={10}>
           {" "}
-          <Flex align={"center"} gap={"3rem"}>
-            <Flex direction={"column"}>
-              <Text className={`a-dd-div-title-left${click ? "-active" : ""}`}>
-                {date}
-              </Text>
-              <Text className={`a-dd-div-title-left${click ? "-active" : ""}`}>
-                {time}
-              </Text>
-            </Flex>
+          <Flex align={"center"} gap={"1rem"}>
+            <div style={{ minWidth: "10rem" }}>
+              <Flex direction={"column"}>
+                <Text
+                  className={`a-dd-div-title-left${click ? "-active" : ""}`}
+                >
+                  {date}
+                </Text>
+                <Text
+                  className={`a-dd-div-title-left${click ? "-active" : ""}`}
+                >
+                  {time}
+                </Text>
+              </Flex>
+            </div>
             <Flex direction={"column"}>
               <Text className={`a-dd-div-title${click ? "-active" : ""}`}>
                 {type}
@@ -96,7 +104,7 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
       >
         <Component />
       </div>
-      <hr />
+      <hr />{" "}
     </div>
   );
 };
