@@ -43,6 +43,9 @@ const ContactUs = () => {
     <div ref={contactUs.contactUs}>
       <form className="contact-us-main-div" onSubmit={onSubmit}>
         <Text className="contact-us-title">Contact Us</Text>
+        <Text className="contact-us-label" style={{ color: "rgb(26 65 119)" }}>
+          Business Number: 868162389
+        </Text>
         <TextInput
           required={true}
           label="Name"
