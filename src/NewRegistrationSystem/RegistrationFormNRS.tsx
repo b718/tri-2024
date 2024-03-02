@@ -1521,7 +1521,11 @@ const RegistrationFormNRS = () => {
                     </Flex>
                   ) : (
                     <Flex direction={"column"} style={{ margin: "1rem" }}>
-                      <Payment title={"stripe-payment"} price={price * 1.05} />
+                      <Payment
+                        title={"stripe-payment"}
+                        price={price * 1.05}
+                        name={first + " " + last}
+                      />
                       <PayPalPayment
                         price={(price * 1.05).toString()}
                         desc={ticketType!}
