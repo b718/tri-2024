@@ -85,6 +85,11 @@
   background-color: white;
 }
 
+.registration-label-color label {
+  color: var(--var-med-blue);
+  font-weight: normal;
+}
+
 /*Max-width is basically saying 500px, if youre in that this will happen*/
 @media all {
   /* xs, extra-small: 0px

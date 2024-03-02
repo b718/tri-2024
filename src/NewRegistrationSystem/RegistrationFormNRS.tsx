@@ -46,7 +46,7 @@ const RegistrationFormNRS = () => {
 
   const PaymentRef = useContext(NavBarContext);
   const { width, height } = useWindowDimensions();
-
+  const [nip, setNip] = useState<string>("");
   const [paymentStatus, setPaymentStatus] = useState<any>("");
 
   //PageInfo
@@ -224,7 +224,6 @@ const RegistrationFormNRS = () => {
     const options = { timeZone: "America/Los_Angeles" };
     const pstDate = currentDate.toLocaleString("en-US", options);
 
-    // const splitData = paymentStatus.split("-");
     let NewPaymentStatus = "";
 
     if (paymentStatus === "done-stripe") {
@@ -255,6 +254,7 @@ const RegistrationFormNRS = () => {
         postal: postal,
         city: city,
         country: country,
+        nipVatUam: nip,
       },
       ticketInfo: {
         ticketType: ticketType,
@@ -451,35 +451,29 @@ const RegistrationFormNRS = () => {
                   className="registration-form-nrs-flex-0"
                 >
                   <div>
-                    <Text className="">
-                      Name{" "}
-                      <Text
-                        style={{
-                          color: "red",
-                          marginLeft: "0.1rem",
-                          display: "inline-block",
-                        }}
-                      >
-                        *
-                      </Text>
-                    </Text>
                     <Flex gap={"md"} wrap={"nowrap"}>
                       <TextInput
-                        placeholder="Title"
+                        label="Title"
+                        withAsterisk
+                        className="registration-label-color"
                         value={title}
                         onChange={(e) => {
                           setTitle(e.target.value);
                         }}
                       />
                       <TextInput
-                        placeholder="First"
+                        label="First"
+                        withAsterisk
+                        className="registration-label-color"
                         value={first}
                         onChange={(e) => {
                           setFirst(e.target.value);
                         }}
                       />
                       <TextInput
-                        placeholder="Last"
+                        label="Last"
+                        withAsterisk
+                        className="registration-label-color"
                         value={last}
                         onChange={(e) => {
                           setLast(e.target.value);
@@ -490,59 +484,6 @@ const RegistrationFormNRS = () => {
 
                   <div>
                     <Text className="">Profession/Attendee Type </Text>
-
-                    {/* <Box sx={{ minWidth: 120 }}>
-                      <FormControl fullWidth size="small">
-                        <Select
-                          value={profession}
-                          onChange={handleProfession}
-                          style={{ fontSize: "0.875rem" }}
-                        >
-                          <MenuItem
-                            value={"Advocacy"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Advocacy
-                          </MenuItem>
-                          <MenuItem
-                            value={"Audiology/Hearing"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Audiology/Hearing
-                          </MenuItem>
-                          <MenuItem
-                            value={"Education"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Education
-                          </MenuItem>
-                          <MenuItem
-                            value={"Medicine"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Medicine
-                          </MenuItem>
-                          <MenuItem
-                            value={"Psychology"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Psychology
-                          </MenuItem>
-                          <MenuItem
-                            value={"Research"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Research
-                          </MenuItem>
-                          <MenuItem
-                            value={"Other"}
-                            style={{ fontSize: `${fontSize}` }}
-                          >
-                            Other
-                          </MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box> */}
 
                     <select
                       className="registration-form-select"
@@ -686,7 +627,7 @@ const RegistrationFormNRS = () => {
 
                   <div>
                     <Text>
-                      Address{" "}
+                      Address Type{" "}
                       <Text
                         style={{
                           color: "red",
@@ -697,46 +638,6 @@ const RegistrationFormNRS = () => {
                         *
                       </Text>
                     </Text>
-
-                    {/* <Select
-                      withAsterisk={true}
-                      required={true}
-                      transitionProps={{
-                        transition: "pop-top-left",
-                        duration: 80,
-                        timingFunction: "ease",
-                      }}
-                      value={addressType}
-                      onChange={setAddressType}
-                      data={["Work", "Home"]}
-                      style={{ marginBottom: "1rem" }}
-                      placeholder={"Address Type"}
-                    /> */}
-
-                    {/* <FormControl
-                      fullWidth
-                      size={"small"}
-                      style={{ marginBottom: "1rem" }}
-                    >
-                      <Select
-                        value={addressType}
-                        onChange={handleAddressType}
-                        style={{ fontSize: "0.875rem" }}
-                      >
-                        <MenuItem
-                          value={"Work"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Work
-                        </MenuItem>
-                        <MenuItem
-                          value={"Home"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Home
-                        </MenuItem>
-                      </Select>
-                    </FormControl> */}
 
                     <select
                       className="registration-form-select"
@@ -755,18 +656,23 @@ const RegistrationFormNRS = () => {
                       <Flex gap={"1rem"}>
                         <TextInput
                           required={true}
-                          placeholder="Street Address"
+                          withAsterisk={true}
+                          className="registration-label-color"
+                          label={"Street Address"}
                           value={street}
                           onChange={(e) => setStreet(e.target.value)}
                         />
                         <TextInput
-                          placeholder="Apartment, suite"
+                          className="registration-label-color"
+                          label={"Apt, Suite"}
                           value={suite}
                           onChange={(e) => setSuite(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="City"
+                          withAsterisk
+                          className="registration-label-color"
+                          label={"City"}
                           value={city}
                           onChange={(e) => setCity(e.target.value)}
                         />
@@ -774,26 +680,38 @@ const RegistrationFormNRS = () => {
                       <Flex gap={"1rem"}>
                         <TextInput
                           required={true}
-                          placeholder="Province/State"
+                          withAsterisk
+                          className="registration-label-color"
+                          label={"Province/State"}
                           value={state}
                           onChange={(e) => setstate(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Postal Code"
+                          withAsterisk
+                          className="registration-label-color"
+                          label={"Postal Code"}
                           value={postal}
                           onChange={(e) => setPostal(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Country"
+                          withAsterisk
+                          className="registration-label-color"
+                          label={"Country"}
                           value={country}
                           onChange={(e) => setCountry(e.target.value)}
                         />
                       </Flex>
                     </Flex>
                   </div>
-
+                  <div>
+                    <Text>NIP/VAT/UAM</Text>
+                    <TextInput
+                      value={nip}
+                      onChange={(e) => setNip(e.target.value)}
+                    />
+                  </div>
                   <div>
                     <Flex
                       gap={"1rem"}
@@ -820,19 +738,25 @@ const RegistrationFormNRS = () => {
                         </Text>
                         <TextInput
                           required={true}
-                          placeholder="Name"
+                          label="Name"
+                          withAsterisk
+                          className="registration-label-color"
                           value={osName}
                           onChange={(e) => setOsName(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Phone Number"
+                          label="Phone Number"
+                          withAsterisk
+                          className="registration-label-color"
                           value={osPhone}
                           onChange={(e) => setOsPhone(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Email"
+                          label="Email"
+                          withAsterisk
+                          className="registration-label-color"
                           value={osEmail}
                           onChange={(e) => setOsEmail(e.target.value)}
                         />
@@ -856,19 +780,25 @@ const RegistrationFormNRS = () => {
                         </Text>
                         <TextInput
                           required={true}
-                          placeholder="Name"
+                          label="Name"
+                          withAsterisk
+                          className="registration-label-color"
                           value={ofsName}
                           onChange={(e) => setOfsName(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Phone Number"
+                          label="Phone Number"
+                          withAsterisk
+                          className="registration-label-color"
                           value={ofsPhone}
                           onChange={(e) => setOfsPhone(e.target.value)}
                         />
                         <TextInput
                           required={true}
-                          placeholder="Email"
+                          label="Email"
+                          withAsterisk
+                          className="registration-label-color"
                           value={ofsEmail}
                           onChange={(e) => setOfsEmail(e.target.value)}
                         />
@@ -902,60 +832,6 @@ const RegistrationFormNRS = () => {
                         *
                       </Text>
                     </Text>
-
-                    {/* <FormControl fullWidth size="small">
-                      <Select
-                        value={ticketType}
-                        onChange={handleTicketType}
-                        style={{ fontSize: "0.875rem" }}
-                      >
-                        <MenuItem
-                          value={"Early Bird (closes 1 March 2024) $825 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Early Bird (closes 1 March 2024) $825 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={"Regular Rate (closes 8 June 2024) $975 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Regular Rate (closes 8 June 2024) $975 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={"On-site Registration $1475 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          On-site Registration $1475 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={
-                            "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD"
-                          }
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          Student Rate (requires proof of enrolment – closes 8
-                          June 2024) $625 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={"One day, June 10 only $525 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          One day, June 10 only $525 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={"One day, June 11 only $525 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          One day, June 11 only $525 CAD
-                        </MenuItem>
-                        <MenuItem
-                          value={"One day, June 12 only $525 CAD"}
-                          style={{ fontSize: `${fontSize}` }}
-                        >
-                          One day, June 12 only $525 CAD
-                        </MenuItem>
-                      </Select>
-                    </FormControl> */}
 
                     <select
                       className="registration-form-select"
@@ -1024,40 +900,6 @@ const RegistrationFormNRS = () => {
                     </Text>
                   </div>
 
-                  {/* <div>
-                    <Text className="">
-                      Pre-Conference Workshop Add-on: Wednesday, June 10th
-                      <Text
-                        style={{
-                          color: "red",
-                          marginLeft: "0.1rem",
-                          display: "inline-block",
-                        }}
-                      >
-                        *
-                      </Text>
-                    </Text>
-
-                    <Select
-                      size={"xs"}
-                      placeholder="Workshop registrations are limited in number, first-come, first-served."
-                      value={addOn}
-                      onChange={setAddOn}
-                      withAsterisk={true}
-                      required={true}
-                      data={[
-                        "Workshop 1",
-                        "Workshop 2",
-                        "No - I am only attending the main conference from June 10-12, 2023",
-                      ]}
-                      transitionProps={{
-                        transition: "pop-top-left",
-                        duration: 80,
-                        timingFunction: "ease",
-                      }}
-                    />
-                  </div> */}
-
                   <div>
                     <Text className="">
                       Will you be bringing a guest to the TRI Welcome Dinner?
@@ -1071,29 +913,6 @@ const RegistrationFormNRS = () => {
                         *
                       </Text>
                     </Text>
-
-                    {/* <FormControl fullWidth size="small"> */}
-                    {/* <Select
-                      value={guest}
-                      onChange={handleGuest}
-                      style={{ fontSize: "0.875rem" }}
-                    >
-                      <MenuItem
-                        value={
-                          "Yes – ($95 to be added to conference registration)"
-                        }
-                        style={{ fontSize: `${fontSize}` }}
-                      >
-                        Yes – ($95 to be added to conference registration)
-                      </MenuItem>
-                      <MenuItem
-                        value={"No"}
-                        style={{ fontSize: `${fontSize}` }}
-                      >
-                        No
-                      </MenuItem>
-                    </Select> */}
-                    {/* </FormControl> */}
 
                     <select
                       className="registration-form-select"
@@ -1162,53 +981,6 @@ const RegistrationFormNRS = () => {
                       <div></div>
                     )}
                   </div>
-
-                  {/* <div>
-                    <Flex style={{ wordBreak: "break-word" }} gap={"4rem"}>
-                      <Text className="registration-form-nrs-dinner-text">
-                        Your full Conference Registration includes the TRI
-                        Networking Dinner Event on Monday, June 10th. Will you
-                        be bringing a guest to the Event?
-                        <Text
-                          style={{
-                            color: "red",
-                            marginLeft: "0.1rem",
-                            display: "inline-block",
-                          }}
-                        >
-                          *
-                        </Text>
-                      </Text>
-                      <Flex
-                        gap={"1rem"}
-                        justify={"center"}
-                        direction={`${width < 600 ? "column" : "row"}`}
-                      >
-                        <button
-                          type="button"
-                          className={`registration-form-nrs-button${
-                            btn == "yes" ? "-active" : ""
-                          }`}
-                          onClick={() => {
-                            setBtn("yes");
-                          }}
-                        >
-                          Yes
-                        </button>
-                        <button
-                          type="button"
-                          className={`registration-form-nrs-button${
-                            btn == "no" ? "-active" : ""
-                          }`}
-                          onClick={() => {
-                            setBtn("no");
-                          }}
-                        >
-                          No
-                        </button>
-                      </Flex>
-                    </Flex>
-                  </div> */}
 
                   <div>
                     <Flex
@@ -1734,6 +1506,10 @@ const RegistrationFormNRS = () => {
                   direction={"column"}
                   className="registration-form-nrs-flex-2"
                 >
+                  <Text>Please remember to submit after payment!</Text>
+                  <Text>
+                    Do not close the browser until recipt is received!
+                  </Text>
                   {paymentStatus === "done-stripe" ||
                   paymentStatus === "done-pp" ? (
                     <Flex direction={"column"} style={{ margin: "1rem" }}>

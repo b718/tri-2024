@@ -6,9 +6,10 @@ const MondayJune10th = () => {
   return (
     <div>
       <div className="mj10-host">
-        <Text>CHAIR:</Text>
-        <Text>FATIMA HUSAIN, </Text>
-        <Text>UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN, USA.</Text>
+        <Text>
+          Chair:  Fatima Husain, University of Illinois Urbana-Champaign, United
+          States
+        </Text>
       </div>
 
       <div className="mj10-list">
@@ -28,17 +29,23 @@ const MondayJune10th = () => {
       </div>
 
       <Text className="mj10-text">
-        Sound tolerance disorders are often comorbid with tinnitus but are
-        poorly understood and their impact on individuals with tinnitus is not
-        well understood. Misophonia is a relatively newly-defined sound
-        tolerance disorder consisting of intense emotional responses to specific
-        sounds, or 'triggers' (Swedo et al., 2022). As a sound tolerance
-        disorder, misophonia has a high comorbidity with tinnitus and
-        hyperacusis (Aazh et al., 2022). In this panel, several experts spanning
-        audiology, neuroscience, and behavioral psychology will moderate
-        discussion on the similarities between misophonia, tinnitus, and
-        hyperacusis, clinical differentiation between these disorders, and
-        currently identified underlying mechanisms.
+        <b>One Sentence Summary:</b> The symposium will bring together experts
+        from audiology, neuroscience, and psychology to discuss sound tolerance
+        disorders of loudness hyperacusis and misophonia in the context of
+        tinnitus.
+      </Text>
+      <Text className="mj10-text">
+        <b>Abstract:</b> Sound tolerance disorders are often comorbid with
+        tinnitus but are poorly understood and their impact on individuals with
+        tinnitus is not well understood. Misophonia is a relatively
+        newly-defined sound tolerance disorder consisting of intense emotional
+        responses to specific sounds, or &#39;triggers&#39; (Swedo et al.,
+        2022). As a sound tolerance disorder, misophonia has a high comorbidity
+        with tinnitus and hyperacusis (Aazh et al., 2022). In this panel,
+        several experts spanning audiology, neuroscience, and behavioral
+        psychology will moderate discussion on the similarities between
+        misophonia, tinnitus, and hyperacusis, clinical differentiation between
+        these disorders, and currently identified underlying mechanisms.
       </Text>
     </div>
   );

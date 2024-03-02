@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useContext } from "react";
 import "./Sponsorship.css";
 import { NavBarContext } from "../App";
@@ -6,6 +7,7 @@ import oticonImage from "../Images/Oticon_Logo_LCT_260px_rgb_pos.png";
 import signia from "../Images/Sponsorships/signia.png";
 import neuromod from "../Images/Sponsorships/new_neuro_white.png";
 import widex from "../Images/Sponsorships/widex.jpg";
+import ataImage from "../Images/ATA Logo.jpg";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 
 const Sponsorships = () => {
@@ -15,6 +17,7 @@ const Sponsorships = () => {
   const signialink = "https://www.signia.net/en/";
   const neurmodlink = "https://neuromoddevices.com/";
   const widexlink = "https://www.widex.com/";
+  const ata = "https://www.ata.org/";
   const { width, height } = useWindowDimensions();
 
   return (
@@ -42,6 +45,9 @@ const Sponsorships = () => {
           </a>
           <a href={widexlink} target="_blank">
             <Image width={imageWidth} fit="contain" src={widex} />
+          </a>
+          <a href={ata} target="_blank">
+            <Image width={imageWidth} fit="contain" src={ataImage} />
           </a>
 
           {/* <Image width={imageWidth} fit="contain" src={comingSoon} /> */}

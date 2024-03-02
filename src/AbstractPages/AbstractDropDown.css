@@ -1,0 +1,101 @@
+@font-face {
+  font-family: Gravity;
+  src: url("../../public/Fonts/gravity/Gravity-Regular.otf");
+}
+
+@font-face {
+  font-family: Auger-Mono-Bold;
+  src: url("../../public/Fonts-Two/Auger\ Mono\ Webfont/augermono-regular.woff2");
+}
+
+:root {
+  --symposia-text-color: #0283c9;
+  --font-size: 0.875rem;
+  --font-small-size: 0.8rem;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
+}
+
+.a-dd-div {
+  max-width: 95vw;
+  margin: 0 auto;
+  color: var(--var-dark-blue);
+}
+
+.a-dd-div-title-left {
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--font-small-size);
+  transition: 0.5s;
+  color: var(--var-dark-blue);
+  cursor: pointer;
+}
+
+.a-dd-div-title-left-active {
+  font-family: Auger-Mono-Bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--font-small-size);
+  transition: 0.5s;
+  color: var(--var-dark-blue);
+  cursor: pointer;
+}
+
+.a-dd-div-title {
+  font-family: Gravity;
+  font-weight: bold;
+  font-size: var(--font-size);
+  transition: 0.5s;
+  color: var(--symposia-text-color);
+  cursor: pointer;
+}
+
+.a-dd-div-title-active {
+  font-family: Gravity;
+  font-weight: bold;
+  font-size: var(--font-size);
+  transition: 0.5s;
+  color: var(--symposia-text-color);
+  cursor: pointer;
+}
+
+.a-dd-div-active-content {
+  overflow: hidden;
+  transition: 0.5s;
+  color: var(--var-dark-blue);
+
+  font-size: var(--font-size);
+  font-family: Gravity;
+}
+
+.a-dd-div-svg {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.a-dd-div-svg-active {
+  margin-top: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.a-dd-div-faq-line-middle {
+  color: #74a441;
+}
+
+.a-dd-div-line-rotate {
+  color: #74a441;
+  transition: 0.5s;
+}
+
+.a-dd-div-line-rotate-active {
+  color: #74a441;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}

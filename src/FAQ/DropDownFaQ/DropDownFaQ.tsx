@@ -4,7 +4,7 @@ import { Text, Grid, Flex } from "@mantine/core";
 interface FaQData {
   title: string;
   text: string;
-  links: string[][];
+  links?: string[][];
 }
 const DropDownFaQ: FunctionComponent<FaQData> = ({ title, text, links }) => {
   const [click, setClick] = useState<Boolean>(false);
@@ -79,7 +79,7 @@ const DropDownFaQ: FunctionComponent<FaQData> = ({ title, text, links }) => {
         </Text>
 
         <Flex direction={"column"}>
-          {links.map((value) => {
+          {links?.map((value) => {
             return (
               <Flex>
                 <Text

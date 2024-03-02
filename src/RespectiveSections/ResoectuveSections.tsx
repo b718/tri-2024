@@ -20,21 +20,6 @@ const ResoectuveSections = () => {
             </button>
           </Flex>
         </div>
-
-        <div className="respective-sections-div-two">
-          <Flex
-            align={"center"}
-            gap={"10rem"}
-            justify={"center"}
-            className="respsective-sectons-abstracts"
-            wrap={"wrap"}
-          >
-            <Text className="respsective-sectons-title-two">Abstracts</Text>
-            <button className="respsective-sectons-abstracts-button">
-              <a href="/abstracts">READ DETAILS</a>
-            </button>
-          </Flex>
-        </div>
       </Flex>
     </div>
   );

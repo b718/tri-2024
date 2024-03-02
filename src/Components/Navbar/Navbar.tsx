@@ -186,15 +186,6 @@ const Navbar = () => {
                           Speakers
                         </Link>
                       </Text>
-                      <Text
-                        className="nav-bar-posters"
-                        // style={{ opacity: `${!enterSubmission ? "0" : "100"}` }}
-                        style={{ display: `${!enterProgram ? "none" : ""}` }}
-                      >
-                        <Link to={"abstracts"} className="nav-bar-posters">
-                          ABSTRACTS
-                        </Link>
-                      </Text>
                     </div>
                   </Flex>
                   <Text

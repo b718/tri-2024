@@ -98,6 +98,8 @@ const FaQ = () => {
     ],
   ];
 
+  const HotelBooking = [["", ""]];
+
   return (
     <div>
       <div
@@ -154,6 +156,12 @@ const FaQ = () => {
             "Vancouver has long been a popular tourist destination known for its natural beauty, outdoor activities, cultural attractions, and culinary scene. Learn about the local First Nations people on a walking tour, explore art and theatre on Granville Island, take a whale-watching tour off the coast, and much more. For travellers going the extra mile, Alaskan cruises and train rides on the Rocky Mountaineer are easily accessible from the city."
           }
           links={GetTourism}
+        />
+        <DropDownFaQ
+          title={"Hyatt Regency Hotel Booking"}
+          text={
+            "TRI-2024 has managed to secure some hotel rooms at the Hyatt Regency Hotel, Downtown Vancouver at a significantly discounted rate.  The hotel is a 5 minutes walk to the conference centre and all rooms have 2 beds allowing for shared accommodation.  A link to the hotel group booking will be provided with your conference registration receipt."
+          }
         />
         <Venue />
       </div>
