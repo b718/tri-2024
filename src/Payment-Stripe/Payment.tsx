@@ -5,10 +5,15 @@ import CheckoutForm from "./CheckoutForm";
 import "./Payment.css";
 interface PaymentPerson {
   title: string;
+  name: string;
   price: number;
 }
 
-const Payment: React.FunctionComponent<PaymentPerson> = ({ title, price }) => {
+const Payment: React.FunctionComponent<PaymentPerson> = ({
+  title,
+  price,
+  name,
+}) => {
   const [stripePromise, setStripePromise] =
     useState<Promise<Stripe | null> | null>(null);
   const [clientSecret, setClientSecret] = useState("");
