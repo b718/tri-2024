@@ -316,6 +316,7 @@ const RegistrationFormNRS = () => {
     setPostal("");
     setCity("");
     setCountry("");
+    setNip("");
 
     //Contacts
     setOfsName("");
