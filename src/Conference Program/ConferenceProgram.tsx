@@ -19,6 +19,10 @@ import MondayRealWorldEvidence from "../AbstractPages/MondayJune10th/MondayRealW
 import TuesdayMeasureTinnitus from "../AbstractPages/TuesdayJune11th/TuesdayMeasureTinnitus";
 import TuesdayHowMeasureSuccess from "../AbstractPages/TuesdayJune11th/TuesdayHowMeasureSuccess";
 import TuesdayContribution from "../AbstractPages/TuesdayJune11th/TuesdayContribution";
+import MondayJune10thDistinguish from "../AbstractPages/MondayJune10th/MondayJune10thDistinguish";
+import June12thMorning from "../AbstractPages/WednesdayJune12th/June12thMorning";
+import June12thSuccessful from "../AbstractPages/WednesdayJune12th/June12thSuccessful";
+import June12thAfternoon from "../AbstractPages/WednesdayJune12th/June12thAfterNoon";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
@@ -76,6 +80,14 @@ const ConferenceProgram = () => {
           <ConferenceProgramDropDown
             title="monday, june 10"
             Component={June10}
+          />
+
+          <AbstractDropDown
+            title={"WHERE ARE WE NOW? WHERE ARE WE GOING?"}
+            date={"MONDAY, JUNE 10th"}
+            time={"9:00 - 10:00"}
+            type={"The Aage Moller Distinguished Lecture On Tinnitus:"}
+            Component={MondayJune10thDistinguish}
           />
 
           <AbstractDropDown
@@ -137,11 +149,35 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
+            title={"To Be Posted"}
+            date={"WEDNESDAY, JUNE 12th"}
+            time={"8:00 - 9:00"}
+            type={"Opening Session:"}
+            Component={June12thMorning}
+          />
+
+          <AbstractDropDown
+            title={"THE SUCCESSFUL TINNITUS AUDIOLOGIST"}
+            date={"WEDNESDAY, JUNE 12th"}
+            time={"9:00 - 9:30"}
+            type={"Workshop:"}
+            Component={June12thSuccessful}
+          />
+
+          <AbstractDropDown
             title={"TINNITUS AND PHYSICAL LINKS"}
             date={"WEDNESDAY, JUNE 12th"}
             time={"10:30 - 12:00"}
             type={"Symposium:"}
             Component={June12thPhysicalLinks}
+          />
+
+          <AbstractDropDown
+            title={"WAR ON TINNITUS"}
+            date={"WEDNESDAY, JUNE 12th"}
+            time={"1:00 - 2:00"}
+            type={"Afternoon Session:"}
+            Component={June12thAfternoon}
           />
         </div>
       </div>

@@ -6,7 +6,9 @@ const MondayRealWorldEvidence = () => {
   return (
     <div>
       <div className="mj10-host">
-        <Text>Chair: Emily McMahan, Alaska Hearing and Tinnitus Center</Text>
+        <Text>
+          <b>Chair:</b> Emily McMahan, Alaska Hearing and Tinnitus Center
+        </Text>
       </div>
 
       <div className="mj10-list">

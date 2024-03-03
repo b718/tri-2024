@@ -6,9 +6,9 @@ const TuesdayMeasureTinnitus = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          Speaker: Richard S. Tyler, Ph.D., Department of Otolaryngology-Head
-          and Neck Surgery and Communication Sciences and Disorders, Iowa City,
-          IA, The University of Iowa
+          <b>Speaker:</b> Richard S. Tyler, Ph.D., Department of
+          Otolaryngology-Head and Neck Surgery and Communication Sciences and
+          Disorders, Iowa City, IA, The University of Iowa
         </Text>
       </div>
 
