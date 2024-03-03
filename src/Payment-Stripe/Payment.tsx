@@ -6,6 +6,7 @@ import "./Payment.css";
 interface PaymentPerson {
   title: string;
   name: string;
+  email: string;
   price: number;
 }
 
@@ -13,6 +14,7 @@ const Payment: React.FunctionComponent<PaymentPerson> = ({
   title,
   price,
   name,
+  email,
 }) => {
   const [stripePromise, setStripePromise] =
     useState<Promise<Stripe | null> | null>(null);
@@ -35,6 +37,8 @@ const Payment: React.FunctionComponent<PaymentPerson> = ({
       },
       body: JSON.stringify({
         price: (price * 100).toString(),
+        name: name,
+        email: email,
       }),
     }).then(async (result) => {
       var { clientSecret } = await result.json();
