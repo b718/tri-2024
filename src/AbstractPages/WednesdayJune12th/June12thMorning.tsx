@@ -1,15 +1,16 @@
-import { Flex, Text } from "@mantine/core";
 import React from "react";
+import { Flex, Text } from "@mantine/core";
 
-const June12thPhysicalLinks = () => {
+const June12thMorning = () => {
   return (
     <div>
       <div className="mj10-host">
         <Text>
-          <b>Chair:</b> Sarah Michiels, Hasselt University, Belgium
+          <b>Chair:</b> Dr Sylvie Hébert, Professor and Program Director of
+          Audiology, Université de Montréal
         </Text>
       </div>
-
+      {/* 
       <div className="mj10-list">
         <Text>SPEAKERS: </Text>
         <ol className="mj10-inner-list">
@@ -51,9 +52,9 @@ const June12thPhysicalLinks = () => {
         their tinnitus after cervical spine or temporomandibular treatment. The
         final goal of this symposium is to present the characteristics of these
         patients and the type of treatment that provided succor.
-      </Text>
+      </Text> */}
     </div>
   );
 };
 
-export default June12thPhysicalLinks;
+export default June12thMorning;

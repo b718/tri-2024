@@ -9,7 +9,7 @@ import husain from "../../Images/Husain-Photo.png";
 import michesl from "../../Images/Michiels-Photo.jpg";
 import mcmahan from "../../Images/McMahan Photo.jpg";
 import norena from "../../Images/Norena Photo.jpg";
-import dirk from "../../Images/Dirk-De-Ridder Photo.jpg";
+import dirk from "../../Images/De Ridder Headshot.jpg";
 import jaste from "../../Images/JastreboffM Photo.jpg";
 import carol from "../../Images/Carol-Lau.jpg";
 import slyvie from "../../Images/sylvieHS.png";

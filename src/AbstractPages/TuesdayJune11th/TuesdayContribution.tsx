@@ -5,7 +5,9 @@ const TuesdayContribution = () => {
   return (
     <div>
       <div className="mj10-host">
-        <Text>Speaker: Dr Arnaud Norena, Aix-Marseille University, France</Text>
+        <Text>
+          <b>Speaker:</b> Dr Arnaud Norena, Aix-Marseille University, France
+        </Text>
       </div>
 
       <Text className="mj10-text">

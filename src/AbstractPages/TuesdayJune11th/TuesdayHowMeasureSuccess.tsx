@@ -5,7 +5,9 @@ const TuesdayHowMeasureSuccess = () => {
   return (
     <div>
       <div className="mj10-host">
-        <Text>Chair: Hazel Goedhart, Tinnitus Hub, The Netherlands</Text>
+        <Text>
+          <b>Chair:</b> Hazel Goedhart, Tinnitus Hub, The Netherlands
+        </Text>
       </div>
 
       <div className="mj10-list">

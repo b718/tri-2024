@@ -7,8 +7,8 @@ const MondayJune10th = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          Chair:  Fatima Husain, University of Illinois Urbana-Champaign, United
-          States
+          <b>Chair:</b>  Fatima Husain, University of Illinois Urbana-Champaign,
+          United States
         </Text>
       </div>
 
