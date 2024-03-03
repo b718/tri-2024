@@ -96,9 +96,9 @@ const Committee = () => {
                     landscapes of tinnitus and hyperacusis research. Vibrant
                     discussions, debates, and the exchange of ideas to improve
                     the lives of our clients will take place over the
-                    conference’s two days as we work to bridge the gaps between
-                    research, clinical practice, and the experiences of those
-                    affected by tinnitus and hyperacusis.
+                    conference’s three days as we work to bridge the gaps
+                    between research, clinical practice, and the experiences of
+                    those affected by tinnitus and hyperacusis.
                     <br></br>
                     <br></br>
                     We look forward to seeing you here in beautiful Vancouver,
@@ -155,10 +155,10 @@ const Committee = () => {
                   engage in a complete, packed program exploring the diverse
                   landscapes of tinnitus and hyperacusis research. Vibrant
                   discussions, debates, and the exchange of ideas to improve the
-                  lives of our clients will take place over the conference’s two
-                  days as we work to bridge the gaps between research, clinical
-                  practice, and the experiences of those affected by tinnitus
-                  and hyperacusis.
+                  lives of our clients will take place over the conference’s
+                  three days as we work to bridge the gaps between research,
+                  clinical practice, and the experiences of those affected by
+                  tinnitus and hyperacusis.
                   <br></br>
                   <br></br> We look forward to seeing you here in beautiful
                   Vancouver, where international collaboration and

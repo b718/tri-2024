@@ -96,9 +96,9 @@ const CarouselForm = () => {
         onSubmit={onSubmit}
       >
         <Text className="carousel-form-title">Abstract Submissions</Text>
-        <Text style={{ fontStyle: "italic" }}>
+        {/* <Text style={{ fontStyle: "italic" }}>
           Deadline extended to March 1st!
-        </Text>
+        </Text> */}
 
         {/* <Text>Submissions are now closed.</Text> */}
         <Flex direction={"column"} style={{ marginTop: "2rem" }}>
