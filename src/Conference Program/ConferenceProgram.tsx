@@ -23,6 +23,10 @@ import MondayJune10thDistinguish from "../AbstractPages/MondayJune10th/MondayJun
 import June12thMorning from "../AbstractPages/WednesdayJune12th/June12thMorning";
 import June12thSuccessful from "../AbstractPages/WednesdayJune12th/June12thSuccessful";
 import June12thAfternoon from "../AbstractPages/WednesdayJune12th/June12thAfterNoon";
+import MondayJune10thHyeracusis from "../AbstractPages/MondayJune10th/MondayJune10thHyperacusis";
+import TuesdayJune11thRound from "../AbstractPages/TuesdayJune11th/TuesdayJune11thRound";
+import TuesdayJune11thEvidenceBased from "../AbstractPages/TuesdayJune11th/TuesdayJune11thEvidenceBased";
+import June12thRoundTable from "../AbstractPages/WednesdayJune12th/June12thRoundTable";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
@@ -110,6 +114,14 @@ const ConferenceProgram = () => {
             Component={MondayRealWorldEvidence}
           />
 
+          <AbstractDropDown
+            title={"HYPERACUSIS RESEARCH, LIMITED"}
+            date={"MONDAY, JUNE 10th"}
+            time={"2:30 - 3:00"}
+            type={"Sponsor Session:"}
+            Component={MondayJune10thHyeracusis}
+          />
+
           <ConferenceProgramDropDown
             title="tuesday, june 11"
             Component={June11}
@@ -124,6 +136,14 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
+            title={"HYPERACUSIS AND OTHER SOUND TOLERANCE DISORDERS"}
+            date={"TUESDAY, JUNE 11th"}
+            time={"9:00 - 10:00"}
+            type={"Round Table:"}
+            Component={TuesdayJune11thRound}
+          />
+
+          <AbstractDropDown
             title={
               "HOW SHOULD WE MEASURE THE SUCCESS OF TINNITUS TRIALS AND INTERVENTIONS?"
             }
@@ -134,11 +154,27 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
+            title={"EVIDENCE-BASED PRACTICE IN AUDIOLOGY: AN INTRODUCTION"}
+            date={"TUESDAY, JUNE 11th"}
+            time={"10:30 - 12:00"}
+            type={"Workshop:"}
+            Component={TuesdayJune11thEvidenceBased}
+          />
+
+          <AbstractDropDown
+            title={"WAR ON TINNITUS"}
+            date={"TUESDAY, JUNE 11th"}
+            time={"1:00 - 2:00"}
+            type={"Afternoon Session:"}
+            Component={June12thAfternoon}
+          />
+
+          <AbstractDropDown
             title={
               "CONTRIBUTION OF MIDDLE EAR AND MULTIMODAL PLASTICITY TO TINNITUS AND HYPERACUSIS."
             }
             date={"TUESDAY, JUNE 11th"}
-            time={"1:00 - 2:00"}
+            time={"2:00 - 3:00"}
             type={"Afternoon Session:"}
             Component={TuesdayContribution}
           />
@@ -149,7 +185,7 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
-            title={"To Be Posted"}
+            title={"TINNITUS ASSESSMENT AND COMORBIDITIES"}
             date={"WEDNESDAY, JUNE 12th"}
             time={"8:00 - 9:00"}
             type={"Opening Session:"}
@@ -173,16 +209,14 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
-            title={"WAR ON TINNITUS"}
+            title={"HETEROGENIETY OF TINNITUS"}
             date={"WEDNESDAY, JUNE 12th"}
-            time={"1:00 - 2:00"}
-            type={"Afternoon Session:"}
-            Component={June12thAfternoon}
+            time={"3:00 - 4:00"}
+            type={"Round Table:"}
+            Component={June12thRoundTable}
           />
         </div>
       </div>
-      {/* <SpeakerSection />
-      <Program /> */}
     </div>
   );
 };

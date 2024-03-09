@@ -14,7 +14,6 @@ const TuesdayHowMeasureSuccess = () => {
         <Text>SPEAKERS: </Text>
         <ol className="mj10-inner-list">
           <li>Hazel Goedhart, Tinnitus Hub, the Netherlands</li>
-          <li>Josef Rauschecker, Georgetown University, United States</li>
           <li>Inge Stegeman, University of Utrecht, The Netherlands</li>
           <li>Diane Smit, University of Utrecht, The Netherlands</li>
           <li>

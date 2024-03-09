@@ -842,12 +842,7 @@ const RegistrationFormNRS = () => {
                       }}
                     >
                       <option value="" selected disabled></option>
-                      <option
-                        value={"Early Bird (closes 8 March 2024) $825 CAD"}
-                        style={{ fontSize: `${fontSize}` }}
-                      >
-                        Early Bird (closes 8 March 2024) $825 CAD
-                      </option>
+
                       <option
                         value={"Regular Rate (closes 8 June 2024) $975 CAD"}
                         style={{ fontSize: `${fontSize}` }}
@@ -1507,8 +1502,10 @@ const RegistrationFormNRS = () => {
                   direction={"column"}
                   className="registration-form-nrs-flex-2"
                 >
-                  <Text>Please remember to submit after payment!</Text>
-                  <Text>
+                  <Text style={{ marginLeft: "1rem", marginRight: "1rem" }}>
+                    Please remember to submit after payment!
+                  </Text>
+                  <Text style={{ marginLeft: "1rem", marginRight: "1rem" }}>
                     Do not close the browser until recipt is received!
                   </Text>
                   {paymentStatus === "done-stripe" ||
