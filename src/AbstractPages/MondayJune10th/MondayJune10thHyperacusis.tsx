@@ -7,7 +7,8 @@ const MondayJune10thHyeracusis = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          <b>Speaker:</b>  Steven Barad
+          <b>Speaker:</b>  Steven Barad M.D., Director, Hyperacusis Research,
+          Limited.
         </Text>
       </div>
 

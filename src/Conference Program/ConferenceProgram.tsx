@@ -115,7 +115,7 @@ const ConferenceProgram = () => {
           />
 
           <AbstractDropDown
-            title={"HYPERACUSIS RESEARCH, LIMITED"}
+            title={"HYPERACUSIS.NET"}
             date={"MONDAY, JUNE 10th"}
             time={"2:30 - 3:00"}
             type={"Sponsor Session:"}
@@ -175,7 +175,7 @@ const ConferenceProgram = () => {
             }
             date={"TUESDAY, JUNE 11th"}
             time={"2:00 - 3:00"}
-            type={"Afternoon Session:"}
+            type={"Workshop:"}
             Component={TuesdayContribution}
           />
 
