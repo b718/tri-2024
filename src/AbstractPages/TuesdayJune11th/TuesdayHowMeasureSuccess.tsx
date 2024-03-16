@@ -15,11 +15,9 @@ const TuesdayHowMeasureSuccess = () => {
         <ol className="mj10-inner-list">
           <li>Hazel Goedhart, Tinnitus Hub, the Netherlands</li>
           <li>Inge Stegeman, University of Utrecht, The Netherlands</li>
-          <li>Diane Smit, University of Utrecht, The Netherlands</li>
-          <li>
-            Deborah Hall, Heriot-Watt University, United Kingdom (to be
-            confirmed)
-          </li>
+          <li>Adriana Smit, University of Utrecht, The Netherlands</li>
+          <li>Joel Berger, University of Iowa, USA</li>
+          <li>Laura Basso, University Hospital Regensburg, Germany</li>
         </ol>
       </div>
 

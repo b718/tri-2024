@@ -41,7 +41,7 @@ const PricingNRS = () => {
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
               <br />
               <br />
-              Early Bird, Closes March 8th, 2024
+              ATA Registration, Closes April 8th, 2024
               <br />
               Regular Rate, Closes June 8th, 2024
             </Text>
@@ -67,7 +67,7 @@ const PricingNRS = () => {
 
           <Flex direction={"column"} align={"center"} justify={"center"}>
             <RegistrationComponent
-              regPackage={"Early Bird"}
+              regPackage={"ATA Registration"}
               price={"$825 CAD"}
             />
 

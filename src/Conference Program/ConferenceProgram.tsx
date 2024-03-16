@@ -27,6 +27,7 @@ import MondayJune10thHyeracusis from "../AbstractPages/MondayJune10th/MondayJune
 import TuesdayJune11thRound from "../AbstractPages/TuesdayJune11th/TuesdayJune11thRound";
 import TuesdayJune11thEvidenceBased from "../AbstractPages/TuesdayJune11th/TuesdayJune11thEvidenceBased";
 import June12thRoundTable from "../AbstractPages/WednesdayJune12th/June12thRoundTable";
+import June12thOticon from "../AbstractPages/WednesdayJune12th/June12thOticon";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
@@ -198,6 +199,16 @@ const ConferenceProgram = () => {
             time={"9:00 - 9:30"}
             type={"Workshop:"}
             Component={June12thSuccessful}
+          />
+
+          <AbstractDropDown
+            title={
+              "NAVIGATING OTICON'S TINNITUS SOUND SUPPORT IN THE GENIE 2.0"
+            }
+            date={"WEDNESDAY, JUNE 12th"}
+            time={"10:30 - 11:00"}
+            type={"Sponsorship Session:"}
+            Component={June12thOticon}
           />
 
           <AbstractDropDown

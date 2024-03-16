@@ -8,6 +8,7 @@ import signia from "../Images/Sponsorships/signia.png";
 import neuromod from "../Images/Sponsorships/new_neuro_white.png";
 import widex from "../Images/Sponsorships/widex.jpg";
 import ataImage from "../Images/ATA Logo.jpg";
+import hyperArc from "../Images/HyperacusisResearch.png";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 
 const Sponsorships = () => {
@@ -50,18 +51,8 @@ const Sponsorships = () => {
             <Image width={imageWidth} fit="contain" src={ataImage} />
           </a>
 
-          {/* <Image width={imageWidth} fit="contain" src={comingSoon} /> */}
-          {/* <Image width={imageWidth} fit="contain" src={comingSoon} /> */}
+          <Image width={105} fit="contain" src={hyperArc} />
         </Flex>
-        {/* <Flex justify="center" align="center">
-          <Text
-            size={"3rem"}
-            style={{ fontStyle: "italic" }}
-            className="sponsorships-main-coming-soon-text"
-          >
-            COMING SOON
-          </Text>
-        </Flex> */}
       </div>
     </div>
   );

@@ -48,6 +48,7 @@ const RegistrationFormNRS = () => {
   const { width, height } = useWindowDimensions();
   const [nip, setNip] = useState<string>("");
   const [paymentStatus, setPaymentStatus] = useState<any>("");
+  const [ata, setATA] = useState<any>("");
 
   //PageInfo
   const [page, setPage] = useState<number>(0);
@@ -138,12 +139,16 @@ const RegistrationFormNRS = () => {
   const [dietaryGuest, setDietaryGuest] = useState("");
 
   const checkTicket = () => {
-    return ticketType && price > 0 && guest;
+    if (ticketType === "ATA Registration $825 CAD") {
+      return ata === "152" && price > 0 && guest;
+    } else {
+      return ticketType && price > 0 && guest;
+    }
   };
 
   useEffect(() => {
     let values = [
-      "Early Bird (closes 8 March 2024) $825 CAD",
+      "ATA Registration (closes 8 April 2024) $825 CAD",
       "Regular Rate (closes 8 June 2024) $975 CAD",
       "On-site Registration $1475 CAD",
       "Student Rate (requires proof of enrolment – closes 8 June 2024) $625 CAD",
@@ -433,7 +438,6 @@ const RegistrationFormNRS = () => {
                     pointerStrokeColor="#5d9cec"
                   />
                 ),
-                // <progress value={1} />
               }[page]
             }
           </Flex>
@@ -842,7 +846,14 @@ const RegistrationFormNRS = () => {
                       }}
                     >
                       <option value="" selected disabled></option>
-
+                      <option
+                        value={
+                          "ATA Registration (closes 8 April 2024) $825 CAD"
+                        }
+                        style={{ fontSize: `${fontSize}` }}
+                      >
+                        ATA Registration (closes 8 April 2024) $825 CAD{" "}
+                      </option>
                       <option
                         value={"Regular Rate (closes 8 June 2024) $975 CAD"}
                         style={{ fontSize: `${fontSize}` }}
@@ -977,6 +988,21 @@ const RegistrationFormNRS = () => {
                       <div></div>
                     )}
                   </div>
+
+                  {ticketType === "ATA Registration $825 CAD" ? (
+                    <div style={{ marginTop: "1rem" }}>
+                      {" "}
+                      <Text className="">ATA Code</Text>
+                      <TextInput
+                        value={ata}
+                        onChange={(e) => {
+                          setATA(e.target.value);
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
 
                   <div>
                     <Flex
