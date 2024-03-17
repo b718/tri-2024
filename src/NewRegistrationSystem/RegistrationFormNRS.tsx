@@ -989,7 +989,8 @@ const RegistrationFormNRS = () => {
                     )}
                   </div>
 
-                  {ticketType === "ATA Registration $825 CAD" ? (
+                  {ticketType ===
+                  "ATA Registration (closes 8 April 2024) $825 CAD" ? (
                     <div style={{ marginTop: "1rem" }}>
                       {" "}
                       <Text className="">ATA Code</Text>
