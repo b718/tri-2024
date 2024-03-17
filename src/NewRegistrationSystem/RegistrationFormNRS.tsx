@@ -139,7 +139,7 @@ const RegistrationFormNRS = () => {
   const [dietaryGuest, setDietaryGuest] = useState("");
 
   const checkTicket = () => {
-    if (ticketType === "ATA Registration $825 CAD") {
+    if (ticketType === "ATA Registration (closes 8 April 2024) $825 CAD") {
       return ata === "152" && price > 0 && guest;
     } else {
       return ticketType && price > 0 && guest;
