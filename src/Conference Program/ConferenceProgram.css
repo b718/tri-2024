@@ -11,6 +11,15 @@
 :root {
   --main-text-color: rgb(26 65 119);
   --font-size: 0.875rem;
+  --symposia-text-color: #0283c9;
+  --font-size: 0.875rem;
+  --font-small-size: 0.8rem;
+  --var-white: #ffffff;
+  --var-black: #000000;
+  --var-dark-blue: #194177;
+  --var-med-blue: #0482c8;
+  --var-light-blue: #86ccf2;
+  --var-green: #73a441;
 }
 
 .conference-program-section-main-div {
@@ -51,6 +60,38 @@
 .conference-program-world-peter-image {
   width: 100%;
   height: 100%;
+}
+
+.conference-program-download-section {
+  margin-top: 0.3rem;
+  color: var(--main-text-color);
+}
+
+.conference-program-download-section-title {
+  font-size: 1rem;
+}
+
+.conference-program-button {
+  margin-top: 0.3rem;
+  font-family: Gravity;
+  color: var(--var-dark-blue);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.conference-program-button a {
+  text-decoration: none;
+  color: var(--var-dark-blue);
+}
+
+.conference-program-button:hover {
+  background-color: lightgray;
 }
 
 /*Max-width is basically saying 500px, if youre in that this will happen*/

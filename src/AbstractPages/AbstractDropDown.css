@@ -23,7 +23,11 @@
 .a-dd-div {
   max-width: 95vw;
   margin: 0 auto;
+  margin-top: 1rem;
   color: var(--var-dark-blue);
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 .a-dd-div-title-left {

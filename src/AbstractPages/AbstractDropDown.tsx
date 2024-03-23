@@ -98,13 +98,12 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
                 height: parentRef.current?.scrollHeight,
               }
             : {
-                height: "0px",
+                height: parentRef.current?.scrollHeight,
               }
         }
       >
         <Component />
       </div>
-      <hr />{" "}
     </div>
   );
 };
