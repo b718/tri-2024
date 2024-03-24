@@ -13,16 +13,29 @@ const June12thPhysicalLinks = () => {
       <div className="mj10-list">
         <Text>SPEAKERS: </Text>
         <ol className="mj10-inner-list">
-          <li>Mr. Robin Guillard, University of Grenoble Alpes, France</li>
-          <li>Mr. Antonios Chalimourdas, Hasselt University, Belgium,</li>
-          <li>Ms. Sara Demoen, Hasselt University, Belgium</li>
+          <li>
+            Mr. Robin Guillard, University of Grenoble Alpes, France - Tinnitus,
+            dreams and awakening: new insights and theoretical implications
+          </li>
+          <li>
+            Mr. Antonios Chalimourdas, Hasselt University, Belgium - Can
+            Physical Activity Decrease the Tinnitus Severity? - A Longitudinal
+            Observational Study 
+          </li>
+          <li>
+            Ms. Sara Demoen, Hasselt University, Belgium - Health-related
+            Quality of life in patients with somatic tinnitus: A cross sectional
+            study 
+          </li>
           <li>
             Dr. Annemarie van der Wal, ACTA Academic Center for Dentistry,
-            Amsterdam, The Netherlands
+            Amsterdam, The Netherlands - The effect of orofacial treatment on
+            tinnitus complaints in patients with somatosensory tinnitus 
           </li>
           <li>
             Prof. dr. Tanit Ganz Sanchez, University of Sao Paulo, ENT
-            Department, School of Medicine, Brazil
+            Department, School of Medicine, Brazil - Somatosensory tinnitus: who
+            gets total remission?
           </li>
         </ol>
       </div>

@@ -13,11 +13,28 @@ const TuesdayHowMeasureSuccess = () => {
       <div className="mj10-list">
         <Text>SPEAKERS: </Text>
         <ol className="mj10-inner-list">
-          <li>Hazel Goedhart, Tinnitus Hub, the Netherlands</li>
-          <li>Inge Stegeman, University of Utrecht, The Netherlands</li>
-          <li>Adriana Smit, University of Utrecht, The Netherlands</li>
-          <li>Joel Berger, University of Iowa, USA</li>
-          <li>Laura Basso, University Hospital Regensburg, Germany</li>
+          <li>
+            Hazel Goedhart, Tinnitus Hub, the Netherlands - Outcome measures
+            that tinnitus patients care about
+          </li>
+          <li>
+            Inge Stegeman, University of Utrecht, The Netherlands - Outcome
+            measures in tinnitus research: the methodological perspective
+          </li>
+          <li>
+            Adriana Smit, University of Utrecht, The Netherlands - Tinnitus
+            outcome measure; what it brought us, where it leaves us in tinnitus
+            care.
+          </li>
+          <li>
+            Joel Berger, University of Iowa, USA - The potential for objective
+            testing of tinnitus in humans.
+          </li>
+          <li>
+            Laura Basso, University Hospital Regensburg, Germany - The 83
+            Symptoms of Tinnitus: Content Overlap of Commonly Used Scales for
+            Tinnitus Distress
+          </li>
         </ol>
       </div>
 

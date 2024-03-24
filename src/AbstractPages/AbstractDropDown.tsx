@@ -10,6 +10,7 @@ interface CommiteeDropDownData {
   type?: string;
   time?: string;
   date?: string;
+  location?: string;
   Component: React.ComponentType;
 }
 
@@ -18,6 +19,7 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
   type,
   time,
   date,
+  location,
   Component,
 }) => {
   const [click, setClick] = useState<Boolean>(false);
@@ -26,7 +28,7 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
     <div className="a-dd-div">
       <Grid
         columns={12}
-        onClick={() => setClick(!click)}
+        onClick={() => setClick(false)}
         align="center"
         style={{ cursor: "pointer" }}
       >
@@ -44,6 +46,11 @@ const AbstractDropDown: FunctionComponent<CommiteeDropDownData> = ({
                   className={`a-dd-div-title-left${click ? "-active" : ""}`}
                 >
                   {time}
+                </Text>
+                <Text
+                  className={`a-dd-div-title-left${click ? "-active" : ""}`}
+                >
+                  {location}
                 </Text>
               </Flex>
             </div>

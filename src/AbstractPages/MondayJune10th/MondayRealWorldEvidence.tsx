@@ -16,23 +16,33 @@ const MondayRealWorldEvidence = () => {
         <ol className="mj10-inner-list">
           <li>
             Sven Vanneste, Trinity College Institute for Neuroscience, &amp;
-            School of Psychology, Trinity College Dublin, Ireland.
+            School of Psychology, Trinity College Dublin, Ireland - Exploring
+            Transcutaneous Stimulation of Peripheral Nerves as a Source of
+            Transcranial Electrical Stimulation Effects
           </li>
-          <li>Emily McMahan, Founder of Alaska Hearing and Tinnitus Center.</li>
+          <li>
+            Emily McMahan, Founder of Alaska Hearing and Tinnitus Center - A
+            Hybrid Approach to Tinnitus Care: Utilizing Bimodal Neuromodulation
+          </li>
           <li>
             Craig Kasper, Founder and Managing Director of New York Hearing
-            Doctors – Institute for Hearing and Balance, New York, U.S.A.
-          </li>
-          <li>
+            Doctors – Institute for Hearing and Balance, New York, U.S.A and
             Brian Fligor – Co-Founder and Clinical Strategic Advisor at Lantos
             Technologies. President and Owner of Tobias and Battite Inc, Boston,
-            Massachusetts, U.S.A.
+            Massachusetts, U.S.A. - Bimodal Neuromodulation for the Treatment of
+            Tinnitus: Real-World Clinical Outcomes &amp; Outliers
           </li>
+
           <li>
             Stefan Schoisswohl, Universität der Bundeswehr München, Munich,
-            Germany.
+            Germany - The Effects of Combining Transcranial Magnetic Stimulation
+            with Auditory Stimulation on Tinnitus Symptoms
           </li>
-          <li>Milena Engelke, Universitätsklinikum Regensburg, Germany.</li>
+          <li>
+            Milena Engelke, Universitätsklinikum Regensburg, Germany -
+            Collecting real world evidence on tinnitus symptom dynamics through
+            Ecological Momentary Assessment
+          </li>
         </ol>
       </div>
 

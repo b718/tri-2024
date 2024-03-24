@@ -18,6 +18,13 @@ import TuesdayJune11thEvidenceBased from "../../AbstractPages/TuesdayJune11th/Tu
 import TuesdayHowMeasureSuccess from "../../AbstractPages/TuesdayJune11th/TuesdayHowMeasureSuccess";
 import TuesdayJune11thRound from "../../AbstractPages/TuesdayJune11th/TuesdayJune11thRound";
 import TuesdayMeasureTinnitus from "../../AbstractPages/TuesdayJune11th/TuesdayMeasureTinnitus";
+import TuesdayBioMarkers from "../../AbstractPages/TuesdayJune11th/TuesdayBioMarkers";
+import TuesdayHeterogeniety from "../../AbstractPages/TuesdayJune11th/TuesdayHeterogeniety";
+import TuesdayPulsatile from "../../AbstractPages/TuesdayJune11th/TuesdayPulsatile";
+import TuesdayHyper from "../../AbstractPages/TuesdayJune11th/TuesdayHyper";
+import TuesdayApplicationsRemote from "../../AbstractPages/TuesdayJune11th/TuesdayApplicationsRemote";
+import TuesdayNewIdeas from "../../AbstractPages/TuesdayJune11th/TuesdayNewIdeas";
+import TuesdayPosters from "../../AbstractPages/TuesdayJune11th/TuesdayPosters";
 
 const June11 = () => {
   const { width, height } = useWindowDimensions();
@@ -56,16 +63,26 @@ const June11 = () => {
       <AbstractDropDown
         title={"MEASURING TINNITUS IN THE CLINIC AND FOR RESEARCH"}
         date={"TUESDAY, JUNE 11th"}
-        time={"8:00 - 9:00"}
+        time={"08:00 - 09:00"}
         type={"Opening Session:"}
+        location={"(THEATRE)"}
         Component={TuesdayMeasureTinnitus}
       />
       <AbstractDropDown
         title={"HYPERACUSIS AND OTHER SOUND TOLERANCE DISORDERS"}
         date={"TUESDAY, JUNE 11th"}
-        time={"9:00 - 10:00"}
+        time={"09:00 - 10:00"}
         type={"Round Table:"}
+        location={"(THEATRE)"}
         Component={TuesdayJune11thRound}
+      />
+      <AbstractDropDown
+        title={"BIOMARKERS OF TINNITUS"}
+        date={"TUESDAY, JUNE 11th"}
+        time={"09:00 - 10:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={TuesdayBioMarkers}
       />
       <AbstractDropDown
         title={
@@ -74,30 +91,74 @@ const June11 = () => {
         date={"TUESDAY, JUNE 11th"}
         time={"10:30 - 12:00"}
         type={"Symposium:"}
+        location={"(THEATRE)"}
         Component={TuesdayHowMeasureSuccess}
       />
       <AbstractDropDown
-        title={"EVIDENCE-BASED PRACTICE IN AUDIOLOGY: AN INTRODUCTION"}
+        title={"HETEROGENIETY OF TINNITUS"}
         date={"TUESDAY, JUNE 11th"}
         time={"10:30 - 12:00"}
-        type={"Workshop:"}
-        Component={TuesdayJune11thEvidenceBased}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={TuesdayHeterogeniety}
+      />
+      <AbstractDropDown
+        title={"PULSATILE TINNITUS"}
+        date={"TUESDAY, JUNE 11th"}
+        time={"10:30 - 12:00"}
+        type={"Oral Papers:"}
+        location={"(C460)"}
+        Component={TuesdayPulsatile}
       />
       <AbstractDropDown
         title={"WAR ON TINNITUS"}
         date={"TUESDAY, JUNE 11th"}
-        time={"1:00 - 2:00"}
+        time={"01:00 - 02:00"}
         type={"Afternoon Session:"}
+        location={"(THEATRE)"}
         Component={June12thAfternoon}
+      />
+      <AbstractDropDown
+        title={"HYPERACUSIS"}
+        date={"TUESDAY, JUNE 11th"}
+        time={"02:00 - 03:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={TuesdayHyper}
+      />
+      <AbstractDropDown
+        title={"APPLICATIONS AND REMOTE CARE"}
+        date={"TUESDAY, JUNE 11th"}
+        time={"02:00 - 03:00"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={TuesdayApplicationsRemote}
       />
       <AbstractDropDown
         title={
           "CONTRIBUTION OF MIDDLE EAR AND MULTIMODAL PLASTICITY TO TINNITUS AND HYPERACUSIS."
         }
         date={"TUESDAY, JUNE 11th"}
-        time={"2:00 - 3:00"}
+        time={"02:00 - 03:00"}
         type={"Workshop:"}
+        location={"(C460)"}
         Component={TuesdayContribution}
+      />
+      <AbstractDropDown
+        title={"NEW IDEAS IN TINNITUS"}
+        date={"TUESDAY, JUNE 11th"}
+        time={"03:30 - 05:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={TuesdayNewIdeas}
+      />
+      <AbstractDropDown
+        title={""}
+        date={"TUESDAY, JUNE 11th"}
+        time={"03:00 - 05:00"}
+        type={"Posters + Exhibition:"}
+        location={"(POSTER HALL)"}
+        Component={TuesdayPosters}
       />
     </div>
   );

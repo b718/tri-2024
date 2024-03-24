@@ -91,7 +91,10 @@ const ConferenceProgram = () => {
               Program/Speakers/Speaker Schedule
             </Text>
             <button className="conference-program-button">
-              <a href="Speaker Program.pdf" download="SpeakProgram">
+              <a
+                href="Speaker Program.pdf"
+                download="Detailed-Presenter-Schedule"
+              >
                 Download Schedule
               </a>
             </button>

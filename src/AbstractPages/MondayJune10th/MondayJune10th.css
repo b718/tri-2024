@@ -45,3 +45,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+.mj10-inner-list li {
+  margin-top: 0.3rem;
+}

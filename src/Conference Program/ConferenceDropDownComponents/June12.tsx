@@ -17,6 +17,12 @@ import June12thOticon from "../../AbstractPages/WednesdayJune12th/June12thOticon
 import June12thPhysicalLinks from "../../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
 import June12thRoundTable from "../../AbstractPages/WednesdayJune12th/June12thRoundTable";
 import June12thSuccessful from "../../AbstractPages/WednesdayJune12th/June12thSuccessful";
+import WednesdayElectro from "../../AbstractPages/WednesdayJune12th/WednesdayElectro";
+import WednesdayTinnitusAndCognition from "../../AbstractPages/WednesdayJune12th/WednesdayTinnitusAndCognition";
+import WednesdayMisophonia from "../../AbstractPages/WednesdayJune12th/WednesdayMisophonia";
+import WednesdayRemoteCare from "../../AbstractPages/WednesdayJune12th/WednesdayRemoteCare";
+import WednesdayClinical from "../../AbstractPages/WednesdayJune12th/WednesdayClinical";
+import WednesdayEpidemiology from "../../AbstractPages/WednesdayJune12th/WednesdayEpidemiology";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -55,25 +61,46 @@ const June12 = () => {
       <AbstractDropDown
         title={"TINNITUS ASSESSMENT AND COMORBIDITIES"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"8:00 - 9:00"}
+        time={"08:00 - 09:00"}
         type={"Opening Session:"}
+        location={"(THEATRE)"}
         Component={June12thMorning}
+      />
+
+      <AbstractDropDown
+        title={"ELECTROPHYSIOLOGY"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"09:00 - 10:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={WednesdayElectro}
+      />
+
+      <AbstractDropDown
+        title={"TINNITUS AND COGNITION"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"09:00 - 10:00"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={WednesdayTinnitusAndCognition}
+      />
+
+      <AbstractDropDown
+        title={"MISOPHONIA AND TINNITUS"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"09:30 - 10:00"}
+        type={"Workshop:"}
+        location={"(C460)"}
+        Component={WednesdayMisophonia}
       />
 
       <AbstractDropDown
         title={"THE SUCCESSFUL TINNITUS AUDIOLOGIST"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"9:00 - 9:30"}
+        time={"09:30 - 10:00"}
         type={"Workshop:"}
+        location={"(C460)"}
         Component={June12thSuccessful}
-      />
-
-      <AbstractDropDown
-        title={"NAVIGATING OTICON'S TINNITUS SOUND SUPPORT IN THE GENIE 2.0"}
-        date={"WEDNESDAY, JUNE 12th"}
-        time={"10:30 - 11:00"}
-        type={"Sponsorship Session:"}
-        Component={June12thOticon}
       />
 
       <AbstractDropDown
@@ -81,15 +108,53 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"10:30 - 12:00"}
         type={"Symposium:"}
+        location={"(THEATRE)"}
         Component={June12thPhysicalLinks}
+      />
+
+      <AbstractDropDown
+        title={"NAVIGATING OTICON'S TINNITUS SOUND SUPPORT IN THE GENIE 2.0"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"10:30 - 11:00"}
+        type={"Sponsorship Session:"}
+        location={"(C460)"}
+        Component={June12thOticon}
+      />
+
+      <AbstractDropDown
+        title={"CLINICAL APPLICATIONS"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"02:00 - 03:30"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={WednesdayClinical}
+      />
+
+      <AbstractDropDown
+        title={"REMOTE CARE"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"02:00 - 03:30"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={WednesdayRemoteCare}
       />
 
       <AbstractDropDown
         title={"HETEROGENIETY OF TINNITUS"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"3:00 - 4:00"}
+        time={"03:00 - 04:00"}
         type={"Round Table:"}
+        location={"(THEATRE)"}
         Component={June12thRoundTable}
+      />
+
+      <AbstractDropDown
+        title={"EPIDEMIOLOGY"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"03:30 - 04:30"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={WednesdayEpidemiology}
       />
     </div>
   );

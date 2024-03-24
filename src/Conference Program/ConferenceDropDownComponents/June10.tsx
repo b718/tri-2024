@@ -15,6 +15,10 @@ import MondayJune10thDistinguish from "../../AbstractPages/MondayJune10th/Monday
 import MondayJune10th from "../../AbstractPages/MondayJune10th/MondayJune10th";
 import MondayJune10thHyeracusis from "../../AbstractPages/MondayJune10th/MondayJune10thHyperacusis";
 import MondayRealWorldEvidence from "../../AbstractPages/MondayJune10th/MondayRealWorldEvidence";
+import MondayJune10thAnimalResearch from "../../AbstractPages/MondayJune10th/MondayJune10thAnimalResearch";
+import MondayJune10thSoundTherapy from "../../AbstractPages/MondayJune10th/MondayJune10thSoundTherapy";
+import MondayJune10thPosters from "../../AbstractPages/MondayJune10th/MondayJune10thPosters";
+import TuesdayJune11thEvidenceBased from "../../AbstractPages/TuesdayJune11th/TuesdayJune11thEvidenceBased";
 
 const June10 = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -53,9 +57,19 @@ const June10 = () => {
       <AbstractDropDown
         title={"WHERE ARE WE NOW? WHERE ARE WE GOING?"}
         date={"MONDAY, JUNE 10th"}
-        time={"9:00 - 10:00"}
+        time={"09:00 - 10:00"}
         type={"The Aage Moller Distinguished Lecture On Tinnitus:"}
+        location={"(THEATRE)"}
         Component={MondayJune10thDistinguish}
+      />
+
+      <AbstractDropDown
+        title={"ANIMAL RESEARCH"}
+        date={"MONDAY, JUNE 10th"}
+        time={"10:30 - 12:00"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={MondayJune10thAnimalResearch}
       />
 
       <AbstractDropDown
@@ -65,6 +79,7 @@ const June10 = () => {
         date={"MONDAY, JUNE 10th"}
         time={"10:30 - 12:00"}
         type={"Symposium:"}
+        location={"(THEATRE)"}
         Component={MondayJune10th}
       />
 
@@ -73,17 +88,46 @@ const June10 = () => {
           "REAL WORLD EVIDENCE FOR MULTIMODAL TREATMENT APPROACHES FOR TINNITUS"
         }
         date={"MONDAY, JUNE 10th"}
-        time={"1:00 - 2:00"}
+        time={"01:00 - 02:00"}
         type={"Symposium:"}
+        location={"(THEATRE)"}
         Component={MondayRealWorldEvidence}
+      />
+
+      <AbstractDropDown
+        title={"EVIDENCE-BASED PRACTICE IN AUDIOLOGY: AN INTRODUCTION"}
+        date={"MONDAY, JUNE 10th"}
+        time={"02:00 - 03:00"}
+        type={"Workshop:"}
+        location={"(C460)"}
+        Component={TuesdayJune11thEvidenceBased}
       />
 
       <AbstractDropDown
         title={"HYPERACUSIS.NET"}
         date={"MONDAY, JUNE 10th"}
-        time={"2:30 - 3:00"}
+        time={"02:30 - 03:00"}
         type={"Sponsor Session:"}
+        location={"(C460)"}
         Component={MondayJune10thHyeracusis}
+      />
+
+      <AbstractDropDown
+        title={"SOUND THERAPY"}
+        date={"MONDAY, JUNE 10th"}
+        time={"03:30 - 05:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={MondayJune10thSoundTherapy}
+      />
+
+      <AbstractDropDown
+        title={""}
+        date={"MONDAY, JUNE 10th"}
+        time={"03:00 - 05:00 "}
+        type={"Posters + Exhibition:"}
+        location={"(POSTER HALL)"}
+        Component={MondayJune10thPosters}
       />
     </div>
   );

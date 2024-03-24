@@ -16,14 +16,23 @@ const MondayJune10th = () => {
         <Text>SPEAKERS: </Text>
         <ol className="mj10-inner-list">
           <li>
-            Julia Campbell, University of Texas at Austin, Texas, United States
+            Julia Campbell, University of Texas at Austin, Texas, USA - The
+            hyperacusis versus misophonia controversy
           </li>
-          <li>Dave Eddins, University of Central Florida, United States</li>
           <li>
-            Fatima Husain, University of Illinois Urbana-Champaign, United
-            States
+            Dave Eddins, University of Central Florida, USA - A transitional
+            treatment for hyperacusis
           </li>
-          <li>Arnaud Norena, Aix-Marseille University, France</li>
+          <li>
+            Fatima Husain, University of Illinois Urbana-Champaign, USA -
+            Electrophysiological measures of hyperacusis, misophonia and
+            tinnitus
+          </li>
+          <li>
+            Arnaud Norena, Aix-Marseille University, France - The putative
+            neural mechanisms of noise-induced tinnitus and hyperacusis studied
+            in guinea pigs (voir courriel)
+          </li>
           <li>Zach Rosenthal, Duke University, United States</li>
         </ol>
       </div>
