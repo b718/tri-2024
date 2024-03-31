@@ -1,15 +1,10 @@
 import { Flex, Image, Table } from "@mantine/core";
 import React, { useState } from "react";
-import EventComponent from "./EventComponent/EventComponent";
-import June10th9AM from "../HelperComponents/June10th9AM";
-import June10th1030AM from "../HelperComponents/June10th1030AM";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import June10tScheduleTwo from "../../Images/june10th-2.png";
 import { Document, Page, pdfjs } from "react-pdf";
-import NewJune10thSchedule from "../../Images/june10th-new.png";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "@bitnoi.se/react-scheduler/dist/style.css";
-import June10thSchedule from "../../Images/Monday June 10.png";
+import June10thSchedule from "../../Images/june-10th-schedule.png";
 import AbstractDropDown from "../../AbstractPages/AbstractDropDown";
 import MondayJune10thDistinguish from "../../AbstractPages/MondayJune10th/MondayJune10thDistinguish";
 import MondayJune10th from "../../AbstractPages/MondayJune10th/MondayJune10th";
@@ -19,6 +14,7 @@ import MondayJune10thAnimalResearch from "../../AbstractPages/MondayJune10th/Mon
 import MondayJune10thSoundTherapy from "../../AbstractPages/MondayJune10th/MondayJune10thSoundTherapy";
 import MondayJune10thPosters from "../../AbstractPages/MondayJune10th/MondayJune10thPosters";
 import TuesdayJune11thEvidenceBased from "../../AbstractPages/TuesdayJune11th/TuesdayJune11thEvidenceBased";
+import MondayJune10thRemote from "../../AbstractPages/MondayJune10th/MondayJune10thRemote";
 
 const June10 = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -92,6 +88,15 @@ const June10 = () => {
         type={"Symposium:"}
         location={"(THEATRE)"}
         Component={MondayRealWorldEvidence}
+      />
+
+      <AbstractDropDown
+        title={"REMOTE COUNSELLING AND TELECARE IN TINNITUS"}
+        date={"MONDAY, JUNE 10th"}
+        time={"01:00 - 01:30"}
+        type={"Workshop:"}
+        location={"(C460)"}
+        Component={MondayJune10thRemote}
       />
 
       <AbstractDropDown

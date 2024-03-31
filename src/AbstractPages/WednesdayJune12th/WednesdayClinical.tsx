@@ -5,16 +5,15 @@ const WednesdayClinical = () => {
   return (
     <div>
       <div className="mj10-list">
-        <ul className="mj10-inner-list">
-          <li>
-            Pete Vernezze, The effectiveness of a 6-week live, online
-            mindfulness-based intervention for tinnitus distress
-          </li>
-          <li>
-            Adriana L Smit, Comparison of clinical practice guidelines regarding
-            treatment recommendations for chronic tinnitus in adults
-          </li>
-        </ul>
+        <Text>
+          Pete Vernezze, The effectiveness of a 6-week live, online
+          mindfulness-based intervention for tinnitus distress
+        </Text>
+
+        <Text>
+          Adriana L Smit, Comparison of clinical practice guidelines regarding
+          treatment recommendations for chronic tinnitus in adults
+        </Text>
       </div>
     </div>
   );

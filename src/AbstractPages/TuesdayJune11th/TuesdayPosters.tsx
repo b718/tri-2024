@@ -65,6 +65,11 @@ const TuesdayPosters = () => {
             Sang Hoon Kim, Association between tinnitus and inflammatory bowel
             disease: A national cohort study
           </li>
+          <li>
+            Nour Alsabbagh and Phillip E. Gander, The sleeping brain of
+            tinnitus: A review of neural and behavioural correlates of sleep in
+            phantom sound perception
+          </li>
         </ul>
       </div>
     </div>

@@ -7,6 +7,8 @@ import { NavBarContext } from "../App";
 import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import Venue from "../Venue/Venue";
+import DropDownFaQComp from "./DropDownFaQ/DropDownFaQComp";
+import CanadianVisa from "./FaQ_Components/CanadianVisa";
 
 const FaQ = () => {
   const faqRef = useContext(NavBarContext);
@@ -96,6 +98,7 @@ const FaQ = () => {
       "DESTINATION CANADA–EVENTS IN JUNE",
       "https://www.destinationvancouver.com/events/calendar-of-events/vancouver-events-in-june/",
     ],
+    ["APPLYING FOR CANADIAN VISA", ""],
   ];
 
   const HotelBooking = [["", ""]];
@@ -162,6 +165,10 @@ const FaQ = () => {
           text={
             "TRI-2024 has managed to secure some hotel rooms at the Hyatt Regency Hotel, Downtown Vancouver at a significantly discounted rate.  The hotel is a 5 minutes walk to the conference centre and all rooms have 2 beds allowing for shared accommodation.  A link to the hotel group booking will be provided with your conference registration receipt."
           }
+        />
+        <DropDownFaQComp
+          title={"APPLYING FOR CANADIAN VISA"}
+          Component={CanadianVisa}
         />
         <Venue />
       </div>

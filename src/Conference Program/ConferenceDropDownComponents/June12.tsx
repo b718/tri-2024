@@ -1,16 +1,7 @@
 import { Center, Flex, Grid, Image, Text } from "@mantine/core";
 import React from "react";
-import EventComponent from "./EventComponent/EventComponent";
-import June12th8AM from "../HelperComponents/June12th8AM";
-import June12th1030AM from "../HelperComponents/June12th1030AM";
-import June12thScheduleTwo from "../../Images/june12th-2.png";
-import NewJune12thSchedule from "../../Images/june12th-new.png";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import C440June12th9AM from "../HelperComponents/C440June12th9AM";
-import C440June12th930AM from "../HelperComponents/C440June12th930AM";
-import C440June12th1PM from "../HelperComponents/C440June12th1PM";
-import C440June12th2PM from "../HelperComponents/C440June12th2PM";
-import June12thSchedule from "../../Images/Wednesday June 12.png";
+import June12thSchedule from "../../Images/june-12th-schedule.png";
 import AbstractDropDown from "../../AbstractPages/AbstractDropDown";
 import June12thMorning from "../../AbstractPages/WednesdayJune12th/June12thMorning";
 import June12thOticon from "../../AbstractPages/WednesdayJune12th/June12thOticon";
@@ -23,6 +14,8 @@ import WednesdayMisophonia from "../../AbstractPages/WednesdayJune12th/Wednesday
 import WednesdayRemoteCare from "../../AbstractPages/WednesdayJune12th/WednesdayRemoteCare";
 import WednesdayClinical from "../../AbstractPages/WednesdayJune12th/WednesdayClinical";
 import WednesdayEpidemiology from "../../AbstractPages/WednesdayJune12th/WednesdayEpidemiology";
+import June12thLenire from "../../AbstractPages/WednesdayJune12th/June12thLenire";
+import WednesdayRemoteCareTwo from "../../AbstractPages/WednesdayJune12th/WednesdayRemoteCareTwo";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -122,6 +115,15 @@ const June12 = () => {
       />
 
       <AbstractDropDown
+        title={"LENIRE TINNITUS TREATMENT REAL WORLD SUCCESS"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"11:00 - 11:30"}
+        type={"Sponsorship Session:"}
+        location={"(C460)"}
+        Component={June12thLenire}
+      />
+
+      <AbstractDropDown
         title={"CLINICAL APPLICATIONS"}
         date={"WEDNESDAY, JUNE 12th"}
         time={"02:00 - 03:30"}
@@ -133,7 +135,7 @@ const June12 = () => {
       <AbstractDropDown
         title={"REMOTE CARE"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"02:00 - 03:30"}
+        time={"02:00 - 02:30"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
         Component={WednesdayRemoteCare}
@@ -146,6 +148,15 @@ const June12 = () => {
         type={"Round Table:"}
         location={"(THEATRE)"}
         Component={June12thRoundTable}
+      />
+
+      <AbstractDropDown
+        title={"REMOTE CARE"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"03:00 - 03:30"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={WednesdayRemoteCareTwo}
       />
 
       <AbstractDropDown

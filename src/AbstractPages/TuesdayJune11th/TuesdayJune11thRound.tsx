@@ -6,7 +6,7 @@ const TuesdayJune11thRound = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          <b>Facilitator:</b> Dr Arnaud Norena
+          <b>Moderator::</b> Dr Philippe Fournier
         </Text>
       </div>
 

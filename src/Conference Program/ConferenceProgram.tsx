@@ -88,12 +88,12 @@ const ConferenceProgram = () => {
           />
           <div className="conference-program-download-section">
             <Text className="conference-program-download-section-title">
-              Program/Speakers/Speaker Schedule
+              Program and Speaker Schedule
             </Text>
             <button className="conference-program-button">
               <a
                 href="Speaker Program.pdf"
-                download="Detailed-Presenter-Schedule"
+                download="Detailed-Presenter-Schedule-Updated March 29, 2024"
               >
                 Download Schedule
               </a>
