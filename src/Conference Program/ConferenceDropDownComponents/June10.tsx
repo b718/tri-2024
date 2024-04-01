@@ -102,14 +102,14 @@ const June10 = () => {
       <AbstractDropDown
         title={"EVIDENCE-BASED PRACTICE IN AUDIOLOGY: AN INTRODUCTION"}
         date={"MONDAY, JUNE 10th"}
-        time={"02:00 - 03:00"}
+        time={"02:00 - 02:30"}
         type={"Workshop:"}
         location={"(C460)"}
         Component={TuesdayJune11thEvidenceBased}
       />
 
       <AbstractDropDown
-        title={"HYPERACUSIS.NET"}
+        title={"HYPERACUSIS RESEARCH, LTD"}
         date={"MONDAY, JUNE 10th"}
         time={"02:30 - 03:00"}
         type={"Sponsor Session:"}

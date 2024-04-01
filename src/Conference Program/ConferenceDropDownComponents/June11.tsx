@@ -118,14 +118,6 @@ const June11 = () => {
         Component={TuesdayHyper}
       />
       <AbstractDropDown
-        title={"APPLICATIONS AND REMOTE CARE"}
-        date={"TUESDAY, JUNE 11th"}
-        time={"02:00 - 03:00"}
-        type={"Oral Papers:"}
-        location={"(C400/C420)"}
-        Component={TuesdayApplicationsRemote}
-      />
-      <AbstractDropDown
         title={
           "CONTRIBUTION OF MIDDLE EAR AND MULTIMODAL PLASTICITY TO TINNITUS AND HYPERACUSIS."
         }
