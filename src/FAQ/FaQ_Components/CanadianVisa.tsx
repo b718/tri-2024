@@ -62,8 +62,8 @@ const CanadianVisa = () => {
           </li>
         </ol>
         <Text>
-          <b>• Reminder:</b> You do not need an eTA if you are a Canadian
-          Citizen or Canadian
+          <b>• Reminder:</b> You don't need an eTA if you are a Canadian Citizen
+          or a Citizen of the United States.
         </Text>
       </div>
     </div>
