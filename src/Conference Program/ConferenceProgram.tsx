@@ -39,7 +39,6 @@ const ConferenceProgram = () => {
     } else {
       return 650;
     }
-    //650
   };
   return (
     <div>
@@ -92,8 +91,8 @@ const ConferenceProgram = () => {
             </Text>
             <button className="conference-program-button">
               <a
-                href="Speaker Program.pdf"
-                download="Detailed-Presenter-Schedule-Updated March 29, 2024"
+                href="Speaker Program_2024.04.06.pdf"
+                download="Detailed-Presenter-Schedule-Updated April 6th, 2024"
               >
                 Download Schedule
               </a>

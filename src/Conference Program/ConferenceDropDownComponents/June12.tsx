@@ -16,6 +16,7 @@ import WednesdayClinical from "../../AbstractPages/WednesdayJune12th/WednesdayCl
 import WednesdayEpidemiology from "../../AbstractPages/WednesdayJune12th/WednesdayEpidemiology";
 import June12thLenire from "../../AbstractPages/WednesdayJune12th/June12thLenire";
 import WednesdayRemoteCareTwo from "../../AbstractPages/WednesdayJune12th/WednesdayRemoteCareTwo";
+import June12thATA from "../../AbstractPages/WednesdayJune12th/June12thATA";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -30,8 +31,6 @@ const June12 = () => {
     } else {
       return 700;
     }
-    //961
-    //500
   };
   return (
     <div>
@@ -121,6 +120,17 @@ const June12 = () => {
         type={"Sponsorship Session:"}
         location={"(C460)"}
         Component={June12thLenire}
+      />
+
+      <AbstractDropDown
+        title={
+          "SCIENTIFIC AND CLINICAL IMPACT OF THE AMERICAN TINNITUS ASSOCIATION’S MISSION TO TRANSFORM TINNITUS PATIENT OUTCOMES"
+        }
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"11:30 - 12:00"}
+        type={"Sponsorship Session:"}
+        location={"(C460)"}
+        Component={June12thATA}
       />
 
       <AbstractDropDown
