@@ -846,14 +846,7 @@ const RegistrationFormNRS = () => {
                       }}
                     >
                       <option value="" selected disabled></option>
-                      <option
-                        value={
-                          "ATA Registration (closes 8 April 2024) $825 CAD"
-                        }
-                        style={{ fontSize: `${fontSize}` }}
-                      >
-                        ATA Registration (closes 8 April 2024) $825 CAD{" "}
-                      </option>
+
                       <option
                         value={"Regular Rate (closes 8 June 2024) $975 CAD"}
                         style={{ fontSize: `${fontSize}` }}

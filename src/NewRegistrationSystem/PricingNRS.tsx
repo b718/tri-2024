@@ -41,8 +41,6 @@ const PricingNRS = () => {
               Conference from June 10 to 12, 2024 in Vancouver, Canada.
               <br />
               <br />
-              ATA Registration, Closes April 8th, 2024
-              <br />
               Regular Rate, Closes June 8th, 2024
             </Text>
 
@@ -66,11 +64,6 @@ const PricingNRS = () => {
           )}
 
           <Flex direction={"column"} align={"center"} justify={"center"}>
-            <RegistrationComponent
-              regPackage={"ATA Registration"}
-              price={"$825 CAD"}
-            />
-
             <RegistrationComponent
               regPackage={"Regular Rate"}
               price={"$975 CAD"}
