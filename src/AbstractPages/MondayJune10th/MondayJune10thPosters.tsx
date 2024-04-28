@@ -12,40 +12,22 @@ const MondayJune10thPosters = () => {
             experience, for a certain duration, is a prerequisite for tinnitus 
           </li>
           <li>
-            Ho Yun Lee, Seung-Ho Shin, Oak-Sung Choo, Jae Yong Byun, Jae Ho
-            Chung, Analysis of Loudness Discomfort Level Tests in Tinnitus
-            Patients
+            Ho Yun Lee, Seung-Ho Shin, Exploring the Origins of Decreased Sound
+            Tolerance in Tinnitus Patients
           </li>
           <li>
-            Han Lv, Qian Chen, Zuozhen Zhang, Zhaodi Wang, Shusheng Gong,
-            Junzhong Ji, Zhenchang Wang, Jinduo Liu, Functional-guided
-            reinforcement learning effective connectivity indicates
-            effectiveness of sound therapy in tinnitus patients
+            Sang Hoon Kim, Association between tinnitus and inflammatory bowel
+            disease: A national cohort study 
           </li>
           <li>
-            Dave Korotkov, Tinnitus Distress and the Steeling/Sensitization
-            Hypotheses: A Secondary
+            Jiwon Kwak, Soo Jeong Choi, Jiwon Chang, Gi Jung Im, Euyhyun Park,
+            Is Zinc Deficiency a Risk Factor for Tinnitus? : An Analysis from
+            Chronic Idiopathic Tinnitus Patients with Normal Hearing
           </li>
           <li>
-            Andréia Aparecida de Azevedo, Ricardo Rodrigues Figueiredo, Eliana
-            Ferreira Vilela, Jeanne Oiticica, correlation between tinnitus
-            severity and the big five personality traits
-          </li>
-          <li>
-            Min Young Kwak, Yong Tae Cho, Yong-Hwi An, Hyun Joon Shim, Relation
-            of Sound Level Tolerance to Tinnitus in Human: A Comparative
-            Analysis of Unilateral, Bilateral, and Control Groups
-          </li>
-          <li>
-            Cosima F. Lukas, Paul Wilknitz, Prof. Dr. Orlando Guntinas-Lichius,
-            Dr. Daniela Ivansic, Prof. Dr. ChristianDobel, Prof. Dr. Manuela
-            Nowotny, Occupational noise exposure: Early audiological and
-            physiological signs of noise- induced hearing loss and mental health
-          </li>
-          <li>
-            Lieber Po-Hung Li, Cheng-Ta Li, Jen-Chuen Hsieh, Steady-state
-            auditory evoked fields reflect long-term effects of repetitive
-            transcranial magnetic stimulation in tinnitus
+            Jae Sang Han, Minho Lee, Hyeon-Chun Park, So Young Park, Yeun-Jun
+            Chung, Shi Nae Park, Identification of SNPs Associated with Chronic
+            Sensorineural Tinnitus in the Korean Population
           </li>
           <li>
             Sneha Uttakalika 1 , Manya Fangaria , Ashwini Tidole 2 ,
@@ -53,10 +35,31 @@ const MondayJune10thPosters = () => {
             somatosensory tinnitus in individuals with tinnitus
           </li>
           <li>
-            Luciana Lozza de Moraes Marchiori, Licia Sayuri Tanaka, Daiane de
-            Almeida Soares Ciquinato, Glória de Moraes Marchiori, Braulio
-            Henrique Magnani Branco, Analysis between subjective sleep quality
-            and level of intensity of the tinnitus in people post COVID-19
+            Sneha Uttakalika, Diya ES Dinesh, Abhishek Jain, Kajal Bhatiwal,
+            Suman Penwal, Prevalence of hyperacusis and misophonia among
+            individuals with tinnitus
+          </li>
+          <li>
+            June Choi, Hong Jin Kim, Ye Hwan Lee, Young Han Chung, Kang Hyeon
+            Lim, Sang Yeop Kim, Yong Jun Jeong, Analysis of auditory brain stem
+            response and otoacoustic emission in unilateral tinnitus patients
+            with normal hearing
+          </li>
+          <li>
+            Fournier, P., Valentin, O., Z., Walsh, Z., Zendel, B.R. &amp;
+            Lehmann, A., Association between cannabis and tinnitus: could loud
+            music listening under cannabis influence be the missing link?
+          </li>
+          <li>
+            Cosima F. Lukas, Paul Wilknitz, Prof. Dr. Orlando Guntinas-Lichius,
+            Dr. Daniela Ivansic, Prof. Dr. Christian Dobel, Prof. Dr. Manuela
+            Nowotny, Occupational noise exposure: Early audiological and
+            physiological signs of noise- induced hearing loss and mental health
+          </li>
+          <li>
+            Zahra Jafari, David Baguley, Bryan E. Kolb, and Majid H. Mohajeran,
+            A systematic review and meta-analysis of extended high-frequency
+            hearing thresholds in tinnitus with a normal audiogram
           </li>
           <li>
             Kritika Nayyar, Sweety Chauhan, Neha Surkund, Swaham Mohanty, Kajal
@@ -65,13 +68,9 @@ const MondayJune10thPosters = () => {
             India
           </li>
           <li>
-            Jae Sang Han, Minho Lee, Hyeon-Chun Park, So Young Park, Yeun-Jun
-            Chung, Shi Nae ParL, Identification of SNPs Associated with Chronic
-            Sensorineural Tinnitus in the Korean Population
-          </li>
-          <li>
-            Kyu-Yup Lee, Da-Jung Jung,Sang-Heun Lee, Study on protective effect
-            of novel chemical compound against acquired hearing loss
+            Claudia Barros Coelho, Sodriane D&#39;Avila, Sabrina Magalhães,
+            Richard Tyler, Percutaneous Electroneurostimulation (PENS) as a
+            Novel Treatment for TTTS: Insights from a Focused Two-Case Study
           </li>
         </ul>
       </div>

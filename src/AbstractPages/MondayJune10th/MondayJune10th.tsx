@@ -33,7 +33,11 @@ const MondayJune10th = () => {
             neural mechanisms of noise-induced tinnitus and hyperacusis studied
             in guinea pigs (voir courriel)
           </li>
-          <li>Zach Rosenthal, Duke University, United States</li>
+          <li>
+            Fournier, P., Lessard-Dostie, H., Bigras, J., McDonald, T., Noreña,
+            A.J., Lagacé, J., Hyperacusis and associated symptoms among
+            conference interpreters
+          </li>
         </ol>
       </div>
 

@@ -72,7 +72,7 @@ const June11 = () => {
         date={"TUESDAY, JUNE 11th"}
         time={"09:00 - 10:00"}
         type={"Oral Papers:"}
-        location={"(THEATRE)"}
+        location={"(C400/C420)"}
         Component={TuesdayBioMarkers}
       />
       <AbstractDropDown
@@ -122,9 +122,9 @@ const June11 = () => {
           "CONTRIBUTION OF MIDDLE EAR AND MULTIMODAL PLASTICITY TO TINNITUS AND HYPERACUSIS."
         }
         date={"TUESDAY, JUNE 11th"}
-        time={"02:00 - 03:00"}
+        time={"02:30 - 03:00"}
         type={"Workshop:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={TuesdayContribution}
       />
       <AbstractDropDown
@@ -138,7 +138,7 @@ const June11 = () => {
       <AbstractDropDown
         title={""}
         date={"TUESDAY, JUNE 11th"}
-        time={"03:00 - 05:00"}
+        time={"03:30 - 05:00"}
         type={"Posters + Exhibition:"}
         location={"(POSTER HALL)"}
         Component={TuesdayPosters}

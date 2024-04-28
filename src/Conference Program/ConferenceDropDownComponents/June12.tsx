@@ -80,9 +80,9 @@ const June12 = () => {
       <AbstractDropDown
         title={"MISOPHONIA AND TINNITUS"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"09:30 - 10:00"}
+        time={"09:00 - 09:30"}
         type={"Workshop:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={WednesdayMisophonia}
       />
 
@@ -91,7 +91,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"09:30 - 10:00"}
         type={"Workshop:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={June12thSuccessful}
       />
 
@@ -109,7 +109,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"10:30 - 11:00"}
         type={"Sponsorship Session:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={June12thOticon}
       />
 
@@ -118,7 +118,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"11:00 - 11:30"}
         type={"Sponsorship Session:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={June12thLenire}
       />
 
@@ -129,7 +129,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"11:30 - 12:00"}
         type={"Sponsorship Session:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={June12thATA}
       />
 

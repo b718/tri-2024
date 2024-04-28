@@ -29,11 +29,6 @@ const TuesdayPulsatile = () => {
             Dave Korotkov - Living with Pulsatile Tinnitus: A Self-Narrative
             Using McAdam’s Levels of Personality Model
           </li>
-          <li>
-            Shi Nae Park, Min Chae Jeon, Chan Mee Lee, Jae Sang Han, Jae Hyng
-            Seo, Clinical Management of Myoclonic Tinnitus for A Cure: From
-            Botox Injection to Surgery
-          </li>
         </ul>
       </div>
     </div>

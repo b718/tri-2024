@@ -7,14 +7,24 @@ const TuesdayPosters = () => {
       <div className="mj10-list">
         <ul className="mj10-inner-list">
           <li>
-            Ho Yun Lee, Seung-Ho Shinm, Exploring the Origins of Decreased Sound
-            Tolerance in Tinnitus Patients
+            Ho Yun Lee, Seung-Ho Shin, Oak-Sung Choo, Jae Yong Byun, Jae Ho
+            Chung, Analysis of Loudness Discomfort Level Tests in Tinnitus
+            Patients
           </li>
           <li>
-            June Choi, Hong Jin Kim, Ye Hwan Lee, Young Han Chung, Kang Hyeon
-            Lim, Sang Yeop Kim, Yong Jun Jeong, Analysis of auditory brain stem
-            response and otoacoustic emission in unilateral tinnitus patients
-            with normal hearing
+            Han Lv, Qian Chen, Zuozhen Zhang, Zhaodi Wang, Shusheng Gong,
+            Junzhong Ji, Zhenchang Wang, Jinduo Liu, Functional-guided
+            reinforcement learning effective connectivity indicates
+            effectiveness of sound therapy in tinnitus patients
+          </li>
+          <li>
+            Dave Korotkov, Tinnitus Distress and the Steeling/Sensitization
+            Hypotheses: A Secondary
+          </li>
+          <li>
+            Andréia Aparecida de Azevedo, Ricardo Rodrigues Figueiredo, Eliana
+            Ferreira Vilela, Jeanne Oiticica, correlation between tinnitus
+            severity and the big five personality traits
           </li>
           <li>
             Sung Il Cho, Mohammad Mokhatrish, Wonyong Baek, Gi-Sung Nam,
@@ -22,14 +32,14 @@ const TuesdayPosters = () => {
             sensorineural hearing loss and acute tinnitus
           </li>
           <li>
+            Min Young Kwak, Yong Tae Cho, Yong-Hwi An, Hyun Joon Shim, Relation
+            of Sound Level Tolerance to Tinnitus in Human: A Comparative
+            Analysis of Unilateral, Bilateral, and Control Groups
+          </li>
+          <li>
             Bourez, P.H. Vallet, Guillaume, T., Fournier, P., Improving
             audiology student training by clinical simulation of tinnitus: a
             glimpse of tinnitus lived experience
-          </li>
-          <li>
-            Fournier, P., Lessard-Dostie, H., Bigras, J., McDonald, T., Noreña,
-            A.J., Lagacé, J., Hyperacusis and associated symptoms among
-            conference interpreters
           </li>
           <li>
             Denise Fuchten, Kelly K.S. Assouly, Inge Stegeman, Adriana L. Smit,
@@ -37,13 +47,12 @@ const TuesdayPosters = () => {
             depression questionnaires
           </li>
           <li>
-            Eun Bit Bae1, 2* - Low hearing frequency affecting hearing device
-            use
+            Eun Bit Bae, Low hearing frequency affecting hearing device use
           </li>
           <li>
-            Sneha Uttakalika, Diya ES Dinesh, Abhishek Jain, Kajal Bhatiwal,
-            Suman Penwal, Prevalence of hyperacusis and misophonia among
-            individuals with tinnitus
+            Lieber Po-Hung Li, Cheng-Ta Li, Jen-Chuen Hsieh, Steady-state
+            auditory evoked fields reflect long-term effects of repetitive
+            transcranial magnetic stimulation in tinnitus
           </li>
           <li>
             Glória de Moraes Marchiori, Licia Sayuri Tanaka, Victor Augusto
@@ -52,23 +61,24 @@ const TuesdayPosters = () => {
             symptoms among people post COVID-19
           </li>
           <li>
-            Zahra Jafari, David Baguley, Bryan E. Kolb, and Majid H. Mohajeran,
-            A systematic review and meta-analysis of extended high-frequency
-            hearing thresholds in tinnitus with a normal audiogram
-          </li>
-          <li>
-            Jiwon Kwak, Soo Jeong Choi, Jiwon Chang, Gi Jung Im, Euyhyun Park,
-            Is Zinc Deficiency a Risk Factor for Tinnitus?: An Analysis from
-            Chronic Idiopathic Tinnitus Patients with Normal Hearing
-          </li>
-          <li>
-            Sang Hoon Kim, Association between tinnitus and inflammatory bowel
-            disease: A national cohort study
+            Luciana Lozza de Moraes Marchiori, Licia Sayuri Tanaka, Daiane de
+            Almeida Soares Ciquinato, Glória de Moraes Marchiori, Braulio
+            Henrique Magnani Branco, Analysis between subjective sleep quality
+            and level of intensity of the tinnitus in people post COVID-19
           </li>
           <li>
             Nour Alsabbagh and Phillip E. Gander, The sleeping brain of
             tinnitus: A review of neural and behavioural correlates of sleep in
-            phantom sound perception
+            phantom sound perception.
+          </li>
+          <li>
+            Shi Nae Park, Min Chae Jeon, Chan Mee Lee, Jae Sang Han, Jae Hyng
+            Seo, Clinical Management of Myoclonic Tinnitus for A Cure: From
+            Botox Injection to Surgery
+          </li>
+          <li>
+            Kyu-Yup Lee, Da-Jung Jung,Sang-Heun Lee, Study on protective effect
+            of novel chemical compound against acquired hearing loss
           </li>
         </ul>
       </div>

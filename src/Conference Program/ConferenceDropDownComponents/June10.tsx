@@ -95,7 +95,7 @@ const June10 = () => {
         date={"MONDAY, JUNE 10th"}
         time={"01:00 - 01:30"}
         type={"Workshop:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={MondayJune10thRemote}
       />
 
@@ -104,7 +104,7 @@ const June10 = () => {
         date={"MONDAY, JUNE 10th"}
         time={"02:00 - 02:30"}
         type={"Workshop:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={TuesdayJune11thEvidenceBased}
       />
 
@@ -113,7 +113,7 @@ const June10 = () => {
         date={"MONDAY, JUNE 10th"}
         time={"02:30 - 03:00"}
         type={"Sponsor Session:"}
-        location={"(C460)"}
+        location={"(C440)"}
         Component={MondayJune10thHyeracusis}
       />
 
@@ -129,7 +129,7 @@ const June10 = () => {
       <AbstractDropDown
         title={""}
         date={"MONDAY, JUNE 10th"}
-        time={"03:00 - 05:00 "}
+        time={"03:30 - 05:00 "}
         type={"Posters + Exhibition:"}
         location={"(POSTER HALL)"}
         Component={MondayJune10thPosters}
