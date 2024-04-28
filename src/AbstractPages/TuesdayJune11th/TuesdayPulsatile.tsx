@@ -29,6 +29,12 @@ const TuesdayPulsatile = () => {
             Dave Korotkov - Living with Pulsatile Tinnitus: A Self-Narrative
             Using McAdam’s Levels of Personality Model
           </li>
+
+          <li>
+            Yoonjai Lee, Won Jun Noh, Jae-Jin Song, Forest for the Trees:
+            Preliminary results of novel sigmoid sinus resurfacing in subjects
+            with sigmoid sinus dehiscence and adjacent broad-based diverticulum
+          </li>
         </ul>
       </div>
     </div>
