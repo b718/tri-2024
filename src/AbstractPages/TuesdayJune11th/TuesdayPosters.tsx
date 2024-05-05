@@ -80,6 +80,12 @@ const TuesdayPosters = () => {
             Kyu-Yup Lee, Da-Jung Jung,Sang-Heun Lee, Study on protective effect
             of novel chemical compound against acquired hearing loss
           </li>
+
+          <li>
+            Natalia Vasconcellos de Oliveira Souza, Arianna Rustici, Nicole
+            Cancelliere, Vitor Mendes Pereira, Vascular causes of Pulsatile
+            Tinnitus: The St. Michael’s Hospital experience.
+          </li>
         </ul>
       </div>
     </div>

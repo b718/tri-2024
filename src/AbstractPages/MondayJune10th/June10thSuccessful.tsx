@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Text } from "@mantine/core";
 
-const June12thSuccessful = () => {
+const June10thSuccessful = () => {
   return (
     <div>
       <div className="mj10-host">
@@ -46,4 +46,4 @@ const June12thSuccessful = () => {
   );
 };
 
-export default June12thSuccessful;
+export default June10thSuccessful;

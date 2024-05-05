@@ -15,6 +15,7 @@ import MondayJune10thSoundTherapy from "../../AbstractPages/MondayJune10th/Monda
 import MondayJune10thPosters from "../../AbstractPages/MondayJune10th/MondayJune10thPosters";
 import TuesdayJune11thEvidenceBased from "../../AbstractPages/TuesdayJune11th/TuesdayJune11thEvidenceBased";
 import MondayJune10thRemote from "../../AbstractPages/MondayJune10th/MondayJune10thRemote";
+import June10thSuccessful from "../../AbstractPages/MondayJune10th/June10thSuccessful";
 
 const June10 = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -97,6 +98,15 @@ const June10 = () => {
         type={"Workshop:"}
         location={"(C440)"}
         Component={MondayJune10thRemote}
+      />
+
+      <AbstractDropDown
+        title={"THE SUCCESSFUL TINNITUS AUDIOLOGIST, A PRACTITIONER’S GUIDE"}
+        date={"MONDAY, JUNE 10th"}
+        time={"01:30 - 02:00"}
+        type={"Workshop:"}
+        location={"(C440)"}
+        Component={June10thSuccessful}
       />
 
       <AbstractDropDown

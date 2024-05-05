@@ -15,7 +15,7 @@ import { NavBarContext } from "../App";
 import AbstractDropDown from "../AbstractPages/AbstractDropDown";
 import June12thPhysicalLinks from "../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
 import June12thMorning from "../AbstractPages/WednesdayJune12th/June12thMorning";
-import June12thSuccessful from "../AbstractPages/WednesdayJune12th/June12thSuccessful";
+import June12thSuccessful from "../AbstractPages/MondayJune10th/June10thSuccessful";
 import June12thRoundTable from "../AbstractPages/WednesdayJune12th/June12thRoundTable";
 import June12thOticon from "../AbstractPages/WednesdayJune12th/June12thOticon";
 const ConferenceProgram = () => {
@@ -91,8 +91,8 @@ const ConferenceProgram = () => {
             </Text>
             <button className="conference-program-button">
               <a
-                href="Speaker Program_2024.04.06.pdf"
-                download="Detailed-Presenter-Schedule-Updated April 6th, 2024"
+                href="Speaker Program_05_05.pdf"
+                download="Detailed-Presenter-Schedule-Updated May 5th, 2024"
               >
                 Download Schedule
               </a>

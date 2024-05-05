@@ -9,6 +9,7 @@ import neuromod from "../Images/Sponsorships/new_neuro_white.png";
 import widex from "../Images/Sponsorships/widex.jpg";
 import ataImage from "../Images/ATA Logo.jpg";
 import hyperArc from "../Images/HyperacusisResearch.png";
+import neoSensory from "../Images/NeosensoryLogoLockupColor.png";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 
 const Sponsorships = () => {
@@ -19,6 +20,7 @@ const Sponsorships = () => {
   const neurmodlink = "https://neuromoddevices.com/";
   const widexlink = "https://www.widex.com/";
   const ata = "https://www.ata.org/";
+  const neo = "https://neosensory.com/";
   const { width, height } = useWindowDimensions();
 
   return (
@@ -52,6 +54,10 @@ const Sponsorships = () => {
           </a>
 
           <Image width={105} fit="contain" src={hyperArc} />
+
+          <a href={neo} target={"_blank"}>
+            <Image width={160} fit="contain" src={neoSensory} />
+          </a>
         </Flex>
       </div>
     </div>

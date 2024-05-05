@@ -7,7 +7,6 @@ import June12thMorning from "../../AbstractPages/WednesdayJune12th/June12thMorni
 import June12thOticon from "../../AbstractPages/WednesdayJune12th/June12thOticon";
 import June12thPhysicalLinks from "../../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
 import June12thRoundTable from "../../AbstractPages/WednesdayJune12th/June12thRoundTable";
-import June12thSuccessful from "../../AbstractPages/WednesdayJune12th/June12thSuccessful";
 import WednesdayElectro from "../../AbstractPages/WednesdayJune12th/WednesdayElectro";
 import WednesdayTinnitusAndCognition from "../../AbstractPages/WednesdayJune12th/WednesdayTinnitusAndCognition";
 import WednesdayMisophonia from "../../AbstractPages/WednesdayJune12th/WednesdayMisophonia";
@@ -17,6 +16,7 @@ import WednesdayEpidemiology from "../../AbstractPages/WednesdayJune12th/Wednesd
 import June12thLenire from "../../AbstractPages/WednesdayJune12th/June12thLenire";
 import WednesdayRemoteCareTwo from "../../AbstractPages/WednesdayJune12th/WednesdayRemoteCareTwo";
 import June12thATA from "../../AbstractPages/WednesdayJune12th/June12thATA";
+import June12thNeosensory from "../../AbstractPages/WednesdayJune12th/June12thNeosensory";
 
 const June12 = () => {
   const { width, height } = useWindowDimensions();
@@ -87,12 +87,12 @@ const June12 = () => {
       />
 
       <AbstractDropDown
-        title={"THE SUCCESSFUL TINNITUS AUDIOLOGIST"}
+        title={"NEOSENSORY: RESEARCH AND CLINICAL PROTOCOLS"}
         date={"WEDNESDAY, JUNE 12th"}
         time={"09:30 - 10:00"}
-        type={"Workshop:"}
+        type={"Sponsorship Session:"}
         location={"(C440)"}
-        Component={June12thSuccessful}
+        Component={June12thNeosensory}
       />
 
       <AbstractDropDown

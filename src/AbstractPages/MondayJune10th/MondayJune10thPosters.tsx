@@ -72,6 +72,11 @@ const MondayJune10thPosters = () => {
             Richard Tyler, Percutaneous Electroneurostimulation (PENS) as a
             Novel Treatment for TTTS: Insights from a Focused Two-Case Study
           </li>
+          <li>
+            Anusha Yasoda-Mohan, Katy Tobin, Iracema Leroi1, Brian Lawlor &amp;
+            Sven Vanneste, Investigating the longitudinal relationship between
+            tinnitus and cognitive decline.
+          </li>
         </ul>
       </div>
     </div>
