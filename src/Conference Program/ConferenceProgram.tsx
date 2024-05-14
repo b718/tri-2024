@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useContext, useState } from "react";
 import "./ConferenceProgram.css";
-import SpeakerSection from "./SpeakersComponent/SpeakerSection";
-import Program from "./Program/Program";
-import { Image, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
 import ConferenceProgramDropDown from "./ConferenceProgramComponents/ConferenceProgramDropDown";
 import June10 from "./ConferenceDropDownComponents/June10";
 import June11 from "./ConferenceDropDownComponents/June11";
@@ -12,12 +10,8 @@ import PeterScienceWorld from "../Images/peter-skaronis-XH82uGMB8H8-unsplash cop
 import useWindowDimensions from "../Components/useWindowsDimensions";
 import { useInView } from "react-intersection-observer";
 import { NavBarContext } from "../App";
-import AbstractDropDown from "../AbstractPages/AbstractDropDown";
-import June12thPhysicalLinks from "../AbstractPages/WednesdayJune12th/June12thPhysicalLinks";
-import June12thMorning from "../AbstractPages/WednesdayJune12th/June12thMorning";
-import June12thSuccessful from "../AbstractPages/MondayJune10th/June10thSuccessful";
-import June12thRoundTable from "../AbstractPages/WednesdayJune12th/June12thRoundTable";
-import June12thOticon from "../AbstractPages/WednesdayJune12th/June12thOticon";
+
+import CommunityConferenceRoundup from "./ConferenceDropDownComponents/CommunityConferenceRoundup";
 const ConferenceProgram = () => {
   const { width, height } = useWindowDimensions();
   const [hoverPeter, setHoverPeter] = useState(false);
@@ -98,6 +92,12 @@ const ConferenceProgram = () => {
               </a>
             </button>
           </div>
+
+          <hr style={{ maxWidth: "98vw" }}></hr>
+          <ConferenceProgramDropDown
+            title="Community Conference Roundup, Wednesday, June 12th"
+            Component={CommunityConferenceRoundup}
+          />
         </div>
       </div>
     </div>
