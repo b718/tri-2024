@@ -8,7 +8,7 @@ import signia from "../Images/Sponsorships/signia.png";
 import neuromod from "../Images/Sponsorships/new_neuro_white.png";
 import widex from "../Images/Sponsorships/widex.jpg";
 import ataImage from "../Images/ATA Logo.jpg";
-import hyperArc from "../Images/HyperacusisResearch.png";
+import hyperArc from "../Images/Hyperacusis Research Logo May 12.png";
 import neoSensory from "../Images/NeosensoryLogoLockupColor.png";
 import useWindowDimensions from "../Components/useWindowsDimensions";
 
@@ -21,6 +21,7 @@ const Sponsorships = () => {
   const widexlink = "https://www.widex.com/";
   const ata = "https://www.ata.org/";
   const neo = "https://neosensory.com/";
+  const hyper = "https://hyperacusisresearch.org/";
   const { width, height } = useWindowDimensions();
 
   return (
@@ -53,7 +54,9 @@ const Sponsorships = () => {
             <Image width={imageWidth} fit="contain" src={ataImage} />
           </a>
 
-          <Image width={105} fit="contain" src={hyperArc} />
+          <a href={hyper} target={"_blank"}>
+            <Image width={160} fit="contain" src={hyperArc} />
+          </a>
 
           <a href={neo} target={"_blank"}>
             <Image width={160} fit="contain" src={neoSensory} />

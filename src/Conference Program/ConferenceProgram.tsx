@@ -85,8 +85,8 @@ const ConferenceProgram = () => {
             </Text>
             <button className="conference-program-button">
               <a
-                href="Speaker Program_05_05.pdf"
-                download="Detailed-Presenter-Schedule-Updated May 5th, 2024"
+                href="Speaker Program_05_15.pdf"
+                download="Detailed-Presenter-Schedule-Updated May 15th, 2024"
               >
                 Download Schedule
               </a>

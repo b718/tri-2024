@@ -86,6 +86,12 @@ const TuesdayPosters = () => {
             Cancelliere, Vitor Mendes Pereira, Vascular causes of Pulsatile
             Tinnitus: The St. Michael’s Hospital experience.
           </li>
+          <li>
+            Khodayar Goshtasbi, Mehdi Abouzari, Pooya Khosravi, Adwight Risbud,
+            Elaine C. Martin, Hamid R. Djalilian, Smartphone-Based Cognitive
+            Behavioral Therapy and Customized Sound Therapy for Tinnitus: A
+            Randomized Controlled Trial
+          </li>
         </ul>
       </div>
     </div>

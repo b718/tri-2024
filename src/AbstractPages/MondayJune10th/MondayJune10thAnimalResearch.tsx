@@ -27,10 +27,6 @@ const MondayJune10thAnimalResearch = () => {
             effect of novel chemical compound against acquired hearing loss
           </li>
           <li>
-            Norena, A. - The putative neural mechanisms of noise-induced
-            tinnitus and hyperacusis studied in guinea pigs (voir courriel)
-          </li>
-          <li>
             Jinsheng Zhang, Po Hung Chiang, Paul Morse, Tasnim Arroum, Maik
             Huttemann - Near-Infrared (NIR) Light Treatment of Tinnitus
           </li>
