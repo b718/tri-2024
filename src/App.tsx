@@ -1,39 +1,23 @@
-import React, {
-  createRef,
-  createContext,
-  useRef,
-  useState,
-  useContext,
-} from "react";
+import React, { createRef, createContext, useRef, useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Home/Home";
 import Committee from "./Committee/Committee";
-import SpeakerSection from "./Conference Program/SpeakersComponent/SpeakerSection";
 import ConferenceProgram from "./Conference Program/ConferenceProgram";
-import Registration from "./Registration/RegistrationOld/Registration";
 import Sponsorships from "./Sponsorship/Sponsorships";
-import PageHolder from "./PageHolder/PageHolder";
 import FaQ from "./FAQ/FaQ";
-import Venue from "./Venue/Venue";
 import Footer from "./Footer/Footer";
 import Carousel from "./Carousel/Carousel";
-import { Flex, Text } from "@mantine/core";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
-import PaymentForm from "./PaymentForm/PaymentForm";
+import { Text } from "@mantine/core";
+import { Routes, Route } from "react-router-dom";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Symposia from "./Symposia/Symposia";
 import ContactUs from "./ContactUs/ContactUs";
 import NewNews from "./NewNews/NewNews";
 import PricingNRS from "./NewRegistrationSystem/PricingNRS";
 import RegistrationFormNRS from "./NewRegistrationSystem/RegistrationFormNRS";
 import SpeakerPage from "./SpeakerPage/SpeakerPage";
-import CommiteePage from "./CommiteePage/CommiteePage";
-import ScientificCommitee from "./ScientificCommitee/ScientificCommitee";
 import ResoectuveSections from "./RespectiveSections/ResoectuveSections";
-import AbstractPages from "./AbstractPages/AbstractPages";
-import MondayJune10th from "./AbstractPages/MondayJune10th/MondayJune10th";
-import WholeAbstract from "./AbstractPages/WholeAbstract";
 
 interface ContextTypeNavBarRef {
   committeeRef: React.RefObject<HTMLDivElement>;
@@ -41,7 +25,6 @@ interface ContextTypeNavBarRef {
   conferenceProgramRef: React.RefObject<HTMLDivElement>;
   registrationRef: React.RefObject<HTMLDivElement>;
   innerRegistrationRef: React.RefObject<HTMLDivElement>;
-  // presentersRef?: React.RefObject<HTMLDivElement>;
   sponsorshipRef: React.RefObject<HTMLDivElement>;
   venueRef: React.RefObject<HTMLDivElement>;
   faqRef: React.RefObject<HTMLDivElement>;
@@ -51,8 +34,6 @@ interface ContextTypeNavBarRef {
   postersPapers: React.RefObject<HTMLDivElement>;
   contactUs: React.RefObject<HTMLDivElement>;
   programRef: React.RefObject<HTMLDivElement>;
-
-  // contactUsRef?: React.RefObject<HTMLDivElement>;
 }
 
 interface ContextBurger {
@@ -92,7 +73,6 @@ export const ButtonClickedContext = createContext<ButtonClickedContext>({
 });
 
 function App() {
-  // const navBarScrollRefs = useContext(NavBarContext);
   const comitteeRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
   const conferenceProgramRef = useRef<HTMLDivElement>(null);

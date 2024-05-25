@@ -6,7 +6,7 @@ const June12thATA = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          <b>Speaker:</b> Jinsheng Zhang and Sara Downs, American Tinnitus
+          <b>Speaker:</b> Jinsheng Zhang and Patrick Lynch, American Tinnitus
           Association (ATA)
         </Text>
       </div>

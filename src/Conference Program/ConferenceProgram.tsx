@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "./ConferenceProgram.css";
 import { Text } from "@mantine/core";
 import ConferenceProgramDropDown from "./ConferenceProgramComponents/ConferenceProgramDropDown";
@@ -85,8 +85,8 @@ const ConferenceProgram = () => {
             </Text>
             <button className="conference-program-button">
               <a
-                href="Speaker Program_05_15.pdf"
-                download="Detailed-Presenter-Schedule-Updated May 15th, 2024"
+                href="Speaker Program_05_27.pdf"
+                download="Detailed-Presenter-Schedule-Updated May 27th, 2024"
               >
                 Download Schedule
               </a>

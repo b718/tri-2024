@@ -14,11 +14,6 @@ const TuesdayHeterogeniety = () => {
             Tanit Sanchez, Long term total remission of tinnitus: fact or myth?
           </li>
           <li>
-            Jing Sun, Zhenchang Wang, Han Lv, Causal Associations of Genetically
-            Determined Tinnitus with Neuroimaging Traits: Evidence from a
-            Mendelian Randomization Study
-          </li>
-          <li>
             Qian Chen, Yan Huang, Xinghao Wang, Lining Dong, Thalamic multimodal
             quantitative MRI feature explains the different outcomes in tinnitus
             patients after sound therapy 

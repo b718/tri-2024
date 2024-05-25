@@ -1,5 +1,3 @@
-import React from "react";
-import EventComponent from "./EventComponent/EventComponent";
 import { Flex, Image } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June11thSchedule from "../../Images/june-11th-schedule.png";
@@ -13,7 +11,6 @@ import TuesdayBioMarkers from "../../AbstractPages/TuesdayJune11th/TuesdayBioMar
 import TuesdayHeterogeniety from "../../AbstractPages/TuesdayJune11th/TuesdayHeterogeniety";
 import TuesdayPulsatile from "../../AbstractPages/TuesdayJune11th/TuesdayPulsatile";
 import TuesdayHyper from "../../AbstractPages/TuesdayJune11th/TuesdayHyper";
-import TuesdayApplicationsRemote from "../../AbstractPages/TuesdayJune11th/TuesdayApplicationsRemote";
 import TuesdayNewIdeas from "../../AbstractPages/TuesdayJune11th/TuesdayNewIdeas";
 import TuesdayPosters from "../../AbstractPages/TuesdayJune11th/TuesdayPosters";
 

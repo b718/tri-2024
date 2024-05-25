@@ -1,5 +1,4 @@
-import { Center, Flex, Grid, Image, Text } from "@mantine/core";
-import React from "react";
+import { Flex, Image } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import June12thSchedule from "../../Images/june-12th-schedule.png";
 import AbstractDropDown from "../../AbstractPages/AbstractDropDown";
@@ -134,12 +133,12 @@ const June12 = () => {
       />
 
       <AbstractDropDown
-        title={"CLINICAL APPLICATIONS"}
+        title={"EPIDEMIOLOGY"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"02:00 - 03:30"}
+        time={"02:00 - 03:00"}
         type={"Oral Papers:"}
         location={"(THEATRE)"}
-        Component={WednesdayClinical}
+        Component={WednesdayEpidemiology}
       />
 
       <AbstractDropDown
@@ -152,30 +151,30 @@ const June12 = () => {
       />
 
       <AbstractDropDown
-        title={"HETEROGENIETY OF TINNITUS"}
-        date={"WEDNESDAY, JUNE 12th"}
-        time={"03:00 - 04:00"}
-        type={"Round Table:"}
-        location={"(THEATRE)"}
-        Component={June12thRoundTable}
-      />
-
-      <AbstractDropDown
         title={"REMOTE CARE"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"03:00 - 03:30"}
+        time={"02:00 - 03:00"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
         Component={WednesdayRemoteCareTwo}
       />
 
       <AbstractDropDown
-        title={"EPIDEMIOLOGY"}
+        title={"HETEROGENIETY OF TINNITUS"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"03:30 - 04:30"}
+        time={"03:45 - 04:30"}
+        type={"Round Table:"}
+        location={"(THEATRE)"}
+        Component={June12thRoundTable}
+      />
+
+      <AbstractDropDown
+        title={"CLINICAL APPLICATIONS"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"03:45 - 04:30"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
-        Component={WednesdayEpidemiology}
+        Component={WednesdayClinical}
       />
     </div>
   );

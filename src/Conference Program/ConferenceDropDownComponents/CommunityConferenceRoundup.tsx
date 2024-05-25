@@ -1,4 +1,3 @@
-import React from "react";
 import { Flex, Image } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import communityConferenceSchedule from "../../Images/TRI2024_CommunityEvent_Mailer-1.png";

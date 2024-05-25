@@ -20,12 +20,6 @@ const WednesdayEpidemiology = () => {
             Eun Bit Bae, What next after tinnitus? Based on a 10-year Korea
             National Health andNutrition Examination Survey (2008-2018)
           </li>
-          <li>
-            Jia Li, Zhengli Shi, Pengfei Zhao, Jing Sun, Xinghao Wang, Chunli
-            Liu, Zhenchang Wang, Han Lv, Flavonoids can lower the incidence and
-            relieve the severity of tinnitus in older people: National Health
-            and Nutrition Examination Survey 2005–2018
-          </li>
         </ul>
       </div>
     </div>

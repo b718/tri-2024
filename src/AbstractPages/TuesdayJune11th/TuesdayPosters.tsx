@@ -12,12 +12,6 @@ const TuesdayPosters = () => {
             Patients
           </li>
           <li>
-            Han Lv, Qian Chen, Zuozhen Zhang, Zhaodi Wang, Shusheng Gong,
-            Junzhong Ji, Zhenchang Wang, Jinduo Liu, Functional-guided
-            reinforcement learning effective connectivity indicates
-            effectiveness of sound therapy in tinnitus patients
-          </li>
-          <li>
             Dave Korotkov, Tinnitus Distress and the Steeling/Sensitization
             Hypotheses: A Secondary
           </li>

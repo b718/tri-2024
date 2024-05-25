@@ -15,6 +15,10 @@ const WednesdayRemoteCareTwo = () => {
           Ann Perreau, Rich Tyler - Acceptability and Effectiveness of Remote
           Counseling for Tinnitus
         </Text>
+        <Text>
+          Jason Zhang, Pranavi Sammidi, Brandon Nie, Bryan Nie, Kaibao Nie,
+          Development and Testing of Online Sound Therapy Platform
+        </Text>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
-import { Flex, Image, Table } from "@mantine/core";
-import React, { useState } from "react";
+import { Flex, Image } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
-import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "@bitnoi.se/react-scheduler/dist/style.css";
 import June10thSchedule from "../../Images/june-10th-schedule.png";
@@ -18,7 +16,6 @@ import MondayJune10thRemote from "../../AbstractPages/MondayJune10th/MondayJune1
 import June10thSuccessful from "../../AbstractPages/MondayJune10th/June10thSuccessful";
 
 const June10 = () => {
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const { width, height } = useWindowDimensions();
 
   const triCommitteeRogersSize = () => {
