@@ -144,15 +144,6 @@ const June12 = () => {
       <AbstractDropDown
         title={"REMOTE CARE"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"02:00 - 02:30"}
-        type={"Oral Papers:"}
-        location={"(C400/C420)"}
-        Component={WednesdayRemoteCare}
-      />
-
-      <AbstractDropDown
-        title={"REMOTE CARE"}
-        date={"WEDNESDAY, JUNE 12th"}
         time={"02:00 - 03:00"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
