@@ -72,7 +72,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"09:00 - 09:30"}
         type={"Workshop:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={WednesdayMisophonia}
       />
 
@@ -90,7 +90,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"09:30 - 10:00"}
         type={"Sponsorship Session:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={June12thNeosensory}
       />
 
@@ -108,7 +108,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"10:30 - 11:00"}
         type={"Sponsorship Session:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={June12thOticon}
       />
 
@@ -117,7 +117,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"11:00 - 11:30"}
         type={"Sponsorship Session:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={June12thLenire}
       />
 
@@ -128,7 +128,7 @@ const June12 = () => {
         date={"WEDNESDAY, JUNE 12th"}
         time={"11:30 - 12:00"}
         type={"Sponsorship Session:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={June12thATA}
       />
 
