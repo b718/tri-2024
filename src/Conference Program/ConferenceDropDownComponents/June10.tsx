@@ -58,15 +58,6 @@ const June10 = () => {
       />
 
       <AbstractDropDown
-        title={"ANIMAL RESEARCH"}
-        date={"MONDAY, JUNE 10th"}
-        time={"10:30 - 12:00"}
-        type={"Oral Papers:"}
-        location={"(C400/C420)"}
-        Component={MondayJune10thAnimalResearch}
-      />
-
-      <AbstractDropDown
         title={
           "SOUND TOLERANCE DISORDERS AND TINNITUS: INVESTIGATING HYPERACUSIS AND MISOPHONIA"
         }
@@ -75,6 +66,15 @@ const June10 = () => {
         type={"Symposium:"}
         location={"(THEATRE)"}
         Component={MondayJune10th}
+      />
+
+      <AbstractDropDown
+        title={"ANIMAL RESEARCH"}
+        date={"MONDAY, JUNE 10th"}
+        time={"10:30 - 12:00"}
+        type={"Oral Papers:"}
+        location={"(C400/C420)"}
+        Component={MondayJune10thAnimalResearch}
       />
 
       <AbstractDropDown
@@ -98,29 +98,20 @@ const June10 = () => {
       />
 
       <AbstractDropDown
-        title={"THE SUCCESSFUL TINNITUS AUDIOLOGIST, A PRACTITIONER’S GUIDE"}
+        title={"PRACTICAL ADVICE FOR THE TINNITUS AUDIOLOGIST"}
         date={"MONDAY, JUNE 10th"}
         time={"01:30 - 02:00"}
         type={"Workshop:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={June10thSuccessful}
-      />
-
-      <AbstractDropDown
-        title={"EVIDENCE-BASED PRACTICE IN AUDIOLOGY: AN INTRODUCTION"}
-        date={"MONDAY, JUNE 10th"}
-        time={"02:00 - 02:30"}
-        type={"Workshop:"}
-        location={"(C440)"}
-        Component={TuesdayJune11thEvidenceBased}
       />
 
       <AbstractDropDown
         title={"HYPERACUSIS RESEARCH, LTD"}
         date={"MONDAY, JUNE 10th"}
-        time={"02:30 - 03:00"}
+        time={"02:00 - 02:30"}
         type={"Sponsor Session:"}
-        location={"(C440)"}
+        location={"(C400/C420)"}
         Component={MondayJune10thHyeracusis}
       />
 
@@ -136,9 +127,9 @@ const June10 = () => {
       <AbstractDropDown
         title={""}
         date={"MONDAY, JUNE 10th"}
-        time={"03:30 - 05:00 "}
+        time={"03:00 - 05:00 "}
         type={"Posters + Exhibition:"}
-        location={"(POSTER HALL)"}
+        location={"(C440)"}
         Component={MondayJune10thPosters}
       />
     </div>

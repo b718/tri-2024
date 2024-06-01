@@ -68,21 +68,21 @@ const June12 = () => {
       />
 
       <AbstractDropDown
-        title={"TINNITUS AND COGNITION"}
-        date={"WEDNESDAY, JUNE 12th"}
-        time={"09:00 - 10:00"}
-        type={"Oral Papers:"}
-        location={"(C400/C420)"}
-        Component={WednesdayTinnitusAndCognition}
-      />
-
-      <AbstractDropDown
         title={"MISOPHONIA AND TINNITUS"}
         date={"WEDNESDAY, JUNE 12th"}
         time={"09:00 - 09:30"}
         type={"Workshop:"}
         location={"(C440)"}
         Component={WednesdayMisophonia}
+      />
+
+      <AbstractDropDown
+        title={"EPIDEMIOLOGY"}
+        date={"WEDNESDAY, JUNE 12th"}
+        time={"09:30 - 10:00"}
+        type={"Oral Papers:"}
+        location={"(THEATRE)"}
+        Component={WednesdayEpidemiology}
       />
 
       <AbstractDropDown
@@ -133,18 +133,18 @@ const June12 = () => {
       />
 
       <AbstractDropDown
-        title={"EPIDEMIOLOGY"}
+        title={"CLINICAL APPLICATIONS"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"02:00 - 03:00"}
+        time={"02:00 - 02:45"}
         type={"Oral Papers:"}
         location={"(THEATRE)"}
-        Component={WednesdayEpidemiology}
+        Component={WednesdayClinical}
       />
 
       <AbstractDropDown
         title={"REMOTE CARE"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"02:00 - 03:00"}
+        time={"02:00 - 02:45"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
         Component={WednesdayRemoteCareTwo}
@@ -153,19 +153,19 @@ const June12 = () => {
       <AbstractDropDown
         title={"HETEROGENIETY OF TINNITUS"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"03:45 - 04:30"}
+        time={"03:30 - 04:30"}
         type={"Round Table:"}
         location={"(THEATRE)"}
         Component={June12thRoundTable}
       />
 
       <AbstractDropDown
-        title={"CLINICAL APPLICATIONS"}
+        title={"TINNITUS AND COGNITION"}
         date={"WEDNESDAY, JUNE 12th"}
-        time={"03:45 - 04:30"}
+        time={"03:30 - 04:30"}
         type={"Oral Papers:"}
         location={"(C400/C420)"}
-        Component={WednesdayClinical}
+        Component={WednesdayTinnitusAndCognition}
       />
     </div>
   );

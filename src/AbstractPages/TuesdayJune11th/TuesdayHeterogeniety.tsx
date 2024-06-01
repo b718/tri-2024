@@ -14,11 +14,6 @@ const TuesdayHeterogeniety = () => {
             Tanit Sanchez, Long term total remission of tinnitus: fact or myth?
           </li>
           <li>
-            Qian Chen, Yan Huang, Xinghao Wang, Lining Dong, Thalamic multimodal
-            quantitative MRI feature explains the different outcomes in tinnitus
-            patients after sound therapy 
-          </li>
-          <li>
             Gianfranco Velasco, Hyun Jae Cho, Young Jun Seo, Ji Hyung Lim, Jae
             Sang Han, Jae Hyun Seo, Shi Nae Park, The Size Analysis of Stapedius
             and Tensor Tympani Muscles in CT scan in Patients with Middle Ear
@@ -29,6 +24,10 @@ const TuesdayHeterogeniety = () => {
             Guntinas-Lichius, Christian Dobel, Short and sweet: Long-lasting
             therapy success after interdisciplinary tinnitus treatment - a
             5-year follow-up study
+          </li>
+          <li>
+            Phil Gander, What is the role of the hippocampus and parahippocampal
+            gyrus in the persistence of tinnitus?
           </li>
         </ul>
       </div>

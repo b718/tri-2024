@@ -60,11 +60,7 @@ const TuesdayPosters = () => {
             Henrique Magnani Branco, Analysis between subjective sleep quality
             and level of intensity of the tinnitus in people post COVID-19
           </li>
-          <li>
-            Nour Alsabbagh and Phillip E. Gander, The sleeping brain of
-            tinnitus: A review of neural and behavioural correlates of sleep in
-            phantom sound perception.
-          </li>
+
           <li>
             Shi Nae Park, Min Chae Jeon, Chan Mee Lee, Jae Sang Han, Jae Hyng
             Seo, Clinical Management of Myoclonic Tinnitus for A Cure: From
@@ -75,11 +71,6 @@ const TuesdayPosters = () => {
             of novel chemical compound against acquired hearing loss
           </li>
 
-          <li>
-            Natalia Vasconcellos de Oliveira Souza, Arianna Rustici, Nicole
-            Cancelliere, Vitor Mendes Pereira, Vascular causes of Pulsatile
-            Tinnitus: The St. Michael’s Hospital experience.
-          </li>
           <li>
             Khodayar Goshtasbi, Mehdi Abouzari, Pooya Khosravi, Adwight Risbud,
             Elaine C. Martin, Hamid R. Djalilian, Smartphone-Based Cognitive

@@ -6,7 +6,8 @@ const TuesdayContribution = () => {
     <div>
       <div className="mj10-host">
         <Text>
-          <b>Speaker:</b> Dr Arnaud Norena, Aix-Marseille University, France
+          <b>Speaker:</b> Dr Arnaud Norena, Aix-Marseille University, France, Ms
+          Myriam Westcott, DWM Audiology
         </Text>
       </div>
 

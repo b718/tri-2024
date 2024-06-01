@@ -17,18 +17,6 @@ const WednesdayElectro = () => {
             correlates with subjective tinnitus severity on a between-subjectand
             within-subject basis
           </li>
-          <li>
-            Simon San Martin, Constantino Dragidevic, Cristina De Gatica,
-            Vicente Medel, Christ Devia1,3, Paul, Dynamics of EEG and
-            Otoacoustic Emissions During Acoustic Residual - Inhibition in
-            Tinnitus
-          </li>
-          <li>
-            Payam S. Shabestari, Stefan Schoisswohl, Zino Wellauer, Tobias
-            Kleinjung, Martin Meyer, Martin Schecklmann, Berthold Lanngguth,
-            Patrick Neff, Prediction of Acoustic Tinnitus Suppression: A
-            computationally assisted approach
-          </li>
         </ul>
       </div>
     </div>

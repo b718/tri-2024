@@ -18,11 +18,6 @@ const MondayJune10thAnimalResearch = () => {
             Tinnitus
           </li>
           <li>
-            Yoonjai Lee, Won Jun Noh, Jae-Jin Song - Forest for the Trees:
-            Preliminary results of novel sigmoid sinus resurfacing in subjects
-            with sigmoid sinus dehiscence and adjacent broad-based diverticulum
-          </li>
-          <li>
             Kyu-Yup Lee, Da-Jung Jung, Sang-Heun Lee - Study on protective
             effect of novel chemical compound against acquired hearing loss
           </li>

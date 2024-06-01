@@ -13,6 +13,8 @@ import TuesdayPulsatile from "../../AbstractPages/TuesdayJune11th/TuesdayPulsati
 import TuesdayHyper from "../../AbstractPages/TuesdayJune11th/TuesdayHyper";
 import TuesdayNewIdeas from "../../AbstractPages/TuesdayJune11th/TuesdayNewIdeas";
 import TuesdayPosters from "../../AbstractPages/TuesdayJune11th/TuesdayPosters";
+import WednesdayElectro from "../../AbstractPages/WednesdayJune12th/WednesdayElectro";
+import WednesdayEpidemiology from "../../AbstractPages/WednesdayJune12th/WednesdayEpidemiology";
 
 const June11 = () => {
   const { width, height } = useWindowDimensions();
@@ -27,8 +29,6 @@ const June11 = () => {
     } else {
       return 700;
     }
-    //961
-    //500
   };
   return (
     <div>
@@ -87,7 +87,7 @@ const June11 = () => {
         date={"TUESDAY, JUNE 11th"}
         time={"10:30 - 12:00"}
         type={"Oral Papers:"}
-        location={"(C400/C420)"}
+        location={"(C440)"}
         Component={TuesdayHeterogeniety}
       />
       <AbstractDropDown
@@ -95,7 +95,7 @@ const June11 = () => {
         date={"TUESDAY, JUNE 11th"}
         time={"10:30 - 12:00"}
         type={"Oral Papers:"}
-        location={"(C460)"}
+        location={"(C400/C420)"}
         Component={TuesdayPulsatile}
       />
       <AbstractDropDown
@@ -135,9 +135,9 @@ const June11 = () => {
       <AbstractDropDown
         title={""}
         date={"TUESDAY, JUNE 11th"}
-        time={"03:30 - 05:00"}
+        time={"03:00 - 05:00"}
         type={"Posters + Exhibition:"}
-        location={"(POSTER HALL)"}
+        location={"(C440)"}
         Component={TuesdayPosters}
       />
     </div>

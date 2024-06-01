@@ -57,11 +57,6 @@ const MondayJune10thPosters = () => {
             physiological signs of noise- induced hearing loss and mental health
           </li>
           <li>
-            Zahra Jafari, David Baguley, Bryan E. Kolb, and Majid H. Mohajeran,
-            A systematic review and meta-analysis of extended high-frequency
-            hearing thresholds in tinnitus with a normal audiogram
-          </li>
-          <li>
             Kritika Nayyar, Sweety Chauhan, Neha Surkund, Swaham Mohanty, Kajal
             Bhatiwal, Suman Penwal, Kamalakannan Karupaiah, Prashanth Prabhu,
             Prevalence of misokinesia and misophonia among adult population in

@@ -10,11 +10,6 @@ const June12thRoundTable = () => {
         </Text>
       </div>
 
-      {/* <div className="mj10-list">
-        <Text>Panellists: </Text>
-        <ol className="mj10-inner-list"></ol>
-      </div> */}
-
       <Text className="mj10-text">
         <b>Panellists:</b> TBA
       </Text>

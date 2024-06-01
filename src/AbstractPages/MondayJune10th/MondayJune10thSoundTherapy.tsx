@@ -26,11 +26,7 @@ const MondayJune10thSoundTherapy = () => {
             Nina Wunder, Winfried Schlee, Sex effects in sound therapy for
             tinnitus
           </li>
-          <li>
-            Xinghao Wang, Qian Che, Jing Sun, Jia Li, Zhenghan Yang, Han Lv,
-            Zhenchang Wang, Transformer Model Based on DTI to Predict the Effect
-            of Music Masking Therapy in Patients with Tinnitus
-          </li>
+
           <li>
             Gianfranco C. Velasco, MD; Jaclyn Leigh E. Vidal, MD; Min Chae Jun,
             MD; Chan Mee Lee, MD; Jae Sang Han, MD, PhD; Jae Hyun Seo, MD, PhD;
