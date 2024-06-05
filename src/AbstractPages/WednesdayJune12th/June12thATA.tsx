@@ -12,7 +12,7 @@ const June12thATA = () => {
       </div>
 
       <Text className="mj10-text">
-        <b>Abstract:</b> Since 1971, ATA has been dedicated to raising awareness
+        <b>Summary:</b> Since 1971, ATA has been dedicated to raising awareness
         of tinnitus patient struggles and improving patient outcomes by funding
         research and improving access to healthcare professionals proficient in
         tinnitus management. This presentation delves into ATA research grant
