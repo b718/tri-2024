@@ -1,6 +1,7 @@
 import { Flex, Image } from "@mantine/core";
 import useWindowDimensions from "../../Components/useWindowsDimensions";
 import communityConferenceSchedule from "../../Images/TRI2024_CommunityEvent_Mailer-1.png";
+import confirmedCommunityConferenceSchedule from "../../Images/confirmed_agenda.png";
 const CommunityConferenceRoundup = () => {
   const { width, height } = useWindowDimensions();
 
@@ -27,6 +28,11 @@ const CommunityConferenceRoundup = () => {
         >
           <Image
             src={communityConferenceSchedule}
+            fit={"cover"}
+            width={triCommitteeRogersSize()}
+          />
+          <Image
+            src={confirmedCommunityConferenceSchedule}
             fit={"cover"}
             width={triCommitteeRogersSize()}
           />
