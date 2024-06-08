@@ -44,15 +44,7 @@ const PricingNRS = () => {
               Regular Rate, Closes June 8th, 2024
             </Text>
 
-            <button
-              className="pricing-nrs-register-button"
-              onClick={() => {
-                buttonClickedContext.setButtonClicked(true);
-                setTimeout(() => {
-                  scrollToSection(registration.innerRegistrationRef);
-                }, 100);
-              }}
-            >
+            <button className="pricing-nrs-register-button ">
               REGISTER NOW
             </button>
           </Flex>
